@@ -12,7 +12,7 @@ public class HelmetSlot : EquipmentSlot
     public void EquipHelmet(Helmet helmet)
     {
         int[] ids = Equip(helmet, helmetSpawn);
-        DecoyEquip(helmet, helmetSpawn);
+        DecoyEquip(helmet, decoyHelmetSpawn);
         currentHelmet = currentEquipment as Helmet;
         if (currentHelmet != null)
         {
