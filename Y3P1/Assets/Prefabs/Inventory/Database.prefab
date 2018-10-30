@@ -88,12 +88,15 @@ MonoBehaviour:
   oWNames:
   - Pickaxe
   - Torch
+  - Cleaver
   oWSprite:
   - {fileID: 21300000, guid: c5ead9b7a2fa9074cb23976e823511e1, type: 3}
   - {fileID: 21300000, guid: f2ebb1d647b49bb46a559f9874a42a74, type: 3}
+  - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
   oWObject:
   - {fileID: 5980796425491674147, guid: c669be2b4a229374c890df3aed91f6ff, type: 3}
   - {fileID: 5980796425491674147, guid: b2d30bc724e18014f99f542c82a36f73, type: 3}
+  - {fileID: 5980796425491674147, guid: 0e5da5678f761484b94187a4b2c0acb2, type: 3}
   crossbowNames:
   - Bow
   - Crossbow
