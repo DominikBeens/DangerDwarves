@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &528443720 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1474018264146894573, guid: 23cc839ecc11619429b2844d711570af,
-    type: 3}
-  m_PrefabInstance: {fileID: 6015702396544195205}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7893263057771901687 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8136903220673741615, guid: 9dfb24b8158f3504f83310b91b58ed3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7893263057771901686}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5743486
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +31,12 @@ Transform:
   m_Father: {fileID: 5206128624395534402}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &7893263057771901687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8136903220673741615, guid: 9dfb24b8158f3504f83310b91b58ed3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7893263057771901686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25218307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,6 +5018,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialType: 0
+--- !u!4 &528443720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1474018264146894573, guid: 23cc839ecc11619429b2844d711570af,
+    type: 3}
+  m_PrefabInstance: {fileID: 6015702396544195205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1254042887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,8 +5996,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.004574299, y: -0.23046204, z: 1.1183007}
-    m_Extent: {x: 1.6088758, y: 1.8025426, z: 1.6817368}
+    m_Center: {x: 0.004574299, y: -0.23046258, z: 1.1183012}
+    m_Extent: {x: 1.608877, y: 1.8025439, z: 1.6817377}
   m_DirtyAABB: 0
 --- !u!1 &106078428586340384
 GameObject:
@@ -12487,6 +12487,22 @@ PrefabInstance:
       propertyPath: ikActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 234211423, guid: 35380d2f791b7ea4e95492d7ca46df30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234211424, guid: 35380d2f791b7ea4e95492d7ca46df30, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234211424, guid: 35380d2f791b7ea4e95492d7ca46df30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234211424, guid: 35380d2f791b7ea4e95492d7ca46df30, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35380d2f791b7ea4e95492d7ca46df30, type: 3}
 --- !u!1001 &1884837378
@@ -12606,7 +12622,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 152.65201
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2300000, guid: a8887e4c77e3224428276a21a49c4e8f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8887e4c77e3224428276a21a49c4e8f, type: 3}
 --- !u!1001 &1934812280
 PrefabInstance:
@@ -13982,6 +13999,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChefhatWhite
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.004573822
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.23046248
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 1.1182995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.855746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.7742227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493719549855371815, guid: 8984756be7e97484e9def264afbaff12,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1.2380798
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8984756be7e97484e9def264afbaff12, type: 3}
