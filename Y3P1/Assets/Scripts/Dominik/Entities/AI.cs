@@ -321,7 +321,7 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
 
     private void AggroClosestPlayer()
     {
-        Entity newTarget = EntityManager.instance.GetClosestPlayer(transform);
+        Entity newTarget = EntityManager.instance.GetClosestPlayer(transform, settings.targetSeekRange);
         if (newTarget)
         {
             photonView.RPC("SetTarget", RpcTarget.All, newTarget.photonView.ViewID);

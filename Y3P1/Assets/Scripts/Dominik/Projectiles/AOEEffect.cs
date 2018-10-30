@@ -96,7 +96,7 @@ public class AOEEffect : MonoBehaviourPunCallbacks
 
     private void TriggerCameraShake()
     {
-        if (!continuousEffect)
+        if (!continuousEffect && Player.localPlayer)
         {
             Vector3 viewPos = Player.localPlayer.playerCam.cameraComponent.WorldToViewportPoint(transform.position);
             if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1)

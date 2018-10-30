@@ -26,6 +26,7 @@ public class AISettings : ScriptableObject
     public float wanderRadius = 6f;
     public float minIdleTime = 1f;
     public float maxIdleTime = 4f;
+    public float targetSeekRange = 100f;
 
     [System.Serializable]
     public struct AttackAnimation

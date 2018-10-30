@@ -169,3 +169,13 @@ MonoBehaviour:
       type: 3}
     poolSize: 25
     autoExpand: 1
+  - poolName: WraithSummonExplosion
+    poolPrefab: {fileID: 7814782754571929585, guid: af73392a907987640ad2c9e92ef945a5,
+      type: 3}
+    poolSize: 25
+    autoExpand: 1
+  - poolName: WraithSummon
+    poolPrefab: {fileID: 3716037247890611631, guid: 4e91dbf85dfdcce4485893698486bd8c,
+      type: 3}
+    poolSize: 25
+    autoExpand: 1

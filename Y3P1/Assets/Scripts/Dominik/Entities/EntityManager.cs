@@ -55,12 +55,12 @@ public class EntityManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public Entity GetClosestPlayer(Transform origin)
+    public Entity GetClosestPlayer(Transform origin, float seekRange)
     {
         Player[] players = FindObjectsOfType<Player>();
 
         Entity closestPlayer = null;
-        float closestDistanceSqr = Mathf.Infinity;
+        float closestDistanceSqr = seekRange;
 
         for (int i = 0; i < players.Length; i++)
         {

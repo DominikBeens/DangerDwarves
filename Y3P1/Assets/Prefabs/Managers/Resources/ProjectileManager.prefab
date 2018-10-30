@@ -97,6 +97,10 @@ MonoBehaviour:
     projectileSpawn: 0
     freezePosition: 1
     speedOverride: 0
+  - projectilePool: WraithSummon
+    projectileSpawn: 0
+    freezePosition: 1
+    speedOverride: 0
 --- !u!114 &5769053136309210999
 MonoBehaviour:
   m_ObjectHideFlags: 0
