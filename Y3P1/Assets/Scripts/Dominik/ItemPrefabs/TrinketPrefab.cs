@@ -6,9 +6,8 @@ public class TrinketPrefab : ItemPrefab
 {
 
     private ParticleSystem.MainModule particleMain;
-    private Material mat;
+    //private Material mat;
 
-    [SerializeField] private MeshRenderer renderer;
     //[SerializeField] private ParticleSystem particle;
 
     protected override void Awake()

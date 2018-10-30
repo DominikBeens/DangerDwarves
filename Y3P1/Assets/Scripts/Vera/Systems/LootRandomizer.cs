@@ -147,6 +147,7 @@ public class LootRandomizer : MonoBehaviour {
         Item testItem = new Weapon_Melee();
         int rarity = Rarity();
         int nIL = NewItemLevel(rarity, currentItemLevel);
+        int mat = Random.Range(0, Database.hostInstance.axeMats.Count);
 
         bool rOL = false;
         if (rarity >= 2)
@@ -155,7 +156,7 @@ public class LootRandomizer : MonoBehaviour {
         }
         string secun = Database.hostInstance.GetMeleeSecundary(rOL);
         //Item Creation XD
-        testItem.StartUp(Database.hostInstance.GetAxeName(), rarity, Database.hostInstance.GetAxeSprite(), NewStats(nIL), Database.hostInstance.GetAxeObject(), nIL);
+        testItem.StartUp(Database.hostInstance.GetAxeName(), rarity, Database.hostInstance.GetAxeSprite(), NewStats(nIL), Database.hostInstance.GetAxeObject(), nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun , SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun),Single(secun));
         testItem.StartMelee(Range(), 0);
         //end item creation
@@ -167,6 +168,7 @@ public class LootRandomizer : MonoBehaviour {
         Item testItem = new Weapon_Melee();
         int rarity = Rarity();
         int nIL = NewItemLevel(rarity, currentItemLevel);
+        int mat = Random.Range(0, Database.hostInstance.swordMats.Count);
         int degreesSecun = Degrees();
         int degreesPri = Degrees();
         int amountSecun = 1;
@@ -187,7 +189,7 @@ public class LootRandomizer : MonoBehaviour {
         }
         string secun = Database.hostInstance.GetMeleeSecundary(rOL);
         //Item Creation XD
-        testItem.StartUp(Database.hostInstance.GetSwordName(), rarity, Database.hostInstance.GetSwordSprite(), NewStats(nIL), Database.hostInstance.GetSwordObject(), nIL);
+        testItem.StartUp(Database.hostInstance.GetSwordName(), rarity, Database.hostInstance.GetSwordSprite(), NewStats(nIL), Database.hostInstance.GetSwordObject(), nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun), Single(secun));
         testItem.StartMelee(Range(), 0);
         //end item creation
@@ -199,6 +201,7 @@ public class LootRandomizer : MonoBehaviour {
         Item testItem = new Weapon_Melee();
         int rarity = Rarity();
         int nIL = NewItemLevel(rarity, currentItemLevel);
+        int mat = Random.Range(0, Database.hostInstance.hammerMats.Count);
         int degreesSecun = Degrees();
         int degreesPri = Degrees();
         int amountSecun = 1;
@@ -219,7 +222,7 @@ public class LootRandomizer : MonoBehaviour {
         }
         string secun = Database.hostInstance.GetMeleeSecundary(rOL);
         //Item Creation XD
-        testItem.StartUp(Database.hostInstance.GetHammerName(), rarity, Database.hostInstance.GetHammerSprite(), NewStats(nIL), Database.hostInstance.GetHammerObject(), nIL);
+        testItem.StartUp(Database.hostInstance.GetHammerName(), rarity, Database.hostInstance.GetHammerSprite(), NewStats(nIL), Database.hostInstance.GetHammerObject(), nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun), Single(secun));
         testItem.StartMelee(Range(), Knockback());
         //end item creation
@@ -231,6 +234,7 @@ public class LootRandomizer : MonoBehaviour {
         Item testItem = new Weapon_Ranged();
         int rarity = Rarity();
         int nIL = NewItemLevel(rarity, currentItemLevel);
+        int mat = Random.Range(0, Database.hostInstance.crossbowMats.Count);
         int degreesSecun = Degrees();
         int degreesPri = Degrees();
         int amountSecun = 1;
@@ -252,7 +256,7 @@ public class LootRandomizer : MonoBehaviour {
         string secun = Database.hostInstance.GetRangedSecundary(rOL);
         
         //Item Creation XD
-        testItem.StartUp(Database.hostInstance.GetCrossbowName(), rarity, Database.hostInstance.GetCrossbowSprite(), NewStats(nIL), Database.hostInstance.GetCrossbowObject(),nIL);
+        testItem.StartUp(Database.hostInstance.GetCrossbowName(), rarity, Database.hostInstance.GetCrossbowSprite(), NewStats(nIL), Database.hostInstance.GetCrossbowObject(),nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL),FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun,Buff(secun), Single(secun));
         testItem.StartRanged(Force(), amountPrim, degreesPri);
         //end item creation

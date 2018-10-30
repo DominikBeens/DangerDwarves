@@ -11,8 +11,6 @@ public class WeaponPrefab : ItemPrefab
     private Action endMelee;
 
     public Transform projectileSpawn;
-    public MeshRenderer renderer;
-    [SerializeField] private Material[] materials;
     [SerializeField] private MeleeWeaponTrail weaponTrail;
     [SerializeField] private string prefabToSpawnOnHit;
     [SerializeField] private LayerMask hitLayerMask;
@@ -143,28 +141,6 @@ public class WeaponPrefab : ItemPrefab
         if (weapon != null)
         {
             myItem = WeaponSlot.currentWeapon;
-            SetWeaponMaterial((myItem as Weapon).materialIndex);
-        }
-    }
-
-    // TODO: I believe this doesnt really do what i want it to do. Find a better way to sync weapon materials.
-    // We should probably just add the materialindex to get generated in the lootmanager.
-    private void SetWeaponMaterial(int? index)
-    {
-        if (index == null)
-        {
-            if (materials.Length > 0)
-            {
-                int randomMat = UnityEngine.Random.Range(0, materials.Length);
-                renderer.material = materials[randomMat];
-                (myItem as Weapon).materialIndex = randomMat;
-
-                photonView.RPC("SyncMaterial", RpcTarget.AllBuffered, randomMat);
-            }
-        }
-        else
-        {
-            renderer.material = materials[(int)index];
         }
     }
 
@@ -185,12 +161,6 @@ public class WeaponPrefab : ItemPrefab
         SpawnDroppedItemLabel();
 
         //DroppedItemManager.instance.RegisterDroppedItem(photonView.ViewID, myItem);
-    }
-
-    [PunRPC]
-    private void SyncMaterial(int index)
-    {
-        SetWeaponMaterial(index);
     }
 
     [PunRPC]

@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4984602334252335789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 8e45983f7a5788f4d993d6bf0bd121b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4984602334252734509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4984602334250434637 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 8e45983f7a5788f4d993d6bf0bd121b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4984602334252734509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &120610579550423224
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,18 +115,6 @@ Transform:
   m_Father: {fileID: 8136903220673741615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4984602334252335789 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 8e45983f7a5788f4d993d6bf0bd121b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4984602334252734509}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &4984602334250434637 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 8e45983f7a5788f4d993d6bf0bd121b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4984602334252734509}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5980796425491674147
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,15 +180,14 @@ MonoBehaviour:
       defense: 0
     prefabIndex: 0
     itemLevel: 1
+    materialIndex: 0
+  itemType: 2
   interactCollider: {fileID: 1072848850438641678}
   objectCollider: {fileID: 2062470117242574286}
   weaponRarityParticles: []
   dropRotationAdjustment: {x: 0, y: 0, z: 0}
-  projectileSpawn: {fileID: 5808629879463845336}
   renderer: {fileID: 4984602334250434637}
-  materials:
-  - {fileID: 2100000, guid: 1fe5fbfc50e1feb478e5b63022716c23, type: 2}
-  - {fileID: 2100000, guid: 613aeca4d573d534e8f445844e20a49e, type: 2}
+  projectileSpawn: {fileID: 5808629879463845336}
   weaponTrail: {fileID: 2483850538173498881}
   prefabToSpawnOnHit: HitMarker
   hitLayerMask:

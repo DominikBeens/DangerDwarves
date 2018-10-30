@@ -12,6 +12,24 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 376244304596455639}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5778402262759134458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5208117306376314112, guid: 63676f157ffb1ce43a71855df562642b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1763142926966032890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7426219749928940997 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9185314240386087999, guid: 63676f157ffb1ce43a71855df562642b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1763142926966032890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8361679534065160379 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7817499212812523841, guid: 63676f157ffb1ce43a71855df562642b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1763142926966032890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &688917379826458348
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,18 +103,6 @@ Transform:
   m_Father: {fileID: 8136903220673741615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &5778402262759134458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5208117306376314112, guid: 63676f157ffb1ce43a71855df562642b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1763142926966032890}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &7426219749928940997 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 9185314240386087999, guid: 63676f157ffb1ce43a71855df562642b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1763142926966032890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5980796425491674147
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,17 +166,16 @@ MonoBehaviour:
       defense: 0
     prefabIndex: 0
     itemLevel: 1
+    materialIndex: 0
+  itemType: 5
   interactCollider: {fileID: 2291722069947913747}
   objectCollider: {fileID: 7455363917724103159}
   weaponRarityParticles:
   - {fileID: 7426219749928940997}
   - {fileID: 8361679534065160379}
   dropRotationAdjustment: {x: 0, y: 0, z: 0}
-  projectileSpawn: {fileID: 5808629879463845336}
   renderer: {fileID: 376244304594553015}
-  materials:
-  - {fileID: 2100000, guid: 7fb772bcb1ab81b4f912fe76639dc6cd, type: 2}
-  - {fileID: 2100000, guid: 761bbbf31d50ddc419438edd2dfa5834, type: 2}
+  projectileSpawn: {fileID: 5808629879463845336}
   weaponTrail: {fileID: 0}
   prefabToSpawnOnHit: 
   hitLayerMask:
@@ -227,12 +232,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.16, z: 0.52}
   m_Center: {x: 0, y: 0, z: 0.14}
---- !u!198 &8361679534065160379 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7817499212812523841, guid: 63676f157ffb1ce43a71855df562642b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1763142926966032890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &376244304596455639
 PrefabInstance:
   m_ObjectHideFlags: 0

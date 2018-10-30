@@ -31,40 +31,43 @@ public class Database : MonoBehaviour {
     [SerializeField] private List<string> oWNames = new List<string>();
     public List<Sprite> oWSprite = new List<Sprite>();
     public List<GameObject> oWObject = new List<GameObject>();
+    public List<Material> cleaverMats;
 
     [Header("Crossbow")]
     [SerializeField] private List<string> crossbowNames = new List<string>();
     public List<Sprite> crossbowSprite = new List<Sprite>();
     public List<GameObject> crossbowObject = new List<GameObject>();
+    public List<Material> crossbowMats;
 
     [Header("Axe")]
     [SerializeField] private List<string> axeNames = new List<string>();
     public List<Sprite> axeSprite = new List<Sprite>();
     public List<GameObject> axeObject = new List<GameObject>();
+    public List<Material> axeMats;
 
     [Header("sword")]
     [SerializeField] private List<string> swordNames = new List<string>();
     public List<Sprite> swordSprite = new List<Sprite>();
     public List<GameObject> swordObject = new List<GameObject>();
+    public List<Material> swordMats;
 
     [Header("Hammer")]
     [SerializeField] private List<string> hammerNames = new List<string>();
     public List<Sprite> hammerSprite = new List<Sprite>();
     public List<GameObject> hammerObject = new List<GameObject>();
+    public List<Material> hammerMats;
 
     [Header("Armor")]
     [Header("Helmet")]
     [SerializeField] private List<string> helmetNames = new List<string>();
     public List<Sprite> helmetSprite = new List<Sprite>();
     public List<GameObject> helmetObject = new List<GameObject>();
+    public List<Material> chefsHatMats;
 
     [Header("Trinket")]
     [SerializeField] private List<string> trinketNames = new List<string>();
     public List<Sprite> trinketSprite = new List<Sprite>();
     public List<GameObject> trinketObject = new List<GameObject>();
-
-
-
 
     public void Awake()
     {
