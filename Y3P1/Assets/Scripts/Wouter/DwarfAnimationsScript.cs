@@ -126,9 +126,9 @@ public class DwarfAnimationsScript : MonoBehaviour
         myAnim.SetTrigger("Pickup");
     }
 
-    public void Drink()
+    public void Oil()
     {
-        myAnim.SetTrigger("Drink");
+        myAnim.SetTrigger("Oil");
     }
 
     public bool CanEquipRanged()

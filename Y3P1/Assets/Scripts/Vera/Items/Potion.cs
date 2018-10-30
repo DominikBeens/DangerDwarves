@@ -56,7 +56,7 @@ public class Potion : Item
         {
             nextDrinkTime = Time.time + potionDrinkCooldown;
             Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
-            Player.localPlayer.dwarfAnimController.Drink();
+            Player.localPlayer.dwarfAnimController.Oil();
         }
     }
 
@@ -66,19 +66,19 @@ public class Potion : Item
         {
             case StatusEffects.StatusEffectType.Bleed:
 
-                return "Potion of Bleeding";
+                return "Blood Imbue";
             case StatusEffects.StatusEffectType.Slow:
 
-                return "Potion of Slowness";
+                return "Slowness Imbue";
             case StatusEffects.StatusEffectType.ArmorBreak:
 
-                return "Potion of Broken Armor";
+                return "Broken Armor Imbue";
             case StatusEffects.StatusEffectType.WeaponBreak:
 
-                return "Potion of Broken Weapons";
+                return "Broken Weapons Imbue";
             case StatusEffects.StatusEffectType.Poison:
 
-                return "Potion of Poison";
+                return "Poison Imbue";
             default:
 
                 return "StatusEffectType Not Found! (Potion.GetPotionName())";
@@ -91,16 +91,16 @@ public class Potion : Item
         {
             case ItemRarity.common:
 
-                return 4f;
+                return 6f;
             case ItemRarity.rare:
 
-                return 5.5f;
+                return 8f;
             case ItemRarity.epic:
 
-                return 7f;
+                return 11f;
             case ItemRarity.legendary:
 
-                return 10f;
+                return 15f;
             default:
 
                 return buffDuration;
