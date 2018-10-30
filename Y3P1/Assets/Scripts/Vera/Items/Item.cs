@@ -12,8 +12,9 @@ public class Item
     // public GameObject itemPrefab;
     public int prefabIndex;
     public int itemLevel = -1;
+    public int materialIndex = 0;
 
-    public virtual void StartUp(string name, int rarity,int Mysprite,Stats myStat,int myObj,int iLevel)
+    public virtual void StartUp(string name, int rarity,int Mysprite,Stats myStat,int myObj,int iLevel,int material = 0)
     {
         itemName = name;
         itemRarity = (ItemRarity)rarity;
@@ -21,6 +22,7 @@ public class Item
         myStats = myStat;
         prefabIndex = myObj;
         itemLevel = iLevel;
+        materialIndex = material;
     }
 
     public void SendInfo()

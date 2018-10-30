@@ -13,12 +13,14 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
 
     public Item myItem;
 
-
+    public enum ItemType { Undefined, Sword, Axe, Hammer, Cleaver, Crossbow, Chefshat }
+    public ItemType itemType;
 
     [SerializeField] protected GameObject interactCollider;
     [SerializeField] protected Collider objectCollider;
     [SerializeField] protected List<ParticleSystem> weaponRarityParticles = new List<ParticleSystem>();
     [SerializeField] protected Vector3 dropRotationAdjustment;
+    [SerializeField] protected Renderer renderer;
 
     protected virtual void Awake()
     {
@@ -37,6 +39,7 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
 
         if (!string.IsNullOrEmpty(myItem.itemName))
         {
+            SetMaterial();
             SetRarityParticleColors();
         }
     }
@@ -93,6 +96,39 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
         {
             PhotonNetwork.RemoveRPCs(photonView);
             PhotonNetwork.Destroy(gameObject);
+        }
+    }
+
+    private void SetMaterial()
+    {
+        switch (itemType)
+        {
+            case ItemType.Undefined:
+                break;
+            case ItemType.Sword:
+
+                renderer.material = Database.hostInstance.swordMats[myItem.materialIndex];
+                break;
+            case ItemType.Axe:
+
+                renderer.material = Database.hostInstance.axeMats[myItem.materialIndex];
+                break;
+            case ItemType.Hammer:
+
+                renderer.material = Database.hostInstance.hammerMats[myItem.materialIndex];
+                break;
+            case ItemType.Cleaver:
+
+                renderer.material = Database.hostInstance.cleaverMats[myItem.materialIndex];
+                break;
+            case ItemType.Crossbow:
+
+                renderer.material = Database.hostInstance.crossbowMats[myItem.materialIndex];
+                break;
+            case ItemType.Chefshat:
+
+                renderer.material = Database.hostInstance.chefsHatMats[myItem.materialIndex];
+                break;
         }
     }
 

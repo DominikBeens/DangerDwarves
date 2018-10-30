@@ -106,10 +106,13 @@ MonoBehaviour:
       defense: 0
     prefabIndex: 0
     itemLevel: 1
+    materialIndex: 0
+  itemType: 0
   interactCollider: {fileID: 8306164770073976704}
   objectCollider: {fileID: 1181897410327462403}
   weaponRarityParticles: []
   dropRotationAdjustment: {x: -90, y: 0, z: 0}
+  renderer: {fileID: 727557903425214021}
 --- !u!114 &4555522520552425865
 MonoBehaviour:
   m_ObjectHideFlags: 0

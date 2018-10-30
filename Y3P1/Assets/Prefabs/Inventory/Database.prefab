@@ -97,6 +97,9 @@ MonoBehaviour:
   - {fileID: 5980796425491674147, guid: c669be2b4a229374c890df3aed91f6ff, type: 3}
   - {fileID: 5980796425491674147, guid: b2d30bc724e18014f99f542c82a36f73, type: 3}
   - {fileID: 5980796425491674147, guid: 0e5da5678f761484b94187a4b2c0acb2, type: 3}
+  cleaverMats:
+  - {fileID: 2100000, guid: af26dae09470cdc42b10103b203c3d90, type: 2}
+  - {fileID: 2100000, guid: 22b78ae0019076f41b9604921a066441, type: 2}
   crossbowNames:
   - Bow
   - Crossbow
@@ -111,6 +114,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 378230571bbf3c4499cb85633d3afffd, type: 3}
   crossbowObject:
   - {fileID: 5980796425491674147, guid: 11c494545ececfd42a01d9632e35e826, type: 3}
+  crossbowMats:
+  - {fileID: 2100000, guid: 7fb772bcb1ab81b4f912fe76639dc6cd, type: 2}
+  - {fileID: 2100000, guid: 761bbbf31d50ddc419438edd2dfa5834, type: 2}
   axeNames:
   - Axe
   - Great Axe
@@ -129,6 +135,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c396ab04836bc445b9cae6ad436b9d7, type: 3}
   axeObject:
   - {fileID: 5980796425491674147, guid: edce065c4f7d2e64db6390cafb86c7ed, type: 3}
+  axeMats:
+  - {fileID: 2100000, guid: 1fe5fbfc50e1feb478e5b63022716c23, type: 2}
+  - {fileID: 2100000, guid: 613aeca4d573d534e8f445844e20a49e, type: 2}
   swordNames:
   - Sword
   - Greatsword
@@ -146,6 +155,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
   swordObject:
   - {fileID: 5980796425491674147, guid: 9dfb24b8158f3504f83310b91b58ed3e, type: 3}
+  swordMats:
+  - {fileID: 2100000, guid: 7080954b9df783642b969daccde4bfa9, type: 2}
+  - {fileID: 2100000, guid: 8685bf7c607317d4f869b27368cb3b28, type: 2}
   hammerNames:
   - Hammer
   - Dwarven Hammer
@@ -162,6 +174,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7f4d7586b71bc87449ea18483b51c4b1, type: 3}
   hammerObject:
   - {fileID: 5980796425491674147, guid: af6855acc7d5fc143aae18749f17179c, type: 3}
+  hammerMats:
+  - {fileID: 2100000, guid: fdc3c8fbca542844699de626d6c8104c, type: 2}
+  - {fileID: 2100000, guid: e5155761c6cced14eafd332e1f1d9141, type: 2}
   helmetNames:
   - helmet
   - Warrior Helmet
@@ -178,6 +193,13 @@ MonoBehaviour:
   - {fileID: 2789109688068099712, guid: dc1d13192ebeafe4db451921434928f0, type: 3}
   - {fileID: 727557903423277189, guid: 70ff8413c44dc2e4b94f06eb56c1edd5, type: 3}
   - {fileID: 6033659611258288555, guid: 8984756be7e97484e9def264afbaff12, type: 3}
+  chefsHatMats:
+  - {fileID: 2100000, guid: 24d1634f3ce96764d9a19e0d89f5d3bc, type: 2}
+  - {fileID: 2100000, guid: ed7c36e8423527b43af925c543f25453, type: 2}
+  - {fileID: 2100000, guid: 86e358cf9819c0e4e874889474070bd6, type: 2}
+  - {fileID: 2100000, guid: d56b0e9236b5c654fa58366b4364f55c, type: 2}
+  - {fileID: 2100000, guid: 1cf0da0af0f73ec4d8ce820fb35397ae, type: 2}
+  - {fileID: 2100000, guid: 393c594a07580cf4abb8f4946d5b1690, type: 2}
   trinketNames:
   - Arcane Orb
   - Transcendence

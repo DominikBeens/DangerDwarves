@@ -244,15 +244,14 @@ MonoBehaviour:
       defense: 0
     prefabIndex: 0
     itemLevel: 1
+    materialIndex: 0
+  itemType: 4
   interactCollider: {fileID: 1072848850438641678}
   objectCollider: {fileID: 2062470117242574286}
   weaponRarityParticles: []
   dropRotationAdjustment: {x: 0, y: 0, z: 0}
-  projectileSpawn: {fileID: 5808629879463845336}
   renderer: {fileID: 5573537387985034019}
-  materials:
-  - {fileID: 2100000, guid: af26dae09470cdc42b10103b203c3d90, type: 2}
-  - {fileID: 2100000, guid: 22b78ae0019076f41b9604921a066441, type: 2}
+  projectileSpawn: {fileID: 5808629879463845336}
   weaponTrail: {fileID: 2483850538173498881}
   prefabToSpawnOnHit: HitMarker
   hitLayerMask:
