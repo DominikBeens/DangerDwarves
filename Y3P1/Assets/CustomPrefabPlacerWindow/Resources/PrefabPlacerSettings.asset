@@ -52,37 +52,37 @@ MonoBehaviour:
     editorButtonFontStyle: 0
   - prefab: {fileID: 2064648942731819761, guid: 53b9756c27552f34eb7bf76e6cdb730f,
       type: 3}
-    editorWindowName: Ground 1
+    editorWindowName: Ground 1 (Rocks)
     editorButtonColor: {r: 1, g: 0.81239533, b: 0.13679248, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 7476630297232857174, guid: b83eb283e36848245bfbc84797eb2906,
       type: 3}
-    editorWindowName: Ground 2
+    editorWindowName: Ground 2 (Slab)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 5496019365768312710, guid: 3345062642c61674595cfa1d38920ae7,
       type: 3}
-    editorWindowName: Ground 3
+    editorWindowName: Ground 3 (Gravel)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 7428797580688087927, guid: 0139a9ec0c578464d8caf420eea56261,
       type: 3}
-    editorWindowName: Ground 4
+    editorWindowName: Ground 4 (Slabs)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 8661661467337631753, guid: 531839ede6d3e4d4e928c63b76500b07,
       type: 3}
-    editorWindowName: Ground 5
+    editorWindowName: Ground 5 (4 Tiles)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 4356301040548569912, guid: 253813d429987424d8641d0aaf8e6372,
       type: 3}
-    editorWindowName: Ground 6
+    editorWindowName: Ground 6 (Mix)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 4055044590689200724, guid: 201a1b1de8b2db6488151f19de45c3ed,
       type: 3}
-    editorWindowName: Ground 6
+    editorWindowName: Ground 7 (Planks)
     editorButtonColor: {r: 1, g: 0.8117647, b: 0.13725491, a: 1}
     editorButtonFontStyle: 0
   - prefab: {fileID: 200957646521602742, guid: 4ec17ac0a01b42941837e6dfd5ba8a48, type: 3}
