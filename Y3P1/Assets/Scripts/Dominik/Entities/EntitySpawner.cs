@@ -158,6 +158,15 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         return validPos;
     }
 
+    public void ResetSpawner()
+    {
+        canSpawn = true;
+        if (spawnTrigger)
+        {
+            spawnTrigger.enabled = true;
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

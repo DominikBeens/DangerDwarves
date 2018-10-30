@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class ArmoryManager : MonoBehaviour
     public static Item selectedItem;
     public static StatSelectButton.StatToSelect selectedStat;
 
+    private Action<Item> onRightClickInventorySlot;
     private enum ServiceType { RerollSecondary, RerollStats };
 
     [SerializeField] private GameObject armoryCanvas;
@@ -49,7 +51,8 @@ public class ArmoryManager : MonoBehaviour
 
     private void Start()
     {
-        Player.localPlayer.myInventory.OnRightClickInventorySlot += (i) => SelectItem(i);
+        onRightClickInventorySlot = (i) => SelectItem(i);
+        Player.localPlayer.myInventory.OnRightClickInventorySlot += onRightClickInventorySlot;
         Player.localPlayer.myInventory.OnHoverInventorySlot += ToggleHoverSlotCanvas;
     }
 
@@ -240,5 +243,11 @@ public class ArmoryManager : MonoBehaviour
     public bool HasOpenUI()
     {
         return armoryCanvas.activeInHierarchy;
+    }
+
+    private void OnDisable()
+    {
+        Player.localPlayer.myInventory.OnRightClickInventorySlot -= onRightClickInventorySlot;
+        Player.localPlayer.myInventory.OnHoverInventorySlot -= ToggleHoverSlotCanvas;
     }
 }

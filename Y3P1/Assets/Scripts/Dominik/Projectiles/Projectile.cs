@@ -192,7 +192,13 @@ public class Projectile : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prefabToSpawnOnDeath))
         {
-            ObjectPooler.instance.GrabFromPool(prefabToSpawnOnDeath, transform.position, Quaternion.identity);
+            GameObject newSpawn = ObjectPooler.instance.GrabFromPool(prefabToSpawnOnDeath, transform.position, Quaternion.identity);
+
+            AOEEffect aoeComponent = newSpawn.GetComponent<AOEEffect>();
+            if (aoeComponent)
+            {
+                aoeComponent.Initialise(fireData.damage);
+            }
         }
     }
 }
