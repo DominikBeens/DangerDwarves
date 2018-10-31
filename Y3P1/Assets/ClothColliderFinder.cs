@@ -1,21 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Y3P1;
 
-public class ClothColliderFinder : MonoBehaviour {
+public class ClothColliderFinder : MonoBehaviour
+{
 
-    public CapsuleCollider col1;
-    public CapsuleCollider col2;
     public Cloth myCloth;
 
-    private void Start() 
+    private void Start()
     {
-        myCloth = GetComponent<Cloth>();
+        CapsuleCollider[] cols = new CapsuleCollider[]
+            {
+                Player.localPlayer.collider1,
+                Player.localPlayer.collider2
+            };
 
-        col1 = transform.root.Find("CowlCollider1").GetComponent<CapsuleCollider>();
-        col2 = transform.root.Find("CowlCollider2").GetComponent<CapsuleCollider>();
+        myCloth.capsuleColliders = cols;
 
-        myCloth.capsuleColliders[0] = col1;
-        myCloth.capsuleColliders[1] = col2;
+        if (myCloth.capsuleColliders[0] != null && myCloth.capsuleColliders[1] != null)
+        {
+            Debug.LogWarning("Gottem");
+        }
     }
 }
