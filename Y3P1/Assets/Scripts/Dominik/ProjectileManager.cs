@@ -8,7 +8,7 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
 
     public static ProjectileManager instance;
 
-    public enum ProjecileVisual { None, Arrow, Bolt };
+    public enum ProjecileVisual { None, Arrow, Bolt, Bullet };
 
     [System.Serializable]
     public struct ProjectileSettings

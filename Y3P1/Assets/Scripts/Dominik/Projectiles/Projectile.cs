@@ -1,5 +1,6 @@
 ﻿using Photon.Pun;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Y3P1;
 
@@ -24,8 +25,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private bool isEnemyProjectile;
 
     [Header("Visuals")]
-    [SerializeField] private GameObject arrowVisual;
-    [SerializeField] private GameObject boltVisual;
+    [SerializeField] private List<ProjectileVisual> visuals = new List<ProjectileVisual>();
 
     [Header("Status Effect Module")]
     [SerializeField] private bool applyStatusEffect;
@@ -45,6 +45,15 @@ public class Projectile : MonoBehaviour
         public int visual;
     }
     public FireData fireData;
+
+    [Serializable]
+    public struct ProjectileVisual
+    {
+        public ProjectileManager.ProjecileVisual visualType;
+        public GameObject visualObject;
+        public bool showTrail;
+        public Material trailMaterial;
+    }
 
     public virtual void Awake()
     {
@@ -86,41 +95,19 @@ public class Projectile : MonoBehaviour
 
     private void SetVisual()
     {
-        if (!arrowVisual || !boltVisual)
-        {
-            return;
-        }
-
         ProjectileManager.ProjecileVisual visual = (ProjectileManager.ProjecileVisual)fireData.visual;
-        switch (visual)
+        for (int i = 0; i < visuals.Count; i++)
         {
-            case ProjectileManager.ProjecileVisual.None:
-
-                arrowVisual.SetActive(false);
-                boltVisual.SetActive(false);
-                if (trail)
-                {
-                    trail.Emit = false;
-                }
-                break;
-            case ProjectileManager.ProjecileVisual.Arrow:
-
-                arrowVisual.SetActive(true);
-                boltVisual.SetActive(false);
-                if (trail)
-                {
-                    trail.Emit = true;
-                }
-                break;
-            case ProjectileManager.ProjecileVisual.Bolt:
-
-                arrowVisual.SetActive(false);
-                boltVisual.SetActive(true);
-                if (trail)
-                {
-                    trail.Emit = false;
-                }
-                break;
+            if (visuals[i].visualType == visual)
+            {
+                visuals[i].visualObject.SetActive(true);
+                trail.Emit = visuals[i].showTrail;
+                trail.Renderer.material = visuals[i].trailMaterial;
+            }
+            else
+            {
+                visuals[i].visualObject.SetActive(false);
+            }
         }
     }
 

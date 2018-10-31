@@ -22,6 +22,7 @@ public class MeleeWeaponTrail : MonoBehaviour
 
     [SerializeField]
     Material _material;
+    public Material Material { get { return _material; } set { _material = value; } }
 
     [SerializeField]
     float _lifeTime = 1.00f;
@@ -65,6 +66,8 @@ public class MeleeWeaponTrail : MonoBehaviour
     Vector3 _lastCameraPosition2;
     bool _lastFrameEmit = true;
 
+    private Renderer _renderer;
+    public Renderer Renderer { get { return _renderer; } set { _renderer = value; } }
 
     public class Point
     {
@@ -84,7 +87,8 @@ public class MeleeWeaponTrail : MonoBehaviour
         _o.transform.localScale = Vector3.one;
         _o.AddComponent(typeof(MeshFilter));
         _o.AddComponent(typeof(MeshRenderer));
-        _o.GetComponent<Renderer>().material = _material;
+        _renderer = _o.GetComponent<Renderer>();
+        _renderer.material = _material;
         _trailMesh = new Mesh
         {
             name = name + "TrailMesh"
