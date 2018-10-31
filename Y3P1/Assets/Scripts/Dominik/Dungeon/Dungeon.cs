@@ -6,6 +6,8 @@ using Y3P1;
 public class Dungeon : MonoBehaviour 
 {
 
+    private EntitySpawner[] entitySpawners;
+
     [Header("Dungeon Stats")]
     public string dungeonName;
     [TextArea] public string dungeonDescription;
@@ -14,6 +16,11 @@ public class Dungeon : MonoBehaviour
 
     [SerializeField] private Transform startSpawn;
 
+    private void Awake()
+    {
+        entitySpawners = GetComponentsInChildren<EntitySpawner>();
+    }
+
     public void StartDungeon()
     {
 
@@ -21,7 +28,10 @@ public class Dungeon : MonoBehaviour
 
     public void CloseDungeon()
     {
-
+        for (int i = 0; i < entitySpawners.Length; i++)
+        {
+            entitySpawners[i].ResetSpawner();
+        }
     }
 
     public void TeleportToDungeon()
