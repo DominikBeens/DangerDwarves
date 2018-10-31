@@ -7,6 +7,7 @@ TagManager:
   - Environment
   - PvPZone
   - Torch
+  - CowlCollider
   layers:
   - Default
   - TransparentFX
