@@ -79,6 +79,23 @@ public class LootRandomizer : MonoBehaviour {
         return LootCH(cI);
     }
 
+    private Item LootRanged(int cI)
+    {
+        int rand = Random.Range(0, 2);
+        Item newItem = null;
+        switch (rand)
+        {
+            case 0:
+                newItem = LootStaff(cI);
+                break;
+            case 1:
+                newItem = LootCrossbow(cI);
+                break;
+
+        }
+        return newItem;
+    }
+
     private Item LootAHelmet(int cI)
     {
         Item newItem = null;
@@ -98,7 +115,7 @@ public class LootRandomizer : MonoBehaviour {
         switch (randomType)
         {
             case 0:
-                newItem = LootCrossbow(cI);
+                newItem = LootRanged(cI);
                 break;
             case 1:
                 newItem = LootAxe(cI);
@@ -275,6 +292,41 @@ public class LootRandomizer : MonoBehaviour {
         //Item Creation XD
         testItem.StartUp(Database.hostInstance.GetCrossbowName(), rarity, Database.hostInstance.GetCrossbowSprite(), NewStats(nIL), Database.hostInstance.GetCrossbowObject(),nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL),FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun,Buff(secun), Single(secun));
+        testItem.StartRanged(Force(), amountPrim, degreesPri);
+        //end item creation
+
+        test.Add((Weapon_Ranged)testItem);
+        return testItem;
+    }
+
+    private Item LootStaff(int currentItemLevel)
+    {
+        Item testItem = new Weapon_Ranged();
+        int rarity = Rarity();
+        int nIL = NewItemLevel(rarity, currentItemLevel);
+        int degreesSecun = Degrees();
+        int degreesPri = Degrees();
+        int amountSecun = 1;
+        int amountPrim = 1;
+        if (degreesSecun != 0)
+        {
+            amountSecun = AmountSecun();
+        }
+        if (degreesPri != 0)
+        {
+            amountPrim = AmountPrimary();
+        }
+
+        bool rOL = false;
+        if (rarity >= 2)
+        {
+            rOL = true;
+        }
+        string secun = Database.hostInstance.GetRangedSecundary(rOL);
+
+        //Item Creation XD
+        testItem.StartUp(Database.hostInstance.GetStaffName(), rarity, Database.hostInstance.GetStaffSprite(), NewStats(nIL), Database.hostInstance.GetStaffObject(), nIL);
+        testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun, Buff(secun), Single(secun));
         testItem.StartRanged(Force(), amountPrim, degreesPri);
         //end item creation
 

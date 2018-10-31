@@ -117,6 +117,13 @@ MonoBehaviour:
   crossbowMats:
   - {fileID: 2100000, guid: 7fb772bcb1ab81b4f912fe76639dc6cd, type: 2}
   - {fileID: 2100000, guid: 761bbbf31d50ddc419438edd2dfa5834, type: 2}
+  StaffNames:
+  - Demon staff
+  staffSprite:
+  - {fileID: 21300000, guid: d6aa08abd7d967b409f97a0a07b927a3, type: 3}
+  - {fileID: 21300000, guid: c268f624bcf4ead4e89ebc1d8c3ed5ad, type: 3}
+  staffObject:
+  - {fileID: 4600826014966429009, guid: fae04cefb0898214caf6d47a4c2c0ced, type: 3}
   axeNames:
   - Axe
   - Great Axe
@@ -178,7 +185,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fdc3c8fbca542844699de626d6c8104c, type: 2}
   - {fileID: 2100000, guid: e5155761c6cced14eafd332e1f1d9141, type: 2}
   helmetNames:
-  - helmet
+  - Helmet
   - Warrior Helmet
   - Commander Helmet
   - Helmet of the Dwarven King
