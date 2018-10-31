@@ -13,7 +13,7 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
 
     public Item myItem;
 
-    public enum ItemType { Undefined, Sword, Axe, Hammer, Cleaver, Crossbow, Chefshat, Cowl }
+    public enum ItemType { Undefined, Sword, Axe, Hammer, Cleaver, Crossbow, Chefshat, Cowl, DemonStaff }
     public ItemType itemType;
 
     [SerializeField] protected GameObject interactCollider;

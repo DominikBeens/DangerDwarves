@@ -56,7 +56,8 @@ public class WeaponPrefab : ItemPrefab
                 amount = weapon.amountOfProjectiles,
                 coneOfFireInDegrees = weapon.coneOfFireInDegrees,
                 mousePos = PlayerController.mouseInWorldPos,
-                projectileOwnerID = Player.localPlayer.photonView.ViewID
+                projectileOwnerID = Player.localPlayer.photonView.ViewID,
+                projectileVisual = ProjectileManager.instance.GetProjectileVisual(itemType)
             };
             ProjectileManager.instance.FireProjectile(data);
         }
@@ -126,7 +127,8 @@ public class WeaponPrefab : ItemPrefab
             amount = weapon.secondaryAmountOfProjectiles,
             coneOfFireInDegrees = weapon.secondaryConeOfFireInDegrees,
             mousePos = PlayerController.mouseInWorldPos,
-            projectileOwnerID = Player.localPlayer.photonView.ViewID
+            projectileOwnerID = Player.localPlayer.photonView.ViewID,
+            projectileVisual = ProjectileManager.instance.GetProjectileVisual(itemType)
         };
         ProjectileManager.instance.FireProjectile(data);
     }

@@ -22,6 +22,10 @@ public class Projectile : MonoBehaviour
     [SerializeField] private bool stayOnOwner;
     [SerializeField] private bool isEnemyProjectile;
 
+    [Header("Visuals")]
+    [SerializeField] private GameObject arrowVisual;
+    [SerializeField] private GameObject boltVisual;
+
     [Header("Status Effect Module")]
     [SerializeField] private bool applyStatusEffect;
     [SerializeField] private StatusEffects.StatusEffectType effectToApply;
@@ -37,6 +41,7 @@ public class Projectile : MonoBehaviour
         public int damage;
         public Vector3 mousePos;
         public int ownerID;
+        public int visual;
     }
     public FireData fireData;
 
@@ -72,8 +77,32 @@ public class Projectile : MonoBehaviour
     {
         this.fireData = fireData;
         owner = stayOnOwner ? PhotonNetwork.GetPhotonView(fireData.ownerID).transform : null;
+        SetVisual();
 
         OnFire(this);
+    }
+
+    private void SetVisual()
+    {
+        ProjectileManager.ProjecileVisual visual = (ProjectileManager.ProjecileVisual)fireData.visual;
+        switch (visual)
+        {
+            case ProjectileManager.ProjecileVisual.None:
+
+                arrowVisual.SetActive(false);
+                boltVisual.SetActive(false);
+                break;
+            case ProjectileManager.ProjecileVisual.Arrow:
+
+                arrowVisual.SetActive(true);
+                boltVisual.SetActive(false);
+                break;
+            case ProjectileManager.ProjecileVisual.Bolt:
+
+                arrowVisual.SetActive(false);
+                boltVisual.SetActive(true);
+                break;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

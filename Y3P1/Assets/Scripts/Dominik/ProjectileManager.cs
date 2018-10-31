@@ -8,6 +8,8 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
 
     public static ProjectileManager instance;
 
+    public enum ProjecileVisual { None, Arrow, Bolt };
+
     [System.Serializable]
     public struct ProjectileSettings
     {
@@ -30,6 +32,7 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
         public int coneOfFireInDegrees = 0;
         public Vector3 mousePos = new Vector3();
         public int projectileOwnerID = 9999;
+        public ProjecileVisual projectileVisual = ProjecileVisual.None;
     }
 
     private void Awake()
@@ -55,11 +58,12 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
             data.amount,
             data.coneOfFireInDegrees,
             data.mousePos,
-            data.projectileOwnerID);
+            data.projectileOwnerID,
+            (int)data.projectileVisual);
     }
 
     [PunRPC]
-    private void FireProjectileRPC(Vector3 position, Quaternion rotation, string projectilePoolName, float speed, int damage, int amountOfProjectiles = 1, int coneOfFireInDegrees = 0, Vector3 mousePos = new Vector3(), int ownerID = 9999)
+    private void FireProjectileRPC(Vector3 position, Quaternion rotation, string projectilePoolName, float speed, int damage, int amountOfProjectiles = 1, int coneOfFireInDegrees = 0, Vector3 mousePos = new Vector3(), int ownerID = 9999, int projectileVisual = 0)
     {
         // Firing in a straight line.
         if (coneOfFireInDegrees == 0)
@@ -72,7 +76,8 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
                     speed = speed,
                     damage = damage,
                     mousePos = mousePos,
-                    ownerID = ownerID
+                    ownerID = ownerID,
+                    visual = projectileVisual
                 });
             }
         }
@@ -93,7 +98,8 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
                     speed = speed,
                     damage = damage,
                     mousePos = mousePos,
-                    ownerID = ownerID
+                    ownerID = ownerID,
+                    visual = projectileVisual
                 });
 
                 rot.y += angleStep;
@@ -149,5 +155,18 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
         }
 
         return defaultSpeed;
+    }
+
+    public ProjecileVisual GetProjectileVisual(ItemPrefab.ItemType itemType)
+    {
+        switch (itemType)
+        {
+            case ItemPrefab.ItemType.Crossbow:
+                return ProjecileVisual.Arrow;
+            case ItemPrefab.ItemType.DemonStaff:
+                return ProjecileVisual.Bolt;
+        }
+
+        return ProjecileVisual.None;
     }
 }

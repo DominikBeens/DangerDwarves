@@ -89,4 +89,5 @@ MonoBehaviour:
   - OpenDoor
   - SyncActiveDungeon
   - SyncCancelDungeon
+  - SyncTeleportEffect
   DisableAutoOpenWizard: 1
