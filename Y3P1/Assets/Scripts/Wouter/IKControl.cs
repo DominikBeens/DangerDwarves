@@ -11,7 +11,10 @@ public class IKControl : MonoBehaviour, IPunObservable
     public bool extrabool = true;
     public Transform rightHandObj = null;
     public Transform rightHandObjRot;
+    public Transform leftHandObj = null;
+    public Transform leftHandObjRot;
     public Transform lookObj = null;
+
 
     private void Awake()
     {
@@ -42,6 +45,15 @@ public class IKControl : MonoBehaviour, IPunObservable
                     animator.SetIKPosition(AvatarIKGoal.RightHand, rightHandObj.position);
                     animator.SetIKRotation(AvatarIKGoal.RightHand, rightHandObjRot .rotation);
                 }
+                if(leftHandObj != null)
+                {
+                    animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+                    animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+                    //animator.SetIKPosition(AvatarIKGoal.RightHand, PlayerController.mouseInWorldPos);
+                    animator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandObj.position);
+                    animator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandObjRot.rotation);
+                }
+
             }
             //if the IK is not active, set the position and rotation of the hand and head back to the original position
             else
