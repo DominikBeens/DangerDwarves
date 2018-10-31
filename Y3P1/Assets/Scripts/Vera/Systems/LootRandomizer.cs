@@ -76,12 +76,18 @@ public class LootRandomizer : MonoBehaviour {
 
     public Item LootChefsHat(int cI)
     {
-        return LootOtherHelmet(cI);
+        return LootCH(cI);
     }
 
     private Item LootAHelmet(int cI)
     {
-        Item newItem = LootHelmet(cI);
+        Item newItem = null;
+        if (Random.Range(0,100) < 80)
+        {
+            newItem = LootHelmet(cI);
+            return newItem;
+        }
+        newItem = LootOtherHelmet(cI);
         return newItem;
     }
 
@@ -319,6 +325,18 @@ public class LootRandomizer : MonoBehaviour {
         int myItem = Database.hostInstance.OH();
         //Item Creation XD
         testItem.StartUp(Database.hostInstance.GetOHName(myItem), rarity, Database.hostInstance.GetOHSprite(myItem), NewStats(nIL), Database.hostInstance.GetOHObject(myItem), nIL);
+        //end item creation
+        return testItem;
+    }
+
+    private Item LootCH(int currentItemLevel)
+    {
+        Item testItem = new Helmet();
+        int rarity = Rarity();
+        int nIL = NewItemLevel(rarity, currentItemLevel);
+        int myItem = Database.hostInstance.CH();
+        //Item Creation XD
+        testItem.StartUp(Database.hostInstance.GetCHName(myItem), rarity, Database.hostInstance.GetCHSprite(myItem), NewStats(nIL), Database.hostInstance.GetCHObject(myItem), nIL);
         //end item creation
         return testItem;
     }
