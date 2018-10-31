@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 117853655}
   m_Layer: 0
   m_Name: CowlCollider2
-  m_TagString: CowlCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 1285813299}
   m_Layer: 0
   m_Name: CowlCollider1
-  m_TagString: CowlCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3414,6 +3414,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 925961011351208656}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2745025847128751888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3802139526504440224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7427684269891178227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6203849363356442577, guid: c0e03436bb6523a41ac837fa86aa5d9b,
@@ -3672,6 +3678,7 @@ Transform:
   - {fileID: 2055093408466149069}
   - {fileID: 3178491925162334221}
   - {fileID: 7214819229167513878}
+  - {fileID: 2745025847128751888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3729,6 +3736,7 @@ MonoBehaviour:
   playerAppearance: {fileID: 0}
   reviveZone: {fileID: 0}
   cameraShake: {fileID: 2892370508811539411}
+  teleporter: {fileID: 0}
 --- !u!114 &7267311020839716367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7300,6 +7308,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e03436bb6523a41ac837fa86aa5d9b, type: 3}
+--- !u!1001 &3802139526504440224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 8464704438644112515}
+    m_Modifications:
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358859722758495920, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212890795569366332, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleporter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379287191861182112, guid: 85a028a8aa5e8c14c8e0d3b851e931b0,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85a028a8aa5e8c14c8e0d3b851e931b0, type: 3}
 --- !u!1001 &5747452515737573405
 PrefabInstance:
   m_ObjectHideFlags: 0

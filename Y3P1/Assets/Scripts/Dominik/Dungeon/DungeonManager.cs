@@ -8,6 +8,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
 
     public static DungeonManager instance;
     public static Dungeon openDungeon;
+    private static bool isInDungeon;
 
     [SerializeField] private GameObject dungeonCanvas;
     [SerializeField] private GameObject dungeonOverview;
@@ -83,6 +84,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
             if (allDungeons[i].dungeonName == dungeonName)
             {
                 openDungeon = allDungeons[i];
+                openDungeon.StartDungeon();
 
                 DungeonUI newDungeonUI = Instantiate(dungeonUIPrefab, openDungeonSpawn.position, Quaternion.identity, openDungeonSpawn).GetComponent<DungeonUI>();
                 newDungeonUI.Setup(openDungeon);
@@ -105,6 +107,11 @@ public class DungeonManager : MonoBehaviourPunCallbacks
         openDungeon = null;
         Destroy(openDungeonSpawn.childCount > 0 ? openDungeonSpawn.GetChild(0).gameObject : null);
         ToggleView();
+
+        if (isInDungeon)
+        {
+            TeleportOutOfDungeon("Dungeon has been closed.");
+        }
     }
 
     private void ToggleView()
@@ -115,15 +122,17 @@ public class DungeonManager : MonoBehaviourPunCallbacks
 
     public void TeleportToDungeon(string dungeonName)
     {
-        openDungeon.TeleportToDungeon();
+        Player.localPlayer.teleporter.Teleport(openDungeon.startSpawn.position);
         ToggleDungeonCanvas(false);
         insideDungeonCanvas.SetActive(true);
+        isInDungeon = true;
     }
 
-    public void TeleportOutOfDungeon()
+    public void TeleportOutOfDungeon(string message)
     {
-        Player.localPlayer.transform.position = Vector3.zero;
+        Player.localPlayer.teleporter.Teleport(Vector3.zero, message);
         insideDungeonCanvas.SetActive(false);
+        isInDungeon = false;
     }
 
     public bool HasOpenUI()

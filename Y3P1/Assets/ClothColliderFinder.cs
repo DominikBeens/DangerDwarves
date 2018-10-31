@@ -15,10 +15,5 @@ public class ClothColliderFinder : MonoBehaviour
             };
 
         myCloth.capsuleColliders = cols;
-
-        if (myCloth.capsuleColliders[0] != null && myCloth.capsuleColliders[1] != null)
-        {
-            Debug.LogWarning("Gottem");
-        }
     }
 }

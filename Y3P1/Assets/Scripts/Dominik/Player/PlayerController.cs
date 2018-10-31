@@ -40,19 +40,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private void InitialiseEvents()
     {
-        Player.localPlayer.entity.OnDeath.AddListener(() =>
-        {
-            canControl = false;
-            Player.localPlayer.rb.velocity = Vector3.zero;
-        });
-        Player.localPlayer.entity.OnRevive.AddListener(() => canControl = true);
+        Player.localPlayer.entity.OnDeath.AddListener(() => Freeze(true));
+        Player.localPlayer.entity.OnRevive.AddListener(() => Freeze(false));
 
-        Player.localPlayer.reviveZone.OnStartRevive += () =>
-        {
-            canControl = false;
-            Player.localPlayer.rb.velocity = Vector3.zero;
-        };
-        Player.localPlayer.reviveZone.OnEndRevive += () => canControl = true;
+        Player.localPlayer.reviveZone.OnStartRevive += () => Freeze(true);
+        Player.localPlayer.reviveZone.OnEndRevive += () => Freeze(false);
+
+        Player.localPlayer.teleporter.OnStartTeleport += () => Freeze(true);
+        Player.localPlayer.teleporter.OnEndTeleport += () => Freeze(false);
     }
 
     private void Update()
@@ -176,6 +171,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
             body.rotation = Quaternion.Slerp(body.rotation, dodgeRotation, Time.deltaTime * 10);
             Player.localPlayer.rb.AddForce(dodgeVelocity * Time.deltaTime * dodgeSpeed, ForceMode.Force);
         }
+    }
+
+    private void Freeze(bool b)
+    {
+        canControl = !b;
+        Player.localPlayer.rb.velocity = Vector3.zero;
     }
 
     public void AdjustMoveSpeed(float value)

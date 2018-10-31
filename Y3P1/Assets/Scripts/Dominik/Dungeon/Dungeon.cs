@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Photon.Pun;
 using UnityEngine;
-using Y3P1;
 
-public class Dungeon : MonoBehaviour 
+public class Dungeon : MonoBehaviour
 {
 
     private EntitySpawner[] entitySpawners;
@@ -14,7 +12,7 @@ public class Dungeon : MonoBehaviour
 
     [Space(10)]
 
-    [SerializeField] private Transform startSpawn;
+    public Transform startSpawn;
 
     private void Awake()
     {
@@ -23,7 +21,10 @@ public class Dungeon : MonoBehaviour
 
     public void StartDungeon()
     {
-
+        if (PhotonNetwork.IsMasterClient)
+        {
+            // Generate difficulty.
+        }
     }
 
     public void CloseDungeon()
@@ -32,10 +33,10 @@ public class Dungeon : MonoBehaviour
         {
             entitySpawners[i].ResetSpawner();
         }
-    }
 
-    public void TeleportToDungeon()
-    {
-        Player.localPlayer.transform.position = startSpawn.position;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            // Cleanup all alive enemies and drops.
+        }
     }
 }

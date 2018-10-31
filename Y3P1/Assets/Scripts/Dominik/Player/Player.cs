@@ -42,6 +42,7 @@ namespace Y3P1
         [HideInInspector] public PlayerAppearance playerAppearance;
         [HideInInspector] public ReviveZone reviveZone;
         [HideInInspector] public CameraShake cameraShake;
+        [HideInInspector] public Teleporter teleporter;
         #endregion
 
         private void Awake()
@@ -73,6 +74,7 @@ namespace Y3P1
             playerAppearance = GetComponentInChildren<PlayerAppearance>();
             reviveZone = GetComponentInChildren<ReviveZone>();
             cameraShake = GetComponentInChildren<CameraShake>();
+            teleporter = GetComponentInChildren<Teleporter>();
         }
 
         private void Initialise()
