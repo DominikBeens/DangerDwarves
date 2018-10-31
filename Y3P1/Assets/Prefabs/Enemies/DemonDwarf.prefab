@@ -359,7 +359,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: db16216c3f288ea4eb77dfefecada55a, type: 2}
+  - {fileID: 2100000, guid: ce5a83fcea7762541ba43ca5bd854dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1291,7 +1291,9 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCords: {x: 0, y: 0, z: 0}
   mystuff: {x: 0, y: 0, z: 0, w: 0}
+  stopLookAtDistance: 1.5
   gettarget: 0
+  extrabool: 1
 --- !u!114 &352168142025584862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ikActive: 1
+  extrabool: 1
   rightHandObj: {fileID: 7631664434875687033}
   rightHandObjRot: {fileID: 7631664434875687033}
   lookObj: {fileID: 7631664434875687033}
@@ -1687,7 +1690,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: db16216c3f288ea4eb77dfefecada55a, type: 2}
+  - {fileID: 2100000, guid: ce5a83fcea7762541ba43ca5bd854dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
