@@ -92,6 +92,21 @@ public class DungeonManager : MonoBehaviourPunCallbacks
         ToggleView();
     }
 
+    public void CancelDungeon(string dungeonName)
+    {
+        photonView.RPC("SyncCancelDungeon", RpcTarget.All);
+        NotificationManager.instance.NewNotification("<color=yellow>" + PhotonNetwork.NickName + "</color> has <b>canceled</b> the dungeon: <color=yellow>" + dungeonName + "</color>!");
+    }
+
+    [PunRPC]
+    private void SyncCancelDungeon()
+    {
+        openDungeon.CloseDungeon();
+        openDungeon = null;
+        Destroy(openDungeonSpawn.childCount > 0 ? openDungeonSpawn.GetChild(0).gameObject : null);
+        ToggleView();
+    }
+
     private void ToggleView()
     {
         dungeonOverview.SetActive(openDungeon == null ? true : false);

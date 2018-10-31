@@ -8675,7 +8675,7 @@ GameObject:
   - component: {fileID: 991123686}
   - component: {fileID: 991123685}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ManualSpawnZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8721,7 +8721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionType: 0
-  lookForTag: 
+  lookForTag: Player
   OnZoneEnterEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -37399,7 +37399,7 @@ MonoBehaviour:
   - {fileID: 6357796064771890802, guid: 824fa7283f7c88c4fb23e3cddbe0d13d, type: 3}
   spawnOnAwake: 0
   spawnImmortal: 0
-  spawnRange: 8
+  spawnRange: 0
   spawnTriggerRange: 0
   spawnAmount: 1
   spawnPreview: {fileID: 0}
@@ -54434,7 +54434,7 @@ GameObject:
   - component: {fileID: 940903705487292758}
   - component: {fileID: 3779195672111386637}
   m_Layer: 13
-  m_Name: PartiseDummySpawner
+  m_Name: PractiseDummySpawner
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

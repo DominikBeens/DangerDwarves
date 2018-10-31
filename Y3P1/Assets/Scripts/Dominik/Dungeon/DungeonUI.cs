@@ -14,6 +14,10 @@ public class DungeonUI : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button startDungeonButton;
     [SerializeField] private Button enterDungeonButton;
+    [SerializeField] private Button cancelDungeonButton;
+
+    [Header("Panels")]
+    [SerializeField] private GameObject optionsPanel;
 
     public void Setup(Dungeon dungeon)
     {
@@ -31,6 +35,8 @@ public class DungeonUI : MonoBehaviour
         {
             startDungeonButton.transform.parent.gameObject.SetActive(DungeonManager.openDungeon != myDungeon);
             enterDungeonButton.transform.parent.gameObject.SetActive(DungeonManager.openDungeon == myDungeon);
+
+            optionsPanel.SetActive(DungeonManager.openDungeon == myDungeon);
         }
     }
 
@@ -38,5 +44,6 @@ public class DungeonUI : MonoBehaviour
     {
         startDungeonButton.onClick.AddListener(() => DungeonManager.instance.ActivateDungeon(myDungeon.dungeonName));
         enterDungeonButton.onClick.AddListener(() => DungeonManager.instance.TeleportToDungeon(myDungeon.dungeonName));
+        cancelDungeonButton.onClick.AddListener(() => DungeonManager.instance.CancelDungeon(myDungeon.dungeonName));
     }
 }
