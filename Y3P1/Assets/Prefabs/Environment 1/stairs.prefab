@@ -1,16 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &406612994249733195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 406612994250125003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &406612994793572095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
     type: 3}
   m_PrefabInstance: {fileID: 406612994793708671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &406612994249733195 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 406612994250125003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &852246990014834479
 GameObject:
@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2332576180939420883
 Transform:
@@ -60,7 +60,7 @@ GameObject:
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6282527786358948874
 Transform:
@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ded54785719a43b4582e80175e49b123, type: 2}
+    - target: {fileID: 100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
 --- !u!1001 &406612994384441878
@@ -225,6 +229,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d3e1cc296a00146b73683cacf00c95, type: 3}
 --- !u!1001 &406612994793708671
@@ -285,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ded54785719a43b4582e80175e49b123, type: 2}
+    - target: {fileID: 100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
 --- !u!1001 &406612995417737873
@@ -362,6 +375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d3e1cc296a00146b73683cacf00c95, type: 3}
