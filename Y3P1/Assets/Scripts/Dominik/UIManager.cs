@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Y3P1;
 
 public class UIManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class UIManager : MonoBehaviour
     {
         get
         {
-            if (BountyManager.instance.HasOpenUI() || SceneManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI())
+            if (BountyManager.instance.HasOpenUI() || SceneManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI() || DungeonManager.instance.HasOpenUI())
             {
                 return true;
             }

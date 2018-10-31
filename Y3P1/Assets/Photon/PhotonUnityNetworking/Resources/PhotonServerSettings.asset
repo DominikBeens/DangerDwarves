@@ -87,4 +87,5 @@ MonoBehaviour:
   - SyncHealthTest
   - LightBrazier
   - OpenDoor
+  - SyncActiveDungeon
   DisableAutoOpenWizard: 1

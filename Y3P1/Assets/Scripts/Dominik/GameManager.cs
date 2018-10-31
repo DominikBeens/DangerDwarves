@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject bountyManagerPrefab;
     [SerializeField] private GameObject projectileManagerPrefab;
     [SerializeField] private GameObject notificationManagerPrefab;
+    [SerializeField] private GameObject dungeonManagerPrefab;
     //[SerializeField] private GameObject droppedItemManagerPrefab;
 
     private void Awake()
@@ -48,6 +49,11 @@ public class GameManager : MonoBehaviourPunCallbacks
             if (!FindObjectOfType<NotificationManager>())
             {
                 PhotonNetwork.InstantiateSceneObject(notificationManagerPrefab.name, Vector3.zero, Quaternion.identity);
+            }
+
+            if (!FindObjectOfType<DungeonManager>())
+            {
+                PhotonNetwork.InstantiateSceneObject(dungeonManagerPrefab.name, Vector3.zero, Quaternion.identity);
             }
 
             //if (!FindObjectOfType<DroppedItemManager>())
