@@ -90,7 +90,6 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
             return;
         }
 
-        NotificationManager.instance.NewNotification(Player.localPlayer.myInventory.aIL.averageILevel.ToString());
         for (int i = 0; i < spawnAmount; i++)
         {
             Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();

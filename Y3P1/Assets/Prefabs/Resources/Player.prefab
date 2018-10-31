@@ -3711,6 +3711,8 @@ MonoBehaviour:
   playerUICam: {fileID: 2224781018497381817}
   characterCam: {fileID: 3178491925162334216}
   deathCanvas: {fileID: 1963476409204493732}
+  collider1: {fileID: 1285813299}
+  collider2: {fileID: 117853655}
   weaponChargeCanvas: {fileID: 0}
   dwarfAnimEvents: {fileID: 0}
   rangedWeaponLookAt: {fileID: 1512173445}
@@ -6239,12 +6241,12 @@ PrefabInstance:
     - target: {fileID: 2288831310382713562, guid: c0e03436bb6523a41ac837fa86aa5d9b,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.1060001
+      value: 0.10600013
       objectReference: {fileID: 0}
     - target: {fileID: 2288831310382713562, guid: c0e03436bb6523a41ac837fa86aa5d9b,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.10100017
+      value: -0.10100023
       objectReference: {fileID: 0}
     - target: {fileID: 2288831310382290603, guid: c0e03436bb6523a41ac837fa86aa5d9b,
         type: 3}

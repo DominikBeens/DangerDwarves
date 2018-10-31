@@ -76,12 +76,35 @@ public class LootRandomizer : MonoBehaviour {
 
     public Item LootChefsHat(int cI)
     {
-        return LootOtherHelmet(cI);
+        return LootCH(cI);
+    }
+
+    private Item LootRanged(int cI)
+    {
+        int rand = Random.Range(0, 2);
+        Item newItem = null;
+        switch (rand)
+        {
+            case 0:
+                newItem = LootStaff(cI);
+                break;
+            case 1:
+                newItem = LootCrossbow(cI);
+                break;
+
+        }
+        return newItem;
     }
 
     private Item LootAHelmet(int cI)
     {
-        Item newItem = LootHelmet(cI);
+        Item newItem = null;
+        if (Random.Range(0,100) < 80)
+        {
+            newItem = LootHelmet(cI);
+            return newItem;
+        }
+        newItem = LootOtherHelmet(cI);
         return newItem;
     }
 
@@ -92,7 +115,7 @@ public class LootRandomizer : MonoBehaviour {
         switch (randomType)
         {
             case 0:
-                newItem = LootCrossbow(cI);
+                newItem = LootRanged(cI);
                 break;
             case 1:
                 newItem = LootAxe(cI);
@@ -276,6 +299,41 @@ public class LootRandomizer : MonoBehaviour {
         return testItem;
     }
 
+    private Item LootStaff(int currentItemLevel)
+    {
+        Item testItem = new Weapon_Ranged();
+        int rarity = Rarity();
+        int nIL = NewItemLevel(rarity, currentItemLevel);
+        int degreesSecun = Degrees();
+        int degreesPri = Degrees();
+        int amountSecun = 1;
+        int amountPrim = 1;
+        if (degreesSecun != 0)
+        {
+            amountSecun = AmountSecun();
+        }
+        if (degreesPri != 0)
+        {
+            amountPrim = AmountPrimary();
+        }
+
+        bool rOL = false;
+        if (rarity >= 2)
+        {
+            rOL = true;
+        }
+        string secun = Database.hostInstance.GetRangedSecundary(rOL);
+
+        //Item Creation XD
+        testItem.StartUp(Database.hostInstance.GetStaffName(), rarity, Database.hostInstance.GetStaffSprite(), NewStats(nIL), Database.hostInstance.GetStaffObject(), nIL);
+        testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun, Buff(secun), Single(secun));
+        testItem.StartRanged(Force(), amountPrim, degreesPri);
+        //end item creation
+
+        test.Add((Weapon_Ranged)testItem);
+        return testItem;
+    }
+
     private int GoldAmount(int currentItemLevel,int rarity)
     {
         float gold = 0;
@@ -319,6 +377,18 @@ public class LootRandomizer : MonoBehaviour {
         int myItem = Database.hostInstance.OH();
         //Item Creation XD
         testItem.StartUp(Database.hostInstance.GetOHName(myItem), rarity, Database.hostInstance.GetOHSprite(myItem), NewStats(nIL), Database.hostInstance.GetOHObject(myItem), nIL);
+        //end item creation
+        return testItem;
+    }
+
+    private Item LootCH(int currentItemLevel)
+    {
+        Item testItem = new Helmet();
+        int rarity = Rarity();
+        int nIL = NewItemLevel(rarity, currentItemLevel);
+        int myItem = Database.hostInstance.CH();
+        //Item Creation XD
+        testItem.StartUp(Database.hostInstance.GetCHName(myItem), rarity, Database.hostInstance.GetCHSprite(myItem), NewStats(nIL), Database.hostInstance.GetCHObject(myItem), nIL);
         //end item creation
         return testItem;
     }

@@ -88,4 +88,5 @@ MonoBehaviour:
   - LightBrazier
   - OpenDoor
   - SyncActiveDungeon
+  - SyncCancelDungeon
   DisableAutoOpenWizard: 1

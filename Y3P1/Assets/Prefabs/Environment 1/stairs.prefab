@@ -1,16 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &406612994249733195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 406612994250125003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &406612994793572095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
     type: 3}
   m_PrefabInstance: {fileID: 406612994793708671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &406612994249733195 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 41fbcd9703c74e6498983d6c11dca8a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 406612994250125003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &852246990014834479
 GameObject:
@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2332576180939420883
 Transform:
@@ -60,7 +60,7 @@ GameObject:
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6282527786358948874
 Transform:
@@ -69,13 +69,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7285238728722643383}
-  m_LocalRotation: {x: 0.25881907, y: -0, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: -0, y: 0.18, z: -0.31}
+  m_LocalRotation: {x: 0.2664082, y: -0, z: -0, w: 0.9638603}
+  m_LocalPosition: {x: 0, y: 0.171, z: -0.286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2332576180939420883}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30.000002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30.901001, y: 0, z: 0}
 --- !u!65 &9139372375776597811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87,8 +87,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.992936, y: 5.5298476, z: 0.5622435}
-  m_Center: {x: 0.46232387, y: -0.29613084, z: 0.21887533}
+  m_Size: {x: 3.992937, y: 5.399888, z: 0.5622435}
+  m_Center: {x: 0.46232405, y: -0.22720198, z: 0.21887483}
 --- !u!1001 &406612994250125003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ded54785719a43b4582e80175e49b123, type: 2}
+    - target: {fileID: 100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
 --- !u!1001 &406612994384441878
@@ -220,6 +224,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.35
       objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d3e1cc296a00146b73683cacf00c95, type: 3}
 --- !u!1001 &406612994793708671
@@ -280,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ded54785719a43b4582e80175e49b123, type: 2}
+    - target: {fileID: 100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fbcd9703c74e6498983d6c11dca8a7, type: 3}
 --- !u!1001 &406612995417737873
@@ -352,6 +370,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455975035829147874, guid: 93d3e1cc296a00146b73683cacf00c95,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d3e1cc296a00146b73683cacf00c95, type: 3}

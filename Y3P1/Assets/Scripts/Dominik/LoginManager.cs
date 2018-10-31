@@ -185,15 +185,15 @@ public class LoginManager : MonoBehaviourPunCallbacks
         PhotonNetwork.NickName = defaultName;
     }
 
-    public void SetPlayerName(string value)
+    public void SetPlayerName(TMP_InputField inputField)
     {
-        if (string.IsNullOrEmpty(value))
+        if (string.IsNullOrEmpty(inputField.text))
         {
             return;
         }
-        PhotonNetwork.NickName = value;
+        PhotonNetwork.NickName = inputField.text;
 
-        PlayerPrefs.SetString(playerNamePrefKey, value);
+        PlayerPrefs.SetString(playerNamePrefKey, inputField.text);
     }
 
     public void QuitGame()
