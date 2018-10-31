@@ -21,6 +21,10 @@ namespace Y3P1
         [Header("Death")]
         [SerializeField] private GameObject deathCanvas;
 
+        [Header("Cowl Coth")]
+        public CapsuleCollider collider1;
+        public CapsuleCollider collider2;
+
         #region Components
         [HideInInspector] public WeaponChargeCanvas weaponChargeCanvas;
         [HideInInspector] public AnimationEventsDwarf dwarfAnimEvents;
