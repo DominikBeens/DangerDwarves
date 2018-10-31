@@ -62,11 +62,15 @@ public class Database : MonoBehaviour {
     public List<Sprite> helmetSprite = new List<Sprite>();
     public List<GameObject> helmetObject = new List<GameObject>();
 
-    [Header("Chefs hats")]
+    [Header("Other Helmets")]
     [SerializeField] private List<string> oHelmetNames = new List<string>();
     public List<Sprite> oHelmetSprite = new List<Sprite>();
     public List<GameObject> oHelmetObject = new List<GameObject>();
 
+    [Header("Chefs hats")]
+    [SerializeField] private List<string> chNames = new List<string>();
+    public List<Sprite> chSprite = new List<Sprite>();
+    public List<GameObject> chObject = new List<GameObject>();
 
     [Header("Trinket")]
     [SerializeField] private List<string> trinketNames = new List<string>();
@@ -92,6 +96,7 @@ public class Database : MonoBehaviour {
         allGameobjects.AddRange(oWObject);
         allGameobjects.AddRange(potionObjects);
         allGameobjects.AddRange(oHelmetObject);
+        allGameobjects.AddRange(chObject);
 
         allSprites.AddRange(crossbowSprite);
         allSprites.AddRange(axeSprite);
@@ -102,6 +107,7 @@ public class Database : MonoBehaviour {
         allSprites.AddRange(oWSprite);
         allSprites.AddRange(potionSprite);
         allSprites.AddRange(oHelmetSprite);
+        allSprites.AddRange(chSprite);
 
         allMaterials.AddRange(potionMaterial);
     }
@@ -114,6 +120,11 @@ public class Database : MonoBehaviour {
     public int OH()
     {
         return Random.Range(0, oHelmetNames.Count);
+    }
+
+    public int CH()
+    {
+        return Random.Range(0, chNames.Count);
     }
 
     // secundary's
@@ -173,6 +184,11 @@ public class Database : MonoBehaviour {
     public string GetOHName(int i)
     {
         return oHelmetNames[i];
+    }
+
+    public string GetCHName(int i)
+    {
+        return chNames[i];
     }
 
     public string GetOWName(int i)
@@ -235,6 +251,18 @@ public class Database : MonoBehaviour {
         for (int i = 0; i < allSprites.Count; i++)
         {
             if (oHelmetSprite[o] == allSprites[i])
+            {
+                index = i;
+            }
+        }
+        return index;
+    }
+    public int GetCHSprite(int o)
+    {
+        int index = 0;
+        for (int i = 0; i < allSprites.Count; i++)
+        {
+            if (chSprite[o] == allSprites[i])
             {
                 index = i;
             }
@@ -392,6 +420,19 @@ public class Database : MonoBehaviour {
         for (int i = 0; i < allGameobjects.Count; i++)
         {
             if (oHelmetObject[o] == allGameobjects[i])
+            {
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    public int GetCHObject(int o)
+    {
+        int index = 0;
+        for (int i = 0; i < allGameobjects.Count; i++)
+        {
+            if (chObject[o] == allGameobjects[i])
             {
                 index = i;
             }

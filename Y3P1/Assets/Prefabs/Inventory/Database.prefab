@@ -194,26 +194,44 @@ MonoBehaviour:
   - {fileID: 2789109688068099712, guid: dc1d13192ebeafe4db451921434928f0, type: 3}
   - {fileID: 727557903423277189, guid: 70ff8413c44dc2e4b94f06eb56c1edd5, type: 3}
   oHelmetNames:
-  - Chefs hat white
-  - Chefs hat blue
-  - Chefs hat dark
-  - Chefs hat green
-  - Chefs hat orange
-  - Chefs hat red
+  - Black cowl
+  - Blue cowl
+  - Green cowl
+  - Purlple cowl
+  - Red cowl
   oHelmetSprite:
   - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
   - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
   - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
   - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
   - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
   oHelmetObject:
+  - {fileID: 727557903423277189, guid: 83e4a6b2dd6ea3142801c18dc97099e3, type: 3}
+  - {fileID: 727557903423277189, guid: 95310e36a7a512c44b012f5d08d10b88, type: 3}
+  - {fileID: 727557903423277189, guid: 48e3700b49252324e90ab74abd1eab0f, type: 3}
+  - {fileID: 727557903423277189, guid: 259c119733ec4834fa84e9b5d9b47641, type: 3}
+  - {fileID: 727557903423277189, guid: 619188c99a678a945b51ab664c72739d, type: 3}
+  chNames:
+  - Chefs hat white
+  - Chefs hat blue
+  - Chefs hat dark
+  - Chefs hat green
+  - Chefs hat yellow
+  - Chefs hat red
+  chSprite:
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  chObject:
   - {fileID: 6033659611258288555, guid: 8984756be7e97484e9def264afbaff12, type: 3}
-  - {fileID: 2656354656781135600, guid: a39d16d7f9eed1040aebb97d95b2a91f, type: 3}
-  - {fileID: 8880392575849408287, guid: 14d6e5f7095f0484ab6dfc02265ede3a, type: 3}
-  - {fileID: 2763982185727011621, guid: 7446929d823dec642b847ffbf10c1596, type: 3}
-  - {fileID: 3445250284531689995, guid: d75a5ce772f056e49be8ef4d91485f6d, type: 3}
-  - {fileID: 2234151027638980195, guid: 932a520a5becbff4d958fc01cc869aaf, type: 3}
+  - {fileID: 6033659611258288555, guid: 150b49f2a6b1dd4459cc616dfcc2d38f, type: 3}
+  - {fileID: 6033659611258288555, guid: 4fcf7d9a66de8824da508baf5600d7b4, type: 3}
+  - {fileID: 6033659611258288555, guid: 0fe40eea8e39b874fa6e2a9f4f89f0d1, type: 3}
+  - {fileID: 6033659611258288555, guid: 1d5d5856b71618b4db0e670de8d591ff, type: 3}
+  - {fileID: 6033659611258288555, guid: 5cba8413ed48b3e409f6db91f6cd4f50, type: 3}
   trinketNames:
   - Arcane Orb
   - Transcendence
