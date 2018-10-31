@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCollider: {fileID: 0}
-  entityID: 4
+  entityID: 3
   instaDestroyOnDeath: 0
   rb: {fileID: 1898242398378090830}
   entityType: 0
@@ -475,6 +475,21 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173248024611418699, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173248024611418699, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.15167277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173248024611418699, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.87125564
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9efe84057e5594aacef6e45e40aadf, type: 3}

@@ -196,7 +196,7 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (PhotonNetwork.IsMasterClient && canDropLoot)
         {
-            Player.localPlayer.myInventory.DropNewItem(transform.position,entityType);
+            Player.localPlayer.myInventory.DropNewItem(transform.position,entityType,entityID);
         }
     }
 

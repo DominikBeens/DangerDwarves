@@ -408,20 +408,29 @@ public class Inventory : MonoBehaviourPunCallbacks
                 hotkeySlots.Add(allSlots[i]);
             }
         }
-        hotkeySlots.Reverse();
-        OrderHotKeySlots();
+        //hotkeySlots.Reverse();
+        StartCoroutine(OrderHotKeySlots());
+        
     }
 
-    private void OrderHotKeySlots()
+    private IEnumerator OrderHotKeySlots()
     {
-        List<InventorySlot> tempHK = hotkeySlots;
+        yield return new WaitForSeconds(0.5f);
+        List<InventorySlot> tempHK = new List<InventorySlot>();
+        for (int i = 0; i < hotkeySlots.Count; i++)
+        {
+            tempHK.Add(null);
+        }
+
         for (int i = 0; i < tempHK.Count; i++)
         {
-            if(tempHK[i].index < 1)
+            if(hotkeySlots[i].index > 0)
             {
-                hotkeySlots[tempHK[i].index - 1] = tempHK[i];
+                tempHK[hotkeySlots[i].index - 1] = hotkeySlots[i];
             }
         }
+        hotkeySlots = tempHK;
+        
     }
 
     private void EquipToHotkey(int toSlot)
@@ -455,7 +464,7 @@ public class Inventory : MonoBehaviourPunCallbacks
             allSlots[index].SetImage(Database.hostInstance.allSprites[allItems[index].spriteIndex]);
             allSlots[index].EnableImage();
         }
-        else
+        else if (allItems[ind] != null)
         {
             if(allSlots[ind].slotType == InventorySlot.SlotType.helmet && allItems[index] is Helmet || allSlots[ind].slotType == InventorySlot.SlotType.weapon && allItems[index] is Weapon|| allSlots[ind].slotType == InventorySlot.SlotType.trinket && allItems[index] is Trinket || allSlots[ind].slotType == InventorySlot.SlotType.all)
             {
@@ -530,6 +539,7 @@ public class Inventory : MonoBehaviourPunCallbacks
             }
 
         }
+        UpdateInventoryColor();
     }
 
     private void Update()
@@ -637,6 +647,8 @@ public class Inventory : MonoBehaviourPunCallbacks
                 {
                     Potion temp = (Potion)allItems[index];
                     temp.Drink();
+                    allItems[index] = null;
+                    allSlots[index].DisableImage();
                     return;
                 }
 
@@ -760,7 +772,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         int index = GetIndex(hotkeySlots[ind - 1]);
         if (allItems[index] == null)
         {
-
+            UpdateInventoryColor();
             return;
         }
         if(allItems[index] is Weapon|| allItems[index] is Helmet || allItems[index] is Trinket)
@@ -773,6 +785,10 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             Potion temp = (Potion)allItems[index];
             temp.Drink();
+            allItems[index] = null;
+            allSlots[index].DisableImage();
+            UpdateInventoryColor();
+            return;
         }
     }
 
@@ -1069,10 +1085,14 @@ public class Inventory : MonoBehaviourPunCallbacks
         return canvas.enabled;
     }
 
-    public void DropNewItem(Vector3 loc , Entity.EntityType type)
+    public void DropNewItem(Vector3 loc , Entity.EntityType type, int id)
     {
         Item newItem = null;
-        if (type == Entity.EntityType.Humanoid)
+        if (id == 5)
+        {
+            newItem = LootRandomizer.instance.LootChefsHat(aIL.averageILevel);
+        }
+        else if (type == Entity.EntityType.Humanoid)
         {
            newItem  = LootRandomizer.instance.DropLoot(aIL.averageILevel, 1);
         }

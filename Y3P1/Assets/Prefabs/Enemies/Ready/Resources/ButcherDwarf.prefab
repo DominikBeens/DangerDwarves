@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCollider: {fileID: 0}
-  entityID: 4
+  entityID: 5
   instaDestroyOnDeath: 0
   rb: {fileID: 1898242398378090830}
   entityType: 0

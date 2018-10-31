@@ -1732,8 +1732,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2288831310382713561}
-  m_LocalRotation: {x: -0.09229499, y: 0.7010588, z: 0.69034415, w: -0.15304676}
-  m_LocalPosition: {x: -0.017993629, y: 0.10600005, z: -0.10100011}
+  m_LocalRotation: {x: -0.09229493, y: 0.7010588, z: 0.69034415, w: -0.15304676}
+  m_LocalPosition: {x: -0.017993629, y: 0.10600008, z: -0.10100017}
   m_LocalScale: {x: 0.007478101, y: 0.004103166, z: 0.004103166}
   m_Children:
   - {fileID: 2288831310382290683}
@@ -2482,7 +2482,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ce5a83fcea7762541ba43ca5bd854dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2560,7 +2560,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ce5a83fcea7762541ba43ca5bd854dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2711,13 +2711,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7870836611435039735}
-  m_LocalRotation: {x: -0, y: 0.9797383, z: -0.20028234, w: 0}
-  m_LocalPosition: {x: 0, y: 1.357, z: 1.387}
+  m_LocalRotation: {x: -0, y: 0.9999131, z: -0.013188055, w: 0}
+  m_LocalPosition: {x: 0, y: 0.73, z: 1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2288831311170850097}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 23.107, y: 180.00002, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.511, y: 180.00002, z: 0}
 --- !u!20 &4998205450204747485
 Camera:
   m_ObjectHideFlags: 0
@@ -2727,8 +2727,8 @@ Camera:
   m_GameObject: {fileID: 7870836611435039735}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}

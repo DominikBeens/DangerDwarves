@@ -45,11 +45,5 @@ public class AverageItemLevel : MonoBehaviourPunCallbacks
         allPlayers = PhotonNetwork.PlayerList.Length;
 
         averageILevel = Mathf.RoundToInt(AllLvl / allPlayers);
-
-        if (PhotonNetwork.IsMasterClient)
-        {
-            NotificationManager.instance.NewNotification(averageILevel.ToString() + "    " + allPlayers.ToString());
-
-        }
     }
 }

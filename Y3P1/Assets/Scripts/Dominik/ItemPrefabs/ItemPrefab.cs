@@ -117,17 +117,9 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
 
                 renderer.material = Database.hostInstance.hammerMats[myItem.materialIndex];
                 break;
-            case ItemType.Cleaver:
-
-                renderer.material = Database.hostInstance.cleaverMats[myItem.materialIndex];
-                break;
             case ItemType.Crossbow:
 
                 renderer.material = Database.hostInstance.crossbowMats[myItem.materialIndex];
-                break;
-            case ItemType.Chefshat:
-
-                renderer.material = Database.hostInstance.chefsHatMats[myItem.materialIndex];
                 break;
         }
     }
