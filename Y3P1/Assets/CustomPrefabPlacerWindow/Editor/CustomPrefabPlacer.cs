@@ -53,13 +53,18 @@ public class CustomPrefabPlacer : EditorWindow
                 string buttonName = !string.IsNullOrEmpty(settings.prefabs[i].editorWindowName) ? settings.prefabs[i].editorWindowName : settings.prefabs[i].prefab.name;
 
                 GUIStyle buttonStyle = new GUIStyle(GUI.skin.button);
-                buttonStyle.normal.textColor = settings.prefabs[i].editorButtonColor;
+                buttonStyle.normal.textColor = settings.prefabs[i].editorButtonFontColor;
                 buttonStyle.fontStyle = settings.prefabs[i].editorButtonFontStyle;
+
+                Color oldColor = GUI.backgroundColor;
+                GUI.backgroundColor = settings.prefabs[i].editorButtonColor;
 
                 if (GUILayout.Button(buttonName, buttonStyle, GUILayout.Height(40)))
                 {
                     PlacePrefab(settings.prefabs[i].prefab);
                 }
+
+                GUI.backgroundColor = oldColor;
 
                 GUILayout.Space(5);
             }

@@ -22,7 +22,8 @@ public class PrefabPlacerSettings : ScriptableObject
         public GameObject prefab;
         [Tooltip("This is optional, if left blank the prefab name will be used.")]
         public string editorWindowName;
-        public Color editorButtonColor = Color.white;
+        public Color editorButtonFontColor = Color.white;
         public FontStyle editorButtonFontStyle;
+        public Color editorButtonColor = Color.white;
     }
 }
