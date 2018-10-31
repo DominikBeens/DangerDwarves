@@ -14,9 +14,17 @@ public class Brazier : MonoBehaviourPunCallbacks
         }
     }
 
+    public void Extinguish()
+    {
+        if (particle.activeInHierarchy)
+        {
+            photonView.RPC("LightBrazier", RpcTarget.AllBuffered);
+        }
+    }
+
     [PunRPC]
     private void LightBrazier()
     {
-        particle.SetActive(true);
+        particle.SetActive(!particle.activeInHierarchy);
     }
 }

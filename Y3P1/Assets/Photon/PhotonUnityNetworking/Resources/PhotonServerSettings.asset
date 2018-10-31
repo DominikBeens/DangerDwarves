@@ -86,4 +86,5 @@ MonoBehaviour:
   - SyncDropData
   - SyncHealthTest
   - LightBrazier
+  - OpenDoor
   DisableAutoOpenWizard: 1
