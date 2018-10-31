@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     private Transform owner;
     public enum Target { Enemy, Player };
     private Collider hitCollider;
+    private MeleeWeaponTrail trail;
 
     [SerializeField] private string myPoolName;
     public Target damageTarget;
@@ -50,6 +51,7 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         photonView = GetComponent<PhotonView>();
         defaultDamageTarget = damageTarget;
+        trail = GetComponent<MeleeWeaponTrail>();
     }
 
     public virtual void OnEnable()
@@ -84,6 +86,11 @@ public class Projectile : MonoBehaviour
 
     private void SetVisual()
     {
+        if (!arrowVisual || !boltVisual)
+        {
+            return;
+        }
+
         ProjectileManager.ProjecileVisual visual = (ProjectileManager.ProjecileVisual)fireData.visual;
         switch (visual)
         {
@@ -91,16 +98,28 @@ public class Projectile : MonoBehaviour
 
                 arrowVisual.SetActive(false);
                 boltVisual.SetActive(false);
+                if (trail)
+                {
+                    trail.Emit = false;
+                }
                 break;
             case ProjectileManager.ProjecileVisual.Arrow:
 
                 arrowVisual.SetActive(true);
                 boltVisual.SetActive(false);
+                if (trail)
+                {
+                    trail.Emit = true;
+                }
                 break;
             case ProjectileManager.ProjecileVisual.Bolt:
 
                 arrowVisual.SetActive(false);
                 boltVisual.SetActive(true);
+                if (trail)
+                {
+                    trail.Emit = false;
+                }
                 break;
         }
     }
