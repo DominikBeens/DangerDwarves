@@ -40,7 +40,7 @@ public class Dungeon : MonoBehaviour
     {
         for (int i = 0; i < entitySpawners.Length; i++)
         {
-            entitySpawners[i].ResetSpawner();
+            entitySpawners[i].SetCanSpawn(true);
         }
 
         for (int i = 0; i < burnables.Length; i++)

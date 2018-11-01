@@ -9,7 +9,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
     private bool canSpawn = true;
     private Collider spawnTrigger;
 
-    [SerializeField] private List<GameObject> entityPrefabs = new List<GameObject>();
+    public List<GameObject> entityPrefabs = new List<GameObject>();
 
     [Header("Spawn Settings")]
     [SerializeField] private bool spawnOnAwake;
@@ -77,7 +77,12 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         // Double check.
         if (PhotonNetwork.IsMasterClient)
         {
-            SpawnEntities(entityPrefabs[Random.Range(0, entityPrefabs.Count)].name);
+            if (spawnTrigger)
+            {
+                spawnTrigger.enabled = false;
+            }
+
+            SpawnEntities();
         }
     }
 
@@ -89,11 +94,11 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
             spawnTrigger.enabled = false;
         }
 
-        photonView.RPC("SpawnEntities", RpcTarget.MasterClient, entityPrefabs[Random.Range(0, entityPrefabs.Count)].name);
+        photonView.RPC("SpawnEntities", RpcTarget.MasterClient);
     }
 
     [PunRPC]
-    private void SpawnEntities(string entity)
+    private void SpawnEntities()
     {
         if (!PhotonNetwork.IsMasterClient)
         {
@@ -105,7 +110,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
             Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();
             if (spawnPos != Vector3.zero)
             {
-                GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(entity, spawnPos, transform.rotation);
+                GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(GetRandomEntity(), spawnPos, transform.rotation);
                 Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
                 if (!newEntity)
                 {
@@ -120,7 +125,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    private Vector3 GetRandomPos()
+    public Vector3 GetRandomPos()
     {
         Vector3 validPos = Vector3.zero;
         bool foundValidPos = false;
@@ -171,12 +176,17 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         return validPos;
     }
 
-    public void ResetSpawner()
+    public string GetRandomEntity()
     {
-        canSpawn = true;
+        return entityPrefabs[Random.Range(0, entityPrefabs.Count)].name;
+    }
+
+    public void SetCanSpawn(bool b)
+    {
+        canSpawn = b;
         if (spawnTrigger)
         {
-            spawnTrigger.enabled = true;
+            spawnTrigger.enabled = b;
         }
     }
 

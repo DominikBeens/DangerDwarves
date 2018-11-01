@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1437030741040640830}
   - component: {fileID: 8164022918584082212}
   m_Layer: 0
-  m_Name: ItemManager
+  m_Name: DroppedItemManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,6 +63,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 999
-  InstantiationId: 999
+  viewIdField: 998
+  InstantiationId: 998
   isRuntimeInstantiated: 0
