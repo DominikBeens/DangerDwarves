@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5974729592834434813}
   - component: {fileID: 7796512187621635379}
   - component: {fileID: 6668932428273441859}
+  - component: {fileID: 293147258164308550}
   m_Layer: 0
   m_Name: Reling
   m_TagString: Untagged
@@ -155,6 +156,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &293147258164308550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5763811742896361556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 4.000001, z: 1.4745498}
+  m_Center: {x: 0, y: 1.8084069e-16, z: 0.48727435}
 --- !u!1 &7558740665873806791
 GameObject:
   m_ObjectHideFlags: 0

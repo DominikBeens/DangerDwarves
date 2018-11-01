@@ -5,6 +5,7 @@ public class Dungeon : MonoBehaviour
 {
 
     private EntitySpawner[] entitySpawners;
+    private Burnable[] burnables;
 
     [Header("Dungeon Stats")]
     public string dungeonName;
@@ -17,6 +18,7 @@ public class Dungeon : MonoBehaviour
     private void Awake()
     {
         entitySpawners = GetComponentsInChildren<EntitySpawner>();
+        burnables = GetComponentsInChildren<Burnable>();
     }
 
     public void StartDungeon()
@@ -32,6 +34,11 @@ public class Dungeon : MonoBehaviour
         for (int i = 0; i < entitySpawners.Length; i++)
         {
             entitySpawners[i].ResetSpawner();
+        }
+
+        for (int i = 0; i < burnables.Length; i++)
+        {
+            burnables[i].ResetObject();
         }
 
         if (PhotonNetwork.IsMasterClient)

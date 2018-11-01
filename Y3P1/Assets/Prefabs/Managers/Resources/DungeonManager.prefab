@@ -826,8 +826,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7521864540472711269}
   m_HandleRect: {fileID: 2559465403299657368}
   m_Direction: 0
-  m_Value: 0.9999982
-  m_Size: 0.9638475
+  m_Value: 1
+  m_Size: 0.96384776
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1881,7 +1881,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3951700160991544701}
         m_MethodName: TeleportOutOfDungeon
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 684105587780046116}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2288,7 +2288,7 @@ RectTransform:
   m_Father: {fileID: 618028263167261828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.03615238, y: 0}
+  m_AnchorMin: {x: 0.036152244, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
