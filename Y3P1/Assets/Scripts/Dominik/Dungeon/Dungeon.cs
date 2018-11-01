@@ -40,7 +40,12 @@ public class Dungeon : MonoBehaviour
     {
         for (int i = 0; i < entitySpawners.Length; i++)
         {
-            entitySpawners[i].ResetSpawner();
+            entitySpawners[i].CanSpawn = true;
+        }
+
+        for (int i = 0; i < propSpawners.Count; i++)
+        {
+            propSpawners[i].CanSpawn = true;
         }
 
         for (int i = 0; i < burnables.Length; i++)
@@ -50,6 +55,7 @@ public class Dungeon : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
         {
+            PhotonNetwork.RemoveRPCs(EntityManager.instance.photonView);
             // Cleanup all alive enemies and drops.
         }
     }

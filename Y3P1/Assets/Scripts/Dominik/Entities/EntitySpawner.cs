@@ -1,22 +1,37 @@
 ﻿using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
-using Y3P1;
 
-public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
+public class EntitySpawner : MonoBehaviourPunCallbacks
 {
 
     private bool canSpawn = true;
+    public bool CanSpawn
+    {
+        get
+        {
+            return canSpawn;
+        }
+
+        set
+        {
+            canSpawn = value;
+            if (spawnTrigger)
+            {
+                spawnTrigger.enabled = value;
+            }
+        }
+    }
     private Collider spawnTrigger;
 
-    [SerializeField] private List<GameObject> entityPrefabs = new List<GameObject>();
+    public List<GameObject> entityPrefabs = new List<GameObject>();
 
     [Header("Spawn Settings")]
     [SerializeField] private bool spawnOnAwake;
     [SerializeField] private bool spawnImmortal;
     [SerializeField] private float spawnRange;
     [SerializeField] private float spawnTriggerRange;
-    [SerializeField] private float spawnAmount;
+    [SerializeField] private int spawnAmount = 1;
     [SerializeField] private GameObject spawnPreview;
 
     private void Awake()
@@ -77,50 +92,58 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         // Double check.
         if (PhotonNetwork.IsMasterClient)
         {
-            SpawnEntities(entityPrefabs[Random.Range(0, entityPrefabs.Count)].name);
+            NotificationManager.instance.NewNotification("Spawn prop");
+            int spawnerIndex = EntityManager.instance.GetSpawnerIndex(this);
+            if (spawnerIndex != -1)
+            {
+                EntityManager.instance.photonView.RPC("SpawnEntities", RpcTarget.AllBuffered, spawnerIndex, spawnAmount, spawnRange, spawnImmortal);
+            }
         }
     }
 
     private void TriggerSpawn()
     {
-        canSpawn = false;
-        if (spawnTrigger)
+        int spawnerIndex = EntityManager.instance.GetSpawnerIndex(this);
+        if (spawnerIndex != -1)
         {
-            spawnTrigger.enabled = false;
+            EntityManager.instance.photonView.RPC("SpawnEntities", RpcTarget.AllBuffered, spawnerIndex, spawnAmount, spawnRange, spawnImmortal);
         }
-
-        photonView.RPC("SpawnEntities", RpcTarget.MasterClient, entityPrefabs[Random.Range(0, entityPrefabs.Count)].name);
+        else
+        {
+            Debug.LogError("Couldnt find EntitySpawner in EntityManager. Index returned -1.");
+        }
+        //photonView.RPC("SpawnEntities", RpcTarget.MasterClient);
     }
 
-    [PunRPC]
-    private void SpawnEntities(string entity)
-    {
-        if (!PhotonNetwork.IsMasterClient)
-        {
-            return;
-        }
+    //[PunRPC]
+    //private void SpawnEntities()
+    //{
+    //    if (!PhotonNetwork.IsMasterClient)
+    //    {
+    //        return;
+    //    }
 
-        for (int i = 0; i < spawnAmount; i++)
-        {
-            Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();
-            if (spawnPos != Vector3.zero)
-            {
-                GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(entity, spawnPos, transform.rotation);
-                Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
-                if (!newEntity)
-                {
-                    newEntity.health.isImmortal = spawnImmortal;
-                }
-            }
-            else
-            {
-                // This happens when GetRandomPos() couldnt find a valid position to spawn an entity.
-                // Lets just skip this spawn if this happens.
-            }
-        }
-    }
+    //    for (int i = 0; i < spawnAmount; i++)
+    //    {
+    //        Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();
+    //        if (spawnPos != Vector3.zero)
+    //        {
+    //            GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(GetRandomEntity(), spawnPos, transform.rotation);
+    //            Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
+    //            if (!newEntity)
+    //            {
+    //                newEntity.health.isImmortal = spawnImmortal;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            // This happens when GetRandomPos() couldnt find a valid position to spawn an entity.
+    //            // Lets just skip this spawn if this happens.
+    //        }
+    //    }
+    //}
 
-    private Vector3 GetRandomPos()
+    public Vector3 GetRandomPos()
     {
         Vector3 validPos = Vector3.zero;
         bool foundValidPos = false;
@@ -171,13 +194,9 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         return validPos;
     }
 
-    public void ResetSpawner()
+    public string GetRandomEntity()
     {
-        canSpawn = true;
-        if (spawnTrigger)
-        {
-            spawnTrigger.enabled = true;
-        }
+        return entityPrefabs[Random.Range(0, entityPrefabs.Count)].name;
     }
 
     private void OnDrawGizmosSelected()
@@ -189,23 +208,23 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         Gizmos.DrawWireSphere(transform.position, spawnRange);
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(canSpawn);
-            if (spawnTrigger)
-            {
-                stream.SendNext(spawnTrigger.enabled);
-            }
-        }
-        else
-        {
-            canSpawn = (bool)stream.ReceiveNext();
-            if (spawnTrigger)
-            {
-                spawnTrigger.enabled = (bool)stream.ReceiveNext();
-            }
-        }
-    }
+    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    if (stream.IsWriting)
+    //    {
+    //        stream.SendNext(canSpawn);
+    //        if (spawnTrigger)
+    //        {
+    //            stream.SendNext(spawnTrigger.enabled);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        canSpawn = (bool)stream.ReceiveNext();
+    //        if (spawnTrigger)
+    //        {
+    //            spawnTrigger.enabled = (bool)stream.ReceiveNext();
+    //        }
+    //    }
+    //}
 }

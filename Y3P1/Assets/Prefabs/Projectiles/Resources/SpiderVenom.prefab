@@ -4644,10 +4644,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7106649673028893103}
-  - component: {fileID: 5925572640237181615}
   - component: {fileID: 4247674038721876242}
   - component: {fileID: 1513465962598485992}
   - component: {fileID: 9156334626702542129}
+  - component: {fileID: 5511060744192162010}
   m_Layer: 10
   m_Name: SpiderVenom
   m_TagString: Untagged
@@ -4671,19 +4671,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5925572640237181615
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716037247890611631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4247674038721876242
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4719,6 +4706,7 @@ MonoBehaviour:
   prefabToSpawnOnDeath: 
   stayOnOwner: 0
   isEnemyProjectile: 1
+  visuals: []
   applyStatusEffect: 1
   effectToApply: 4
   effectDuration: 2
@@ -4744,6 +4732,19 @@ MonoBehaviour:
   viewIdField: 104
   InstantiationId: 104
   isRuntimeInstantiated: 0
+--- !u!65 &5511060744192162010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716037247890611631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2975568, y: 0.10159316, z: 0.24330795}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6100610156650455875
 GameObject:
   m_ObjectHideFlags: 0

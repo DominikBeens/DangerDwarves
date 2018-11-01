@@ -8,6 +8,7 @@ public class EntityManager : MonoBehaviourPunCallbacks
 
     public static EntityManager instance;
 
+    public EntitySpawner[] allEntitySpawners;
     public List<Entity> aliveTargets = new List<Entity>();
 
     private void Awake()
@@ -20,6 +21,60 @@ public class EntityManager : MonoBehaviourPunCallbacks
         {
             Destroy(this);
         }
+
+        allEntitySpawners = FindObjectsOfType<EntitySpawner>();
+    }
+
+    [PunRPC]
+    private void SpawnEntities(int spawner, int spawnAmount, float spawnRange, bool spawnImmortal)
+    {
+        EntitySpawner origin = allEntitySpawners[spawner];
+
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            origin.CanSpawn = false;
+            return;
+        }
+
+        if (!origin.CanSpawn)
+        {
+            return;
+        }
+
+        origin.CanSpawn = false;
+
+        for (int i = 0; i < spawnAmount; i++)
+        {
+            Vector3 spawnPos = spawnRange == 0 ? origin.transform.position : origin.GetRandomPos();
+            if (spawnPos != Vector3.zero)
+            {
+                GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(origin.GetRandomEntity(), spawnPos, origin.transform.rotation);
+                Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
+                if (!newEntity)
+                {
+                    newEntity.health.isImmortal = spawnImmortal;
+                }
+            }
+            else
+            {
+                // This happens when GetRandomPos() couldnt find a valid position to spawn an entity.
+                // Lets just skip this spawn if this happens.
+            }
+        }
+    }
+
+    public int GetSpawnerIndex(EntitySpawner spawner)
+    {
+        int index = -1;
+        for (int i = 0; i < allEntitySpawners.Length; i++)
+        {
+            if (allEntitySpawners[i] == spawner)
+            {
+                return i;
+            }
+        }
+
+        return index;
     }
 
     public void AddToAliveTargets(Entity entity)

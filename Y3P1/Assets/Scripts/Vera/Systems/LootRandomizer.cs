@@ -74,6 +74,30 @@ public class LootRandomizer : MonoBehaviour {
         return newItem;
     }
 
+    public Item EquipmentToShop (int currentItemLevel)
+    {
+        int randomType = Random.Range(0, 3);
+        Item newItem = null;
+        switch (randomType)
+        {
+            case 0:
+                newItem = LootWeapon(currentItemLevel);
+                break;
+            case 1:
+                newItem = LootAHelmet(currentItemLevel);
+                break;
+            case 2:
+                newItem = LootTrinket(currentItemLevel);
+                break;
+        }
+        return newItem;
+    }
+
+    public Item PotionToShop()
+    {
+        return LootPotion();
+    }
+
     public Item LootChefsHat(int cI)
     {
         return LootCH(cI);

@@ -6,6 +6,7 @@ public class Door : MonoBehaviourPunCallbacks
 
     private bool isOpen;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject interactPopupVisual;
 
     public void Open()
     {
@@ -20,5 +21,6 @@ public class Door : MonoBehaviourPunCallbacks
     {
         isOpen = true;
         anim.SetTrigger("Open");
+        interactPopupVisual.SetActive(false);
     }
 }
