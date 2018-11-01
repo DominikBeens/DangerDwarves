@@ -13968,7 +13968,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 4
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -13987,8 +13987,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minIntensity: 2.5
   maxIntensity: 2.5
-  minRange: 0.5
-  maxRange: 1.5
+  minRange: 4
+  maxRange: 8
 --- !u!114 &1656563874136596564
 MonoBehaviour:
   m_ObjectHideFlags: 0
