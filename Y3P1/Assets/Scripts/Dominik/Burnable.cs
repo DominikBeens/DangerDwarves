@@ -4,6 +4,8 @@ using UnityEngine;
 public class Burnable : MonoBehaviourPunCallbacks
 {
 
+    private bool canBurn = true;
+
     [SerializeField] private MeshRenderer webRenderer;
     [SerializeField] private Collider webCollider;
     [SerializeField] private ParticleSystem burnParticle;
@@ -11,7 +13,7 @@ public class Burnable : MonoBehaviourPunCallbacks
 
     public void Burn()
     {
-        if (!burnParticle.isPlaying)
+        if (canBurn)
         {
             photonView.RPC("StartBurn", RpcTarget.AllBuffered);
         }
@@ -20,6 +22,8 @@ public class Burnable : MonoBehaviourPunCallbacks
     [PunRPC]
     private void StartBurn()
     {
+        canBurn = false;
+
         burnParticle.Play();
         Invoke("DisableObject", burnTime);
     }
@@ -42,5 +46,7 @@ public class Burnable : MonoBehaviourPunCallbacks
         webRenderer.enabled = true;
         webCollider.enabled = true;
         burnParticle.Stop();
+
+        canBurn = true;
     }
 }
