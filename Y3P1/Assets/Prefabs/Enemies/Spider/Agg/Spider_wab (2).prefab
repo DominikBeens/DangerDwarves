@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 5949033712295080164}
   - component: {fileID: 5949033712294277316}
   - component: {fileID: 5949033712293179908}
-  - component: {fileID: 5400317915164527273}
+  - component: {fileID: 5990372420519014196}
   m_Layer: 0
   m_Name: Spider_wab (2)
   m_TagString: Environment
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5400317915164527273
-BoxCollider:
+--- !u!136 &5990372420519014196
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -100,9 +100,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1.9999998, z: 1.7217596}
-  m_Center: {x: 3.8852958e-23, y: 6.578079e-17, z: 0.13425785}
+  m_Radius: 0.84
+  m_Height: 2.94
+  m_Direction: 2
+  m_Center: {x: 1.5075696e-15, y: 0, z: -0.30005583}
 --- !u!1 &7373008438970387919
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.35}
 --- !u!114 &3792632983189640665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   webRenderer: {fileID: 5949033712293179908}
-  webCollider: {fileID: 5400317915164527273}
+  webCollider: {fileID: 5990372420519014196}
   burnParticle: {fileID: 8747640151050012251}
   burnTime: 3
 --- !u!114 &8727285284655981023
@@ -228,8 +229,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 1
-  InstantiationId: 1
+  viewIdField: 5
+  InstantiationId: 5
   isRuntimeInstantiated: 0
 --- !u!1001 &4059243518334859577
 PrefabInstance:
