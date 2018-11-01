@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &184169765309090509 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6733971685964282371}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &184169763861396402 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6733971684593666940}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &184169763356290514 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6733971684024769820}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &184169765199700890 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6733971685939450708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6733971684439813319
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,8 +177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6733971685933336413}
   - component: {fileID: 6733971685933336414}
-  - component: {fileID: 6733971685933336415}
-  - component: {fileID: 3020561773879373345}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -262,58 +236,30 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6733971685933336415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &184169763861396402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6733971684593666940}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6733971685933336412}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strength: 250
-  overrideColor: 1
-  overridingColor: {r: 0.9999, g: 0.5743087, b: 0.3081603, a: 1}
-  useShadow: 1
-  shadowMapRenderTexture: {fileID: 0}
-  useCookie: 1
-  cookieMapRenderTexture: {fileID: 0}
-  enableOutOfPhaseColor: 0
-  outOfPhaseColorStrength: 0.1
-  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
-  storeShadowDataShader: {fileID: 4800000, guid: fff19db2423616b4dbabe995cd97279e,
+--- !u!4 &184169763356290514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
     type: 3}
-  shadowDataRenderTexture: {fileID: 0}
-  customDistanceFalloffThreshold: 0.5
-  customDistanceFalloffPower: 2
-  storeDirectionalSpotLightCookieMapShader: {fileID: 4800000, guid: ffdac5434c39f7545b910c253007c8fc,
-    type: 3}
-  customCookieDistanceFalloffStartThreshold: 0.1
-  customCookieDistanceFalloffEndThreshold: 0.25
-  customCookieDistanceFalloffPower: 2
-  customAngularFalloffThreshold: 0.8
-  customAngularFalloffPower: 2
-  storePointLightShadowMapShader: {fileID: 4800000, guid: f1531a9bd4087ff468de8de09f6ba126,
-    type: 3}
-  storePointLightShadowMapMesh: {fileID: 4300000, guid: d68bec3f4c08e40468fad98606344ea6,
-    type: 3}
-  storePointLightCookieMapShader: {fileID: 4800000, guid: 83815c326d7f2514884f3fc7a05b5aef,
-    type: 3}
---- !u!114 &3020561773879373345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_PrefabInstance: {fileID: 6733971684024769820}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6733971685933336412}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e63837b7ddbfb4092bc3061f82591b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!4 &184169765199700890 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6733971685939450708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &184169765309090509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6733971685964282371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6733971684024769820
 PrefabInstance:
   m_ObjectHideFlags: 0
