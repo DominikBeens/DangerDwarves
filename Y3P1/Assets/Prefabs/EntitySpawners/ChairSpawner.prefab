@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 200957646521602741}
   - component: {fileID: 200957646521602740}
-  - component: {fileID: 200957646521602743}
   m_Layer: 0
   m_Name: ChairSpawner
   m_TagString: Untagged
@@ -47,34 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityPrefabs:
   - {fileID: 1271214002197388943, guid: 11b9d9d4bea06464daeb92acfa26a070, type: 3}
-  spawnOnAwake: 1
+  spawnOnAwake: 0
   spawnImmortal: 0
   spawnRange: 0
   spawnTriggerRange: 0
   spawnAmount: 1
   spawnPreview: {fileID: 1739449278888974746}
---- !u!114 &200957646521602743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200957646521602742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 200957646521602740}
-  viewIdField: 1
-  InstantiationId: 1
-  isRuntimeInstantiated: 0
 --- !u!1 &1739449278888974746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5454794072556842701, guid: ff08046c397f50e459068dff5a97ad4e,

@@ -8,7 +8,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
 
     public static DungeonManager instance;
     public static Dungeon openDungeon;
-    private static bool isInDungeon;
+    public static bool isInDungeon;
 
     [SerializeField] private GameObject dungeonCanvas;
     [SerializeField] private GameObject dungeonOverview;

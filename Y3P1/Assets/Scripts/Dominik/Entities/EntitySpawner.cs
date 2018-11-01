@@ -71,6 +71,16 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
         TriggerSpawn();
     }
 
+    // Used by the master clients for spawning static props like boxes and chests.
+    public void TriggerSpawnMasterClient()
+    {
+        // Double check.
+        if (PhotonNetwork.IsMasterClient)
+        {
+            SpawnEntities(entityPrefabs[Random.Range(0, entityPrefabs.Count)].name);
+        }
+    }
+
     private void TriggerSpawn()
     {
         canSpawn = false;
@@ -95,8 +105,12 @@ public class EntitySpawner : MonoBehaviourPunCallbacks, IPunObservable
             Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();
             if (spawnPos != Vector3.zero)
             {
-                Entity newEntity = PhotonNetwork.InstantiateSceneObject(entity, spawnPos, transform.rotation).GetComponentInChildren<Entity>();
-                newEntity.health.isImmortal = spawnImmortal;
+                GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(entity, spawnPos, transform.rotation);
+                Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
+                if (!newEntity)
+                {
+                    newEntity.health.isImmortal = spawnImmortal;
+                }
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Dungeon : MonoBehaviour
@@ -14,6 +15,7 @@ public class Dungeon : MonoBehaviour
     [Space(10)]
 
     public Transform startSpawn;
+    [SerializeField] private List<EntitySpawner> propSpawners = new List<EntitySpawner>();
 
     private void Awake()
     {
@@ -25,6 +27,11 @@ public class Dungeon : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
+            for (int i = 0; i < propSpawners.Count; i++)
+            {
+                propSpawners[i].TriggerSpawnMasterClient();
+            }
+
             // Generate difficulty.
         }
     }

@@ -22,7 +22,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1945978765162522796}
   - component: {fileID: 1945978765162522802}
-  - component: {fileID: 1945978765162522797}
   m_Layer: 0
   m_Name: ChestSpawner
   m_TagString: Untagged
@@ -59,34 +58,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityPrefabs:
   - {fileID: 9198351622957362943, guid: 3fe1e74af6afe934a8e9cb7c2d59a811, type: 3}
-  spawnOnAwake: 1
+  spawnOnAwake: 0
   spawnImmortal: 0
   spawnRange: 0
   spawnTriggerRange: 0
   spawnAmount: 1
   spawnPreview: {fileID: 1679857057740177188}
---- !u!114 &1945978765162522797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945978765162522799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 1945978765162522802}
-  viewIdField: 1
-  InstantiationId: 1
-  isRuntimeInstantiated: 0
 --- !u!1001 &7563532829234811355
 PrefabInstance:
   m_ObjectHideFlags: 0

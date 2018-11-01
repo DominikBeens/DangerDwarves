@@ -201,7 +201,7 @@ namespace Y3P1
 
             if (hub)
             {
-                transform.position = Vector3.up * 0.1f;
+                transform.position = DungeonManager.isInDungeon ? DungeonManager.openDungeon.startSpawn.position : Vector3.up * 0.1f;
             }
         }
 
