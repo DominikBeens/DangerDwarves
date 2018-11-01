@@ -89,7 +89,7 @@ public class StatsInfo : MonoBehaviour {
         }
     }
 
-    public void SetText(string[] item,string[] damage, string[] weapon, string[] ranged, string[] melee, string[] helmet, string[] trinket)
+    public void SetText(string[] item,string[] damage, string[] weapon, string[] ranged, string[] melee, string[] helmet, string[] trinket, string[] value)
     {
         List<string> allTextNeeded = new List<string>();
         if(item != null)
@@ -124,6 +124,10 @@ public class StatsInfo : MonoBehaviour {
         if(trinket != null)
         {
             allTextNeeded.AddRange(trinket);
+        }
+        if(value != null)
+        {
+            allTextNeeded.AddRange(value);
         }
 
 

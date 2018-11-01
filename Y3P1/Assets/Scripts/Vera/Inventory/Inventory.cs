@@ -10,19 +10,35 @@ using Y3P1;
 
 public class Inventory : MonoBehaviourPunCallbacks
 {
+    [Header("Window Select")]
+    [SerializeField] private GameObject equipment;
+    public enum Window {Equipment,Shop}
+    public Window window;
+
+    [Header("Slots")]
     public List<InventorySlot> allSlots = new List<InventorySlot>();
     public List<Item> allItems = new List<Item>();
     public List<InventorySlot> hotkeySlots = new List<InventorySlot>();
     public InventorySlot currentSlot;
     public InventorySlot lastSlot;
+
+    [Header("Dragging")]
     public Item drag;
     private bool dragging;
+
+    [Header("Pointer")]
     [SerializeField] private Image onMouse;
+
+    [Header("Starting Items")]
     [SerializeField] private List<Item> startingItems = new List<Item>();
+
+    [Header("Info")]
     public AverageItemLevel aIL;
+    public int totalGoldAmount;
+
     private bool isInitialised;
     private Canvas canvas;
-    public int totalGoldAmount;
+
 
     private Stats currentStats;
     public int averageILevel = 1;
@@ -480,6 +496,11 @@ public class Inventory : MonoBehaviourPunCallbacks
         UpdateInventoryColor();
     }
 
+    public void ToggleInventory(bool toggle)
+    {
+        canvas.enabled = toggle;
+    }
+
     public void OpenCloseInv()
     {
         if (canvas.enabled == false)
@@ -542,11 +563,37 @@ public class Inventory : MonoBehaviourPunCallbacks
         UpdateInventoryColor();
     }
 
+    private void SetWindow()
+    {
+        switch (window)
+        {
+            case Window.Shop:
+                equipment.SetActive(false);
+                break;
+            case Window.Equipment:
+                equipment.SetActive(true);
+                break;
+        }
+    }
+
     private void Update()
     {
         if (!isInitialised)
         {
             return;
+        }
+        SetWindow();
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            switch (window)
+            {
+                case Window.Shop:
+                    window = Window.Equipment;
+                    break;
+                case Window.Equipment:
+                    window = Window.Shop;
+                    break;
+            }
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -554,7 +601,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            photonView.RPC("AddGold", RpcTarget.All, UnityEngine.Random.Range(500, 1000)); 
+            photonView.RPC("AddGold", RpcTarget.All, UnityEngine.Random.Range(5000, 10000)); 
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -636,25 +683,28 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                int index = GetIndex(currentSlot);
-                OnRightClickInventorySlot(allItems[index]);
-
-                if (ArmoryManager.instance.HasOpenUI())
+                if(window == Window.Equipment)
                 {
-                    return;
-                }
-                if(allItems[index] is Potion)
-                {
-                    Potion temp = (Potion)allItems[index];
-                    temp.Drink();
-                    allItems[index] = null;
-                    allSlots[index].DisableImage();
-                    return;
-                }
+                    int index = GetIndex(currentSlot);
+                    OnRightClickInventorySlot(allItems[index]);
 
-                EquipItem(GetIndex(currentSlot));
-                CalculateArmor();
-                UpdateInventoryColor();
+                    if (ArmoryManager.instance.HasOpenUI())
+                    {
+                        return;
+                    }
+                    if (allItems[index] is Potion)
+                    {
+                        Potion temp = (Potion)allItems[index];
+                        temp.Drink();
+                        allItems[index] = null;
+                        allSlots[index].DisableImage();
+                        return;
+                    }
+
+                    EquipItem(GetIndex(currentSlot));
+                    CalculateArmor();
+                    UpdateInventoryColor();
+                }
             }
         }
 
@@ -1126,8 +1176,6 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if(i < saved.Count)
             {
-                //allItems[i] = saved[i];
-                print(saved[i]);
                 if(isItem[i])
                 {
 
@@ -1156,7 +1204,6 @@ public class Inventory : MonoBehaviourPunCallbacks
 
     private void UpdateInventoryColor()
     {
-        print("Testing coooolors");
         for (int i = 0; i < allSlots.Count; i++)
         {
             if(allItems[i] != null)

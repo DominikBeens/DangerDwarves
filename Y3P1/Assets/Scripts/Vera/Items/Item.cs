@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿
 [System.Serializable]
 public class Item
 {
@@ -6,13 +6,12 @@ public class Item
     public string itemName;
     public enum ItemRarity { common = 0, rare = 1, epic = 2, legendary = 3 }
     public ItemRarity itemRarity;
-    //public Sprite itemImage;
     public int spriteIndex;
     public Stats myStats;
-    // public GameObject itemPrefab;
     public int prefabIndex;
     public int itemLevel = -1;
     public int materialIndex = 0;
+    public bool sold;
 
     public virtual void StartUp(string name, int rarity,int Mysprite,Stats myStat,int myObj,int iLevel,int material = 0)
     {
@@ -27,7 +26,7 @@ public class Item
 
     public void SendInfo()
     {
-        StatsInfo.instance.SetText(ItemInfo(),DamageInfo() ,WeaponInfo(), RangedInfo(), MeleeInfo(), HelmetInfo(), TrinketInfo());
+        StatsInfo.instance.SetText(ItemInfo(),DamageInfo() ,WeaponInfo(), RangedInfo(), MeleeInfo(), HelmetInfo(), TrinketInfo(), ValueInfo());
     }
     
     public string[] ItemInfo()
@@ -60,14 +59,17 @@ public class Item
         NotificationManager.instance.NewNotification("AAAAAAAAAAAAAAAAAAAAAAAAAAh");
         return -1;
     }
+
     public virtual void StartGold(int amount)
     {
         
     }
+
     public virtual string[] DamageInfo()
     {
         return null;
     }
+
     public virtual string[] WeaponInfo()
     {
         return null;
@@ -128,6 +130,26 @@ public class Item
     public virtual void Awake()
     {
 
+    }
+
+    public string[] ValueInfo()
+    {
+        if (sold)
+        {
+            return new string[] { "Buy Value: <color=#00A8FF>" + CalculateValue().ToString() + "<color=white> Gold" };
+        }
+        return new string[] { "Value: <color=#00A8FF>" + CalculateValue().ToString() + "<color=white> Gold"};
+    }
+
+    public int CalculateValue()
+    {
+        int value = itemLevel * ((int)itemRarity + 1) * 2;
+        if (sold)
+        {
+            float i = value * 1.5f;
+            value = (int)i;
+        }
+        return value;
     }
 
 }

@@ -75,6 +75,7 @@ public class ArmoryManager : MonoBehaviour
     public void TogglePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeInHierarchy);
+        Player.localPlayer.myInventory.ToggleInventory(panel.activeInHierarchy);
         SelectItem(null);
     }
 
