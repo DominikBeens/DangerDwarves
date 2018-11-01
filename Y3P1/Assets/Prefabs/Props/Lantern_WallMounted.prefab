@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &8780310545968524514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 9d2b049ca94e0bd499c46c8618c28393,
+    type: 3}
+  m_PrefabInstance: {fileID: 8780310545968920162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5728918954840133123
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5811938080795130489}
   - component: {fileID: 4710018708053622691}
+  - component: {fileID: 7567383793631945705}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -86,7 +93,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.99215686, g: 0.65692776, b: 0.26666665, a: 1}
+  m_Color: {r: 0.99215686, g: 0.5989999, b: 0.26666665, a: 1}
   m_Intensity: 1.3
   m_Range: 9
   m_SpotAngle: 30
@@ -114,12 +121,31 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &8780310545968524514 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 9d2b049ca94e0bd499c46c8618c28393,
-    type: 3}
-  m_PrefabInstance: {fileID: 8780310545968920162}
+--- !u!114 &7567383793631945705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717523775283931247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097385f2a510795498370c4d62e61572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IntensityMult: 5
+  m_RangeMult: 0.1
+  m_ForceOnForFog: 0
+  m_Shadows: 0
+  m_ShadowmapRes: 256
+  m_BlurIterations: 0
+  m_BlurSize: 1
+  m_ESMExponent: 40
+  m_Bounded: 1
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_CopyShadowParamsShader: {fileID: 4800000, guid: 33fc45db43408764c8dd7647b877e561,
+    type: 3}
 --- !u!1001 &8780310545968920162
 PrefabInstance:
   m_ObjectHideFlags: 0

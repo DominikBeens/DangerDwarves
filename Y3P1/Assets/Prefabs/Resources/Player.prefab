@@ -2906,8 +2906,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 15
-  InstantiationId: 15
+  viewIdField: 18
+  InstantiationId: 18
   isRuntimeInstantiated: 0
 --- !u!1 &850867457544464075
 GameObject:
@@ -3238,8 +3238,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 14
-  InstantiationId: 14
+  viewIdField: 17
+  InstantiationId: 17
   isRuntimeInstantiated: 0
 --- !u!1 &3365887358606820787
 GameObject:
@@ -3779,8 +3779,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 2140086444260932015}
-  viewIdField: 13
-  InstantiationId: 13
+  viewIdField: 16
+  InstantiationId: 16
   isRuntimeInstantiated: 0
 --- !u!114 &2140086444260932015
 MonoBehaviour:
@@ -3955,7 +3955,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
@@ -3979,11 +3979,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
-  antialiasingMode: 0
+  antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
-    stationaryBlending: 0.95
+    stationaryBlending: 0.48
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
     quality: 2
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_Z: 1
   m_NearClip: 0.3
   m_FarClipMax: 100
-  m_GlobalDensityMult: 1
+  m_GlobalDensityMult: 0.1
   m_ConstantFog: 100
   m_HeightFogAmount: 0
   m_HeightFogExponent: 1

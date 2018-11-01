@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8016810743802417335}
   - component: {fileID: 1908965093772612190}
   - component: {fileID: 7564804630466950040}
+  - component: {fileID: 5502731981878004518}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0, g: 0.9052944, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6409545, b: 0.7075472, a: 1}
   m_Intensity: 2
   m_Range: 5
   m_SpotAngle: 30
@@ -92,6 +93,31 @@ MonoBehaviour:
   maxIntensity: 3
   minRange: 5
   maxRange: 6
+--- !u!114 &5502731981878004518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947065184024747219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097385f2a510795498370c4d62e61572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IntensityMult: 2
+  m_RangeMult: 0.5
+  m_ForceOnForFog: 0
+  m_Shadows: 0
+  m_ShadowmapRes: 256
+  m_BlurIterations: 0
+  m_BlurSize: 1
+  m_ESMExponent: 40
+  m_Bounded: 1
+  m_BlurShadowmapShader: {fileID: 4800000, guid: 701192b62a7678549918bc87434699fe,
+    type: 3}
+  m_CopyShadowParamsShader: {fileID: 4800000, guid: 33fc45db43408764c8dd7647b877e561,
+    type: 3}
 --- !u!1 &6642792202548248166
 GameObject:
   m_ObjectHideFlags: 0
