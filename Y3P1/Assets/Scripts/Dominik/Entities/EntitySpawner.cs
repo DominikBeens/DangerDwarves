@@ -92,7 +92,6 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
         // Double check.
         if (PhotonNetwork.IsMasterClient)
         {
-            NotificationManager.instance.NewNotification("Spawn prop");
             int spawnerIndex = EntityManager.instance.GetSpawnerIndex(this);
             if (spawnerIndex != -1)
             {
