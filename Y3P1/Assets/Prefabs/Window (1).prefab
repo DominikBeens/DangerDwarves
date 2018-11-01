@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 4
+  strength: 250
   overrideColor: 1
   overridingColor: {r: 0.9999, g: 0.5743087, b: 0.3081603, a: 1}
   useShadow: 1
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6733971685933336412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e63837b7ddbfb4092bc3061f82591b, type: 3}
   m_Name: 

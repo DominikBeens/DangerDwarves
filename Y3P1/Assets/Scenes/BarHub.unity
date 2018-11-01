@@ -15500,6 +15500,7 @@ MonoBehaviour:
   dungeonName: Dungeon of D00oO0m
   dungeonDescription: Woooooooo Spook
   startSpawn: {fileID: 1528367052}
+  propSpawners: []
 --- !u!1 &2102550625
 GameObject:
   m_ObjectHideFlags: 0
@@ -58740,7 +58741,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5066305, g: 0.64333737, b: 0.6509434, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.03
@@ -65816,7 +65817,7 @@ PrefabInstance:
     - target: {fileID: 1116666798787195088, guid: ff08046c397f50e459068dff5a97ad4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8237293
+      value: -3.276
       objectReference: {fileID: 0}
     - target: {fileID: 1116666798787195088, guid: ff08046c397f50e459068dff5a97ad4e,
         type: 3}
@@ -65826,7 +65827,7 @@ PrefabInstance:
     - target: {fileID: 1116666798787195088, guid: ff08046c397f50e459068dff5a97ad4e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.282955
+      value: -20.032
       objectReference: {fileID: 0}
     - target: {fileID: 1116666798787195088, guid: ff08046c397f50e459068dff5a97ad4e,
         type: 3}
@@ -70346,17 +70347,17 @@ PrefabInstance:
     - target: {fileID: 3154229478298774650, guid: 7e115cdc4d5d379449a4a47f44f52dd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0237296
+      value: -2.01
       objectReference: {fileID: 0}
     - target: {fileID: 3154229478298774650, guid: 7e115cdc4d5d379449a4a47f44f52dd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10053229
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3154229478298774650, guid: 7e115cdc4d5d379449a4a47f44f52dd5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.887765
+      value: -6.13
       objectReference: {fileID: 0}
     - target: {fileID: 3154229478298774650, guid: 7e115cdc4d5d379449a4a47f44f52dd5,
         type: 3}
