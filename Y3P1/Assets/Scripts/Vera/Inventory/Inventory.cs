@@ -705,6 +705,14 @@ public class Inventory : MonoBehaviourPunCallbacks
                     CalculateArmor();
                     UpdateInventoryColor();
                 }
+                else if(window == Window.Shop)
+                {
+                    int index = GetIndex(currentSlot);
+                    ShopManager.instance.SellItem(allItems[index]);
+                    allItems[index] = null;
+                    allSlots[index].DisableImage();
+                    UpdateInventoryColor();
+                }
             }
         }
 
@@ -1236,6 +1244,74 @@ public class Inventory : MonoBehaviourPunCallbacks
                 return Legendary;
             default:
                 return defaultColor;
+        }
+    }
+
+    public void SellCommonItems()
+    {
+        for (int i = 0; i < allItems.Count; i++)
+        {
+            if(allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
+            {
+                if(allItems[i].itemRarity == Item.ItemRarity.common)
+                {
+                    ShopManager.instance.SellItem(allItems[i]);
+                    allItems[i] = null;
+                    allSlots[i].DisableImage();
+                    UpdateInventoryColor();
+                }
+            }
+        }
+    }
+
+    public void SellRareItems()
+    {
+        for (int i = 0; i < allItems.Count; i++)
+        {
+            if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
+            {
+                if (allItems[i].itemRarity == Item.ItemRarity.rare)
+                {
+                    ShopManager.instance.SellItem(allItems[i]);
+                    allItems[i] = null;
+                    allSlots[i].DisableImage();
+                    UpdateInventoryColor();
+                }
+            }
+        }
+    }
+
+    public void SellEpicItems()
+    {
+        for (int i = 0; i < allItems.Count; i++)
+        {
+            if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
+            {
+                if (allItems[i].itemRarity == Item.ItemRarity.epic)
+                {
+                    ShopManager.instance.SellItem(allItems[i]);
+                    allItems[i] = null;
+                    allSlots[i].DisableImage();
+                    UpdateInventoryColor();
+                }
+            }
+        }
+    }
+
+    public void SellLegendaryItems()
+    {
+        for (int i = 0; i < allItems.Count; i++)
+        {
+            if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
+            {
+                if (allItems[i].itemRarity == Item.ItemRarity.legendary)
+                {
+                    ShopManager.instance.SellItem(allItems[i]);
+                    allItems[i] = null;
+                    allSlots[i].DisableImage();
+                    UpdateInventoryColor();
+                }
+            }
         }
     }
 }
