@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Y3P1;
@@ -138,13 +139,5 @@ public class DungeonManager : MonoBehaviourPunCallbacks
     public bool HasOpenUI()
     {
         return dungeonCanvas.activeInHierarchy;
-    }
-
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
-    {
-        if (openDungeon != null)
-        {
-            photonView.RPC("SyncActiveDungeon", RpcTarget.All, openDungeon.dungeonName);
-        }
     }
 }

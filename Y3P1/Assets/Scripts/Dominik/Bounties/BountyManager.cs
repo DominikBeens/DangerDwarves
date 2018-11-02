@@ -180,12 +180,4 @@ public class BountyManager : MonoBehaviourPunCallbacks
     {
         return bountyCanvas.activeInHierarchy;
     }
-
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
-    {
-        if (activeBounty != null)
-        {
-            photonView.RPC("SyncActiveBounty", RpcTarget.All, activeBounty.bountyName, activeBounty.progress);
-        }
-    }
 }
