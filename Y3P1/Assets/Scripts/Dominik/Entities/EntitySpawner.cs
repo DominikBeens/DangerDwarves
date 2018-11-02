@@ -111,36 +111,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
         {
             Debug.LogError("Couldnt find EntitySpawner in EntityManager. Index returned -1.");
         }
-        //photonView.RPC("SpawnEntities", RpcTarget.MasterClient);
     }
-
-    //[PunRPC]
-    //private void SpawnEntities()
-    //{
-    //    if (!PhotonNetwork.IsMasterClient)
-    //    {
-    //        return;
-    //    }
-
-    //    for (int i = 0; i < spawnAmount; i++)
-    //    {
-    //        Vector3 spawnPos = spawnRange == 0 ? transform.position : GetRandomPos();
-    //        if (spawnPos != Vector3.zero)
-    //        {
-    //            GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(GetRandomEntity(), spawnPos, transform.rotation);
-    //            Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
-    //            if (!newEntity)
-    //            {
-    //                newEntity.health.isImmortal = spawnImmortal;
-    //            }
-    //        }
-    //        else
-    //        {
-    //            // This happens when GetRandomPos() couldnt find a valid position to spawn an entity.
-    //            // Lets just skip this spawn if this happens.
-    //        }
-    //    }
-    //}
 
     public Vector3 GetRandomPos()
     {
@@ -206,24 +177,4 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, spawnRange);
     }
-
-    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    //{
-    //    if (stream.IsWriting)
-    //    {
-    //        stream.SendNext(canSpawn);
-    //        if (spawnTrigger)
-    //        {
-    //            stream.SendNext(spawnTrigger.enabled);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        canSpawn = (bool)stream.ReceiveNext();
-    //        if (spawnTrigger)
-    //        {
-    //            spawnTrigger.enabled = (bool)stream.ReceiveNext();
-    //        }
-    //    }
-    //}
 }

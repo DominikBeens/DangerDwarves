@@ -200,21 +200,21 @@ public class WeaponPrefab : ItemPrefab
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        base.OnPhotonSerializeView(stream, info);
+        //base.OnPhotonSerializeView(stream, info);
 
-        if (stream.IsWriting)
-        {
-            if (weaponTrail)
-            {
-                stream.SendNext(weaponTrail.Emit);
-            }
-        }
-        else
-        {
-            if (weaponTrail)
-            {
-                weaponTrail.Emit = (bool)stream.ReceiveNext();
-            }
-        }
+        //if (stream.IsWriting)
+        //{
+        //    if (weaponTrail)
+        //    {
+        //        stream.SendNext(weaponTrail.Emit);
+        //    }
+        //}
+        //else
+        //{
+        //    if (weaponTrail)
+        //    {
+        //        weaponTrail.Emit = (bool)stream.ReceiveNext();
+        //    }
+        //}
     }
 }

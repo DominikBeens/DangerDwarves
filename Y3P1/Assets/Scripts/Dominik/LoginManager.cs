@@ -32,6 +32,8 @@ public class LoginManager : MonoBehaviourPunCallbacks
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.SendRate = 5;
+        PhotonNetwork.SerializationRate = 5;
 
         SetUpNameInputField();
         //playMenuPanel.SetActive(true);

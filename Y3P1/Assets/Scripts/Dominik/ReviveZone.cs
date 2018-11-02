@@ -123,15 +123,15 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(reviveZoneObject.activeInHierarchy);
-            stream.SendNext(reviveZoneCollider.enabled);
-        }
-        else
-        {
-            reviveZoneObject.SetActive((bool)stream.ReceiveNext());
-            reviveZoneCollider.enabled = (bool)stream.ReceiveNext();
-        }
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(reviveZoneObject.activeInHierarchy);
+        //    stream.SendNext(reviveZoneCollider.enabled);
+        //}
+        //else
+        //{
+        //    reviveZoneObject.SetActive((bool)stream.ReceiveNext());
+        //    reviveZoneCollider.enabled = (bool)stream.ReceiveNext();
+        //}
     }
 }

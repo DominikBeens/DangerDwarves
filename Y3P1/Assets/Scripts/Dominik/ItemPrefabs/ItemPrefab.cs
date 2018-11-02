@@ -161,17 +161,17 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
 
     public virtual void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(isDropped);
-            stream.SendNext(interactCollider.activeInHierarchy);
-            stream.SendNext(objectCollider.enabled);
-        }
-        else
-        {
-            isDropped = (bool)stream.ReceiveNext();
-            interactCollider.SetActive((bool)stream.ReceiveNext());
-            objectCollider.enabled = (bool)stream.ReceiveNext();
-        }
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(isDropped);
+        //    stream.SendNext(interactCollider.activeInHierarchy);
+        //    stream.SendNext(objectCollider.enabled);
+        //}
+        //else
+        //{
+        //    isDropped = (bool)stream.ReceiveNext();
+        //    interactCollider.SetActive((bool)stream.ReceiveNext());
+        //    objectCollider.enabled = (bool)stream.ReceiveNext();
+        //}
     }
 }

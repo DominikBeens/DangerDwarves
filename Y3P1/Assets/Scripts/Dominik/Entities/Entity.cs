@@ -202,37 +202,37 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(health.isImmortal);
-            stream.SendNext(health.isInvinsible);
-            stream.SendNext(health.isDead);
-            stream.SendNext(health.currentHealth);
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(health.isImmortal);
+        //    stream.SendNext(health.isInvinsible);
+        //    stream.SendNext(health.isDead);
+        //    stream.SendNext(health.currentHealth);
 
-            stream.SendNext(stats.DefenseEffectiveness);
-            stream.SendNext(stats.DamageEffectiveness);
+        //    stream.SendNext(stats.DefenseEffectiveness);
+        //    stream.SendNext(stats.DamageEffectiveness);
 
-            stream.SendNext(stats.stamina);
-            stream.SendNext(stats.strength);
-            stream.SendNext(stats.agility);
-            stream.SendNext(stats.willpower);
-            stream.SendNext(stats.defense);
-        }
-        else
-        {
-            health.isImmortal = (bool)stream.ReceiveNext();
-            health.isInvinsible = (bool)stream.ReceiveNext();
-            health.isDead = (bool)stream.ReceiveNext();
-            health.currentHealth = (int)stream.ReceiveNext();
+        //    stream.SendNext(stats.stamina);
+        //    stream.SendNext(stats.strength);
+        //    stream.SendNext(stats.agility);
+        //    stream.SendNext(stats.willpower);
+        //    stream.SendNext(stats.defense);
+        //}
+        //else
+        //{
+        //    health.isImmortal = (bool)stream.ReceiveNext();
+        //    health.isInvinsible = (bool)stream.ReceiveNext();
+        //    health.isDead = (bool)stream.ReceiveNext();
+        //    health.currentHealth = (int)stream.ReceiveNext();
 
-            stats.DefenseEffectiveness = (float)stream.ReceiveNext();
-            stats.DamageEffectiveness = (float)stream.ReceiveNext();
+        //    stats.DefenseEffectiveness = (float)stream.ReceiveNext();
+        //    stats.DamageEffectiveness = (float)stream.ReceiveNext();
 
-            stats.stamina = (int)stream.ReceiveNext();
-            stats.strength = (int)stream.ReceiveNext();
-            stats.agility = (int)stream.ReceiveNext();
-            stats.willpower = (int)stream.ReceiveNext();
-            stats.defense = (int)stream.ReceiveNext();
-        }
+        //    stats.stamina = (int)stream.ReceiveNext();
+        //    stats.strength = (int)stream.ReceiveNext();
+        //    stats.agility = (int)stream.ReceiveNext();
+        //    stats.willpower = (int)stream.ReceiveNext();
+        //    stats.defense = (int)stream.ReceiveNext();
+        //}
     }
 }

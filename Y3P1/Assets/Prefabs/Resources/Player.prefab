@@ -4192,7 +4192,7 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: FireRanged
   - Type: 1
-    SynchronizeType: 2
+    SynchronizeType: 1
     Name: RecoilStrenght
   - Type: 9
     SynchronizeType: 2
@@ -4204,7 +4204,7 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: bMeleeStance
   - Type: 1
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: Mood
   - Type: 9
     SynchronizeType: 2
@@ -4228,31 +4228,37 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: MeleeAbilityCharging
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Drink
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 2
     Name: Pickup
+  - Type: 9
+    SynchronizeType: 2
+    Name: Oil
+  - Type: 3
+    SynchronizeType: 2
+    Name: IdleRandom
   m_SynchronizeLayers:
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 0
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 1
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 2
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 3
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 4
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 5
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 6
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 7
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 8
-  - SynchronizeType: 2
+  - SynchronizeType: 0
     LayerIndex: 9
 --- !u!1 &8623143039569706873 stripped
 GameObject:

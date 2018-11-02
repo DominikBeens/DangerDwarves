@@ -114,15 +114,15 @@ public class TrinketPrefab : ItemPrefab
 
     public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        base.OnPhotonSerializeView(stream, info);
+        //base.OnPhotonSerializeView(stream, info);
 
-        if (stream.IsWriting)
-        {
-            stream.SendNext(renderer.enabled);
-        }
-        else
-        {
-            renderer.enabled = (bool)stream.ReceiveNext();
-        }
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(renderer.enabled);
+        //}
+        //else
+        //{
+        //    renderer.enabled = (bool)stream.ReceiveNext();
+        //}
     }
 }

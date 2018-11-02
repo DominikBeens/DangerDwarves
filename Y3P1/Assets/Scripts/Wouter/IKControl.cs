@@ -67,15 +67,15 @@ public class IKControl : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(ikActive);
-            stream.SendNext(enabled);
-        }
-        else
-        {
-            ikActive = (bool)stream.ReceiveNext();
-            enabled = (bool)stream.ReceiveNext();
-        }
+        //if (stream.IsWriting)
+        //{
+        //    stream.SendNext(ikActive);
+        //    stream.SendNext(enabled);
+        //}
+        //else
+        //{
+        //    ikActive = (bool)stream.ReceiveNext();
+        //    enabled = (bool)stream.ReceiveNext();
+        //}
     }
 }
