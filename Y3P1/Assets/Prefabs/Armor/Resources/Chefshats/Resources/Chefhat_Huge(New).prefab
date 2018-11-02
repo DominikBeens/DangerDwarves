@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 116301663573599220}
   - component: {fileID: 7309300103247763817}
   m_Layer: 12
-  m_Name: Chefhat
+  m_Name: Chefhat_Huge(New)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,8 +88,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 7227972197286461910}
-  viewIdField: 4
-  InstantiationId: 4
+  viewIdField: 1
+  InstantiationId: 1
   isRuntimeInstantiated: 0
 --- !u!54 &116301663573599220
 Rigidbody:
@@ -158,13 +158,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9109749592430283207}
-  m_LocalRotation: {x: 0, y: 0.058522306, z: 0, w: 0.9982861}
-  m_LocalPosition: {x: 0.01, y: 0, z: 0.04}
-  m_LocalScale: {x: 0.31243226, y: 0.3434188, z: 0.34341887}
+  m_LocalRotation: {x: 0.19407447, y: 0.19407447, z: 0.6799523, w: 0.6799523}
+  m_LocalPosition: {x: -0.33, y: 0, z: -0.82}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children: []
   m_Father: {fileID: 1986665005050809717}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 6.71, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 31.86, z: 90}
 --- !u!33 &9109749592431449543
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -677,8 +677,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0045736227, y: -0.2304625, z: 1.1182996}
-    m_Extent: {x: 0.8557352, y: 0.7742136, z: 1.2380754}
+    m_Center: {x: 0.004573792, y: -0.2304635, z: 1.1183004}
+    m_Extent: {x: 0.701558, y: 0.79365295, z: 1.1933101}
   m_DirtyAABB: 0
 --- !u!1001 &6039660376180613544
 PrefabInstance:
@@ -686,11 +686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1986665005050809717}
     m_Modifications:
-    - target: {fileID: 2463123072081035247, guid: dc26b00b30a8dde44a301a75757b633b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2463123072081035247, guid: dc26b00b30a8dde44a301a75757b633b,
         type: 3}
       propertyPath: m_IsActive

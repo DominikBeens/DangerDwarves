@@ -8,6 +8,7 @@ public class DwarfAnimationsScript : MonoBehaviour
 
     private Animator myAnim;
     private IKControl myIKControl;
+    public Vector3 actualAxis;
 
     public float moodSpectrum;
 
@@ -166,7 +167,9 @@ public class DwarfAnimationsScript : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         Vector3 combinedAxis = new Vector3(x, 0, y);
+        
         combinedAxis = !Player.localPlayer.entity.health.isDead ? transform.parent.InverseTransformDirection(combinedAxis) : Vector3.zero;
+        actualAxis = combinedAxis;
 
         myAnim.SetFloat("HorizontalAxis", combinedAxis.x);
         myAnim.SetFloat("VerticalAxis", combinedAxis.z);
