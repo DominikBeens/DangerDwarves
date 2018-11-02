@@ -67,7 +67,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            NotificationManager.instance.NewNotification("<color=red>" + newPlayer.NickName + "</color> has entered the hub.");
+            string easterEgg =  newPlayer.NickName.ToUpper() == "ANGAITYA" ? "\nEveryone is proud of her!" : "";
+            NotificationManager.instance.NewNotification("<color=red>" + newPlayer.NickName + "</color> has entered the hub." + easterEgg);
         }
     }
 
