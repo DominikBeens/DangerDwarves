@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4778554132450660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
+    type: 3}
+  m_PrefabInstance: {fileID: 8074913055122149816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329845292236604
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,10 +17,9 @@ GameObject:
   - component: {fileID: 4865135451303388}
   - component: {fileID: 285994908499404040}
   - component: {fileID: 8013572108609657672}
-  - component: {fileID: 5659407342713169191}
   - component: {fileID: 4237951325463797157}
   m_Layer: 10
-  m_Name: Buff_Hammershock
+  m_Name: Buff_Dazzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +36,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
-  - {fileID: 7928614614001028226}
+  - {fileID: 4778554132450660}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,13 +52,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747753adf2cbc954a91ce764b48cf948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPoolName: Buff_Hammershock
+  myPoolName: Buff_Dazzle
   damageTarget: 0
   selfDestroyTime: 5
   prefabToSpawnOnHit: 
   prefabToSpawnOnDeath: 
   stayOnOwner: 0
   isEnemyProjectile: 0
+  visuals: []
   applyStatusEffect: 0
   effectToApply: 0
   effectDuration: 0
@@ -80,32 +86,10 @@ MonoBehaviour:
   damageRange: 2
   damageMultiplier: 1
   applyStatusEffect: 1
-  effectToApply: 2
-  effectDuration: 5
-  pushToCenter: 0
-  pushToCenterForce: 0
---- !u!114 &5659407342713169191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329845292236604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 14
-  InstantiationId: 14
-  isRuntimeInstantiated: 0
+  effectToApply: 1
+  effectDuration: 4
+  pushToCenter: 1
+  pushToCenterForce: 4
 --- !u!54 &4237951325463797157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,77 +106,71 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &7928614614001028226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
-    type: 3}
-  m_PrefabInstance: {fileID: 292752182013119731}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &292752182013119731
+--- !u!1001 &8074913055122149816
 PrefabInstance:
   m_ObjectHideFlags: 0
   m_Modification:
     m_TransformParent: {fileID: 4865135451303388}
     m_Modifications:
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.70710707
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.70710653
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8079212221628062940, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3588913870518246731, guid: 8233a9ed161c29646b2d2360c7323db4,
+    - target: {fileID: 8073895759198281540, guid: d9d2cb9e74b267c49a140feb9960d316,
         type: 3}
       propertyPath: m_Name
-      value: Buff_HammershockParticle
+      value: Buff_DazzleParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8233a9ed161c29646b2d2360c7323db4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: d9d2cb9e74b267c49a140feb9960d316, type: 3}

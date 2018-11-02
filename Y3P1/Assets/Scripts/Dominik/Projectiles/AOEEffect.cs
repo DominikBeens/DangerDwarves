@@ -44,15 +44,16 @@ public class AOEEffect : MonoBehaviourPunCallbacks
 
     private void ParentProjectile_OnFire(Projectile obj)
     {
-        Initialise(parentProjectile.fireData.damage);
+        Initialise(parentProjectile);
     }
 
-    public void Initialise(int damage)
+    public void Initialise(Projectile source)
     {
-        this.damage = Mathf.RoundToInt(damage * damageMultiplier);
+        parentProjectile = source;
+        damage = Mathf.RoundToInt(source.fireData.damage * damageMultiplier);
         damageTarget = parentProjectile ? parentProjectile.damageTarget : damageTarget;
 
-        TriggerAOE(this.damage);
+        TriggerAOE(damage);
         if (continuousEffect)
         {
             nextDamageTick = Time.time + effectInterval;
@@ -75,7 +76,11 @@ public class AOEEffect : MonoBehaviourPunCallbacks
     {
         TriggerCameraShake();
 
-        if (!photonView.IsMine)
+        if (!Player.localPlayer)
+        {
+            return;
+        }
+        if (parentProjectile.fireData.ownerID != Player.localPlayer.photonView.ViewID && !parentProjectile.IsEnemyProjectile)
         {
             return;
         }

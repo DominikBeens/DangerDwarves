@@ -197,24 +197,4 @@ public class WeaponPrefab : ItemPrefab
             WeaponSlot.OnEndMelee -= endMelee;
         }
     }
-
-    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        //base.OnPhotonSerializeView(stream, info);
-
-        //if (stream.IsWriting)
-        //{
-        //    if (weaponTrail)
-        //    {
-        //        stream.SendNext(weaponTrail.Emit);
-        //    }
-        //}
-        //else
-        //{
-        //    if (weaponTrail)
-        //    {
-        //        weaponTrail.Emit = (bool)stream.ReceiveNext();
-        //    }
-        //}
-    }
 }

@@ -81,7 +81,6 @@ GameObject:
   - component: {fileID: 5925572640237181615}
   - component: {fileID: 4247674038721876242}
   - component: {fileID: 1513465962598485992}
-  - component: {fileID: 9156334626702542129}
   - component: {fileID: 3566869288177880644}
   m_Layer: 10
   m_Name: Arrow
@@ -173,28 +172,6 @@ MonoBehaviour:
   applyStatusEffect: 0
   effectToApply: 0
   effectDuration: 0
---- !u!114 &9156334626702542129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716037247890611631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 104
-  InstantiationId: 104
-  isRuntimeInstantiated: 0
 --- !u!114 &3566869288177880644
 MonoBehaviour:
   m_ObjectHideFlags: 0

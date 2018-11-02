@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
 
     public static GameManager instance;
+    private bool leavingGame;
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject bountyManagerPrefab;
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            string easterEgg =  newPlayer.NickName.ToUpper() == "ANGAITYA" ? "\nEveryone is proud of her!" : "";
+            string easterEgg = newPlayer.NickName.ToUpper() == "ANGAITYA" ? "\nEveryone is proud of her!" : "";
             NotificationManager.instance.NewNotification("<color=red>" + newPlayer.NickName + "</color> has entered the hub." + easterEgg);
         }
     }
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+        leavingGame = true;
         SafeManager.instance.SaveGame();
         PhotonNetwork.LeaveRoom();
     }
@@ -93,14 +95,23 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-#if UNITY_EDITOR
-        return;
-#else
-        if (cause != DisconnectCause.DisconnectByClientLogic || cause != DisconnectCause.DisconnectByServerLogic)
+        Debug.LogWarning(cause);
+
+        if (leavingGame)
         {
             Destroy(Y3P1.Player.localPlayer.playerCam.gameObject);
             PhotonNetwork.Destroy(Y3P1.Player.localPlayerObject);
         }
+        else
+        {
+#if !UNITY_EDITOR
+            if (cause != DisconnectCause.DisconnectByClientLogic || cause != DisconnectCause.DisconnectByServerLogic)
+            {
+                PhotonNetwork.Reconnect();
+            }
 #endif
+        }
+
+        leavingGame = false;
     }
 }

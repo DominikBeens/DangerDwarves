@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
 {
 
     private Rigidbody rb;
-    private PhotonView photonView;
     private Target defaultDamageTarget;
     protected bool hitAnything;
     private Transform owner;
@@ -23,6 +22,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private string prefabToSpawnOnDeath;
     [SerializeField] private bool stayOnOwner;
     [SerializeField] private bool isEnemyProjectile;
+    public bool IsEnemyProjectile { get { return isEnemyProjectile; } }
 
     [Header("Visuals")]
     [SerializeField] private List<ProjectileVisual> visuals = new List<ProjectileVisual>();
@@ -58,7 +58,6 @@ public class Projectile : MonoBehaviour
     public virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        photonView = GetComponent<PhotonView>();
         defaultDamageTarget = damageTarget;
         trail = GetComponent<MeleeWeaponTrail>();
     }
@@ -195,7 +194,7 @@ public class Projectile : MonoBehaviour
             AOEEffect aoeComponent = newSpawn.GetComponent<AOEEffect>();
             if (aoeComponent)
             {
-                aoeComponent.Initialise(fireData.damage);
+                aoeComponent.Initialise(this);
             }
         }
     }
@@ -232,7 +231,7 @@ public class Projectile : MonoBehaviour
             AOEEffect aoeComponent = newSpawn.GetComponent<AOEEffect>();
             if (aoeComponent)
             {
-                aoeComponent.Initialise(fireData.damage);
+                aoeComponent.Initialise(this);
             }
         }
     }

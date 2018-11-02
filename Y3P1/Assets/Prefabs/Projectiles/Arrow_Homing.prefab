@@ -1,10 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &8295178171812159101 stripped
+--- !u!4 &6061813821006649909 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+  m_CorrespondingSourceObject: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
     type: 3}
-  m_PrefabInstance: {fileID: 4743071059015189183}
+  m_PrefabInstance: {fileID: 9046201404583212172}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3716037247890611631
 GameObject:
@@ -18,10 +18,9 @@ GameObject:
   - component: {fileID: 4257993169252272926}
   - component: {fileID: 5925572640237181615}
   - component: {fileID: 4247674038721876242}
-  - component: {fileID: 4639948572231450245}
-  - component: {fileID: 9156334626702542129}
+  - component: {fileID: 6813736275099122773}
   m_Layer: 10
-  m_Name: Arrow_Volley
+  m_Name: Arrow_Homing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +38,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3541193125591702390}
-  - {fileID: 8295178171812159101}
+  - {fileID: 6061813821006649909}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,7 +79,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &4639948572231450245
+--- !u!114 &6813736275099122773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,41 +88,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3716037247890611631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e85e78d384c67274482c906fb759cdca, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ebe7379a233965489839768ba7048d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPoolName: Arrow_Volley
+  myPoolName: Arrow_Homing
   damageTarget: 0
   selfDestroyTime: 5
   prefabToSpawnOnHit: HitMarker
   prefabToSpawnOnDeath: 
   stayOnOwner: 0
-  volleyArrowPrefab: VolleyArrow
-  volleyRange: 4.5
-  volleyAmount: 50
-  volleyArrowSpeed: 25
---- !u!114 &9156334626702542129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716037247890611631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 104
-  InstantiationId: 104
-  isRuntimeInstantiated: 0
+  isEnemyProjectile: 0
+  visuals: []
+  applyStatusEffect: 0
+  effectToApply: 0
+  effectDuration: 0
+  rotateSpeed: 600
+  rotateIncreaseSpeed: 800
 --- !u!1 &8527049982576195183
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,71 +182,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &4743071059015189183
+--- !u!1001 &9046201404583212172
 PrefabInstance:
   m_ObjectHideFlags: 0
   m_Modification:
     m_TransformParent: {fileID: 7106649673028893103}
     m_Modifications:
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660478062618303682, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 2996428335450812089, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8095150730977284609, guid: 5d4d3ae851ce29c46bf142bc88e2a665,
+    - target: {fileID: 1191424006323067228, guid: 03c08260a6098504ca78e10686301bea,
         type: 3}
       propertyPath: m_Name
-      value: Arrow_VolleyParticle
+      value: Arrow_HomingParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5d4d3ae851ce29c46bf142bc88e2a665, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 03c08260a6098504ca78e10686301bea, type: 3}

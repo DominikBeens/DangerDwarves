@@ -25,7 +25,7 @@ public class TrinketPrefab : ItemPrefab
     private void TrinketSlot_OnEquip()
     {
         SetColors();
-        renderer.enabled = false;
+        //renderer.enabled = false;
         //particle.gameObject.SetActive(true);
     }
 
@@ -45,7 +45,7 @@ public class TrinketPrefab : ItemPrefab
 
         SpawnDroppedItemLabel();
 
-        renderer.enabled = true;
+        //renderer.enabled = true;
         Player.localPlayer.trinketSlot.OnEquip -= TrinketSlot_OnEquip;
 
         //DroppedItemManager.instance.RegisterDroppedItem(photonView.ViewID, myItem);
@@ -110,19 +110,5 @@ public class TrinketPrefab : ItemPrefab
     public override void OnDisable()
     {
         Player.localPlayer.trinketSlot.OnEquip -= TrinketSlot_OnEquip;
-    }
-
-    public override void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        //base.OnPhotonSerializeView(stream, info);
-
-        //if (stream.IsWriting)
-        //{
-        //    stream.SendNext(renderer.enabled);
-        //}
-        //else
-        //{
-        //    renderer.enabled = (bool)stream.ReceiveNext();
-        //}
     }
 }

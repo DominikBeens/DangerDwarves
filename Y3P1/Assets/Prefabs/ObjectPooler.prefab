@@ -47,7 +47,7 @@ MonoBehaviour:
   - poolName: DamageText
     poolPrefab: {fileID: 7972216441462917839, guid: b43c1fbc24ee83b4d88606246cbcea1e,
       type: 3}
-    poolSize: 25
+    poolSize: 30
     autoExpand: 1
   - poolName: Arrow
     poolPrefab: {fileID: 3716037247890611631, guid: 45866b9eb4ed4a54987f23d0fabfd56f,
@@ -57,17 +57,17 @@ MonoBehaviour:
   - poolName: Arrow_Homing
     poolPrefab: {fileID: 3716037247890611631, guid: a257b6921b1103c49a8e506947bd386e,
       type: 3}
-    poolSize: 100
+    poolSize: 25
     autoExpand: 1
   - poolName: Arrow_Volley
     poolPrefab: {fileID: 3716037247890611631, guid: 9a1b07b93aedc464398b51a99c29179d,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: Explosion
     poolPrefab: {fileID: 1329845292236604, guid: 5305464d3f96c2a469f9d1c407c2fd9f,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: Notification
     poolPrefab: {fileID: 8793457367938011384, guid: 6e957eae26a16014eb5239ccf6a8b3b3,
@@ -77,12 +77,12 @@ MonoBehaviour:
   - poolName: TargetMarkParticle
     poolPrefab: {fileID: 7459235889232862647, guid: d681b527d5d9ba44ea5da2f5e23116ac,
       type: 3}
-    poolSize: 100
+    poolSize: 10
     autoExpand: 1
   - poolName: Arrow_Explosive
     poolPrefab: {fileID: 3716037247890611631, guid: 97b090781e7f0cc44824e972cf84bbbb,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: VolleyArrow
     poolPrefab: {fileID: 3716037247890611631, guid: 6f5ed486fbd88104888000635305fd01,
@@ -97,7 +97,7 @@ MonoBehaviour:
   - poolName: Arrow_Animated
     poolPrefab: {fileID: 3716037247890611631, guid: 5442f6ec6f7c3064d9f9b27f24b48e3d,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: Buff_Thorns
     poolPrefab: {fileID: 3716037247890611631, guid: 222fa82acb3a40843b8fc460f5e6dfb7,
@@ -107,52 +107,42 @@ MonoBehaviour:
   - poolName: SpiderVenom
     poolPrefab: {fileID: 3716037247890611631, guid: c04125944dbaa9148b658e6717a83b3c,
       type: 3}
-    poolSize: 50
+    poolSize: 20
     autoExpand: 1
   - poolName: SpiderVenomHit
     poolPrefab: {fileID: 1022150738432160081, guid: c0af923ff4abf37478179fabc4b27a8f,
       type: 3}
-    poolSize: 25
+    poolSize: 20
     autoExpand: 1
   - poolName: Buff_Heal
     poolPrefab: {fileID: 3716037247890611631, guid: 1a6c6e6bb4795a141b9bed6ed10033ab,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: TorchHit
     poolPrefab: {fileID: 1022150738432160081, guid: 3ca7d6a528926ec43a0175bd078b5e56,
       type: 3}
-    poolSize: 50
+    poolSize: 30
     autoExpand: 1
   - poolName: HitMarker
     poolPrefab: {fileID: 1329845292236604, guid: fe4137c4da3e9b74295cca847ef85543,
       type: 3}
-    poolSize: 50
-    autoExpand: 1
-  - poolName: Windslash
-    poolPrefab: {fileID: 3716037247890611631, guid: 927556504a520ea41a0f9cddc5ec5f35,
-      type: 3}
-    poolSize: 50
-    autoExpand: 1
-  - poolName: Buff_Windslash
-    poolPrefab: {fileID: 3716037247890611631, guid: 820411f8c74da3445969ecf59352be7c,
-      type: 3}
-    poolSize: 10
+    poolSize: 30
     autoExpand: 1
   - poolName: Buff_Hammershock
     poolPrefab: {fileID: 1329845292236604, guid: e1e6b85a251dba14c9c4cae7a0d5be77,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: Buff_Dazzle
     poolPrefab: {fileID: 1329845292236604, guid: b402170624543d448bc8383fb825a38e,
       type: 3}
-    poolSize: 25
+    poolSize: 10
     autoExpand: 1
   - poolName: WoodDestroyParticle
     poolPrefab: {fileID: 6786492363065038976, guid: e233232d0b516a746aaca35060647ff2,
       type: 3}
-    poolSize: 25
+    poolSize: 20
     autoExpand: 1
   - poolName: WraithSmokeBall
     poolPrefab: {fileID: 3716037247890611631, guid: 5122b6bcf33d3514d9ffb40466897abd,
@@ -167,7 +157,7 @@ MonoBehaviour:
   - poolName: WraithSmokeBallHit
     poolPrefab: {fileID: 1022150738432160081, guid: 96230f6c8ba975b40a37adbd2f98909c,
       type: 3}
-    poolSize: 25
+    poolSize: 20
     autoExpand: 1
   - poolName: WraithSummonExplosion
     poolPrefab: {fileID: 7814782754571929585, guid: af73392a907987640ad2c9e92ef945a5,

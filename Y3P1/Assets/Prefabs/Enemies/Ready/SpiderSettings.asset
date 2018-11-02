@@ -40,3 +40,7 @@ MonoBehaviour:
   deathAnimation: Spider_death
   walkAnimation: Is Walking
   hitAnimation: 
+  wanderRadius: 6
+  minIdleTime: 1
+  maxIdleTime: 4
+  targetSeekRange: 250

@@ -9295,7 +9295,6 @@ GameObject:
   - component: {fileID: 6217219117793746635}
   - component: {fileID: 1930525978806952104}
   - component: {fileID: 3659444747134613433}
-  - component: {fileID: 613658369442499042}
   m_Layer: 0
   m_Name: WraithSummonExplosion
   m_TagString: Untagged
@@ -14012,28 +14011,6 @@ MonoBehaviour:
   effectDuration: 4
   pushToCenter: 0
   pushToCenterForce: 0
---- !u!114 &613658369442499042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7814782754571929585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 1
-  InstantiationId: 1
-  isRuntimeInstantiated: 0
 --- !u!1 &8849948309968812670
 GameObject:
   m_ObjectHideFlags: 0

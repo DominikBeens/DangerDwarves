@@ -43,4 +43,4 @@ MonoBehaviour:
   wanderRadius: 6
   minIdleTime: 1
   maxIdleTime: 4
-  targetSeekRange: 100
+  targetSeekRange: 250

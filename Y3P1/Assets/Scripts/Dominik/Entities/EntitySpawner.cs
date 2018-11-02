@@ -142,13 +142,13 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
             for (int i = 0; i < raycastPositions.Length; i++)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(raycastPositions[i], Vector3.down, out hit))
+                if (Physics.Raycast(raycastPositions[i], Vector3.down, out hit, 2))
                 {
                     if (hit.transform.tag != "Environment")
                     {
                         break;
                     }
-                    else if (hit.transform.tag == "Environment" && i == raycastPositions.Length - 1 && Mathf.Abs(transform.position.y - hit.point.y) < 0.1f)
+                    else if (hit.transform.tag == "Environment" && i == raycastPositions.Length - 1)
                     {
                         foundValidPos = true;
                         validPos = randomPos;

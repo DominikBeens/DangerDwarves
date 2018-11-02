@@ -38,24 +38,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6541074128113357617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3040438060753054538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers:
-  - SynchronizeType: 1
-    LayerIndex: 0
 --- !u!1 &3716037247890611631
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,7 +51,6 @@ GameObject:
   - component: {fileID: 5925572640237181615}
   - component: {fileID: 4247674038721876242}
   - component: {fileID: 765210797591217307}
-  - component: {fileID: 9156334626702542129}
   m_Layer: 10
   m_Name: Arrow_Animated
   m_TagString: Untagged
@@ -157,28 +138,6 @@ MonoBehaviour:
   animatedProjectiles:
   - {fileID: 910610276577147149}
   - {fileID: 8836469224303019096}
---- !u!114 &9156334626702542129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716037247890611631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 104
-  InstantiationId: 104
-  isRuntimeInstantiated: 0
 --- !u!1 &6643825980608665119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3716037247890611631, guid: 45866b9eb4ed4a54987f23d0fabfd56f,
@@ -217,24 +176,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4494495415901034433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6643825980608665119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers:
-  - SynchronizeType: 1
-    LayerIndex: 0
 --- !u!1 &8527049982576195183
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +339,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 6541074128113357617}
+      objectReference: {fileID: 0}
     - target: {fileID: 1513465962598485992, guid: 45866b9eb4ed4a54987f23d0fabfd56f,
         type: 3}
       propertyPath: myPoolName
@@ -589,7 +530,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 4494495415901034433}
+      objectReference: {fileID: 0}
     - target: {fileID: 1513465962598485992, guid: 45866b9eb4ed4a54987f23d0fabfd56f,
         type: 3}
       propertyPath: myPoolName

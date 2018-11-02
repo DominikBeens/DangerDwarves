@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 7705279525025991936}
   - component: {fileID: 2766268011096404835}
   - component: {fileID: 1036299211034748018}
-  - component: {fileID: 3759800036776352297}
   m_Layer: 0
   m_Name: WraithExplosionCircleParticle
   m_TagString: Untagged
@@ -4736,28 +4735,6 @@ MonoBehaviour:
   effectDuration: 0
   pushToCenter: 0
   pushToCenterForce: 0
---- !u!114 &3759800036776352297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5826240361538065466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 1
-  InstantiationId: 1
-  isRuntimeInstantiated: 0
 --- !u!1 &7517755095186872819
 GameObject:
   m_ObjectHideFlags: 0
