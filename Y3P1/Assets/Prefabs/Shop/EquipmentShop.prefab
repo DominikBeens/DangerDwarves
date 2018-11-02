@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopInventory: {fileID: 4337099619414526017}
-  shopType: 0
+  shopType: 1
   sizeShop: 12
   cooldownInMin: 1
 --- !u!1 &4337099618603032799

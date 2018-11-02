@@ -57,6 +57,8 @@ public class ShopManager : MonoBehaviour {
 
     public void Restock()
     {
+        Player.localPlayer.myInventory.CalculateArmor();
+        NotificationManager.instance.NewNotification("The shop has been restocked");
         ShopInventory.RemoveAll();
         switch (shopType)
         {
@@ -69,7 +71,14 @@ public class ShopManager : MonoBehaviour {
             case ShopType.Potions:
                 for (int i = 0; i < sizeShop; i++)
                 {
-                    ShopInventory.AddItem(LootRandomizer.instance.PotionToShop());
+                    print("Crazy potion");
+                    Item temp = LootRandomizer.instance.PotionToShop();
+                    if(temp == null)
+                    {
+                        print(temp + "    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah");
+                    }
+                    
+                    ShopInventory.AddItem(temp);
                 }
                 break;
         }

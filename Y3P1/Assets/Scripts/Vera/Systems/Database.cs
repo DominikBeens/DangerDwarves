@@ -169,14 +169,11 @@ public class Database : MonoBehaviour {
     //getMaterials
     public int GetPotionMaterial(int o)
     {
-        print(o);
-        NotificationManager.instance.NewNotification(o.ToString());
         int index = 0;
         if (o > potionMaterial.Count - 1)
         {
             o = potionMaterial.Count - 1;
         }
-        print(o);
         for (int i = 0; i < allMaterials.Count; i++)
         {
             if (potionMaterial[o] == allMaterials[i])

@@ -42,7 +42,6 @@ public class Item
         }
         else
         {
-            NotificationManager.instance.NewNotification(itemName);
             newInfo = new string[] { RarityInfo(), "Item level: <color=#00A8FF>" + itemLevel.ToString() };
         }
         
@@ -56,7 +55,6 @@ public class Item
 
     public virtual int StartPotion(int rarity)
     {
-        NotificationManager.instance.NewNotification("AAAAAAAAAAAAAAAAAAAAAAAAAAh");
         return -1;
     }
 

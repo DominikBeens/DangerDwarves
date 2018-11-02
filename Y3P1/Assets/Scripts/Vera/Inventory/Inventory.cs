@@ -510,6 +510,10 @@ public class Inventory : MonoBehaviourPunCallbacks
         else
         {
             canvas.enabled = false;
+            if(window == Window.Shop)
+            {
+                ShopManager.instance.OpenShop();
+            }
         }
     }
 
@@ -669,12 +673,12 @@ public class Inventory : MonoBehaviourPunCallbacks
             {
                 allItems[index].SendInfo();
             }
-            else
+            else if (window == Window.Equipment)
             {
                 StatsInfo.instance.DisablePanel();
             }
         }
-        else
+        else if(window == Window.Equipment)
         {
             StatsInfo.instance.DisablePanel();
         }

@@ -217,7 +217,7 @@ public class ShopInventory : MonoBehaviour {
 
     private void ExtractGold()
     {
-        Player.localPlayer.myInventory.totalGoldAmount -= allItems[GetIndex(currentSlot)].CalculateValue();
+        Player.localPlayer.myInventory.UpdateGold(-allItems[GetIndex(currentSlot)].CalculateValue());
     }
 
     private bool CheckGold(Item toCheck = null)
@@ -252,6 +252,7 @@ public class ShopInventory : MonoBehaviour {
         {
             if(toAdd != null)
             {
+                toAdd.sold = true;
                 allToSellItems.Add(toAdd);
                 break;
             }

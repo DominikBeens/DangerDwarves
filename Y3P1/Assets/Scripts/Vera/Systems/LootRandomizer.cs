@@ -95,7 +95,7 @@ public class LootRandomizer : MonoBehaviour {
 
     public Item PotionToShop()
     {
-        return LootPotion();
+        return LootPotion(true);
     }
 
     public Item LootChefsHat(int cI)
@@ -187,9 +187,9 @@ public class LootRandomizer : MonoBehaviour {
         return newItem;
     }
 
-    private Item LootPotion()
+    private Item LootPotion(bool save = false)
     {
-        if(Random.Range(0,100) < 50)
+        if(Random.Range(0,100) < 50 && !save )
         {
             return null;
         }
