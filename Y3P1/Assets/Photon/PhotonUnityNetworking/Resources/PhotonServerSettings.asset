@@ -91,4 +91,5 @@ MonoBehaviour:
   - SyncCancelDungeon
   - SyncTeleportEffect
   - StartBurn
+  - SetReviveZone
   DisableAutoOpenWizard: 1

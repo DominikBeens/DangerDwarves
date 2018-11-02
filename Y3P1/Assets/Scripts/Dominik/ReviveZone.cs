@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using Y3P1;
 
-public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
+public class ReviveZone : MonoBehaviourPunCallbacks
 {
 
+    private bool initialised;
     private bool checkForInput;
     private bool reviving;
 
-    private Player player;
     private Collider reviveZoneCollider;
 
     [SerializeField] private GameObject reviveZoneObject;
@@ -22,10 +22,43 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
     public event Action OnStartRevive = delegate { };
     public event Action OnEndRevive = delegate { };
 
-    private void Awake()
+    public void Initialise(bool local)
     {
-        player = transform.root.GetComponent<Player>();
         reviveZoneCollider = GetComponent<Collider>();
+
+        if (!local)
+        {
+            return;
+        }
+
+        initialised = true;
+
+        Player.localPlayer.entity.OnDeath.AddListener(() => ToggleRevivable(true));
+        Player.localPlayer.entity.OnRevive.AddListener(() => ToggleRevivable(false));
+    }
+
+    public void ToggleRevivable(bool b)
+    {
+        if (b)
+        {
+            photonView.RPC("SetReviveZone", RpcTarget.AllBuffered, b);
+        }
+        else
+        {
+            photonView.RPC("SetReviveZone", RpcTarget.All, b);
+        }
+    }
+
+    [PunRPC]
+    private void SetReviveZone(bool b)
+    {
+        reviveZoneObject.SetActive(b);
+        reviveZoneCollider.enabled = b;
+
+        if (!b && PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.RemoveRPCs(photonView);
+        }
     }
 
     private void Update()
@@ -45,6 +78,11 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
 
         if (reviving)
         {
+            if (Player.localPlayer.entity.health.isDead)
+            {
+                ToggleRevive(false);
+            }
+
             progressImage.fillAmount += Time.deltaTime * reviveSpeed;
 
             if (progressImage.fillAmount == 1)
@@ -77,13 +115,6 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
-    public void ToggleReviveZone(bool b)
-    {
-        reviveZoneObject.SetActive(b);
-        reviveZoneCollider.enabled = b;
-        interactIndicator.SetActive(false);
-    }
-
     public void ToggleRevive(bool b)
     {
         if (!Player.localPlayer.entity.health.isDead)
@@ -94,7 +125,6 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
             if (b)
             {
                 OnStartRevive();
-                NotificationManager.instance.NewNotification("TEST: " + Player.localPlayer.photonView.Owner.NickName + " is reviving.");
             }
             else
             {
@@ -106,32 +136,25 @@ public class ReviveZone : MonoBehaviourPunCallbacks, IPunObservable
     private void Revive()
     {
         reviving = false;
-        photonView.RPC("SyncRevive", RpcTarget.All, player.photonView.ViewID);
+        checkForInput = false;
+        photonView.RPC("SyncRevive", RpcTarget.All);
     }
 
     [PunRPC]
-    private void SyncRevive(int id)
+    private void SyncRevive()
     {
-        ToggleReviveZone(false);
+        //ToggleReviveZone(false);
 
-        if (Player.localPlayer.photonView.ViewID == id)
+        if (initialised)
         {
-            player.Respawn(false);
+            Player.localPlayer.Respawn(false);
             NotificationManager.instance.NewNotification("<color=red>" + PhotonNetwork.NickName + "</color> has been revived!");
         }
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    public override void OnDisable()
     {
-        //if (stream.IsWriting)
-        //{
-        //    stream.SendNext(reviveZoneObject.activeInHierarchy);
-        //    stream.SendNext(reviveZoneCollider.enabled);
-        //}
-        //else
-        //{
-        //    reviveZoneObject.SetActive((bool)stream.ReceiveNext());
-        //    reviveZoneCollider.enabled = (bool)stream.ReceiveNext();
-        //}
+        Player.localPlayer.entity.OnDeath.RemoveListener(() => ToggleRevivable(true));
+        Player.localPlayer.entity.OnRevive.RemoveListener(() => ToggleRevivable(false));
     }
 }

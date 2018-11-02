@@ -97,21 +97,31 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         Debug.LogWarning(cause);
 
-        if (leavingGame)
+#if UNITY_EDITOR
+        return;
+#else
+        if (cause != DisconnectCause.DisconnectByClientLogic || cause != DisconnectCause.DisconnectByServerLogic)
         {
             Destroy(Y3P1.Player.localPlayer.playerCam.gameObject);
             PhotonNetwork.Destroy(Y3P1.Player.localPlayerObject);
         }
-        else
-        {
-#if !UNITY_EDITOR
-            if (cause != DisconnectCause.DisconnectByClientLogic || cause != DisconnectCause.DisconnectByServerLogic)
-            {
-                PhotonNetwork.Reconnect();
-            }
 #endif
-        }
 
-        leavingGame = false;
+        //        if (leavingGame)
+        //        {
+        //            Destroy(Y3P1.Player.localPlayer.playerCam.gameObject);
+        //            PhotonNetwork.Destroy(Y3P1.Player.localPlayerObject);
+        //        }
+        //        else
+        //        {
+        //#if !UNITY_EDITOR
+        //            if (cause != DisconnectCause.DisconnectByClientLogic || cause != DisconnectCause.DisconnectByServerLogic)
+        //            {
+        //                PhotonNetwork.Reconnect();
+        //            }
+        //#endif
+        //        }
+
+        //        leavingGame = false;
     }
 }

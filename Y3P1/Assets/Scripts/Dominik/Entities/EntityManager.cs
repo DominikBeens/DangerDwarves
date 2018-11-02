@@ -46,7 +46,6 @@ public class EntityManager : MonoBehaviourPunCallbacks
         for (int i = 0; i < spawnAmount; i++)
         {
             Vector3 spawnPos = spawnRange == 0 ? origin.transform.position : origin.GetRandomPos();
-            NotificationManager.instance.NewNotification(spawnPos.ToString());
             if (spawnPos != Vector3.zero)
             {
                 GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(origin.GetRandomEntity(), spawnPos, origin.transform.rotation);

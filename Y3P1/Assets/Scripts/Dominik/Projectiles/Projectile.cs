@@ -154,7 +154,7 @@ public class Projectile : MonoBehaviour
             HandleProjectileStatusEffects(entity);
         }
 
-        if (isEnemyProjectile)
+        if (isEnemyProjectile && entity == Player.localPlayer.entity)
         {
             entity.Hit(-fireData.damage, Stats.DamageType.Ranged);
             HandleProjectileStatusEffects(entity);

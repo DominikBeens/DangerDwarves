@@ -1,11 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!224 &6445159585247828165 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4646051276855569550, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1804775200451949643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129828346626576813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1632042074742679014, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1804775200451949643}
+  m_PrefabAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 206c3631fccebf841b3a96f5f115de29, type: 3}
 --- !u!224 &549299838207358254 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2203483087077638501, guid: ae10adcbca2c84d469fdfd990e1d6eab,
     type: 3}
   m_PrefabInstance: {fileID: 1804775200451949643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2461618777977229473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4261166414810637546, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1804775200451949643}
+  m_PrefabAsset: {fileID: 0}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &5546799059658843132 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6192987289836115895, guid: ae10adcbca2c84d469fdfd990e1d6eab,
@@ -154,11 +174,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -172,13 +192,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2461618777977229473 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4261166414810637546, guid: ae10adcbca2c84d469fdfd990e1d6eab,
-    type: 3}
-  m_PrefabInstance: {fileID: 1804775200451949643}
-  m_PrefabAsset: {fileID: 0}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &5692939137978712533
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +203,7 @@ GameObject:
   - component: {fileID: 3002427419219958876}
   - component: {fileID: 7817391858799720155}
   - component: {fileID: 4025203778759708010}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +276,7 @@ GameObject:
   - component: {fileID: 6368289305768057313}
   - component: {fileID: 6368289305768057437}
   - component: {fileID: 6368289305768057118}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,11 +405,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -420,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5375975939263932919}
   - component: {fileID: 4074655577579427073}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PlayerScreenSpaceUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,19 +476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 6368289305768057118}
   healthBar: {fileID: 1129828346626576813}
---- !u!224 &6445159585247828165 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4646051276855569550, guid: ae10adcbca2c84d469fdfd990e1d6eab,
-    type: 3}
-  m_PrefabInstance: {fileID: 1804775200451949643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1129828346626576813 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1632042074742679014, guid: ae10adcbca2c84d469fdfd990e1d6eab,
-    type: 3}
-  m_PrefabInstance: {fileID: 1804775200451949643}
-  m_PrefabAsset: {fileID: 0}
-  m_Script: {fileID: 11500000, guid: 206c3631fccebf841b3a96f5f115de29, type: 3}
 --- !u!1001 &1804775200451949643
 PrefabInstance:
   m_ObjectHideFlags: 0

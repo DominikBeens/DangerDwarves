@@ -209,6 +209,7 @@ public class ArmoryManager : MonoBehaviour
             selectedItem.myStats = newStats;
 
             Player.localPlayer.myInventory.UpdateGold(-CalculateRerollStatsCost());
+            Player.localPlayer.myInventory.CalculateArmor();
             SelectItem(selectedItem);
         }
     }

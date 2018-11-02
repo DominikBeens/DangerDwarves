@@ -86,6 +86,7 @@ namespace Y3P1
             dwarfAnimController.Initialise(IsConnectedAndMine());
             rangedWeaponLookAt.Initialise(IsConnectedAndMine());
             myInventory.Initialise(IsConnectedAndMine());
+            reviveZone.Initialise(IsConnectedAndMine());
 
             weaponSlot.Initialise(IsConnectedAndMine());
             helmetSlot.Initialise(IsConnectedAndMine());
@@ -151,6 +152,16 @@ namespace Y3P1
                 {
                     weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.Poison, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
                 }
+
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    entity.Hit(-10, Stats.DamageType.Melee);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    entity.Hit(-100, Stats.DamageType.Melee);
+                }
             }
         }
 
@@ -175,14 +186,12 @@ namespace Y3P1
         private void Entity_OnDeath()
         {
             deathCanvas.SetActive(true);
-            reviveZone.ToggleReviveZone(true);
             NotificationManager.instance.NewNotification("<color=red>" + PhotonNetwork.NickName + "</color> has been downed!");
         }
 
         public void Respawn(bool hub)
         {
             deathCanvas.SetActive(false);
-            reviveZone.ToggleReviveZone(false);
             localPlayer.entity.Revive(hub ? 100 : 50);
 
             if (hub)
