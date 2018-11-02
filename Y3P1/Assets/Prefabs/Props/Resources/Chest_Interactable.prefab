@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 4133993539670320160}
   - component: {fileID: 3481017381108286403}
   - component: {fileID: 8254330936016456317}
-  - component: {fileID: 8741191265366256677}
   - component: {fileID: 5263193651228409110}
   m_Layer: 0
   m_Name: Chest_Interactable
@@ -141,11 +140,10 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 0
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 8741191265366256677}
-  - {fileID: 804518704752718954}
+  - {fileID: 0}
   viewIdField: 24
   InstantiationId: 24
   isRuntimeInstantiated: 0
@@ -181,30 +179,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8741191265366256677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9198351622957362943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 9
-    SynchronizeType: 1
-    Name: Hit
-  - Type: 4
-    SynchronizeType: 1
-    Name: Open
-  m_SynchronizeLayers:
-  - SynchronizeType: 0
-    LayerIndex: 0
 --- !u!208 &5263193651228409110
 NavMeshObstacle:
   m_ObjectHideFlags: 0
