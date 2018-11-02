@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 2707019193948728229}
   - component: {fileID: 7693439475671736641}
   - component: {fileID: 7301392020608194756}
+  - component: {fileID: 2199590701380535809}
   m_Layer: 0
   m_Name: Box_1_Interactable
   m_TagString: Untagged
@@ -146,7 +147,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
+  - {fileID: 2199590701380535809}
   - {fileID: 7979497481230447716}
+  - {fileID: 7468111864040099976}
   viewIdField: 27
   InstantiationId: 27
   isRuntimeInstantiated: 0
@@ -247,6 +250,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &2199590701380535809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271214002197388943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!1001 &3091396008332545978
 PrefabInstance:
   m_ObjectHideFlags: 0
