@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7476630297229853782}
   - component: {fileID: 7476630297230853782}
   - component: {fileID: 6077749644308815773}
+  - component: {fileID: 9097797091922342194}
   m_Layer: 13
   m_Name: Ground_wall_1 (1)
   m_TagString: Environment
@@ -90,3 +91,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.0000005, z: 0}
   m_Center: {x: 0, y: 0, z: 0.20000005}
+--- !u!114 &9097797091922342194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476630297232857174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031a198f0191b0f4eb4a26a3be77b799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialType: 0
