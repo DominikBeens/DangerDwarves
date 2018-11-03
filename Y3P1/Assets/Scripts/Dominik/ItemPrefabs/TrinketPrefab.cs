@@ -36,6 +36,7 @@ public class TrinketPrefab : ItemPrefab
         myItem = (Item)boc.ByteArrayToObject(itemData);
 
         isDropped = true;
+        rb.isKinematic = false;
 
         interactCollider.SetActive(true);
         objectCollider.enabled = true;

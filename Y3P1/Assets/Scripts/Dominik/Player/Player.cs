@@ -114,6 +114,8 @@ namespace Y3P1
                         col.enabled = false;
                     }
                 }
+
+                localPlayer.entity.health.UpdateHealth();
             }
             else
             {

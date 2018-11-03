@@ -53,6 +53,11 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         {
             EntityManager.instance.AddToAliveTargets(this);
         }
+
+        if (Player.localPlayer.entity == this)
+        {
+            health.OnHealthModified += (h) => photonView.RPC("SyncHealth", RpcTarget.Others, h.currentHealth, h.maxHealth, Player.localPlayer.myInventory.averageILevel);
+        }
     }
 
     private void Update()
@@ -171,9 +176,15 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
     }
 
     [PunRPC]
-    private void SyncHealth()
+    private void SyncHealth(int currentHealth, int maxHealth, int itemLevel)
     {
-        health.UpdateHealth();
+        for (int i = 0; i < UIManager.instance.playerScreenSpaceUIs.Count; i++)
+        {
+            if (UIManager.instance.playerScreenSpaceUIs[i].Target.entity == this)
+            {
+                UIManager.instance.playerScreenSpaceUIs[i].UpdateHealthText(currentHealth, maxHealth, itemLevel);
+            }
+        }
     }
 
     public void KnockBack(Vector3 direction, float force)

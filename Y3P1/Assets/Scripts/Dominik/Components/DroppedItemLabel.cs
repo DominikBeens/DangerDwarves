@@ -4,6 +4,7 @@ using UnityEngine;
 public class DroppedItemLabel : MonoBehaviour
 {
 
+    private ItemPrefab associatedItemPrefab;
     private Light light;
     private TextMeshProUGUI labelText;
     private Vector3 legendaryMarkDefaultPos;
@@ -28,11 +29,18 @@ public class DroppedItemLabel : MonoBehaviour
             legendaryMark.transform.localPosition = Vector3.zero;
             legendaryMark.transform.eulerAngles = Vector3.zero;
         }
+
+        if (gameObject.activeInHierarchy && associatedItemPrefab)
+        {
+            transform.position = associatedItemPrefab.transform.position + Vector3.up * 0.5f;
+        }
     }
 
-    public void SetText(string text, Item.ItemRarity rarity)
+    public void Initialise(string text, Item item, ItemPrefab itemPrefab)
     {
-        switch (rarity)
+        associatedItemPrefab = itemPrefab;
+
+        switch (item.itemRarity)
         {
             case Item.ItemRarity.common:
 
@@ -65,6 +73,7 @@ public class DroppedItemLabel : MonoBehaviour
 
     public void ReturnToPool()
     {
+        associatedItemPrefab = null;
         legendaryMark.SetActive(false);
         ObjectPooler.instance.AddToPool("DroppedItemLabel", gameObject);
     }
