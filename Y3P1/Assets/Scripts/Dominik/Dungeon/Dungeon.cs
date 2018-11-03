@@ -80,7 +80,7 @@ public class Dungeon : MonoBehaviour
             }
 
             Entity entity = colliders[i].GetComponent<Entity>();
-            if (entity)
+            if (entity && entity.gameObject.tag != "Player")
             {
                 entity.canDropLoot = false;
                 entity.DestroyEntity();
