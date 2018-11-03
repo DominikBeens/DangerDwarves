@@ -205,6 +205,8 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
 
     private void OnDestroy()
     {
+        EntityManager.instance.RemoveFromAliveTargets(this);
+
         if (PhotonNetwork.IsMasterClient && canDropLoot)
         {
             Player.localPlayer.myInventory.DropNewItem(transform.position,entityType,entityID);

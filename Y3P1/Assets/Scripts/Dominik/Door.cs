@@ -16,11 +16,32 @@ public class Door : MonoBehaviourPunCallbacks
         }
     }
 
+    public void Close()
+    {
+        if (isOpen)
+        {
+            photonView.RPC("CloseDoor", RpcTarget.All);
+        }
+    }
+
     [PunRPC]
     private void OpenDoor()
     {
         isOpen = true;
         anim.SetTrigger("Open");
         interactPopupVisual.SetActive(false);
+    }
+
+    [PunRPC]
+    private void CloseDoor()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.RemoveRPCs(photonView);
+        }
+
+        isOpen = false;
+        anim.SetTrigger("Close");
+        interactPopupVisual.SetActive(true);
     }
 }

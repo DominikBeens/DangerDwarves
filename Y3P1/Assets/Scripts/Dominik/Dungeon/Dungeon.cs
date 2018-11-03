@@ -17,6 +17,8 @@ public class Dungeon : MonoBehaviour
 
     public Transform startSpawn;
     [SerializeField] private List<EntitySpawner> propSpawners = new List<EntitySpawner>();
+    [SerializeField] private Transform dungeonCleanupCenter;
+    [SerializeField] private float dungeonCloseCleanupRange = 100f;
 
     private void Awake()
     {
@@ -52,8 +54,7 @@ public class Dungeon : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.RemoveRPCs(EntityManager.instance.photonView);
-            // Cleanup all alive enemies and drops.
+            StartCoroutine(CleanUpDungeon());
         }
     }
 
@@ -62,7 +63,54 @@ public class Dungeon : MonoBehaviour
         for (int i = 0; i < propSpawners.Count; i++)
         {
             propSpawners[i].TriggerSpawnMasterClient();
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    private IEnumerator CleanUpDungeon()
+    {
+        PhotonNetwork.RemoveRPCs(EntityManager.instance.photonView);
+
+        Collider[] colliders = Physics.OverlapSphere(dungeonCleanupCenter.position, dungeonCloseCleanupRange);
+        for (int i = colliders.Length - 1; i >= 0; i--)
+        {
+            if (!colliders[i])
+            {
+                continue;
+            }
+
+            Entity entity = colliders[i].GetComponent<Entity>();
+            if (entity)
+            {
+                entity.canDropLoot = false;
+                entity.DestroyEntity();
+                yield return new WaitForSeconds(0.01f);
+                continue;
+            }
+
+            ItemPrefab item = colliders[i].GetComponent<ItemPrefab>();
+            if (item)
+            {
+                PhotonNetwork.RemoveRPCs(item.photonView);
+                PhotonNetwork.Destroy(item.gameObject);
+                yield return new WaitForSeconds(0.01f);
+                continue;
+            }
+
+            Door door = colliders[i].GetComponent<Door>();
+            if (door)
+            {
+                door.Close();
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (dungeonCleanupCenter)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(dungeonCleanupCenter.position, dungeonCloseCleanupRange);
         }
     }
 }

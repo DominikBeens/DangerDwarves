@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 5366091626816881182}
   - component: {fileID: 632620987821997869}
   - component: {fileID: 4016903671837254718}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: PickUpTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5607915555544878167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.503, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2863926837974212453}

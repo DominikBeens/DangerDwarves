@@ -27,6 +27,11 @@ public class DroppedItemLabel : MonoBehaviour
 
     private void Update()
     {
+        if (!associatedItemPrefab)
+        {
+            ReturnToPool();
+        }
+
         if (legendaryMark.activeInHierarchy)
         {
             legendaryMark.transform.localPosition = Vector3.zero;

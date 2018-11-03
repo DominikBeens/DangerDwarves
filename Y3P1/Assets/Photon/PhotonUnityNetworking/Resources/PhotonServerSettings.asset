@@ -92,4 +92,5 @@ MonoBehaviour:
   - SyncTeleportEffect
   - StartBurn
   - SetReviveZone
+  - CloseDoor
   DisableAutoOpenWizard: 1
