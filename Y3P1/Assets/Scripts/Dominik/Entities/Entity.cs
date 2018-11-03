@@ -53,6 +53,11 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         {
             EntityManager.instance.AddToAliveTargets(this);
         }
+
+        if (Player.localPlayer.entity == this)
+        {
+            health.OnHealthModified += (h) => photonView.RPC("SyncHealth", RpcTarget.Others, h.currentHealth, h.maxHealth);
+        }
     }
 
     private void Update()
@@ -171,9 +176,9 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
     }
 
     [PunRPC]
-    private void SyncHealth()
+    private void SyncHealth(int currentHealth, int maxHealth)
     {
-        health.UpdateHealth();
+        Debug.LogWarning(currentHealth + "  " + maxHealth);
     }
 
     public void KnockBack(Vector3 direction, float force)

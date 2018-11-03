@@ -10,6 +10,7 @@ public class PlayerUI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private TextMeshProUGUI healthText;
 
     private void Update()
     {
@@ -38,5 +39,10 @@ public class PlayerUI : MonoBehaviour
         }
 
         isInitialised = true;
+    }
+
+    public void UpdateHealthText()
+    {
+        //healthText.text = healthData.currentHealth + "/" + healthData.maxHealth;
     }
 }
