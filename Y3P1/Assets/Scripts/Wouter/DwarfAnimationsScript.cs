@@ -132,6 +132,11 @@ public class DwarfAnimationsScript : MonoBehaviour
         myAnim.SetTrigger("Oil");
     }
 
+    public void SetRevive(bool b)
+    {
+        myAnim.SetBool("Reviving", b);
+    }
+
     public bool CanEquipRanged()
     {
         if (myAnim.GetCurrentAnimatorStateInfo(3).IsTag("MeleeSwing"))

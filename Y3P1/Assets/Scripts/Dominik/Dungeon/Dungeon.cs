@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,11 +28,7 @@ public class Dungeon : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            for (int i = 0; i < propSpawners.Count; i++)
-            {
-                propSpawners[i].TriggerSpawnMasterClient();
-            }
-
+            StartCoroutine(SetUpDungeon());
             // Generate difficulty.
         }
     }
@@ -57,6 +54,15 @@ public class Dungeon : MonoBehaviour
         {
             PhotonNetwork.RemoveRPCs(EntityManager.instance.photonView);
             // Cleanup all alive enemies and drops.
+        }
+    }
+
+    private IEnumerator SetUpDungeon()
+    {
+        for (int i = 0; i < propSpawners.Count; i++)
+        {
+            propSpawners[i].TriggerSpawnMasterClient();
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

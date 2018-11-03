@@ -1,5 +1,4 @@
 ﻿using Photon.Pun;
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Y3P1;
@@ -18,9 +17,6 @@ public class ReviveZone : MonoBehaviourPunCallbacks
     [SerializeField] private Image progressImage;
     [SerializeField] private GameObject progressPanel;
     [SerializeField] private GameObject interactIndicator;
-
-    public event Action OnStartRevive = delegate { };
-    public event Action OnEndRevive = delegate { };
 
     public void Initialise(bool local)
     {
@@ -122,20 +118,14 @@ public class ReviveZone : MonoBehaviourPunCallbacks
             reviving = b;
             progressPanel.SetActive(b);
 
-            if (b)
-            {
-                OnStartRevive();
-            }
-            else
-            {
-                OnEndRevive();
-            }
+            Player.localPlayer.dwarfAnimController.SetRevive(b);
+            Player.localPlayer.playerController.Freeze(b);
         }
     }
 
     private void Revive()
     {
-        reviving = false;
+        ToggleRevive(false);
         checkForInput = false;
         photonView.RPC("SyncRevive", RpcTarget.All);
     }
@@ -143,8 +133,6 @@ public class ReviveZone : MonoBehaviourPunCallbacks
     [PunRPC]
     private void SyncRevive()
     {
-        //ToggleReviveZone(false);
-
         if (initialised)
         {
             Player.localPlayer.Respawn(false);

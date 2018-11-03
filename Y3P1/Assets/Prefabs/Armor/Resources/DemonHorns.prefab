@@ -67,7 +67,7 @@ MonoBehaviour:
   interactCollider: {fileID: 8214542074704961095}
   objectCollider: {fileID: 7309300103247763817}
   weaponRarityParticles: []
-  dropRotationAdjustment: {x: 0, y: 0, z: 0}
+  dropRotationAdjustment: {x: 90, y: 0, z: 0}
   renderer: {fileID: 0}
 --- !u!114 &2169969522657603851
 MonoBehaviour:

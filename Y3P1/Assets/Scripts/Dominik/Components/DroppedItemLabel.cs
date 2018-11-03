@@ -8,6 +8,7 @@ public class DroppedItemLabel : MonoBehaviour
     private Light light;
     private TextMeshProUGUI labelText;
     private Vector3 legendaryMarkDefaultPos;
+    private float yPos;
 
     [SerializeField] private GameObject legendaryMark;
     [HideInInspector] public Animator anim;
@@ -20,6 +21,8 @@ public class DroppedItemLabel : MonoBehaviour
 
         legendaryMarkDefaultPos = legendaryMark.transform.position;
         legendaryMark.SetActive(false);
+
+        yPos = Random.Range(0.35f, 0.8f);
     }
 
     private void Update()
@@ -32,7 +35,7 @@ public class DroppedItemLabel : MonoBehaviour
 
         if (gameObject.activeInHierarchy && associatedItemPrefab)
         {
-            transform.position = associatedItemPrefab.transform.position + Vector3.up * 0.5f;
+            transform.position = associatedItemPrefab.transform.position + Vector3.up * yPos;
         }
     }
 

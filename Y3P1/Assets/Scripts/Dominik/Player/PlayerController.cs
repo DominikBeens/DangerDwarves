@@ -43,9 +43,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         Player.localPlayer.entity.OnDeath.AddListener(() => Freeze(true));
         Player.localPlayer.entity.OnRevive.AddListener(() => Freeze(false));
 
-        Player.localPlayer.reviveZone.OnStartRevive += () => Freeze(true);
-        Player.localPlayer.reviveZone.OnEndRevive += () => Freeze(false);
-
         Player.localPlayer.teleporter.OnStartTeleport += () => Freeze(true);
         Player.localPlayer.teleporter.OnEndTeleport += () => Freeze(false);
     }
@@ -173,7 +170,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
     }
 
-    private void Freeze(bool b)
+    public void Freeze(bool b)
     {
         canControl = !b;
         Player.localPlayer.rb.velocity = Vector3.zero;

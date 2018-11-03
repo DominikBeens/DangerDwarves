@@ -206,10 +206,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84a429adc436a443862658514ea42b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webRenderer: {fileID: 5949033712293179908}
+  renderers:
+  - {fileID: 5949033712293179908}
   webCollider: {fileID: 5990372420519014196}
   burnParticle: {fileID: 8747640151050012251}
   burnTime: 3
+  entityToSpawnOnDeath: {fileID: 0}
+  spawnOnDeathChance: 0
 --- !u!114 &8727285284655981023
 MonoBehaviour:
   m_ObjectHideFlags: 0

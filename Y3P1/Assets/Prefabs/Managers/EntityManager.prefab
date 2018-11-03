@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86370d296a1a44f409915bff61744667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allEntitySpawners: []
   aliveTargets: []
 --- !u!114 &6041173789105380577
 MonoBehaviour:
@@ -64,6 +65,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 3
-  InstantiationId: 3
+  viewIdField: 994
+  InstantiationId: 994
   isRuntimeInstantiated: 0
