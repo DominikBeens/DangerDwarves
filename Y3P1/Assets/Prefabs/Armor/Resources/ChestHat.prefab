@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1050650701588365442}
   - component: {fileID: 1050650701585498276}
   - component: {fileID: 1050650701586596452}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ChestTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1050650701588365444}
   - component: {fileID: 1050650701585498278}
   - component: {fileID: 1050650701586596454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ChestBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1050650701588365446}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Chest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 5366091626816881182}
   - component: {fileID: 632620987821997869}
   - component: {fileID: 4016903671837254718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PickUpTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 174048548283638106}
   - component: {fileID: 6774335630515594673}
   - component: {fileID: 6774335630515594672}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Chest
   m_TagString: Environment
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 4445497850855338468}
   - component: {fileID: 6432093224409942905}
   m_Layer: 12
-  m_Name: ChestHat(New)
+  m_Name: ChestHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

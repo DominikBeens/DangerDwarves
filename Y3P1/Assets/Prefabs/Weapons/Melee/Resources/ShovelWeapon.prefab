@@ -251,7 +251,7 @@ MonoBehaviour:
   objectCollider: {fileID: 2062470117242574286}
   weaponRarityParticles: []
   dropRotationAdjustment: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
+  renderer: {fileID: 3871932190490942421}
   projectileSpawn: {fileID: 5808629879463845336}
   weaponTrail: {fileID: 2483850538173498881}
   prefabToSpawnOnHit: HitMarker

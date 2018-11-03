@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 116301663573599220}
   - component: {fileID: 7309300103247763817}
   m_Layer: 12
-  m_Name: DemonHorns(New)
+  m_Name: DemonHorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     itemLevel: -1
     materialIndex: 0
     sold: 0
-  itemType: 6
+  itemType: 0
   interactCollider: {fileID: 8214542074704961095}
   objectCollider: {fileID: 7309300103247763817}
   weaponRarityParticles: []
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 899784077474876683}
   - component: {fileID: 8274305426933441651}
   - component: {fileID: 5663310721021332713}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: beard3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
