@@ -17,8 +17,10 @@ public class ChesthatOpener : MonoBehaviour {
 
     private void Update()
     {
-        
-        print(dwanimscr.actualAxis);
-        myAnimator.SetFloat("Timeline", dwanimscr.actualAxis.z);
+        if (dwanimscr)
+        {
+            print(dwanimscr.actualAxis);
+            myAnimator.SetFloat("Timeline", dwanimscr.actualAxis.z);
+        }
     }
 }
