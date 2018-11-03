@@ -57,6 +57,7 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
         myItem = (Item)boc.ByteArrayToObject(itemData);
 
         isDropped = true;
+        rb.isKinematic = false;
 
         interactCollider.SetActive(true);
         objectCollider.enabled = true;
@@ -72,12 +73,13 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
     protected void SpawnDroppedItemLabel()
     {
         droppedItemLabel = ObjectPooler.instance.GrabFromPool("DroppedItemLabel", transform.position + Vector3.up * 0.5f, Quaternion.identity).GetComponent<DroppedItemLabel>();
-        droppedItemLabel.SetText(myItem.itemName, myItem.itemRarity);
+        droppedItemLabel.Initialise(myItem.itemName, myItem, this);
     }
 
     public void PickUp()
     {
         isDropped = false;
+        rb.isKinematic = true;
 
         interactCollider.SetActive(false);
         objectCollider.enabled = false;
