@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public List<PlayerUI> playerScreenSpaceUIs = new List<PlayerUI>();
     public Transform otherPlayersUISpawn;
     [HideInInspector] public PlayerStatusCanvas playerStatusCanvas;
     [SerializeField] private List<InventorySlot> hotbarSlots = new List<InventorySlot>();

@@ -71,8 +71,14 @@ public class GameManager : MonoBehaviourPunCallbacks
             string easterEgg = newPlayer.NickName.ToUpper() == "ANGAITYA" ? "\nEveryone is proud of her!" : "";
             NotificationManager.instance.NewNotification("<color=red>" + newPlayer.NickName + "</color> has entered the hub." + easterEgg);
 
-            BountyManager.instance.photonView.RPC("SyncActiveBounty", RpcTarget.Others, BountyManager.activeBounty.bountyName, BountyManager.activeBounty.progress);
-            DungeonManager.instance.photonView.RPC("SyncActiveDungeon", RpcTarget.Others, DungeonManager.openDungeon.dungeonName);
+            if (BountyManager.activeBounty != null)
+            {
+                BountyManager.instance.photonView.RPC("SyncActiveBounty", RpcTarget.Others, BountyManager.activeBounty.bountyName, BountyManager.activeBounty.progress);
+            }
+            if (DungeonManager.openDungeon != null)
+            {
+                DungeonManager.instance.photonView.RPC("SyncActiveDungeon", RpcTarget.Others, DungeonManager.openDungeon.dungeonName);
+            }
         }
     }
 

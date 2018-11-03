@@ -45,7 +45,7 @@ public class HealthBar : MonoBehaviour
         }
 
         // Check if health got decreased or added and play the according animation.
-        // TODO: Add 'IncreaseHealth' animation, it just plays the decrease animation now.
+        // Optional TODO: Add 'IncreaseHealth' animation, it just plays the decrease animation now.
         if (anim)
         {
             anim.SetTrigger(foregroundHealthBar.fillAmount > healthData.percentageHealth ? "DecreaseHealth" : "DecreaseHealth");
@@ -71,6 +71,18 @@ public class HealthBar : MonoBehaviour
                 newDamageText.Initialise(healthData);
             }
         }
+    }
+
+    // Used for manually setting healthbar values for when this object is not initialised but used somewhere else as UI.
+    public void SetCustomValues(Health.HealthData healthData)
+    {
+        if (anim)
+        {
+            anim.SetTrigger(foregroundHealthBar.fillAmount > healthData.percentageHealth ? "DecreaseHealth" : "DecreaseHealth");
+        }
+
+        foregroundHealthBar.fillAmount = healthData.percentageHealth;
+        StartCoroutine(LerpBackgroundHealthBar(healthData.percentageHealth));
     }
 
     private IEnumerator LerpBackgroundHealthBar(float percentage)
