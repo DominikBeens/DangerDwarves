@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &1558548018 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8464704438644112515, guid: 35380d2f791b7ea4e95492d7ca46df30,
+    type: 3}
+  m_PrefabInstance: {fileID: 449273439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25218307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,12 +5021,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialType: 1
---- !u!4 &1558548018 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8464704438644112515, guid: 35380d2f791b7ea4e95492d7ca46df30,
-    type: 3}
-  m_PrefabInstance: {fileID: 449273439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838595079
 GameObject:
   m_ObjectHideFlags: 0
