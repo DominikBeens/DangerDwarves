@@ -8,6 +8,8 @@ using TMPro;
 public class Teleporter : MonoBehaviourPunCallbacks
 {
 
+    private bool isTeleporting;
+
     [SerializeField] private Animator screenFadeAnim;
     [SerializeField] private float screenFadeDuration;
     [SerializeField] private string teleportParticle;
@@ -19,12 +21,17 @@ public class Teleporter : MonoBehaviourPunCallbacks
 
     public void Teleport(Vector3 destination, string messageToShow = null)
     {
-        StartCoroutine(StartTeleport(destination, messageToShow));
+        if (!isTeleporting)
+        {
+            StartCoroutine(StartTeleport(destination, messageToShow));
+        }
     }
 
     private IEnumerator StartTeleport(Vector3 destination, string messageToShow)
     {
+        isTeleporting = true;
         OnStartTeleport();
+
         photonView.RPC("SyncTeleportEffect", RpcTarget.All);
         screenFadeAnim.SetTrigger("Fade");
 
@@ -43,7 +50,9 @@ public class Teleporter : MonoBehaviourPunCallbacks
         }
 
         screenFadeAnim.SetTrigger("Fade");
+
         OnEndTeleport();
+        isTeleporting = false;
     }
 
     [PunRPC]

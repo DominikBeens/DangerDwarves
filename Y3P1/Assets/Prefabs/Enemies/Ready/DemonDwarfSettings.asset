@@ -29,4 +29,8 @@ MonoBehaviour:
     m_Bits: 16896
   deathAnimation: Demon_Death
   walkAnimation: Demon_Walking
-  hitAnimation: Demon_Hit
+  hitAnimation: Flinch
+  wanderRadius: 6
+  minIdleTime: 1
+  maxIdleTime: 4
+  targetSeekRange: 250

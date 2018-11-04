@@ -218,5 +218,40 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 12762c735d96cc849a77bae8fe409fc5, type: 2}
+    - target: {fileID: 2766268011096404835, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f556d2b9654addc41bc82695781790c2, type: 2}
+    - target: {fileID: 7680832800880836795, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65586f2fde3974c4e9469dfe6cf89338, type: 2}
+    - target: {fileID: 2766268011096404835, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 888446468047407805, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 888446468047407805, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 888446468047407805, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 888446468047407805, guid: 87fb265c493575842a6abd75968b9ac7,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87fb265c493575842a6abd75968b9ac7, type: 3}

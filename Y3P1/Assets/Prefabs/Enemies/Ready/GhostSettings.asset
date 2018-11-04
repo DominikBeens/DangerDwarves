@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Bits: 16896
   deathAnimation: Wraith_dying
   walkAnimation: Wraith_floating
-  hitAnimation: Wraith_flinch
+  hitAnimation: Flinch
   wanderRadius: 6
   minIdleTime: 1
   maxIdleTime: 4
