@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     public static GameManager instance;
     private bool leavingGame;
 
+    [SerializeField] private Transform hubPlayerSpawn;
+    public Transform PlayerSpawn { get { return hubPlayerSpawn; } }
+
+    [Space(10)]
+
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject bountyManagerPrefab;
     [SerializeField] private GameObject projectileManagerPrefab;
@@ -32,7 +37,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         if (!Y3P1.Player.localPlayerObject && playerPrefab)
         {
-            PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(0, 0.1f, 0), Quaternion.identity);
+            PhotonNetwork.Instantiate(playerPrefab.name, hubPlayerSpawn.position, Quaternion.identity);
         }
 
         if (PhotonNetwork.IsMasterClient)
