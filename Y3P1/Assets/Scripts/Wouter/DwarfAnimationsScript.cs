@@ -7,6 +7,7 @@ public class DwarfAnimationsScript : MonoBehaviour
     private bool initialised;
 
     private Animator myAnim;
+    private PickAndPlayFromList voicelines;
     private IKControl myIKControl;
     public Vector3 actualAxis;
 
@@ -25,6 +26,7 @@ public class DwarfAnimationsScript : MonoBehaviour
 
     private void Awake()
     {
+        voicelines = GetComponent<PickAndPlayFromList>();
         myAnim = GetComponent<Animator>();
         myIKControl = GetComponent<IKControl>();
     }
@@ -44,7 +46,7 @@ public class DwarfAnimationsScript : MonoBehaviour
         Player.localPlayer.entity.OnDeath.AddListener(() => myAnim.SetBool("Dead", true));
         Player.localPlayer.entity.OnRevive.AddListener(() => myAnim.SetBool("Dead", false));
         Player.localPlayer.entity.OnHit.AddListener(() => myAnim.SetTrigger("Flinch"));
-        Player.localPlayer.entity.OnHit.AddListener(() => myAnim.SetTrigger("Flinch"));
+        Player.localPlayer.entity.OnHit.AddListener(() => voicelines.PlaySFXGettingHit(0.1f));
     }
 
     private void PlayerController_OnDodge(bool dodgeStart)
