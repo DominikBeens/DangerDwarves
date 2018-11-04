@@ -44,6 +44,7 @@ public class DwarfAnimationsScript : MonoBehaviour
         Player.localPlayer.entity.OnDeath.AddListener(() => myAnim.SetBool("Dead", true));
         Player.localPlayer.entity.OnRevive.AddListener(() => myAnim.SetBool("Dead", false));
         Player.localPlayer.entity.OnHit.AddListener(() => myAnim.SetTrigger("Flinch"));
+        Player.localPlayer.entity.OnHit.AddListener(() => myAnim.SetTrigger("Flinch"));
     }
 
     private void PlayerController_OnDodge(bool dodgeStart)
