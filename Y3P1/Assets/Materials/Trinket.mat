@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Trinket
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: bb365aaa37b589e4eab91b23cf69ea71, type: 3}
   m_ShaderKeywords: _ANIMATEDMELT_ON _EMISSION _USE_GRADIENT_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -289,6 +289,7 @@ Material:
     - _IntersectIntensity: 0.2
     - _InvFade: 1
     - _Limit: 2
+    - _Luminosity: 0.5
     - _ManualControl: 0.2
     - _MaskClipValue: 0.28
     - _MaxHighLightLevel: 0.9
@@ -307,6 +308,7 @@ Material:
     - _RimOffset: 0.24
     - _RimPower: 0
     - _RoughScale: 0.5
+    - _Saturation: 0.8
     - _Scale: 0.4247461
     - _ScaleFactor: 4
     - _ScanLines: 0
@@ -319,10 +321,12 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Specular: 0
     - _SpecularHighlights: 1
-    - _Speed: 100
+    - _Speed: 0.8
+    - _Spread: 10
     - _SrcBlend: 1
     - _Strength: 0.02
     - _TessValue: 20
+    - _TimeOffset: 0
     - _TimeScale: 0
     - _TransAmbient: 0.2
     - _TransDirect: 1

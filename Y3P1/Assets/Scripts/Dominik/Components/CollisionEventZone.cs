@@ -45,6 +45,12 @@ public class CollisionEventZone : MonoBehaviour
 
         if (other.tag == lookForTag)
         {
+            // Specific network check so that other players cannot trigger collision for us.
+            if (lookForTag == "Player" && other.gameObject.layer != 9)
+            {
+                return;
+            }
+
             eventCaller = other.transform;
             OnZoneEnterEvent.Invoke();
 
@@ -61,6 +67,12 @@ public class CollisionEventZone : MonoBehaviour
 
         if (other.tag == lookForTag)
         {
+            // Specific network check so that other players cannot trigger collision for us.
+            if (lookForTag == "Player" && other.gameObject.layer != 9)
+            {
+                return;
+            }
+
             eventCaller = other.transform;
             OnZoneExitEvent.Invoke();
 
