@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Bits: 16896
   deathAnimation: Spider_death
   walkAnimation: Is Walking
-  hitAnimation: 
+  hitAnimation: Flinch
   wanderRadius: 6
   minIdleTime: 1
   maxIdleTime: 4
