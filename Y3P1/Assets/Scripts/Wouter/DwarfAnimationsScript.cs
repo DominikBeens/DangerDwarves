@@ -129,12 +129,18 @@ public class DwarfAnimationsScript : MonoBehaviour
 
     public void Oil()
     {
-        myAnim.SetTrigger("Oil");
+        //myAnim.SetTrigger("Oil");
+        myAnim.SetBool("OilBool", true);
     }
 
     public void SetRevive(bool b)
     {
         myAnim.SetBool("Reviving", b);
+    }
+
+    public void ResetBool(string boolName)
+    {
+        myAnim.SetBool(boolName, false);
     }
 
     public bool CanEquipRanged()

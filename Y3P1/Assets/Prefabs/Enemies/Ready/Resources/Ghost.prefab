@@ -4660,7 +4660,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 995652c9c3c3a3348a17abca0568733d, type: 2}
+  - {fileID: 2100000, guid: 12762c735d96cc849a77bae8fe409fc5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -10402,7 +10402,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 995652c9c3c3a3348a17abca0568733d, type: 2}
+  - {fileID: 2100000, guid: 12762c735d96cc849a77bae8fe409fc5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -39,4 +39,12 @@ public class AnimationEventsDwarf : MonoBehaviour
             Player.localPlayer.playerController.EndDodge();
         }
     }
+
+    public void ResetBool(string boolName)
+    {
+        if (initialised)
+        {
+            Player.localPlayer.dwarfAnimController.ResetBool(boolName);
+        }
+    }
 }

@@ -4115,6 +4115,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: Steps
+  - Type: 4
+    SynchronizeType: 2
+    Name: OilBool
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
