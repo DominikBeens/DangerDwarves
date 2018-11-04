@@ -827,7 +827,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2559465403299657368}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9638476
+  m_Size: 0.9638477
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1433,21 +1433,21 @@ MonoBehaviour:
     bountyDescription: "How good are your dodging skills? \nTry to impress the eight
       legged fellas."
     entityID: 1
-    amountToKill: 100
+    amountToKill: 50
     progress: 0
     goldReward: 12500
     bountyState: 0
-  - bountyName: Bookwurm
+  - bountyName: Bookworm
     bountyDescription: You won't get much wiser from these books.
     entityID: 2
-    amountToKill: 50
+    amountToKill: 25
     progress: 0
     goldReward: 15000
     bountyState: 0
   - bountyName: Spooktober Special
     bountyDescription: The wraiths are back in town, kill them while they're here.
     entityID: 3
-    amountToKill: 75
+    amountToKill: 30
     progress: 0
     goldReward: 23750
     bountyState: 0
@@ -1455,7 +1455,7 @@ MonoBehaviour:
     bountyDescription: The previous inhabitants of this town have gone mad. It's your
       task to save it.
     entityID: 4
-    amountToKill: 60
+    amountToKill: 40
     progress: 0
     goldReward: 13750
     bountyState: 0
@@ -1550,7 +1550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -0.00006558223}
+  m_AnchoredPosition: {x: 0.000030517578, y: -0.00005236509}
   m_SizeDelta: {x: 16.8, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4621723037839369473
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 684105587780046116}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999999
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2181,7 +2181,7 @@ RectTransform:
   m_Father: {fileID: 5946543349740900083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000011920929}
+  m_AnchorMin: {x: 0, y: 0.000000059604645}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}

@@ -169,3 +169,28 @@ MonoBehaviour:
       type: 3}
     poolSize: 25
     autoExpand: 1
+  - poolName: GhostSmokeBall
+    poolPrefab: {fileID: 3716037247890611631, guid: ca0369990ddffe44ab988f5d44aad7f1,
+      type: 3}
+    poolSize: 25
+    autoExpand: 1
+  - poolName: GhostExplosionCircle
+    poolPrefab: {fileID: 3716037247890611631, guid: 850659b41fbd577468530ced7d4a3a74,
+      type: 3}
+    poolSize: 15
+    autoExpand: 1
+  - poolName: GhostSmokeBallHit
+    poolPrefab: {fileID: 1022150738432160081, guid: 0ab34bbe7cf2787499c47f4b8b1d649e,
+      type: 3}
+    poolSize: 20
+    autoExpand: 1
+  - poolName: GhostSummonExplosion
+    poolPrefab: {fileID: 7814782754571929585, guid: 285aa2da975d2c74b8debd9c87cd29d4,
+      type: 3}
+    poolSize: 25
+    autoExpand: 1
+  - poolName: GhostSummon
+    poolPrefab: {fileID: 3716037247890611631, guid: 8faa3cc1164257e4dbe0d3f340d4107d,
+      type: 3}
+    poolSize: 25
+    autoExpand: 1

@@ -4,11 +4,12 @@ using UnityEngine;
 public class Brazier : MonoBehaviourPunCallbacks
 {
 
+    private bool isLighted;
     [SerializeField] private GameObject particle;
 
     public void Light()
     {
-        if (!particle.activeInHierarchy)
+        if (!isLighted)
         {
             photonView.RPC("LightBrazier", RpcTarget.AllBuffered);
         }
@@ -16,15 +17,28 @@ public class Brazier : MonoBehaviourPunCallbacks
 
     public void Extinguish()
     {
-        if (particle.activeInHierarchy)
+        if (isLighted)
         {
-            photonView.RPC("LightBrazier", RpcTarget.AllBuffered);
+            photonView.RPC("ExtinguishBrazier", RpcTarget.All);
         }
     }
 
     [PunRPC]
     private void LightBrazier()
     {
-        particle.SetActive(!particle.activeInHierarchy);
+        isLighted = true;
+        particle.SetActive(true);
+    }
+
+    [PunRPC]
+    private void ExtinguishBrazier()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.RemoveRPCs(photonView);
+        }
+
+        isLighted = false;
+        particle.SetActive(false);
     }
 }

@@ -62,7 +62,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
 
     private void SetupSpawnTrigger()
     {
-        if (!GetComponent<Collider>())
+        if (!GetComponent<Collider>() && spawnTriggerRange != 0)
         {
             spawnTrigger = gameObject.AddComponent<SphereCollider>();
             spawnTrigger.isTrigger = true;
@@ -83,6 +83,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
 
     public void TriggerSpawnManual()
     {
+        CanSpawn = true;
         TriggerSpawn();
     }
 

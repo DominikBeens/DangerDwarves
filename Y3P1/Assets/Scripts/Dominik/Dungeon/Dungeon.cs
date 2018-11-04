@@ -101,6 +101,13 @@ public class Dungeon : MonoBehaviour
             if (door)
             {
                 door.Close();
+                continue;
+            }
+
+            Brazier brazier = colliders[i].GetComponent<Brazier>();
+            if (brazier)
+            {
+                brazier.Extinguish();
             }
         }
     }

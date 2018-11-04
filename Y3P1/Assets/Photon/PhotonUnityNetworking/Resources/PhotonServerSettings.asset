@@ -93,4 +93,5 @@ MonoBehaviour:
   - StartBurn
   - SetReviveZone
   - CloseDoor
+  - ExtinguishBrazier
   DisableAutoOpenWizard: 1

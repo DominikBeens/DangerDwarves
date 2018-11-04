@@ -101,6 +101,18 @@ MonoBehaviour:
     projectileSpawn: 0
     freezePosition: 1
     speedOverride: 0
+  - projectilePool: GhostSmokeBall
+    projectileSpawn: 0
+    freezePosition: 0
+    speedOverride: 12
+  - projectilePool: GhostExplosionCircle
+    projectileSpawn: 0
+    freezePosition: 1
+    speedOverride: 0
+  - projectilePool: GhostSummon
+    projectileSpawn: 0
+    freezePosition: 1
+    speedOverride: 0
 --- !u!114 &5769053136309210999
 MonoBehaviour:
   m_ObjectHideFlags: 0
