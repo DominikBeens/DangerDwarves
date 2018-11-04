@@ -145,8 +145,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 2025572557295380981}
-  viewIdField: 7
-  InstantiationId: 7
+  viewIdField: 14
+  InstantiationId: 14
   isRuntimeInstantiated: 0
 --- !u!114 &8597416557650368600
 MonoBehaviour:
@@ -273,8 +273,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 3118344256970071842}
-  viewIdField: 9
-  InstantiationId: 9
+  viewIdField: 15
+  InstantiationId: 15
   isRuntimeInstantiated: 0
 --- !u!1 &6357796064771890802
 GameObject:
@@ -337,8 +337,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 8917421558838006630}
   - {fileID: 1447384658736960689}
-  viewIdField: 8
-  InstantiationId: 8
+  viewIdField: 16
+  InstantiationId: 16
   isRuntimeInstantiated: 0
 --- !u!136 &3336837791509303040
 CapsuleCollider:
