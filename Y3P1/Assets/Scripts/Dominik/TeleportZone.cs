@@ -8,4 +8,9 @@ public class TeleportZone : MonoBehaviour
     {
         Player.localPlayer.teleporter.Teleport(destination.position);
     }
+
+    public void TeleportInstant(Transform destination)
+    {
+        Player.localPlayer.transform.position = destination.position;
+    }
 }
