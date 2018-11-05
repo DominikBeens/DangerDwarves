@@ -5,7 +5,6 @@ using Y3P1;
 public class Potion : Item
 {
 
-    private float nextDrinkTime;
     private int myMaterialIndex;
     private int index;
 
@@ -17,10 +16,6 @@ public class Potion : Item
     public float buffDuration = 6f;
     public float potionDrinkCooldown = 30f;
 
-    public override void Awake()
-    {
-        nextDrinkTime = 0;
-    }
 
     public override int PotionNum()
     {
@@ -29,7 +24,6 @@ public class Potion : Item
 
     public override int StartPotion(int rarity)
     {
-        nextDrinkTime = 0;
         index = Random.Range(0, 5);
         Database.hostInstance.GetPotionSprite(index);
         Database.hostInstance.GetPotionObject(index);
@@ -51,13 +45,8 @@ public class Potion : Item
 
     public void Drink()
     {
-        Debug.Log(buffDuration);
-        if (Time.time >= nextDrinkTime)
-        {
-            nextDrinkTime = Time.time + potionDrinkCooldown;
-            Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
-            Player.localPlayer.dwarfAnimController.Oil();
-        }
+        Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
+        Player.localPlayer.dwarfAnimController.Oil();
     }
 
     private string GetPotionName()
@@ -91,16 +80,16 @@ public class Potion : Item
         {
             case ItemRarity.common:
 
-                return 6f;
+                return 15f;
             case ItemRarity.rare:
 
-                return 8f;
+                return 17f;
             case ItemRarity.epic:
 
-                return 11f;
+                return 20f;
             case ItemRarity.legendary:
 
-                return 15f;
+                return 25f;
             default:
 
                 return buffDuration;

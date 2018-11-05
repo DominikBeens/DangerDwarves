@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f934826db8f3a5f4aa2340bbe8e89f01, type: 3}
-  m_Name: SpiderSettings
+  m_Name: Spider_MagmaSettings
   m_EditorClassIdentifier: 
   attacks:
   - attackName: Attack
@@ -27,7 +27,7 @@ MonoBehaviour:
     attackChance: 100
     attackType: 1
     damageType: 1
-    projectilePoolName: SpiderVenom
+    projectilePoolName: SpiderVenom_Red
   attackDistance: 4.5
   attackRangeLookAtSpeed: 10
   randomRangedAttackChance: 35

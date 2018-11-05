@@ -28,6 +28,7 @@ public class LoginManager : MonoBehaviourPunCallbacks
     [SerializeField] private TextMeshProUGUI playerCountText;
     [SerializeField] private Transform dwarfLookAt;
     [SerializeField] private HeadTracking dwarfHeadTracking;
+    [SerializeField] private float cameraSmoothSpeed = 2f;
 
     private void Awake()
     {
@@ -55,15 +56,15 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        roomCountText.text = PhotonNetwork.IsConnected ? "Open rooms: <color=red>" + PhotonNetwork.CountOfRooms : "Open rooms: <color=red>?";
-        playerCountText.text = PhotonNetwork.IsConnected ? "Active dwarves: <color=red>" + Mathf.Clamp(PhotonNetwork.CountOfPlayers - 1, 0, 9999) : "Active dwarves: <color=red>?";
+        //roomCountText.text = PhotonNetwork.IsConnected ? "Open rooms: <color=red>" + PhotonNetwork.CountOfRooms : "Open rooms: <color=red>?";
+        //playerCountText.text = PhotonNetwork.IsConnected ? "Active dwarves: <color=red>" + Mathf.Clamp(PhotonNetwork.CountOfPlayers - 1, 0, 9999) : "Active dwarves: <color=red>?";
 
-        Vector3 mouseInWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+        Vector3 mouseInWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 7));
         Vector3 lookat = new Vector3(mouseInWorldPos.x / 10, mouseInWorldPos.y / 10, 10);
         Quaternion targetRotation = Quaternion.LookRotation(lookat - transform.position, Vector3.up);
-        camTransform.rotation = Quaternion.Slerp(camTransform.rotation, targetRotation, Time.deltaTime * 5f);
+        camTransform.rotation = Quaternion.Slerp(camTransform.rotation, targetRotation, Time.deltaTime * cameraSmoothSpeed);
 
-        dwarfLookAt.position = new Vector3(mouseInWorldPos.x / 10, (mouseInWorldPos.y - 15) / 10, -10);
+        dwarfLookAt.position = new Vector3(mouseInWorldPos.x / 7, (mouseInWorldPos.y - 10) / 7, -7);
     }
 
     private void Connect(ConnectSetting connectSetting, string roomName = null)

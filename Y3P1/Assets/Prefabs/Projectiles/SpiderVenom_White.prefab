@@ -220,8 +220,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0.2760729, b: 0, a: 1}
-      maxColor: {r: 0.90698564, g: 1, b: 0, a: 1}
+      minColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4594,7 +4594,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c69e568ac8d6d54d8a88711d7b73e6f, type: 2}
+  - {fileID: 2100000, guid: 4f4e7b06f234fea44959fd10a60a40a4, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4648,7 +4648,7 @@ GameObject:
   - component: {fileID: 1513465962598485992}
   - component: {fileID: 5511060744192162010}
   m_Layer: 10
-  m_Name: SpiderVenom
+  m_Name: SpiderVenom_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4698,17 +4698,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747753adf2cbc954a91ce764b48cf948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPoolName: SpiderVenom
+  myPoolName: SpiderVenom_White
   damageTarget: 1
   selfDestroyTime: 5
-  prefabToSpawnOnHit: SpiderVenomHit
+  prefabToSpawnOnHit: SpiderVenomHit_White
   prefabToSpawnOnDeath: 
   stayOnOwner: 0
   isEnemyProjectile: 1
   visuals: []
   applyStatusEffect: 1
-  effectToApply: 4
-  effectDuration: 4
+  effectToApply: 1
+  effectDuration: 3
 --- !u!65 &5511060744192162010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4940,8 +4940,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9514741, g: 0.990566, b: 0.3504361, a: 1}
-      maxColor: {r: 0.09803923, g: 0.99215686, b: 0.14936946, a: 1}
+      minColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.41960785}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.41960785}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9573,8 +9573,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.93829894, g: 1, b: 0, a: 1}
-      maxColor: {r: 0.09803922, g: 0.99215686, b: 0.14901961, a: 1}
+      minColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.41960785}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.41960785}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -14044,7 +14044,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6b37eec6bd7d233469efd22b5905852f, type: 2}
+  - {fileID: 2100000, guid: 7a4be0caf9656d249b933940e0a7f468, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -194,3 +194,13 @@ MonoBehaviour:
       type: 3}
     poolSize: 25
     autoExpand: 1
+  - poolName: SpiderVenom_White
+    poolPrefab: {fileID: 3716037247890611631, guid: 967933e4a06b06441b7ec8184fd2bf12,
+      type: 3}
+    poolSize: 20
+    autoExpand: 1
+  - poolName: SpiderVenomHit_White
+    poolPrefab: {fileID: 1022150738432160081, guid: 4d02909c76ab29349927c3a721581ce3,
+      type: 3}
+    poolSize: 20
+    autoExpand: 1
