@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 503d8d8e-abdc-4efc-9e0f-d2013ca8037d
+    AppIdRealtime: 
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 
@@ -25,78 +25,43 @@ MonoBehaviour:
     EnableLobbyStatistics: 0
     NetworkLogging: 1
   StartInOfflineMode: 0
-  PunLogging: 2
+  PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
   RpcList:
-  - DestroyRpc
-  - DestroySpaceship
-  - Fire
-  - RespawnSpaceship
-  - ModifyHealth
-  - ModifyHealthRPC
-  - DestroyProjectile
-  - SpawnDummy
-  - SyncAliveDummy
-  - HitRPC
-  - SetCanSpawnRPC
-  - UsePrimaryRPC
-  - UseSecondaryRPC
-  - FireProjectile
-  - SetCanSpawn
-  - SpawnEntities
-  - SyncAliveTargets
-  - SendNotification
-  - DropItem
-  - RI
-  - PickUpDestroy
-  - SpawnDroppedItemLabel
-  - ParentWeapon
-  - ParentHelmet
-  - ParentEquipment
-  - ParentTrinket
-  - SetAppearance
-  - SpawnProjectile
-  - SetEntityInfo
-  - SyncTarget
-  - SetTarget
-  - SyncMaterial
   - AddGold
-  - UpdateHealthOnJoin
-  - SyncDeathState
-  - SyncActiveBounty
-  - SyncCancelBounty
-  - SyncCompleteBounty
-  - SyncHealth
-  - SyncReviveHealth
-  - SyncRevive
-  - FireBuffProjectile
+  - CloseDoor
+  - DestroyRpc
+  - DropItem
+  - ExtinguishBrazier
   - FireProjectileRPC
-  - KnockBackRPC
-  - SyncStatusEffects
-  - SyncMoveSpeed
   - GetLevel
+  - HitRPC
+  - KnockBackRPC
   - Level
-  - ResetLevel
-  - SetSame
-  - ResetAVR
-  - SyncDroppedItemData
-  - SyncDroppedItems
-  - DropItems
-  - SyncDropData
-  - SyncHealthTest
   - LightBrazier
   - OpenDoor
-  - SyncActiveDungeon
-  - SyncCancelDungeon
-  - SyncTeleportEffect
-  - StartBurn
-  - SetReviveZone
-  - CloseDoor
-  - ExtinguishBrazier
-<<<<<<< HEAD
+  - ParentHelmet
+  - ParentTrinket
+  - ParentWeapon
+  - PickUpDestroy
+  - ResetAVR
+  - SendNotification
   - SendRestock
-=======
-  - Restock
->>>>>>> c26e766f6b16dae13727df38ebb03a6994c1650f
+  - SetAppearance
+  - SetReviveZone
+  - SetTarget
+  - SpawnEntities
+  - StartBurn
+  - SyncActiveBounty
+  - SyncActiveDungeon
+  - SyncCancelBounty
+  - SyncCancelDungeon
+  - SyncCompleteBounty
+  - SyncDropData
+  - SyncHealth
+  - SyncMoveSpeed
+  - SyncRevive
+  - SyncStatusEffects
+  - SyncTeleportEffect
   DisableAutoOpenWizard: 1
