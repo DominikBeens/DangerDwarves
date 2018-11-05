@@ -17,6 +17,7 @@ public class Dungeon : MonoBehaviour
 
     public Transform startSpawn;
     [SerializeField] private List<EntitySpawner> propSpawners = new List<EntitySpawner>();
+    //[SerializeField] private List<EntitySpawner> persistentSpawns = new List<EntitySpawner>();
     [SerializeField] private Transform dungeonCleanupCenter;
     [SerializeField] private float dungeonCloseCleanupRange = 100f;
 

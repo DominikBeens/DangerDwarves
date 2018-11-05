@@ -50,7 +50,7 @@ public class EntityManager : MonoBehaviourPunCallbacks
             {
                 GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(origin.GetRandomEntity(), spawnPos, origin.transform.rotation);
                 Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
-                if (!newEntity)
+                if (newEntity)
                 {
                     newEntity.health.isImmortal = spawnImmortal;
                 }
