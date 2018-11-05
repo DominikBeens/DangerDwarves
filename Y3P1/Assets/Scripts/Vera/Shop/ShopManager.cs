@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Y3P1;
+using Photon.Pun;
 
-public class ShopManager : MonoBehaviour {
+public class ShopManager : MonoBehaviourPunCallbacks
+{
 
     [Header("Shop Type")]
     public static ShopManager instance;
@@ -55,6 +57,7 @@ public class ShopManager : MonoBehaviour {
         ShopInventory.OpenClose();
     }
 
+    [PunRPC]
     public void Restock()
     {
         Player.localPlayer.myInventory.CalculateArmor();
@@ -71,13 +74,7 @@ public class ShopManager : MonoBehaviour {
             case ShopType.Potions:
                 for (int i = 0; i < sizeShop; i++)
                 {
-                    print("Crazy potion");
                     Item temp = LootRandomizer.instance.PotionToShop();
-                    if(temp == null)
-                    {
-                        print(temp + "    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah");
-                    }
-                    
                     ShopInventory.AddItem(temp);
                 }
                 break;
@@ -88,8 +85,9 @@ public class ShopManager : MonoBehaviour {
 
     private void Update()
     {
-        if(Time.time > nextTime)
+        if(Time.time > nextTime && PhotonNetwork.IsMasterClient)
         {
+            //photonView.RPC("Restock", RpcTarget.All);
             Restock();
             nextTime += (cooldownInMin*60);
         }

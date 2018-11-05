@@ -141,13 +141,31 @@ public class Item
 
     public int CalculateValue()
     {
-        int value = itemLevel * ((int)itemRarity + 1) * 2;
+        float value = (GoldStats() * ((int)itemRarity + 1)) * ((itemLevel + 1) / 10 + 1) + itemLevel;
         if (sold)
         {
             float i = value * 1.5f;
             value = (int)i;
         }
-        return value;
+        return (int)value;
+    }
+
+    public float GoldStats()
+    {
+        float g = 1;
+        if (myStats != null)
+        {
+            g--;
+            g += myStats.willpower;
+            g += myStats.stamina;
+            g += myStats.strength;
+            g += myStats.agility;
+            g += myStats.defense;
+
+            //g = g / 10;
+        }
+
+        return g;
     }
 
 }

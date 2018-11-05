@@ -209,6 +209,7 @@ public class Database : MonoBehaviour {
     {
         return axeNames[Random.Range(0, axeNames.Count)];
     }
+
     public string GetStaffName()
     {
         return StaffNames[Random.Range(0, StaffNames.Count)];
@@ -265,6 +266,7 @@ public class Database : MonoBehaviour {
         }
         return index;
     }
+
     public int GetCHSprite(int o)
     {
         int index = 0;
@@ -402,7 +404,7 @@ public class Database : MonoBehaviour {
         }
         for (int i = 0; i < allGameobjects.Count; i++)
         {
-            if (oWObject[o] == allGameobjects[i])
+            if (potionObjects[o] == allGameobjects[i])
             {
                 index = i;
             }
@@ -437,6 +439,7 @@ public class Database : MonoBehaviour {
         }
         return index;
     }
+
     public int GetOHObject(int o)
     {
         int index = 0;
@@ -475,6 +478,7 @@ public class Database : MonoBehaviour {
         }
         return index;
     }
+
     public int GetStaffObject()
     {
         GameObject myObj = staffObject[Random.Range(0, staffObject.Count)];
@@ -488,6 +492,7 @@ public class Database : MonoBehaviour {
         }
         return index;
     }
+
     public int GetCrossbowObject()
     {
         GameObject myObj = crossbowObject[Random.Range(0, crossbowObject.Count)];
