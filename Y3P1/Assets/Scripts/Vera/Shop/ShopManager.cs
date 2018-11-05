@@ -13,6 +13,7 @@ public class ShopManager : MonoBehaviourPunCallbacks
     private bool ugh;
     public enum ShopType {Equipment, Potions}
     public ShopType shopType;
+    public string st;
     [Header("Buy back")]
     public static List<Item> buyBackItems = new List<Item>();
     [SerializeField] private int sizeShop;
@@ -57,11 +58,9 @@ public class ShopManager : MonoBehaviourPunCallbacks
         ShopInventory.OpenClose();
     }
 
-    [PunRPC]
     public void Restock()
     {
         Player.localPlayer.myInventory.CalculateArmor();
-        NotificationManager.instance.NewNotification("The shop has been restocked");
         ShopInventory.RemoveAll();
         switch (shopType)
         {
@@ -81,14 +80,23 @@ public class ShopManager : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void SendRestock()
+    {
+        Restock();
+    }
+
 
 
     private void Update()
     {
-        if(Time.time > nextTime && PhotonNetwork.IsMasterClient)
+        if(Time.time > nextTime)
         {
-            //photonView.RPC("Restock", RpcTarget.All);
-            Restock();
+            if (PhotonNetwork.IsMasterClient)
+            {
+                NotificationManager.instance.NewNotification("The " + st + " shop has been restocked");
+                photonView.RPC("SendRestock", RpcTarget.All);
+            }
             nextTime += (cooldownInMin*60);
         }
 

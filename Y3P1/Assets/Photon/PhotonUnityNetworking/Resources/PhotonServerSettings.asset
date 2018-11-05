@@ -94,4 +94,5 @@ MonoBehaviour:
   - SetReviveZone
   - CloseDoor
   - ExtinguishBrazier
+  - SendRestock
   DisableAutoOpenWizard: 1
