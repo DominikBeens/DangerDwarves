@@ -118,6 +118,7 @@ MonoBehaviour:
   crossbowObject:
   - {fileID: 5980796425491674147, guid: 11c494545ececfd42a01d9632e35e826, type: 3}
   - {fileID: 4600826014966429009, guid: fae04cefb0898214caf6d47a4c2c0ced, type: 3}
+  - {fileID: 4600826014966429009, guid: 292b2a4379542fb429cbb23c1ff7635f, type: 3}
   crossbowMats:
   - {fileID: 2100000, guid: 7fb772bcb1ab81b4f912fe76639dc6cd, type: 2}
   - {fileID: 2100000, guid: 761bbbf31d50ddc419438edd2dfa5834, type: 2}
