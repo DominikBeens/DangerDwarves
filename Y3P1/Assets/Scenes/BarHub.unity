@@ -16792,7 +16792,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 0
+  m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -110615,6 +110615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dungeon2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232663800507480749, guid: 82c5b8bdebcaaa6449b940ddfc983791,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c5b8bdebcaaa6449b940ddfc983791, type: 3}
