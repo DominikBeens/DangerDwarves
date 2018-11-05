@@ -5,7 +5,7 @@ using Y3P1;
 
 public class LocalAmbienceController : MonoBehaviour {
 
-    public GameObject playercamera;
+    
 
     public bool iAmCurrentAmbience;
     public float fogDensity;
@@ -17,7 +17,7 @@ public class LocalAmbienceController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        playercamera = Player.localPlayer.playerCam.gameObject;
+       
         
 	}
 	
