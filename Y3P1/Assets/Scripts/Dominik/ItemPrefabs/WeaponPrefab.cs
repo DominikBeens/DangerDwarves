@@ -90,7 +90,7 @@ public class WeaponPrefab : ItemPrefab
                             entity.Hit(-(weapon.baseDamage + Player.localPlayer.entity.CalculateDamage(Stats.DamageType.Melee)), Stats.DamageType.Melee, WeaponSlot.weaponBuffs);
 
                             // TODO: Change this to an event or a parameter in Entity.Hit()
-                            UIManager.instance.playerStatusCanvas.Hit();
+                            UIManager.instance.playerStatusCanvas.Hit(false);
 
                             if (weapon.knockBack > 0 && !pvp)
                             {

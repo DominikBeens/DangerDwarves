@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 4555522520552425865}
   - component: {fileID: 1020885972926360302}
   - component: {fileID: 1181897410327462403}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Trinket_Mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,8 +130,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.514511, y: 0.5689782, z: 0.6122663}
-  m_Center: {x: -0.045262985, y: -0.21551096, z: -0.013672888}
+  m_Size: {x: 0.53302974, y: 0.67777574, z: 0.616896}
+  m_Center: {x: -0.0012809932, y: -0.32778084, z: -0.015987724}
 --- !u!1 &4722898432765870016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2463123072081035247, guid: dc26b00b30a8dde44a301a75757b633b,
@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 30a98c1fdc878a34f9bca9dff43887ba, type: 2}
+    - target: {fileID: 100000, guid: b01dd13b8eed4274aa53ca0113aa0569, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b01dd13b8eed4274aa53ca0113aa0569, type: 3}
 --- !u!1001 &7180389789067591727
