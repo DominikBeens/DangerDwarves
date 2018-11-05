@@ -64,13 +64,4 @@ MonoBehaviour:
   - SyncRevive
   - SyncStatusEffects
   - SyncTeleportEffect
-<<<<<<< HEAD
-  - StartBurn
-  - SetReviveZone
-  - CloseDoor
-  - ExtinguishBrazier
-  - Restock
   DisableAutoOpenWizard: 1
-=======
-  DisableAutoOpenWizard: 1
->>>>>>> daaa76c837dedbb849a269c7b19fb4b582366785

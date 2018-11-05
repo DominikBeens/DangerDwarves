@@ -7,21 +7,55 @@ public class LocalAmbienceController : MonoBehaviour {
 
     public GameObject playercamera;
 
-    public VolumetricFog myFogSettings;
+    public bool iAmCurrentAmbience;
+    public float fogDensity;
+    public Color fogColor;
+    public float lerpTime;
 
-    public float fogNoiseAmount;
-    public float fogFoggyness;
+
 
 	// Use this for initialization
 	void Start ()
     {
         playercamera = Player.localPlayer.playerCam.gameObject;
-        myFogSettings = playercamera.GetComponent<VolumetricFog>();
+        
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        if(iAmCurrentAmbience)
+        {
+            AdjustAmbience();
+        }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            if(other.gameObject.layer == 9)
+            {
+                iAmCurrentAmbience = true;
+            }
+        }
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (other.gameObject.layer == 9)
+            {
+                iAmCurrentAmbience = false;
+            }
+        }
+    }
+
+    public void AdjustAmbience()
+    {
+        RenderSettings.fogDensity = Mathf.Lerp(RenderSettings.fogDensity, fogDensity, 1f / lerpTime * Time.deltaTime);
+        RenderSettings.fogColor = Color.Lerp(RenderSettings.fogColor, fogColor, 1f / lerpTime * Time.deltaTime);
+    }
 }
