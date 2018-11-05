@@ -16,6 +16,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI itemLevelText;
+    public int ItemLevel { get { return int.Parse(itemLevelText.text); } }
 
     private void Update()
     {
