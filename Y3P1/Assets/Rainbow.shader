@@ -6,7 +6,7 @@ Shader "_Shaders/Rainbow" {
 	Properties{
 		_Saturation("Saturation", Range(0.0, 1.0)) = 0.8
 		_Luminosity("Luminosity", Range(0.0, 1.0)) = 0.5
-		_Spread("Spread", Range(0.5, 10.0)) = 3.8
+		_Spread("Spread", Range(0.1, 10.0)) = 3.8
 		_Speed("Speed", Range(-10.0, 10.0)) = 2.4
 		_TimeOffset("TimeOffset", Range(0.0, 6.28318531)) = 0.0
 	}
