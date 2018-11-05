@@ -321,8 +321,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Specular: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.8
-    - _Spread: 10
+    - _Speed: 0.5
+    - _Spread: 0.5
     - _SrcBlend: 1
     - _Strength: 0.02
     - _TessValue: 20

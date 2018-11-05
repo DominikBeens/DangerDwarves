@@ -47,7 +47,7 @@ public class HeadTracking : MonoBehaviour
 
             if (Vector3.Dot(forward, toOther) > 0)
             {
-                Vector3 relativePos = targetCords - transform.position;
+                Vector3 relativePos = targetFixed - transform.position;
                 Quaternion rotation = Quaternion.LookRotation(relativePos);
                 headbone.transform.rotation = rotation;
             }
