@@ -96,7 +96,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
     public void CancelDungeon(string dungeonName)
     {
         photonView.RPC("SyncCancelDungeon", RpcTarget.All);
-        NotificationManager.instance.NewNotification("<color=yellow>" + PhotonNetwork.NickName + "</color> has <b>canceled</b> the dungeon: <color=yellow>" + dungeonName + "</color>!");
+        NotificationManager.instance.NewNotification("<color=yellow>" + PhotonNetwork.NickName + "</color> has <b>closed</b> the dungeon: <color=yellow>" + dungeonName + "</color>!");
     }
 
     [PunRPC]
@@ -129,7 +129,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
 
     public void TeleportOutOfDungeon(string message)
     {
-        Player.localPlayer.teleporter.Teleport(Vector3.zero, message);
+        Player.localPlayer.teleporter.Teleport(GameManager.instance.PlayerSpawn.position, message);
         insideDungeonCanvas.SetActive(false);
         isInDungeon = false;
     }

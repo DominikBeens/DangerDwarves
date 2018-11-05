@@ -44,7 +44,14 @@ public class Dungeon : MonoBehaviour
 
         for (int i = 0; i < propSpawners.Count; i++)
         {
-            propSpawners[i].CanSpawn = true;
+            if (propSpawners[i])
+            {
+                propSpawners[i].CanSpawn = true;
+            }
+            else
+            {
+                Debug.LogWarning(dungeonName + ": Found missing entry in PropSpawners list!");
+            }
         }
 
         for (int i = 0; i < burnables.Length; i++)
@@ -62,8 +69,15 @@ public class Dungeon : MonoBehaviour
     {
         for (int i = 0; i < propSpawners.Count; i++)
         {
-            propSpawners[i].TriggerSpawnMasterClient();
-            yield return new WaitForSeconds(0.01f);
+            if (propSpawners[i])
+            {
+                propSpawners[i].TriggerSpawnMasterClient();
+                yield return new WaitForSeconds(0.01f);
+            }
+            else
+            {
+                Debug.LogWarning(dungeonName + ": Found missing entry in PropSpawners list!");
+            }
         }
     }
 
