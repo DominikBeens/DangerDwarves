@@ -56,8 +56,11 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        //roomCountText.text = PhotonNetwork.IsConnected ? "Open rooms: <color=red>" + PhotonNetwork.CountOfRooms : "Open rooms: <color=red>?";
-        //playerCountText.text = PhotonNetwork.IsConnected ? "Active dwarves: <color=red>" + Mathf.Clamp(PhotonNetwork.CountOfPlayers - 1, 0, 9999) : "Active dwarves: <color=red>?";
+        if (roomCountText && playerCountText)
+        {
+            roomCountText.text = PhotonNetwork.IsConnected ? "Open rooms: <color=red>" + PhotonNetwork.CountOfRooms : "Open rooms: <color=red>?";
+            playerCountText.text = PhotonNetwork.IsConnected ? "Active dwarves: <color=red>" + Mathf.Clamp(PhotonNetwork.CountOfPlayers - 1, 0, 9999) : "Active dwarves: <color=red>?";
+        }
 
         Vector3 mouseInWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 7));
         Vector3 lookat = new Vector3(mouseInWorldPos.x / 10, mouseInWorldPos.y / 10, 10);
