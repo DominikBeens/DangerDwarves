@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 116301663573599220}
   - component: {fileID: 7309300103247763817}
   m_Layer: 12
-  m_Name: Chefhat_Huge(New)
+  m_Name: Chefhat_Huge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.32145363, y: 0.3205968, z: 0.7273318}
-  m_Center: {x: 0.021849424, y: -0.023427725, z: 0.3936166}
+  m_Size: {x: 0.98527515, y: 0.86614203, z: 1.2185091}
+  m_Center: {x: 0.021849453, y: 0.0012415648, z: -0.35598737}
 --- !u!1 &8214542074704961095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2463123072081035247, guid: dc26b00b30a8dde44a301a75757b633b,

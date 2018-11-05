@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using Y3P1;
-using TMPro;
-using System.Collections.Generic;
 
 public class PlayerStatusCanvas : MonoBehaviour
 {
@@ -44,6 +44,7 @@ public class PlayerStatusCanvas : MonoBehaviour
         {
             noSecondaryText.SetActive(false);
             secondaryProgressText.gameObject.SetActive(true);
+            UpdateSecondaryProgressText();
         }
         else
         {
@@ -52,10 +53,11 @@ public class PlayerStatusCanvas : MonoBehaviour
         }
     }
 
-    public void Hit()
+    public void Hit(bool ranged)
     {
-        weaponSecondaryBarFill += 1 / (float)WeaponSlot.hitsRequiredToSecondary;
-        WeaponSlot.currentHits++;
+        int multiplier = ranged ? 1 : 2;
+        weaponSecondaryBarFill += ranged ? (1 / (float)WeaponSlot.hitsRequiredToSecondary * multiplier) : (1 / (float)WeaponSlot.hitsRequiredToSecondary * multiplier);
+        WeaponSlot.currentHits += (1 * multiplier);
     }
 
     private void WeaponSlot_OnUseSecondary(Weapon.SecondaryType secondaryType)
@@ -69,12 +71,17 @@ public class PlayerStatusCanvas : MonoBehaviour
     {
         if (weaponSecondaryBar.fillAmount < 1)
         {
-            weaponSecondaryBar.fillAmount = Mathf.Lerp(weaponSecondaryBar.fillAmount, weaponSecondaryBarFill, Time.deltaTime * 10);
+            UpdateSecondaryProgressText();
+        }
+    }
 
-            if (secondaryProgressText.gameObject.activeInHierarchy)
-            {
-                secondaryProgressText.text = Mathf.RoundToInt(weaponSecondaryBar.fillAmount * 100) + "%";
-            }
+    private void UpdateSecondaryProgressText()
+    {
+        weaponSecondaryBar.fillAmount = Mathf.Lerp(weaponSecondaryBar.fillAmount, weaponSecondaryBarFill, Time.deltaTime * 10);
+
+        if (secondaryProgressText.gameObject.activeInHierarchy)
+        {
+            secondaryProgressText.text = Mathf.RoundToInt(weaponSecondaryBar.fillAmount * 100) + "%";
         }
     }
 

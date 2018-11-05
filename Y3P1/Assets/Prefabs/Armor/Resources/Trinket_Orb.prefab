@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4555522520552425865}
   - component: {fileID: 1020885972926360302}
   - component: {fileID: 1181897410327462403}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Trinket_Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 1.0000001}
-  m_Center: {x: 1.03, y: 0, z: 0.39}
+  m_Size: {x: 1.0293515, y: 1.0587025, z: 1.07827}
+  m_Center: {x: 0.007600654, y: -0.82329524, z: 0.4584861}
 --- !u!1 &3021384454528244992
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4222571986900963167}
   - component: {fileID: 4066945164231323123}
   - component: {fileID: 2318996464659239459}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

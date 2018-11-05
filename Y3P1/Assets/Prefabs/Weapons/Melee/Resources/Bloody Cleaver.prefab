@@ -261,8 +261,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.16, z: 0.52}
-  m_Center: {x: 0, y: 0, z: 0.14}
+  m_Size: {x: 0.20580876, y: 0.05969204, z: 0.47320473}
+  m_Center: {x: -0.056888074, y: 0, z: 0.0897196}
 --- !u!114 &2153960985361562058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 8270067161727886856}
   - component: {fileID: 8270067161727084072}
   - component: {fileID: 8270067161725986024}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cleaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
