@@ -158,7 +158,8 @@ MonoBehaviour:
   webCollider: {fileID: 5990372420519014196}
   burnParticle: {fileID: 8747640151050012251}
   burnTime: 3
-  entityToSpawnOnDeath: {fileID: 0}
+  entityToSpawnOnDeath: {fileID: 5235892731197639727, guid: 537611df2efad1f41a56d9a46620a528,
+    type: 3}
   spawnOnDeathChance: 70
   rigidbodyExplodeForce: 2
 --- !u!1 &6354216330673829202 stripped
