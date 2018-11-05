@@ -113,6 +113,14 @@ MonoBehaviour:
     projectileSpawn: 0
     freezePosition: 1
     speedOverride: 0
+  - projectilePool: SpiderVenom_White
+    projectileSpawn: 0
+    freezePosition: 0
+    speedOverride: 8
+  - projectilePool: SpiderVenom_Red
+    projectileSpawn: 0
+    freezePosition: 0
+    speedOverride: 8
 --- !u!114 &5769053136309210999
 MonoBehaviour:
   m_ObjectHideFlags: 0

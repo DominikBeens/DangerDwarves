@@ -204,3 +204,13 @@ MonoBehaviour:
       type: 3}
     poolSize: 20
     autoExpand: 1
+  - poolName: SpiderVenom_Red
+    poolPrefab: {fileID: 3716037247890611631, guid: 2cb243e66ac619c4b82b0d89665a8af5,
+      type: 3}
+    poolSize: 20
+    autoExpand: 1
+  - poolName: SpiderVenomHit_Red
+    poolPrefab: {fileID: 1022150738432160081, guid: e72afe44deb4afb4c9e726c647f090bd,
+      type: 3}
+    poolSize: 20
+    autoExpand: 1
