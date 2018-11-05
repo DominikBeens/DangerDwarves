@@ -92,7 +92,7 @@ Material:
     - _FoamDepth: 0
     - _FoamFalloff: 0
     - _FoamSmoothness: 0
-    - _FoamSpecular: 0.3
+    - _FoamSpecular: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
@@ -113,7 +113,7 @@ Material:
     - _UVSec: 0
     - _WaterDepth: 0
     - _WaterFalloff: 0
-    - _WaterSmoothness: 0.94
+    - _WaterSmoothness: 0.65
     - _WaterSpecular: 0
     - _WavesAmount: 8.87
     - _WavesAmplitude: 0.1
