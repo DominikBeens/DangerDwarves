@@ -87,12 +87,12 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Distortion: 0.1
+    - _Distortion: 0.2
     - _DstBlend: 10
     - _FoamDepth: 0
     - _FoamFalloff: 0
     - _FoamSmoothness: 0
-    - _FoamSpecular: 0.03
+    - _FoamSpecular: 0.3
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
@@ -112,8 +112,8 @@ Material:
     - _UVDistortIntensity: 0
     - _UVSec: 0
     - _WaterDepth: 0
-    - _WaterFalloff: -0
-    - _WaterSmoothness: 1.5
+    - _WaterFalloff: 0
+    - _WaterSmoothness: 0.94
     - _WaterSpecular: 0
     - _WavesAmount: 8.87
     - _WavesAmplitude: 0.1
@@ -121,9 +121,9 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 0.5566038, g: 0.5539783, b: 0.5539783, a: 0.6509804}
-    - _DeepColor: {r: 1, g: 1, b: 1, a: 0}
+    - _DeepColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.25511748, g: 0.3679245, b: 0.36455715, a: 1}
-    - _ShalowColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ShalowColor: {r: 1, g: 1, b: 1, a: 1}
     - _Size: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
