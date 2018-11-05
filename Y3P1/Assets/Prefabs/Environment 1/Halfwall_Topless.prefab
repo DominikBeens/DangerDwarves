@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &7416968267716762390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: df98edd93ef70d242bcf4be95ef6c0d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7416968267716886934}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5398398562020258296 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: df98edd93ef70d242bcf4be95ef6c0d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5398398562020387704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2592858877175434344
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2592858877175599176}
-  - component: {fileID: 2521465045440718676}
   m_Layer: 0
   m_Name: Halfwall_Topless
   m_TagString: Environment
@@ -45,19 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
---- !u!65 &2521465045440718676
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &5398398562020258296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: df98edd93ef70d242bcf4be95ef6c0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5398398562020387704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2592858877175434344}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0606904, y: 3.6669712, z: 1}
-  m_Center: {x: 0, y: 1.799294, z: 0}
+--- !u!4 &7416968267716762390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: df98edd93ef70d242bcf4be95ef6c0d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7416968267716886934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5398398562020387704
 PrefabInstance:
   m_ObjectHideFlags: 0
