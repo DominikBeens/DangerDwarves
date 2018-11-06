@@ -74660,7 +74660,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145068, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_Name
-      value: LocalAmbienceController (4)
+      value: LocalAmbienceController(Armory)
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -74675,7 +74675,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: iAmCurrentAmbience
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -79589,7 +79589,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -37.3
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -79624,7 +79624,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -79644,7 +79644,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145068, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_Name
-      value: LocalAmbienceController (1)
+      value: LocalAmbienceController(Attic)
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -82888,7 +82888,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145068, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_Name
-      value: LocalAmbienceController
+      value: LocalAmbienceController(Bar)
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -82908,17 +82908,17 @@ PrefabInstance:
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: fogColor.r
-      value: 0.56702286
+      value: 0.37863162
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: fogColor.g
-      value: 0.5058824
+      value: 0.2980392
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: fogColor.b
-      value: 0.6509804
+      value: 0.6431373
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -89351,7 +89351,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145068, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_Name
-      value: LocalAmbienceController (3)
+      value: LocalAmbienceController(Dungeon1Spawn)
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145070, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
@@ -103053,7 +103053,7 @@ PrefabInstance:
     - target: {fileID: 7272927303487145068, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
       propertyPath: m_Name
-      value: LocalAmbienceController (2)
+      value: LocalAmbienceController(PVP)
       objectReference: {fileID: 0}
     - target: {fileID: 7272927303487145071, guid: 00c04606365df3e45a5834ec830e64f1,
         type: 3}
