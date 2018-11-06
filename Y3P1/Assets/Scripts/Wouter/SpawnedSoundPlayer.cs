@@ -20,7 +20,7 @@ public class SpawnedSoundPlayer : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
         if (minPitch == 0)
         {
