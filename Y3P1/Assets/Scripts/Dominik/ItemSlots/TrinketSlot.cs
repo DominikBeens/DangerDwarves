@@ -7,10 +7,12 @@ public class TrinketSlot : EquipmentSlot
     public static Trinket currentTrinket;
 
     [SerializeField] private Transform trinketSpawn;
+    [SerializeField] private Transform decoyTrinketSpawn;
 
     public void EquipTrinket(Trinket trinket)
     {
         int[] ids = Equip(trinket, trinketSpawn);
+        DecoyEquip(trinket, decoyTrinketSpawn);
         currentTrinket = currentEquipment as Trinket;
         if (currentTrinket != null)
         {

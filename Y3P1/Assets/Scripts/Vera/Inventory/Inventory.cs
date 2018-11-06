@@ -159,7 +159,7 @@ public class Inventory : MonoBehaviourPunCallbacks
     void SaveItem(Item toSave, string objName, Vector3 loc)
     {
         byte[] saved = ObjectToByteArray(toSave);
-        loc.y += 0.1f;
+        loc.y += 0.2f;
         photonView.RPC("DropItem", RpcTarget.AllBuffered, objName, saved, loc);
     }
 
