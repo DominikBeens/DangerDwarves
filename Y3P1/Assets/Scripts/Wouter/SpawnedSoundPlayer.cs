@@ -1,42 +1,56 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SpawnedSoundPlayer : MonoBehaviour {
+public class SpawnedSoundPlayer : MonoBehaviour
+{
+    private Transform parent;
+
     public float lifetime;
     public bool randomizePitch;
     public float minPitch;
     public float maxPitch;
     public AudioSource myAudioSource;
 
-	// Use this for initialization
-	void Start ()
+    private void Awake()
     {
+        parent = transform.parent;
+
         if (lifetime == 0)
         {
             lifetime = 2;
         }
-        if (minPitch == 0 )
+    }
+
+    private void Start()
+    {
+        if (minPitch == 0)
         {
             minPitch = 0.9f;
         }
-        if(maxPitch == 0)
+        if (maxPitch == 0)
         {
             maxPitch = 1.1f;
         }
-        transform.parent = null;
-        
-        if(randomizePitch)
+
+        transform.SetParent(null);
+
+        if (randomizePitch)
         {
             myAudioSource.pitch = Random.Range(minPitch, maxPitch);
         }
 
-        Destroy(this.gameObject, lifetime);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        Invoke("ReturnToParent", lifetime);
+    }
+
+    private void Update()
     {
-		
-	}
+        if (parent && !transform.parent)
+        {
+            transform.position = parent.position;
+        }
+    }
+
+    private void ReturnToParent()
+    {
+        transform.SetParent(parent);
+    }
 }
