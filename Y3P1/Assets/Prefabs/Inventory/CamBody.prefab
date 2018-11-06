@@ -31,6 +31,36 @@ Transform:
   m_Father: {fileID: 2288831310382290631}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 90}
+--- !u!1 &1068896636390720544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1968209186984235036}
+  m_Layer: 15
+  m_Name: TrinketSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1968209186984235036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068896636390720544}
+  m_LocalRotation: {x: 0.98813504, y: -0.12977847, z: 0.0629609, w: 0.05275049}
+  m_LocalPosition: {x: -0.1616, y: -0.0352, z: 0.0372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2288831310382290653}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 6.926, y: -186.405, z: -165.42401}
 --- !u!1 &2094361627473578282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1186,7 @@ Transform:
   m_Children:
   - {fileID: 2288831310382290669}
   - {fileID: 2288831310382290643}
+  - {fileID: 1968209186984235036}
   m_Father: {fileID: 2288831310382290651}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -84.84515, y: 49.224777, z: -52.906822}
