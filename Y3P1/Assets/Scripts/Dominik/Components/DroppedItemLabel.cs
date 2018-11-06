@@ -9,6 +9,7 @@ public class DroppedItemLabel : MonoBehaviour
     private TextMeshProUGUI labelText;
     private Vector3 legendaryMarkDefaultPos;
     private float yPos;
+    private bool isInvokingMethod;
 
     [SerializeField] private GameObject legendaryMark;
     [HideInInspector] public Animator anim;
@@ -27,9 +28,10 @@ public class DroppedItemLabel : MonoBehaviour
 
     private void Update()
     {
-        if (!associatedItemPrefab)
+        if (!associatedItemPrefab && !isInvokingMethod)
         {
-            ReturnToPool();
+            isInvokingMethod = true;
+            Invoke("ReturnToPool", 2);
         }
 
         if (legendaryMark.activeInHierarchy)
@@ -84,5 +86,6 @@ public class DroppedItemLabel : MonoBehaviour
         associatedItemPrefab = null;
         legendaryMark.SetActive(false);
         ObjectPooler.instance.AddToPool("DroppedItemLabel", gameObject);
+        isInvokingMethod = false;
     }
 }
