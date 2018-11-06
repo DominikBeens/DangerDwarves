@@ -1,24 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &5483802122115574485 stripped
+--- !u!4 &7138990998197022943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3389146207351068202, guid: d4e76cc1cfd234a4b85e459adfcaba81,
     type: 3}
   m_PrefabInstance: {fileID: 7138990998197026047}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5483802122749555725 stripped
+--- !u!4 &7138990997756767751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3389146207351068202, guid: d4e76cc1cfd234a4b85e459adfcaba81,
     type: 3}
   m_PrefabInstance: {fileID: 7138990997756764711}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5483802121718632458 stripped
+--- !u!4 &7138990998873917952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3389146207351068202, guid: d4e76cc1cfd234a4b85e459adfcaba81,
     type: 3}
   m_PrefabInstance: {fileID: 7138990998873916960}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5483802122249489679 stripped
+--- !u!4 &7138990998330480389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3389146207351068202, guid: d4e76cc1cfd234a4b85e459adfcaba81,
     type: 3}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 7799107670210270830}
   m_Layer: 0
   m_Name: Door_1_Interactable
-  m_TagString: Environment
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -453,10 +453,10 @@ Transform:
   - {fileID: 2178640116657141361}
   - {fileID: 2178640117650537182}
   - {fileID: 5609994704055609679}
-  - {fileID: 5483802122749555725}
-  - {fileID: 5483802122115574485}
-  - {fileID: 5483802122249489679}
-  - {fileID: 5483802121718632458}
+  - {fileID: 7138990997756767751}
+  - {fileID: 7138990998197022943}
+  - {fileID: 7138990998330480389}
+  - {fileID: 7138990998873917952}
   - {fileID: 7138990997898341082}
   - {fileID: 7138990997828517080}
   - {fileID: 7138990999050081166}
