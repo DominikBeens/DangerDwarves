@@ -323,3 +323,106 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91622a2be6ae41649969d2a66b629ca3, type: 3}
+--- !u!1001 &4124126799165527866
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 3400485393250192331}
+    m_Modifications:
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909783806913818476, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680781366319597077, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_Name
+      value: PotionParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: scalingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222467767487930078, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680781366319597077, guid: 736c7470eb505af42b1c95fc705ea5de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 736c7470eb505af42b1c95fc705ea5de, type: 3}
