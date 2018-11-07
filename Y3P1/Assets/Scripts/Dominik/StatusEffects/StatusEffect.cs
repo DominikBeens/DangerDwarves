@@ -249,6 +249,9 @@ public class StatusEffect_WeaponCharge : StatusEffect
     {
         base.TriggerEffect();
 
-        UIManager.instance.playerStatusCanvas.Hit(false);
+        if (entity == Y3P1.Player.localPlayer.entity)
+        {
+            UIManager.instance.playerStatusCanvas.Hit(false);
+        }
     }
 }

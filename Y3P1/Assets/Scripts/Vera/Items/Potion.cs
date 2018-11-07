@@ -68,7 +68,8 @@ public class Potion : Item
                 break;
 
             case PotionType.WeaponCharge:
-                Player.localPlayer.entity.statusEffects.AddEffect(5, buffDuration);
+                //Player.localPlayer.entity.statusEffects.AddEffect(5, buffDuration);
+                Player.localPlayer.entity.photonView.RPC("SyncStatusEffects", Photon.Pun.RpcTarget.All, 5, buffDuration, -1);
                 Player.localPlayer.dwarfAnimController.Drink();
                 break;
         }
