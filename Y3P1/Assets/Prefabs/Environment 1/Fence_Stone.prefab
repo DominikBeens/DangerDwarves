@@ -89,8 +89,8 @@ GameObject:
   - component: {fileID: 6668932428273441859}
   - component: {fileID: 293147258164308550}
   m_Layer: 0
-  m_Name: Reling
-  m_TagString: Untagged
+  m_Name: Fence_Stone
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

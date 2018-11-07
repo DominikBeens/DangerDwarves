@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 1480810256760012554}
   m_Layer: 0
   m_Name: Kitchen_Counter
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,5 +114,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d141e7059bcf0646806a99542df26db, type: 2}
+    - target: {fileID: 100000, guid: d9e729f53a5c15d4d9146ce203bd0c85, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9e729f53a5c15d4d9146ce203bd0c85, type: 3}
