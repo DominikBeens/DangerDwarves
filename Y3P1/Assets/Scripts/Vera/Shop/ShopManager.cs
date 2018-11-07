@@ -28,11 +28,6 @@ public class ShopManager : MonoBehaviourPunCallbacks
         {
             instance = this;
         }
-        if (ShopInventory.IsOpen())
-        {
-            ShopInventory.OpenClose();
-        }
-
 
         StartCoroutine(Delay());
     }
@@ -41,6 +36,10 @@ public class ShopManager : MonoBehaviourPunCallbacks
     {
         yield return new WaitForSeconds(0.05f);
         Restock();
+        if (ShopInventory.IsOpen())
+        {
+            ShopInventory.OpenClose();
+        }
     }
 
     public void SellItem(Item toSell)
