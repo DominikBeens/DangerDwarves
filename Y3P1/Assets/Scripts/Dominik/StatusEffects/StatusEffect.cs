@@ -236,3 +236,24 @@ public class StatusEffect_Poison : StatusEffect
         }
     }
 }
+
+public class StatusEffect_WeaponCharge : StatusEffect
+{
+    public int chargeAmount = 10;
+
+    public override void Initialise(Entity entity, float duration, int value = -1)
+    {
+        base.Initialise(entity, duration);
+        type = StatusEffects.StatusEffectType.WeaponCharge;
+    }
+
+    public override void TriggerEffect()
+    {
+        base.TriggerEffect();
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            // Entity add weapon charge.
+        }
+    }
+}

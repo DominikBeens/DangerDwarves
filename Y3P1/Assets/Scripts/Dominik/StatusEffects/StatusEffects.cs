@@ -9,7 +9,7 @@ public class StatusEffects
     private Entity myEntity;
     public static float tickRate = 1f;
     private float nextTick;
-    public enum StatusEffectType { Bleed, Slow, ArmorBreak, WeaponBreak, Poison };
+    public enum StatusEffectType { Bleed, Slow, ArmorBreak, WeaponBreak, Poison, WeaponCharge };
 
     public event Action<StatusEffectType> OnEffectStarted = delegate { };
     public event Action<StatusEffectType> OnEffectEnded = delegate { };
@@ -47,24 +47,27 @@ public class StatusEffects
         switch (type)
         {
             case StatusEffectType.Bleed:
-
                 newEffect = new StatusEffect_Bleed();
                 break;
-            case StatusEffectType.Slow:
 
+            case StatusEffectType.Slow:
                 newEffect = new StatusEffect_Slow();
                 break;
-            case StatusEffectType.ArmorBreak:
 
+            case StatusEffectType.ArmorBreak:
                 newEffect = new StatusEffect_ArmorBreak();
                 break;
-            case StatusEffectType.WeaponBreak:
 
+            case StatusEffectType.WeaponBreak:
                 newEffect = new StatusEffect_WeaponBreak();
                 break;
-            case StatusEffectType.Poison:
 
+            case StatusEffectType.Poison:
                 newEffect = new StatusEffect_Poison();
+                break;
+
+            case StatusEffectType.WeaponCharge:
+                newEffect = new StatusEffect_WeaponCharge();
                 break;
         }
 
