@@ -770,5 +770,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatusEffectCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 304122436216688794, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785326154589521586, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774020567990149048, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170935663176715073, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094017609829836730, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332125538383628843, guid: d7ddb0378c220674b9f0f9e5772a3c66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7ddb0378c220674b9f0f9e5772a3c66, type: 3}

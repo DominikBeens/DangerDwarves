@@ -7,7 +7,7 @@ public class Potion : Item
 
     private int myMaterialIndex;
     private int index;
-    public enum PotionType { WeaponBuff, Heal, WeaponCharge}
+    public enum PotionType { WeaponBuff, Heal, WeaponCharge }
 
     public PotionType potionType;
 
@@ -29,7 +29,7 @@ public class Potion : Item
     {
         potionType = (PotionType)type;
         index = Random.Range(0, 5);
-        if(potionType == PotionType.Heal)
+        if (potionType == PotionType.Heal)
         {
             index = 5;
         }
@@ -87,7 +87,7 @@ public class Potion : Item
 
                     case StatusEffects.StatusEffectType.Slow:
                         return "Slowness Imbue";
-                    
+
                     case StatusEffects.StatusEffectType.ArmorBreak:
                         return "Broken Armor Imbue";
 
