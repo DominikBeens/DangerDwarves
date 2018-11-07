@@ -251,9 +251,7 @@ public class StatusEffect_WeaponCharge : StatusEffect
     {
         base.TriggerEffect();
 
-        if (PhotonNetwork.IsMasterClient)
-        {
-            // Entity add weapon charge.
-        }
+        // Entity add weapon charge.
+        NotificationManager.instance.NewNotification("Test");
     }
 }

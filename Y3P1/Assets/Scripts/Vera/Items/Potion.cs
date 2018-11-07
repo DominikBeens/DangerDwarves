@@ -61,6 +61,7 @@ public class Potion : Item
 
             case PotionType.Heal:
                 Player.localPlayer.entity.Hit(Mathf.RoundToInt(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth()), Stats.DamageType.Melee);
+                //Player.localPlayer.entity.statusEffects.AddEffect(5, 5);
                 break;
         }
     }

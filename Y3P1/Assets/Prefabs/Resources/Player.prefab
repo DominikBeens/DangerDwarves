@@ -3226,8 +3226,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 4
-  InstantiationId: 4
+  viewIdField: 124
+  InstantiationId: 124
   isRuntimeInstantiated: 0
 --- !u!1 &283675240357907025
 GameObject:
@@ -5936,7 +5936,6 @@ MonoBehaviour:
     isInvinsible: 0
     isDead: 0
     baseHealth: 100
-    currentHealth: 0
   stats:
     stamina: 0
     strength: 0
@@ -12396,6 +12395,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3102659189459308873, guid: d9a22b72ec8f7f247bee4d1243af548b,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366553660273032781, guid: d9a22b72ec8f7f247bee4d1243af548b,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366553660273032781, guid: d9a22b72ec8f7f247bee4d1243af548b,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
