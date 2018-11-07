@@ -52,23 +52,23 @@ public class DroppedItemLabel : MonoBehaviour
 
         switch (item.itemRarity)
         {
-            case Item.ItemRarity.common:
+            case Item.ItemRarity.Common:
 
                 labelText.color = Color.white;
                 light.enabled = false;
                 break;
-            case Item.ItemRarity.rare:
+            case Item.ItemRarity.Rare:
 
                 labelText.color = Color.blue;
                 light.enabled = false;
                 break;
-            case Item.ItemRarity.epic:
+            case Item.ItemRarity.Epic:
 
                 light.color = Color.magenta;
                 labelText.color = Color.magenta;
                 light.enabled = true;
                 break;
-            case Item.ItemRarity.legendary:
+            case Item.ItemRarity.Legendary:
 
                 light.color = Color.yellow;
                 labelText.color = Color.yellow;

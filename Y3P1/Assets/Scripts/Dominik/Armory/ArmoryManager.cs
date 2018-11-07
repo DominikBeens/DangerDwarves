@@ -179,11 +179,11 @@ public class ArmoryManager : MonoBehaviour
 
             if (selectedItem is Weapon_Melee)
             {
-                (selectedItem as Weapon).secondaryProjectile = Database.hostInstance.GetMeleeSecundary(selectedItem.itemRarity == Item.ItemRarity.legendary);
+                (selectedItem as Weapon).secondaryProjectile = Database.hostInstance.GetMeleeSecundary(selectedItem.itemRarity == Item.ItemRarity.Legendary);
             }
             else if (selectedItem is Weapon_Ranged)
             {
-                (selectedItem as Weapon).secondaryProjectile = Database.hostInstance.GetRangedSecundary(selectedItem.itemRarity == Item.ItemRarity.legendary);
+                (selectedItem as Weapon).secondaryProjectile = Database.hostInstance.GetRangedSecundary(selectedItem.itemRarity == Item.ItemRarity.Legendary);
             }
 
             Player.localPlayer.myInventory.UpdateGold(-CalculateRerollSecondaryCost());

@@ -1234,16 +1234,16 @@ public class Inventory : MonoBehaviourPunCallbacks
     {
         switch (rarity)
         {
-            case Item.ItemRarity.common:
+            case Item.ItemRarity.Common:
 
                 return common;
-            case Item.ItemRarity.rare:
+            case Item.ItemRarity.Rare:
 
                 return rare;
-            case Item.ItemRarity.epic:
+            case Item.ItemRarity.Epic:
 
                 return epic;
-            case Item.ItemRarity.legendary:
+            case Item.ItemRarity.Legendary:
 
                 return Legendary;
             default:
@@ -1257,7 +1257,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if(allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
             {
-                if(allItems[i].itemRarity == Item.ItemRarity.common)
+                if(allItems[i].itemRarity == Item.ItemRarity.Common)
                 {
                     ShopManager.instance.SellItem(allItems[i]);
                     allItems[i] = null;
@@ -1274,7 +1274,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
             {
-                if (allItems[i].itemRarity == Item.ItemRarity.rare)
+                if (allItems[i].itemRarity == Item.ItemRarity.Rare)
                 {
                     ShopManager.instance.SellItem(allItems[i]);
                     allItems[i] = null;
@@ -1291,7 +1291,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
             {
-                if (allItems[i].itemRarity == Item.ItemRarity.epic)
+                if (allItems[i].itemRarity == Item.ItemRarity.Epic)
                 {
                     ShopManager.instance.SellItem(allItems[i]);
                     allItems[i] = null;
@@ -1308,7 +1308,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             if (allItems[i] != null && allSlots[i].slotType == InventorySlot.SlotType.all)
             {
-                if (allItems[i].itemRarity == Item.ItemRarity.legendary)
+                if (allItems[i].itemRarity == Item.ItemRarity.Legendary)
                 {
                     ShopManager.instance.SellItem(allItems[i]);
                     allItems[i] = null;

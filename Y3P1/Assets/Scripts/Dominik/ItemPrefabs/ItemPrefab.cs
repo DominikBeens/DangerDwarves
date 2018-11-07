@@ -136,19 +136,19 @@ public class ItemPrefab : MonoBehaviourPunCallbacks, IPunObservable
         Color rarityColor = new Color();
         switch (myItem.itemRarity)
         {
-            case Item.ItemRarity.common:
+            case Item.ItemRarity.Common:
 
                 rarityColor = Color.white;
                 break;
-            case Item.ItemRarity.rare:
+            case Item.ItemRarity.Rare:
 
                 rarityColor = new Color(0, 0.835f, 1, 1);
                 break;
-            case Item.ItemRarity.epic:
+            case Item.ItemRarity.Epic:
 
                 rarityColor = Color.magenta;
                 break;
-            case Item.ItemRarity.legendary:
+            case Item.ItemRarity.Legendary:
 
                 rarityColor = Color.yellow;
                 break;

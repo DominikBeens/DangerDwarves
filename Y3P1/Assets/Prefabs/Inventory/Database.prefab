@@ -58,12 +58,14 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 806c44aa0ec2d4f4790a68391b10db91, type: 2}
   - {fileID: 2100000, guid: 625f5cd3446241b47bc4ca210ce7e66b, type: 2}
   - {fileID: 2100000, guid: 0aaaf767d0837744299e3245d3528d9f, type: 2}
+  - {fileID: 2100000, guid: 07de576b1b03ca64ca55f8c8b2ffb4c8, type: 2}
   potionDiscription:
   - Applies bleeding damage to your weapon
   - Applies slow effect to your weapon
   - Applies armor break effect to your weapon
   - Applies weapon break effect to your weapon
   - Applies poison damage to your weapon
+  - 'Brings back '
   secundaryRangedAttacks:
   - 
   - Arrow_Animated

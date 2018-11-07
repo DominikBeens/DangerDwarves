@@ -25,9 +25,14 @@ public class Potion : Item
         return index;
     }
 
-    public override int StartPotion(int rarity)
+    public override int StartPotion(int rarity, int type)
     {
+        potionType = (PotionType)type;
         index = Random.Range(0, 5);
+        if(potionType == PotionType.Heal)
+        {
+            index = 5;
+        }
         Database.hostInstance.GetPotionSprite(index);
         Database.hostInstance.GetPotionObject(index);
         effectType = (StatusEffects.StatusEffectType)index;
@@ -37,7 +42,6 @@ public class Potion : Item
         prefabIndex = Database.hostInstance.GetPotionObject(index);
 
         itemName = GetPotionName();
-        Debug.Log(itemName);
         itemRarity = (ItemRarity)rarity;
         statusEffectDuration = GetStatusEffectDuration();
         buffDuration = GetBuffDuration();
@@ -56,7 +60,7 @@ public class Potion : Item
                 break;
 
             case PotionType.Heal:
-                Player.localPlayer.entity.Hit(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth(), Stats.DamageType.Melee);
+                Player.localPlayer.entity.Hit(Mathf.RoundToInt(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth()), Stats.DamageType.Melee);
                 break;
         }
     }
@@ -100,16 +104,16 @@ public class Potion : Item
     {
         switch (itemRarity)
         {
-            case ItemRarity.common:
+            case ItemRarity.Common:
 
                 return 15f;
-            case ItemRarity.rare:
+            case ItemRarity.Rare:
 
                 return 17f;
-            case ItemRarity.epic:
+            case ItemRarity.Epic:
 
                 return 20f;
-            case ItemRarity.legendary:
+            case ItemRarity.Legendary:
 
                 return 25f;
             default:
@@ -143,21 +147,27 @@ public class Potion : Item
         }
     }
 
-    private int GetHealAmount()
+    public string Percentage()
+    {
+        int i = Mathf.RoundToInt(GetHealAmount() * 100);
+        return i.ToString() + "%";
+    }
+
+    private float GetHealAmount()
     {
         switch (itemRarity)
         {
-            case ItemRarity.common:
-                return 20;
+            case ItemRarity.Common:
+                return 0.20f;
 
-            case ItemRarity.rare:
-                return 30;
+            case ItemRarity.Rare:
+                return 0.30f;
 
-            case ItemRarity.epic:
-                return 40;
+            case ItemRarity.Epic:
+                return 0.40f;
 
-            case ItemRarity.legendary:
-                return 50;
+            case ItemRarity.Legendary:
+                return 0.50f;
 
             default:
                 return 0;

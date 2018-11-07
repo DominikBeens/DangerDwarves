@@ -195,9 +195,19 @@ public class LootRandomizer : MonoBehaviour {
         }
         Item newPotion = new Potion();
         int rarity = Rarity();
-        int typePotion = newPotion.StartPotion(rarity);
+        int typePotion = newPotion.StartPotion(rarity, PotionType());
         //newPotion.StartUp("", rarity, Database.hostInstance.GetPotionSprite(typePotion) , null, Database.hostInstance.GetPotionObject(typePotion), 1);
         return newPotion;
+    }
+
+    private int PotionType()
+    {
+        int i = 0;
+        if(Random.Range(0,100) > 70)
+        {
+            i = 1;
+        }
+        return i;
     }
 
     private Item LootAxe(int currentItemLevel)

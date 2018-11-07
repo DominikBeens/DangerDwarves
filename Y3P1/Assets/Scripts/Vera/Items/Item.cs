@@ -4,7 +4,7 @@ public class Item
 {
 
     public string itemName;
-    public enum ItemRarity { common = 0, rare = 1, epic = 2, legendary = 3 }
+    public enum ItemRarity { Common = 0, Rare = 1, Epic = 2, Legendary = 3 }
     public ItemRarity itemRarity;
     public int spriteIndex;
     public Stats myStats;
@@ -38,7 +38,13 @@ public class Item
         }
         else if (this is Potion)
         {
-            newInfo = new string[] {"<color=white>" + itemName, itemRarity.ToString(), Database.hostInstance.potionDiscription[PotionNum()] };
+            string info = Database.hostInstance.potionDiscription[PotionNum()];
+            Potion temp = (Potion)this;
+            if(temp.potionType == Potion.PotionType.Heal)
+            {
+                info = Database.hostInstance.potionDiscription[PotionNum()] + " <color=#00A8FF>" + temp.Percentage() + "</color> health";
+            }
+            newInfo = new string[] {"<color=white>" + itemName, itemRarity.ToString(), info };
         }
         else
         {
@@ -53,7 +59,7 @@ public class Item
         return -1;
     }
 
-    public virtual int StartPotion(int rarity)
+    public virtual int StartPotion(int rarity, int type)
     {
         return -1;
     }
@@ -95,15 +101,15 @@ public class Item
 
     private string RarityInfo()
     {
-        if(itemRarity == ItemRarity.common)
+        if(itemRarity == ItemRarity.Common)
         {
             return "<color=white>" + itemName;
         }
-        if(itemRarity == ItemRarity.epic)
+        if(itemRarity == ItemRarity.Epic)
         {
             return "<color=purple>" + itemName;
         }
-        if(itemRarity == ItemRarity.rare)
+        if(itemRarity == ItemRarity.Rare)
         {
             return "<color=#00A8FF>" + itemName;
         }
