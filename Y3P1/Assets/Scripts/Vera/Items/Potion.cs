@@ -55,16 +55,21 @@ public class Potion : Item
         switch (potionType)
         {
             case PotionType.WeaponBuff:
-                Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
-                Player.localPlayer.dwarfAnimController.Oil();
+                if (WeaponSlot.currentWeapon != null)
+                {
+                    Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
+                    Player.localPlayer.dwarfAnimController.Oil();
+                }
                 break;
 
             case PotionType.Heal:
                 Player.localPlayer.entity.Hit(Mathf.RoundToInt(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth()), Stats.DamageType.Melee);
+                Player.localPlayer.dwarfAnimController.Drink();
                 break;
 
             case PotionType.WeaponCharge:
                 Player.localPlayer.entity.statusEffects.AddEffect(5, buffDuration);
+                Player.localPlayer.dwarfAnimController.Drink();
                 break;
         }
     }

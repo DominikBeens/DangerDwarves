@@ -136,6 +136,11 @@ public class DwarfAnimationsScript : MonoBehaviour
         myAnim.SetBool("OilBool", true);
     }
 
+    public void Drink()
+    {
+        myAnim.SetBool("Drink", true);
+    }
+
     public void SetRevive(bool b)
     {
         myAnim.SetBool("Reviving", b);
@@ -176,8 +181,6 @@ public class DwarfAnimationsScript : MonoBehaviour
         {
             return;
         }
-
-        
 
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
