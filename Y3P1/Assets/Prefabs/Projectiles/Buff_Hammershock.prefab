@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 285994908499404040}
   - component: {fileID: 8013572108609657672}
   - component: {fileID: 4237951325463797157}
+  - component: {fileID: 3492316711928329881}
   m_Layer: 10
   m_Name: Buff_Hammershock
   m_TagString: Untagged
@@ -100,25 +101,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &7928614614001028226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
-    type: 3}
-  m_PrefabInstance: {fileID: 292752182013119731}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7880334812586275238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7587582736874192213, guid: 8233a9ed161c29646b2d2360c7323db4,
-    type: 3}
-  m_PrefabInstance: {fileID: 292752182013119731}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &4778320293673323876
+--- !u!82 &3492316711928329881
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7880334812586275238}
+  m_GameObject: {fileID: 1329845292236604}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -244,6 +233,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &7928614614001028226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7644869666679832689, guid: 8233a9ed161c29646b2d2360c7323db4,
+    type: 3}
+  m_PrefabInstance: {fileID: 292752182013119731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &292752182013119731
 PrefabInstance:
   m_ObjectHideFlags: 0

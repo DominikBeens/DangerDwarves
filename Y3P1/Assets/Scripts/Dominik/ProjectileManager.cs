@@ -8,7 +8,7 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
 
     public static ProjectileManager instance;
 
-    public enum ProjecileVisual { None, Arrow, DemonBolt, SpiderBolt };
+    public enum ProjecileVisual { None, Arrow, DemonBolt, SpiderBolt, Bullet };
 
     [System.Serializable]
     public struct ProjectileSettings
@@ -167,6 +167,8 @@ public class ProjectileManager : MonoBehaviourPunCallbacks
                 return ProjecileVisual.DemonBolt;
             case ItemPrefab.ItemType.SpiderStaff:
                 return ProjecileVisual.SpiderBolt;
+            case ItemPrefab.ItemType.Flintlock:
+                return ProjecileVisual.Bullet;
         }
 
         return ProjecileVisual.None;

@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &2172582378484330965 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 3793e7958990b83469cbe21546ffcbb0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2172582378484198229}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &2172582378486231861 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 3793e7958990b83469cbe21546ffcbb0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2172582378484198229}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &727557903423277189
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +67,7 @@ MonoBehaviour:
   interactCollider: {fileID: 4722898432765870016}
   objectCollider: {fileID: 1181897410327462403}
   weaponRarityParticles: []
-  dropRotationAdjustment: {x: -90, y: 0, z: 0}
+  dropRotationAdjustment: {x: 0, y: 0, z: 0}
   renderer: {fileID: 2172582378486231861}
 --- !u!114 &4555522520552425865
 MonoBehaviour:
@@ -132,6 +120,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.18410484, y: 0.16386476, z: 0.5146942}
   m_Center: {x: 0.023613535, y: -0.14505446, z: 0.05734718}
+--- !u!4 &2172582378484330965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 3793e7958990b83469cbe21546ffcbb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2172582378484198229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2172582378486231861 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 3793e7958990b83469cbe21546ffcbb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2172582378484198229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4722898432765870016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2463123072081035247, guid: dc26b00b30a8dde44a301a75757b633b,
