@@ -304,12 +304,9 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
             AggroClosestPlayer();
         }
 
-        if (behaviourState == BehaviourState.Attack)
+        if (!string.IsNullOrEmpty(settings.hitAnimation))
         {
-            if (!string.IsNullOrEmpty(settings.hitAnimation))
-            {
-                anim.SetTrigger(settings.hitAnimation);
-            }
+            anim.SetTrigger(settings.hitAnimation);
         }
     }
 
