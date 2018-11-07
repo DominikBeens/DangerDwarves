@@ -99893,6 +99893,11 @@ PrefabInstance:
       propertyPath: healAmount
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9146452613545501340, guid: fb29695a673bf5c4ba289b6de42db597,
+        type: 3}
+      propertyPath: refillSecondaryCharge
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb29695a673bf5c4ba289b6de42db597, type: 3}
 --- !u!1001 &602544036
@@ -120431,7 +120436,7 @@ PrefabInstance:
     - target: {fileID: 809714798589981632, guid: f20309387d090b740a9c03dde801f2f4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20309387d090b740a9c03dde801f2f4, type: 3}

@@ -9,6 +9,7 @@ public class PassiveHealZone : MonoBehaviour
     [SerializeField] private int healAmount = 1;
     [SerializeField] private float healInterval = 1f;
     [SerializeField] private float healRange;
+    [SerializeField] private bool refillSecondaryCharge;
     [SerializeField] private LayerMask hitLayerMask;
 
     private void Update()
@@ -32,6 +33,11 @@ public class PassiveHealZone : MonoBehaviour
                 if (entity && entity.health.GetHealthPercentage() != 1)
                 {
                     entity.Hit(healAmount, Stats.DamageType.AOE);
+                }
+
+                if (refillSecondaryCharge)
+                {
+                    UIManager.instance.playerStatusCanvas.Hit(false);
                 }
             }
         }
