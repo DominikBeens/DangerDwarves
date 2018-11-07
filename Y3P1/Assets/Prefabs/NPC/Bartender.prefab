@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4958038582553243822 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 815049736358948600, guid: 0a6b28d5825057347a8708909654ceea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5729105086441266774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5729105085533503238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: aaa70ca34764dd84780350590bbaff8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5729105085533627782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &840642266935971028
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,12 +778,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!4 &4958038582553243822 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 815049736358948600, guid: 0a6b28d5825057347a8708909654ceea,
-    type: 3}
-  m_PrefabInstance: {fileID: 5729105086441266774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5729105085507046378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1890,7 @@ MonoBehaviour:
   rightHandObjRot: {fileID: 0}
   leftHandObj: {fileID: 0}
   leftHandObjRot: {fileID: 0}
-  lookObj: {x: 0, y: 0, z: 0}
+  lookObj: {fileID: 0}
   trackPlayer: 1
 --- !u!1 &5729105086317493121
 GameObject:
@@ -2018,7 +2024,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7fbcc838993f17546a22dcd1d28cf639, type: 2}
+  - {fileID: 2100000, guid: 0ca98268810ccd041a8d30330e91cebc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2318,12 +2324,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!4 &5729105085533503238 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: aaa70ca34764dd84780350590bbaff8d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5729105085533627782}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5729105086376739226
 GameObject:
   m_ObjectHideFlags: 0
