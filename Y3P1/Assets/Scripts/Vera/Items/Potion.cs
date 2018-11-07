@@ -7,7 +7,7 @@ public class Potion : Item
 
     private int myMaterialIndex;
     private int index;
-    public enum PotionType { WeaponBuff, Heal}
+    public enum PotionType { WeaponBuff, Heal, WeaponCharge}
 
     public PotionType potionType;
 
@@ -61,7 +61,10 @@ public class Potion : Item
 
             case PotionType.Heal:
                 Player.localPlayer.entity.Hit(Mathf.RoundToInt(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth()), Stats.DamageType.Melee);
-                //Player.localPlayer.entity.statusEffects.AddEffect(5, 5);
+                break;
+
+            case PotionType.WeaponCharge:
+                Player.localPlayer.entity.statusEffects.AddEffect(5, buffDuration);
                 break;
         }
     }
@@ -96,6 +99,9 @@ public class Potion : Item
             case PotionType.Heal:
                 return "Health Potion";
 
+            case PotionType.WeaponCharge:
+                return "Weapon Charge Potion";
+
             default:
                 return "";
         }
@@ -103,22 +109,47 @@ public class Potion : Item
 
     private float GetBuffDuration()
     {
-        switch (itemRarity)
+        switch (potionType)
         {
-            case ItemRarity.Common:
+            case PotionType.WeaponBuff:
+                switch (itemRarity)
+                {
+                    case ItemRarity.Common:
+                        return 15f;
 
-                return 15f;
-            case ItemRarity.Rare:
+                    case ItemRarity.Rare:
+                        return 17f;
 
-                return 17f;
-            case ItemRarity.Epic:
+                    case ItemRarity.Epic:
+                        return 20f;
 
-                return 20f;
-            case ItemRarity.Legendary:
+                    case ItemRarity.Legendary:
+                        return 25f;
 
-                return 25f;
+                    default:
+                        return buffDuration;
+                }
+
+            case PotionType.WeaponCharge:
+                switch (itemRarity)
+                {
+                    case ItemRarity.Common:
+                        return 3;
+
+                    case ItemRarity.Rare:
+                        return 4;
+
+                    case ItemRarity.Epic:
+                        return 5;
+
+                    case ItemRarity.Legendary:
+                        return 6;
+
+                    default:
+                        return buffDuration;
+                }
+
             default:
-
                 return buffDuration;
         }
     }
@@ -128,22 +159,21 @@ public class Potion : Item
         switch (effectType)
         {
             case StatusEffects.StatusEffectType.Bleed:
-
                 return 3f;
+
             case StatusEffects.StatusEffectType.Slow:
-
                 return 2f;
+
             case StatusEffects.StatusEffectType.ArmorBreak:
-
                 return 5f;
+
             case StatusEffects.StatusEffectType.WeaponBreak:
-
                 return 4f;
+
             case StatusEffects.StatusEffectType.Poison:
-
                 return 3f;
-            default:
 
+            default:
                 return statusEffectDuration;
         }
     }

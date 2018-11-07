@@ -239,8 +239,6 @@ public class StatusEffect_Poison : StatusEffect
 
 public class StatusEffect_WeaponCharge : StatusEffect
 {
-    public int chargeAmount = 10;
-
     public override void Initialise(Entity entity, float duration, int value = -1)
     {
         base.Initialise(entity, duration);
@@ -251,7 +249,6 @@ public class StatusEffect_WeaponCharge : StatusEffect
     {
         base.TriggerEffect();
 
-        // Entity add weapon charge.
-        NotificationManager.instance.NewNotification("Test");
+        UIManager.instance.playerStatusCanvas.Hit(false);
     }
 }

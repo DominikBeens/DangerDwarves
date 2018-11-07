@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 2178640116657141373}
   - component: {fileID: 7450188321996756932}
   m_Layer: 0
-  m_Name: Door_1
+  m_Name: Castle_Door
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2018,8 +2018,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 0}
-  viewIdField: 7
-  InstantiationId: 7
+  viewIdField: 334
+  InstantiationId: 334
   isRuntimeInstantiated: 0
 --- !u!1001 &1457016313416855628
 PrefabInstance:

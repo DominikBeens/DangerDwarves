@@ -203,7 +203,12 @@ public class LootRandomizer : MonoBehaviour {
     private int PotionType()
     {
         int i = 0;
-        if(Random.Range(0,100) > 70)
+        int random = Random.Range(0, 100);
+        if(random > 80)
+        {
+            i = 2;
+        }
+        else if (random > 50)
         {
             i = 1;
         }
