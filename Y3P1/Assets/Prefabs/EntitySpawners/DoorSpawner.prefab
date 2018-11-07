@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityPrefabs:
   - {fileID: 2178640116657171037, guid: 73821ab76dd51a24e9ec1de8fec24475, type: 3}
-  spawnOnAwake: 1
+  spawnOnAwake: 0
   spawnImmortal: 0
   spawnRange: 0
   spawnTriggerRange: 0

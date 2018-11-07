@@ -17,7 +17,7 @@ public class Dungeon : MonoBehaviour
 
     public Transform startSpawn;
     [SerializeField] private List<EntitySpawner> propSpawners = new List<EntitySpawner>();
-    //[SerializeField] private List<EntitySpawner> persistentSpawns = new List<EntitySpawner>();
+    [SerializeField] private List<EntitySpawner> persistentSpawns = new List<EntitySpawner>();
     [SerializeField] private Transform dungeonCleanupCenter;
     [SerializeField] private float dungeonCloseCleanupRange = 100f;
 
@@ -25,14 +25,19 @@ public class Dungeon : MonoBehaviour
     {
         entitySpawners = GetComponentsInChildren<EntitySpawner>();
         burnables = GetComponentsInChildren<Burnable>();
+
+        //if (PhotonNetwork.IsMasterClient)
+        //{
+        //    StartCoroutine(InitialisePersistentSpawners());
+        //}
     }
 
     public void StartDungeon()
     {
         if (PhotonNetwork.IsMasterClient)
         {
+            StartCoroutine(InitialisePersistentSpawners());
             StartCoroutine(SetUpDungeon());
-            // Generate difficulty.
         }
     }
 
@@ -63,6 +68,21 @@ public class Dungeon : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             StartCoroutine(CleanUpDungeon());
+        }
+    }
+
+    private IEnumerator InitialisePersistentSpawners()
+    {
+        for (int i = 0; i < persistentSpawns.Count; i++)
+        {
+            if (persistentSpawns[i])
+            {
+                if (persistentSpawns[i].CanSpawn)
+                {
+                    persistentSpawns[i].TriggerSpawnMasterClient();
+                    yield return new WaitForSeconds(0.02f);
+                }
+            }
         }
     }
 

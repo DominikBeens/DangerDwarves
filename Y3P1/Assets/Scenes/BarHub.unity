@@ -72395,6 +72395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrazierSpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 200957646521602740, guid: 474382c88abd25f41ac1f202febb1190,
+        type: 3}
+      propertyPath: spawnOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474382c88abd25f41ac1f202febb1190, type: 3}
 --- !u!1001 &1003885556
@@ -79536,6 +79541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bacewall_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df98edd93ef70d242bcf4be95ef6c0d8, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df98edd93ef70d242bcf4be95ef6c0d8, type: 3}
 --- !u!1001 &1325041813
@@ -79607,6 +79616,11 @@ PrefabInstance:
     - target: {fileID: 200957646521602742, guid: e2b2d0a1eb84fcb4aa02549cfadad79a,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200957646521602740, guid: e2b2d0a1eb84fcb4aa02549cfadad79a,
+        type: 3}
+      propertyPath: spawnOnAwake
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -81453,6 +81467,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BrazierSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 200957646521602740, guid: 474382c88abd25f41ac1f202febb1190,
+        type: 3}
+      propertyPath: spawnOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474382c88abd25f41ac1f202febb1190, type: 3}
