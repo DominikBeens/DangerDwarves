@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 0.00090393936, y: 0.0005668771, z: 0.00041366712}
   m_Children: []
   m_Father: {fileID: 8559500100860758946}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!33 &1084578888
 MeshFilter:
@@ -515,59 +515,6 @@ Transform:
   m_Father: {fileID: 8559500100860758946}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2371859419715558952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 934180633058824001}
-  - component: {fileID: 4076116371393631129}
-  m_Layer: 9
-  m_Name: HelmetSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &934180633058824001
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2371859419715558952}
-  m_LocalRotation: {x: -0.38138556, y: -0.5954374, z: 0.5954355, w: 0.38138688}
-  m_LocalPosition: {x: -0.17, y: 0.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8559500100860758946}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: -204.72, y: 89.99999, z: -90}
---- !u!114 &4076116371393631129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2371859419715558952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 65
-  InstantiationId: 65
-  isRuntimeInstantiated: 0
 --- !u!1 &2512755274359870778
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,59 +841,6 @@ Transform:
   m_Father: {fileID: 1176511188417891020}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3211836888351800497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4449935093148127397}
-  - component: {fileID: 7533468582636016166}
-  m_Layer: 9
-  m_Name: TrinketSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4449935093148127397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3211836888351800497}
-  m_LocalRotation: {x: -0.49999985, y: -0.49999982, z: -0.50000066, w: 0.49999976}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000004, y: 1.0000005, z: 1.0000006}
-  m_Children: []
-  m_Father: {fileID: 8559500100860758946}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: 89.99999}
---- !u!114 &7533468582636016166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3211836888351800497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 66
-  InstantiationId: 66
-  isRuntimeInstantiated: 0
 --- !u!1 &3318810186064164940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,8 +1046,6 @@ Transform:
   - {fileID: 3465010795711267695}
   - {fileID: 1170226538702676036}
   - {fileID: 3011215726243654909}
-  - {fileID: 934180633058824001}
-  - {fileID: 4449935093148127397}
   - {fileID: 1084578886}
   m_Father: {fileID: 7481444513556991304}
   m_RootOrder: 0
@@ -1310,7 +1202,10 @@ MonoBehaviour:
   extrabool: 1
   rightHandObj: {fileID: 7631664434875687033}
   rightHandObjRot: {fileID: 7631664434875687033}
+  leftHandObj: {fileID: 0}
+  leftHandObjRot: {fileID: 0}
   lookObj: {fileID: 7631664434875687033}
+  trackPlayer: 0
 --- !u!1 &4124425207697395428
 GameObject:
   m_ObjectHideFlags: 0
