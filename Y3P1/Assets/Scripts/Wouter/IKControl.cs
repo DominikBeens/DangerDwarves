@@ -1,5 +1,6 @@
 ﻿using Photon.Pun;
 using UnityEngine;
+using Y3P1;
 
 [RequireComponent(typeof(Animator))]
 public class IKControl : MonoBehaviour, IPunObservable
@@ -13,12 +14,22 @@ public class IKControl : MonoBehaviour, IPunObservable
     public Transform rightHandObjRot;
     public Transform leftHandObj = null;
     public Transform leftHandObjRot;
-    public Transform lookObj = null;
+    public Transform lookObj;
 
+    public bool trackPlayer;
 
     private void Awake()
     {
+        if(trackPlayer)
+        {
+            //lookObj = Player.localPlayer.transform;
+        }
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        //lookObj = Player.localPlayer.transform;     
     }
 
     //a callback for calculating IK
@@ -77,5 +88,10 @@ public class IKControl : MonoBehaviour, IPunObservable
             ikActive = (bool)stream.ReceiveNext();
             enabled = (bool)stream.ReceiveNext();
         }
+    }
+    
+    void Update()
+    {
+        
     }
 }
