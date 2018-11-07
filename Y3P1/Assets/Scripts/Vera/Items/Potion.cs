@@ -7,6 +7,9 @@ public class Potion : Item
 
     private int myMaterialIndex;
     private int index;
+    public enum PotionType { WeaponBuff, Heal}
+
+    public PotionType potionType;
 
     // StatusEffect type and how long the buffs sits on the inflicted target.
     public StatusEffects.StatusEffectType effectType;
@@ -45,32 +48,51 @@ public class Potion : Item
 
     public void Drink()
     {
-        Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
-        Player.localPlayer.dwarfAnimController.Oil();
+        switch (potionType)
+        {
+            case PotionType.WeaponBuff:
+                Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = effectType, statusEffectDuration = statusEffectDuration, endTime = Time.time + buffDuration }, buffDuration);
+                Player.localPlayer.dwarfAnimController.Oil();
+                break;
+
+            case PotionType.Heal:
+                Player.localPlayer.entity.Hit(GetHealAmount() * Player.localPlayer.entity.health.GetMaxHealth(), Stats.DamageType.Melee);
+                break;
+        }
     }
 
     private string GetPotionName()
     {
-        switch (effectType)
+        switch (potionType)
         {
-            case StatusEffects.StatusEffectType.Bleed:
+            case PotionType.WeaponBuff:
 
-                return "Blood Imbue";
-            case StatusEffects.StatusEffectType.Slow:
+                switch (effectType)
+                {
+                    case StatusEffects.StatusEffectType.Bleed:
+                        return "Blood Imbue";
 
-                return "Slowness Imbue";
-            case StatusEffects.StatusEffectType.ArmorBreak:
+                    case StatusEffects.StatusEffectType.Slow:
+                        return "Slowness Imbue";
+                    
+                    case StatusEffects.StatusEffectType.ArmorBreak:
+                        return "Broken Armor Imbue";
 
-                return "Broken Armor Imbue";
-            case StatusEffects.StatusEffectType.WeaponBreak:
+                    case StatusEffects.StatusEffectType.WeaponBreak:
+                        return "Broken Weapons Imbue";
 
-                return "Broken Weapons Imbue";
-            case StatusEffects.StatusEffectType.Poison:
+                    case StatusEffects.StatusEffectType.Poison:
+                        return "Poison Imbue";
 
-                return "Poison Imbue";
+                    default:
+                        return "StatusEffectType Not Found! (Potion.GetPotionName())";
+                }
+
+            case PotionType.Heal:
+                return "Health Potion";
+
             default:
-
-                return "StatusEffectType Not Found! (Potion.GetPotionName())";
+                return "";
         }
     }
 
@@ -118,6 +140,27 @@ public class Potion : Item
             default:
 
                 return statusEffectDuration;
+        }
+    }
+
+    private int GetHealAmount()
+    {
+        switch (itemRarity)
+        {
+            case ItemRarity.common:
+                return 20;
+
+            case ItemRarity.rare:
+                return 30;
+
+            case ItemRarity.epic:
+                return 40;
+
+            case ItemRarity.legendary:
+                return 50;
+
+            default:
+                return 0;
         }
     }
 }
