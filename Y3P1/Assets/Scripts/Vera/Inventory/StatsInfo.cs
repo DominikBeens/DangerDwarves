@@ -13,6 +13,9 @@ public class StatsInfo : MonoBehaviour {
     [SerializeField] private List<TMP_Text> allStatsText = new List<TMP_Text>();
     [SerializeField] private List<bool> bigText = new List<bool>();
     [SerializeField] private TMP_Text valueText;
+
+    [SerializeField] private GameObject rect;
+    [SerializeField] private Rect test;
     private void Awake()
     {
         if(instance == null)
@@ -24,7 +27,7 @@ public class StatsInfo : MonoBehaviour {
     public void DisablePanel()
     {
         myPanel.SetActive(false);
-        myImage.enabled = false;
+        //myImage.enabled = false;
     }
 
     public void UpdateGold(int amount)
@@ -131,23 +134,63 @@ public class StatsInfo : MonoBehaviour {
             valueText.text = value[0];
         }
 
-
+        bool middle = false;
+        if(allTextNeeded.Count < 7)
+        {
+            middle = SetRectSize(allTextNeeded.Count);
+        }
+        else
+        {
+            middle = SetRectSize(7);
+        }
         for (int i = 0; i < allText.Count; i++)
         {
             if(i < allTextNeeded.Count)
             {
+                if (middle)
+                {
+                    allText[i].alignment = TextAlignmentOptions.Center;
+                }
+                else if (i > 1)
+                {
+                    allText[i].alignment = TextAlignmentOptions.Left;
+                }
                 if(allText[i] != null)
                 {
                     myPanel.SetActive(true);
-                    myImage.enabled = true;
                     allText[i].text = allTextNeeded[i];
-                    allText[i].enabled = true;
+                    allText[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    allText[i].gameObject.SetActive(false);
                 }
             }
             else
             {
-                allText[i].enabled = false;
+                allText[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    private bool SetRectSize(int amount)
+    {
+        RectTransform tempRect = rect.GetComponent<RectTransform>();
+        float size = amount - 2;
+        if (size > 0)
+        {
+            size = size * 60 + 30;
+        }
+        else
+        {
+            return false;
+        }
+        tempRect.sizeDelta = new Vector2(411.4f, size);
+
+        if(amount - 2 == 1)
+        {
+            return true;
+        }
+        return false;
     }
 }
