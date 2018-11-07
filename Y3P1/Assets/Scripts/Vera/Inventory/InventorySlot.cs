@@ -90,6 +90,7 @@ public class InventorySlot : MonoBehaviour {
     public void OnMouseEnter()
     {
         inventory.SetCurrentSlot(this);
+        myItem.GetComponent<Animator>().SetBool("hover", true);
     }
 
     public void OnDrag()
@@ -108,6 +109,7 @@ public class InventorySlot : MonoBehaviour {
     public void OnMouseExit()
     {
         inventory.SetCurrentSlot(null);
+        myItem.GetComponent<Animator>().SetBool("hover", false);
         if (!inventory.IsDragging())
         {
 

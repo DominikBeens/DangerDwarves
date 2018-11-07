@@ -30,7 +30,7 @@ public class PassiveHealZone : MonoBehaviour
             if (entitiesInRange[i].tag == "Player" && entitiesInRange[i].gameObject.layer == 9)
             {
                 Entity entity = entitiesInRange[i].GetComponent<Entity>();
-                if (entity && entity.health.GetHealthPercentage() != 1)
+                if (entity && entity.health.CurrentHealth != entity.health.GetMaxHealth())
                 {
                     entity.Hit(healAmount, Stats.DamageType.AOE);
                 }

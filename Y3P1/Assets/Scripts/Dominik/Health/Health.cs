@@ -12,7 +12,8 @@ public class Health
     public bool isDead;
 
     [SerializeField] private int baseHealth = 100;
-    [HideInInspector] public int currentHealth;
+    private int currentHealth;
+    public int CurrentHealth { get { return currentHealth; } }
 
     public event Action<HealthData> OnHealthModified = delegate { };
 
@@ -79,7 +80,7 @@ public class Health
         return currentHealth + "/" + GetMaxHealth();
     }
 
-    private int GetMaxHealth()
+    public int GetMaxHealth()
     {
         if (myEntity)
         {
