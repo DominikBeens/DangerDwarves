@@ -32,7 +32,15 @@ public abstract class Weapon : Item
         }
         else
         {
-            wI = new string[] { "Secondary: ", "Attack: <color=#00A8FF>" + ProjectalName(secondaryProjectile), "Casting time: <color=#00A8FF>" + secondaryChargeupTime.ToString("F1") };
+            if(ProjectalName(secondaryProjectile).Length >= 10)
+            {
+                wI = new string[] { "Secondary: ", "Attack:","<color=#00A8FF>" + ProjectalName(secondaryProjectile), "Casting time: <color=#00A8FF>" + secondaryChargeupTime.ToString("F1") };
+            }
+            else
+            {
+                wI = new string[] { "Secondary: ", "Attack: <color=#00A8FF>" + ProjectalName(secondaryProjectile), "Casting time: <color=#00A8FF>" + secondaryChargeupTime.ToString("F1") };
+            }
+
         }
         return wI;
     }

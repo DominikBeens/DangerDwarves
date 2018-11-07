@@ -136,7 +136,7 @@ public class Item
         {
             return new string[] { "Buy Value: <color=#00A8FF>" + CalculateValue().ToString() + "<color=white> Gold" };
         }
-        return new string[] { "Value: <color=#00A8FF>" + CalculateValue().ToString() + "<color=white> Gold"};
+        return new string[] { "Value: <color=yellow>" + CalculateValue().ToString() + "<color=white> Gold"};
     }
 
     public int CalculateValue()

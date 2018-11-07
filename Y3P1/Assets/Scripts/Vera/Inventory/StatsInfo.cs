@@ -11,7 +11,8 @@ public class StatsInfo : MonoBehaviour {
     [SerializeField] private Image myImage;
     [SerializeField] private TMP_Text gold;
     [SerializeField] private List<TMP_Text> allStatsText = new List<TMP_Text>();
-
+    [SerializeField] private List<bool> bigText = new List<bool>();
+    [SerializeField] private TMP_Text valueText;
     private void Awake()
     {
         if(instance == null)
@@ -127,7 +128,7 @@ public class StatsInfo : MonoBehaviour {
         }
         if(value != null)
         {
-            allTextNeeded.AddRange(value);
+            valueText.text = value[0];
         }
 
 
