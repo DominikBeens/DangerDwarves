@@ -133,7 +133,6 @@ public class StatsInfo : MonoBehaviour {
         {
             valueText.text = value[0];
         }
-
         bool middle = false;
         if(allTextNeeded.Count < 7)
         {
@@ -150,6 +149,7 @@ public class StatsInfo : MonoBehaviour {
                 if (middle)
                 {
                     allText[i].alignment = TextAlignmentOptions.Center;
+                    myPanel.SetActive(true);
                 }
                 else if (i > 1)
                 {

@@ -164,6 +164,7 @@ public class ShopInventory : MonoBehaviour {
         {
             if(allItems[GetIndex(currentSlot)] != null)
             {
+
                 allItems[GetIndex(currentSlot)].SendInfo();
             }
             else
@@ -171,7 +172,7 @@ public class ShopInventory : MonoBehaviour {
                 StatsInfo.instance.DisablePanel();
             }
         }
-        else
+        else if(IsOpen())
         {
             StatsInfo.instance.DisablePanel();
         }

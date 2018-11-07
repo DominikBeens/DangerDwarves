@@ -26,6 +26,7 @@ public class Item
 
     public void SendInfo()
     {
+
         StatsInfo.instance.SetText(ItemInfo(),DamageInfo() ,WeaponInfo(), RangedInfo(), MeleeInfo(), HelmetInfo(), TrinketInfo(), ValueInfo());
     }
     
