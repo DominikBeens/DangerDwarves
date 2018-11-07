@@ -28,6 +28,12 @@ public class ShopManager : MonoBehaviourPunCallbacks
         {
             instance = this;
         }
+        if (ShopInventory.IsOpen())
+        {
+            ShopInventory.OpenClose();
+        }
+
+
         StartCoroutine(Delay());
     }
 
