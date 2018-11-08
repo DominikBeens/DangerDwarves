@@ -14,20 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks:
   - attackName: Wraith_basic_attack
-    attackChance: 50
+    attackChance: 30
     attackType: 1
     damageType: 1
     projectilePoolName: WraithSmokeBall
   - attackName: Wraith_circle_explosion
-    attackChance: 80
+    attackChance: 60
     attackType: 1
     damageType: 1
     projectilePoolName: WraithExplosionCircle
   - attackName: Wraith_summon_enemy
-    attackChance: 100
+    attackChance: 80
     attackType: 1
     damageType: 1
     projectilePoolName: WraithSummon
+  - attackName: Wraith_summon_enemy
+    attackChance: 100
+    attackType: 1
+    damageType: 1
+    projectilePoolName: WraithSummon2
   attackDistance: 10
   attackRangeLookAtSpeed: 10
   randomRangedAttackChance: 30
@@ -44,3 +49,4 @@ MonoBehaviour:
   minIdleTime: 1
   maxIdleTime: 4
   targetSeekRange: 250
+  minIdleLoops: 0
