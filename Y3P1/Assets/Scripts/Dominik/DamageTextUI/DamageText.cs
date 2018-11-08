@@ -33,9 +33,9 @@ public class DamageText : MonoBehaviour
         transform.localScale *= Remap(Mathf.Abs((int)healthData.amountHealthChanged), 0, 10000, 1, 4f);
     }
 
-    public void Initialise(string status)
+    public void Initialise(string status, Color color)
     {
-        SetTextColor(new Health.HealthData { amountHealthChanged = 0 });
+        SetTextColor(color);
 
         damageText.text = status;
         transform.position += new Vector3(Random.Range(-randomSpawnOffsetX, randomSpawnOffsetX), Random.Range(-randomSpawnOffsetY, randomSpawnOffsetY), 0);
@@ -109,6 +109,11 @@ public class DamageText : MonoBehaviour
         {
             damageText.color = Color.green;
         }
+    }
+
+    private void SetTextColor(Color color)
+    {
+        damageText.color = color;
     }
 
     public float Remap(float value, float from1, float to1, float from2, float to2)

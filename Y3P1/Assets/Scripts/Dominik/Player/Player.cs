@@ -131,30 +131,8 @@ namespace Y3P1
 
         private void Update()
         {
-            // Test buff weapon.
             if (photonView.IsMine)
             {
-                if (Input.GetKeyDown(KeyCode.F1))
-                {
-                    weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.Bleed, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
-                }
-                if (Input.GetKeyDown(KeyCode.F2))
-                {
-                    weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.Slow, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
-                }
-                if (Input.GetKeyDown(KeyCode.F3))
-                {
-                    weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.ArmorBreak, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
-                }
-                if (Input.GetKeyDown(KeyCode.F4))
-                {
-                    weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.WeaponBreak, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
-                }
-                if (Input.GetKeyDown(KeyCode.F5))
-                {
-                    weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.Poison, statusEffectDuration = 3, endTime = Time.time + 5 }, 5);
-                }
-
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     entity.Hit(-10, Stats.DamageType.Melee);
