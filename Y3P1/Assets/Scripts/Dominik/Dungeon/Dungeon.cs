@@ -16,8 +16,6 @@ public class Dungeon : MonoBehaviour
     [Space(10)]
 
     public Transform startSpawn;
-    [SerializeField] private List<EntitySpawner> propSpawners = new List<EntitySpawner>();
-    [SerializeField] private List<EntitySpawner> persistentSpawns = new List<EntitySpawner>();
     [SerializeField] private Transform dungeonCleanupCenter;
     [SerializeField] private float dungeonCloseCleanupRange = 100f;
 
@@ -40,21 +38,16 @@ public class Dungeon : MonoBehaviour
     {
         for (int i = 0; i < entitySpawners.Length; i++)
         {
-            if (!persistentSpawns.Contains(entitySpawners[i]))
+            if (entitySpawners[i])
             {
-                entitySpawners[i].CanSpawn = true;
-            }
-        }
-
-        for (int i = 0; i < propSpawners.Count; i++)
-        {
-            if (propSpawners[i])
-            {
-                propSpawners[i].CanSpawn = true;
+                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Humanoid || entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Interactable)
+                {
+                    entitySpawners[i].CanSpawn = true;
+                }
             }
             else
             {
-                Debug.LogWarning(dungeonName + ": Found missing entry in PropSpawners list!");
+                Debug.LogWarning(dungeonName + ": Found missing entry in EntitySpawners list!");
             }
         }
 
@@ -71,13 +64,13 @@ public class Dungeon : MonoBehaviour
 
     private IEnumerator InitialisePersistentSpawners()
     {
-        for (int i = 0; i < persistentSpawns.Count; i++)
+        for (int i = 0; i < entitySpawners.Length; i++)
         {
-            if (persistentSpawns[i])
+            if (entitySpawners[i])
             {
-                if (persistentSpawns[i].CanSpawn)
+                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Static && entitySpawners[i].CanSpawn)
                 {
-                    persistentSpawns[i].TriggerSpawnMasterClient();
+                    entitySpawners[i].TriggerSpawnMasterClient();
                     yield return new WaitForSeconds(0.02f);
                 }
             }
@@ -86,16 +79,19 @@ public class Dungeon : MonoBehaviour
 
     private IEnumerator SetUpDungeon()
     {
-        for (int i = 0; i < propSpawners.Count; i++)
+        for (int i = 0; i < entitySpawners.Length; i++)
         {
-            if (propSpawners[i])
+            if (entitySpawners[i])
             {
-                propSpawners[i].TriggerSpawnMasterClient();
-                yield return new WaitForSeconds(0.01f);
+                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Interactable)
+                {
+                    entitySpawners[i].TriggerSpawnMasterClient();
+                    yield return new WaitForSeconds(0.01f);
+                }
             }
             else
             {
-                Debug.LogWarning(dungeonName + ": Found missing entry in PropSpawners list!");
+                Debug.LogWarning(dungeonName + ": Found missing entry in EntitySpawners list!");
             }
         }
     }

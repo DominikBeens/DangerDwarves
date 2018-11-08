@@ -25,6 +25,8 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
     private Collider spawnTrigger;
 
     public List<GameObject> entityPrefabs = new List<GameObject>();
+    public enum SpawnerType { Humanoid, Static, Interactable };
+    public SpawnerType spawnerType;
 
     [Header("Spawn Settings")]
     [SerializeField] private bool spawnOnAwake;
