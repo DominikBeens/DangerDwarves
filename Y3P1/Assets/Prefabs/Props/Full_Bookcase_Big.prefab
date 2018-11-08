@@ -56,7 +56,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8426056991782701767
 Transform:
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 5488564704741263587}
   m_LocalRotation: {x: -0.5, y: 0.50000006, z: 0.50000006, w: 0.5}
   m_LocalPosition: {x: 11.279862, y: 11.923081, z: -93.41089}
-  m_LocalScale: {x: 1.500001, y: 1.500001, z: 1.500001}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 8048142706745129478}
   - {fileID: 7989146478276976534}
@@ -103,6 +103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (262)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -159,6 +164,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &1238384249802463218
@@ -171,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (261)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -227,6 +242,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &1653248298799761053
@@ -239,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (257)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -295,6 +320,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &1825803180989978306
@@ -307,6 +337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (259)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -367,6 +402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
@@ -433,11 +473,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6370880509041829872, guid: e50286561066f7f4d9aa2e4a392f79b4,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370880509041829872, guid: e50286561066f7f4d9aa2e4a392f79b4,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
@@ -453,6 +488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (256)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -499,6 +539,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &4504625700598264809
@@ -511,6 +556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (258)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -567,6 +617,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &6876922581709549805
@@ -579,6 +634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (263)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -640,6 +700,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
       objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
 --- !u!1001 &9201218353575740885
@@ -652,6 +717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Books_1 (260)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393454711005824047, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6414941522214088565, guid: eaf390eb02e749a49a32ddcaee0adf5c,
         type: 3}
@@ -712,6 +782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -269.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669109522315522427, guid: eaf390eb02e749a49a32ddcaee0adf5c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf390eb02e749a49a32ddcaee0adf5c, type: 3}
