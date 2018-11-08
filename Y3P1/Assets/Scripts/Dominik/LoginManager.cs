@@ -1,5 +1,7 @@
-﻿using Photon.Pun;
+﻿using ExitGames.Client.Photon;
+using Photon.Pun;
 using Photon.Realtime;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -15,37 +17,30 @@ public class LoginManager : MonoBehaviourPunCallbacks
     private Camera cam;
     private Transform camTransform;
     private bool preparingOfflineMode;
+    private int activeDwarves;
+    private int openRooms;
 
     private enum ConnectSetting { Offline, Random, Custom };
     private ConnectSetting currentConnectSetting;
     private string currentConnectionRoomName;
 
     [SerializeField] private TMP_InputField nameInputField;
-    [SerializeField] private GameObject playMenuPanel;
-    [SerializeField] private GameObject roomPanel;
     [SerializeField] private GameObject connectionProgress;
-    [SerializeField] private TextMeshProUGUI roomCountText;
-    [SerializeField] private TextMeshProUGUI playerCountText;
     [SerializeField] private Transform dwarfLookAt;
-    [SerializeField] private HeadTracking dwarfHeadTracking;
     [SerializeField] private float cameraSmoothSpeed = 2f;
+    [SerializeField] private List<GameObject> miniDwarves = new List<GameObject>();
+    [SerializeField] private List<GameObject> miniBraziers = new List<GameObject>();
 
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        //PhotonNetwork.SendRate = 10;
-        //PhotonNetwork.SerializationRate = 5;
 
         SetUpNameInputField();
-        //playMenuPanel.SetActive(true);
-        //roomPanel.SetActive(false);
         connectionProgress.SetActive(false);
 
         cam = Camera.main;
         camTransform = Camera.main.transform;
         camTransform.eulerAngles = Vector3.zero;
-
-        dwarfHeadTracking.Initialise(true);
 
         if (!PhotonNetwork.IsConnected)
         {
@@ -56,18 +51,45 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (roomCountText && playerCountText)
+        if (PhotonNetwork.IsConnected)
         {
-            roomCountText.text = PhotonNetwork.IsConnected ? "Open rooms: <color=red>" + PhotonNetwork.CountOfRooms : "Open rooms: <color=red>?";
-            playerCountText.text = PhotonNetwork.IsConnected ? "Active dwarves: <color=red>" + Mathf.Clamp(PhotonNetwork.CountOfPlayers - 1, 0, 9999) : "Active dwarves: <color=red>?";
+            int checkActiveDwarves = PhotonNetwork.CountOfPlayers - 1;
+            if (checkActiveDwarves != activeDwarves)
+            {
+                activeDwarves = checkActiveDwarves;
+                UpdateActivePlayers();
+            }
+
+            int checkOpenRooms = PhotonNetwork.CountOfRooms;
+            if (checkOpenRooms != openRooms)
+            {
+                openRooms = checkOpenRooms;
+                UpdateOpenRooms();
+            }
         }
 
         Vector3 mouseInWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 7));
-        Vector3 lookat = new Vector3(mouseInWorldPos.x / 10, mouseInWorldPos.y / 10, 10);
+        Vector3 lookat = new Vector3(mouseInWorldPos.x / 10, mouseInWorldPos.y / 10, 125);
         Quaternion targetRotation = Quaternion.LookRotation(lookat - transform.position, Vector3.up);
         camTransform.rotation = Quaternion.Slerp(camTransform.rotation, targetRotation, Time.deltaTime * cameraSmoothSpeed);
 
-        dwarfLookAt.position = new Vector3(mouseInWorldPos.x / 7, (mouseInWorldPos.y - 10) / 7, -7);
+        dwarfLookAt.position = new Vector3(mouseInWorldPos.x, mouseInWorldPos.y, -6);
+    }
+
+    private void UpdateActivePlayers()
+    {
+        for (int i = 0; i < miniDwarves.Count; i++)
+        {
+            miniDwarves[i].SetActive((i <= activeDwarves - 1) ? true : false);
+        }
+    }
+
+    private void UpdateOpenRooms()
+    {
+        for (int i = 0; i < miniBraziers.Count; i++)
+        {
+            miniBraziers[i].SetActive((i < openRooms) ? true : false);
+        }
     }
 
     private void Connect(ConnectSetting connectSetting, string roomName = null)
@@ -159,8 +181,6 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        //playMenuPanel.SetActive(false);
-        //roomPanel.SetActive(true);
         connectionProgress.SetActive(false);
 
         if (preparingOfflineMode)
@@ -171,8 +191,6 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     private void SetUpPanelsWhenConnecting()
     {
-        //playMenuPanel.SetActive(false);
-        //roomPanel.SetActive(false);
         connectionProgress.SetActive(true);
     }
 
