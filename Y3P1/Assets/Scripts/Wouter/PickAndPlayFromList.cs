@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickAndPlayFromList : MonoBehaviour {
+public class PickAndPlayFromList : MonoBehaviour, IPunObservable
+{
 
     //public string listName;
     public float cooldownEffect;
@@ -141,6 +143,18 @@ public class PickAndPlayFromList : MonoBehaviour {
         {
             SFXUsingAbility[Random.Range(0, SFXUsingAbility.Count)].Play();
             cooldownEffect = cooldown; ;
+        }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(luckOfDraw);
+        }
+        else
+        {
+            luckOfDraw = (bool)stream.ReceiveNext();
         }
     }
 }

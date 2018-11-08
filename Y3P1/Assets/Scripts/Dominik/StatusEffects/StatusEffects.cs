@@ -9,7 +9,7 @@ public class StatusEffects
     private Entity myEntity;
     public static float tickRate = 1f;
     private float nextTick;
-    public enum StatusEffectType { Bleed, Slow, ArmorBreak, WeaponBreak, Poison, WeaponCharge };
+    public enum StatusEffectType { Bleed, Slow, ArmorBreak, WeaponBreak, Poison, WeaponCharge, Heal };
 
     public event Action<StatusEffectType> OnEffectStarted = delegate { };
     public event Action<StatusEffectType> OnEffectEnded = delegate { };
