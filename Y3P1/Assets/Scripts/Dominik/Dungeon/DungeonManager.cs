@@ -1,6 +1,7 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 using Y3P1;
+using System;
 
 public class DungeonManager : MonoBehaviourPunCallbacks
 {
@@ -8,6 +9,8 @@ public class DungeonManager : MonoBehaviourPunCallbacks
     public static DungeonManager instance;
     public static Dungeon openDungeon;
     public static bool isInDungeon;
+
+    public static event Action OnDungeonClosed = delegate { };
 
     [SerializeField] private GameObject dungeonCanvas;
     [SerializeField] private GameObject dungeonOverview;
@@ -104,6 +107,7 @@ public class DungeonManager : MonoBehaviourPunCallbacks
     {
         openDungeon.CloseDungeon();
         openDungeon = null;
+        OnDungeonClosed();
         Destroy(openDungeonSpawn.childCount > 0 ? openDungeonSpawn.GetChild(0).gameObject : null);
         ToggleView();
 

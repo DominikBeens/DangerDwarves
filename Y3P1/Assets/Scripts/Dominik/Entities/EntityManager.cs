@@ -50,6 +50,7 @@ public class EntityManager : MonoBehaviourPunCallbacks
             {
                 GameObject newSpawn = PhotonNetwork.InstantiateSceneObject(origin.GetRandomEntity(), spawnPos, origin.transform.rotation);
                 newSpawn.transform.localScale = origin.transform.localScale;
+                newSpawn.transform.SetParent(origin.spawnerType == EntitySpawner.SpawnerType.Static ? origin.transform : null);
                 Entity newEntity = newSpawn.GetComponentInChildren<Entity>();
                 if (newEntity)
                 {

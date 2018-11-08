@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2673434701127183597}
   m_Layer: 0
   m_Name: LowPoly - Rock Smaller (1)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2673434701127183599
 Transform:

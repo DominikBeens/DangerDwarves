@@ -1,16 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &7843104465971082569 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3685597095736214919}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7843104467723087504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
     type: 3}
   m_PrefabInstance: {fileID: 3685597097471778398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7843104465971082569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916846218084479182, guid: 7b5beae23ef357b4bbb8f5b1ac61e5a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3685597095736214919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3685597095609888024
 GameObject:
@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3685597095609888025
 Transform:
@@ -131,10 +131,10 @@ GameObject:
   - component: {fileID: 9075493161999529986}
   m_Layer: 0
   m_Name: wall_plaster_NoPlank
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3685597096365336242
 Transform:
@@ -181,7 +181,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3685597096976414517
 Transform:
@@ -288,7 +288,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3685597097450397760
 Transform:

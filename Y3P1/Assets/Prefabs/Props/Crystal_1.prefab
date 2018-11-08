@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6633881128178840336}
-  - component: {fileID: 5531803236624532784}
+  - component: {fileID: 1855048492476696795}
   m_Layer: 0
   m_Name: Crystal_1
   m_TagString: Environment
@@ -151,8 +151,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5531803236624532784
-BoxCollider:
+--- !u!136 &1855048492476696795
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,9 +161,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6219101, y: 1.0574312, z: 0.7128432}
-  m_Center: {x: -0.08375406, y: 0.58867145, z: -0.081361175}
+  m_Radius: 0.32
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &3284235654758677185
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -71,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 60839f508eba81e449c38f15690c0410, type: 3}
       propertyPath: m_Name
-      value: Bucket
+      value: Bucket Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 60839f508eba81e449c38f15690c0410, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -85,5 +85,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6f6e7f0ba8a6d44408f50d05245f07b7, type: 2}
+    - target: {fileID: 100000, guid: 60839f508eba81e449c38f15690c0410, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 60839f508eba81e449c38f15690c0410, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 60839f508eba81e449c38f15690c0410, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 60839f508eba81e449c38f15690c0410, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 60839f508eba81e449c38f15690c0410, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60839f508eba81e449c38f15690c0410, type: 3}

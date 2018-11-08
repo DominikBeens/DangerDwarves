@@ -1,13 +1,12 @@
 ﻿using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Dungeon : MonoBehaviour
 {
 
     private EntitySpawner[] entitySpawners;
-    private Burnable[] burnables;
+    private bool initialisedBurnables;
 
     [Header("Dungeon Stats")]
     public string dungeonName;
@@ -22,7 +21,6 @@ public class Dungeon : MonoBehaviour
     private void Awake()
     {
         entitySpawners = GetComponentsInChildren<EntitySpawner>();
-        burnables = GetComponentsInChildren<Burnable>();
     }
 
     public void StartDungeon()
@@ -49,11 +47,6 @@ public class Dungeon : MonoBehaviour
             {
                 Debug.LogWarning(dungeonName + ": Found missing entry in EntitySpawners list!");
             }
-        }
-
-        for (int i = 0; i < burnables.Length; i++)
-        {
-            burnables[i].ResetObject();
         }
 
         if (PhotonNetwork.IsMasterClient)

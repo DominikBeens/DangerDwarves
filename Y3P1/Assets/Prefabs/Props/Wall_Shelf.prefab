@@ -18,10 +18,10 @@ GameObject:
   - component: {fileID: 256606197272801296}
   m_Layer: 0
   m_Name: Wall_Shelf
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2872080880871945936
 Transform:
@@ -121,5 +121,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d30c764275615be4884996e6856be9d5, type: 2}
+    - target: {fileID: 100000, guid: 7f7a4b3cc5f2a9243ba69f8dd525e581, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f7a4b3cc5f2a9243ba69f8dd525e581, type: 3}

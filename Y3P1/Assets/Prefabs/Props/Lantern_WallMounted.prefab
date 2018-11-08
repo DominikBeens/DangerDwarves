@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 764885397710638286}
   m_Layer: 0
   m_Name: Lantern_WallMounted
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

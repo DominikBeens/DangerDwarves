@@ -9413,12 +9413,13 @@ GameObject:
   - component: {fileID: 3387350671659174485}
   - component: {fileID: 3387350671660173461}
   - component: {fileID: 5531328587867841447}
+  - component: {fileID: 1667559860968347172}
   m_Layer: 0
   m_Name: Brazier_1
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3387350671657880181
 Transform:
@@ -9491,6 +9492,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29992533, y: 0.30070454, z: 0.74940044}
   m_Center: {x: 0.000023774803, y: 0.000017471615, z: 0.37470022}
+--- !u!208 &1667559860968347172
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387350671658243669}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 0.15, z: 0.37500003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.37500003}
+  m_TimeToStationary: 0.5
 --- !u!1 &3659632363089188161
 GameObject:
   m_ObjectHideFlags: 0

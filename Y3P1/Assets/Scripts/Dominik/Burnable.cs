@@ -25,6 +25,14 @@ public class Burnable : MonoBehaviourPunCallbacks
         }
     }
 
+    private void Start()
+    {
+        if (transform.root.GetComponent<Dungeon>())
+        {
+            DungeonManager.OnDungeonClosed += ResetObject;
+        }
+    }
+
     public void Burn()
     {
         if (canBurn)
@@ -93,5 +101,10 @@ public class Burnable : MonoBehaviourPunCallbacks
         burnParticle.Stop();
 
         canBurn = true;
+    }
+
+    public override void OnDisable()
+    {
+        DungeonManager.OnDungeonClosed -= ResetObject;
     }
 }
