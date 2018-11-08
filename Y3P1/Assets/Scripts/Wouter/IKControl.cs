@@ -22,7 +22,7 @@ public class IKControl : MonoBehaviour, IPunObservable
     {
         if(trackPlayer)
         {
-            //lookObj = Player.localPlayer.transform;
+            lookObj = Player.localPlayer.transform;
         }
         animator = GetComponent<Animator>();
     }
@@ -43,8 +43,17 @@ public class IKControl : MonoBehaviour, IPunObservable
                 // Set the look target position, if one has been assigned
                 if (lookObj != null)
                 {
-                    animator.SetLookAtWeight(1);
-                    animator.SetLookAtPosition(lookObj.position);
+                    
+                    if(trackPlayer)
+                    {
+                        animator.SetLookAtWeight(1);
+                        animator.SetLookAtPosition(lookObj.position + Vector3.up *2);
+                    }
+                    else
+                    {
+                        animator.SetLookAtPosition(lookObj.position);
+                    }
+                    
                 }
 
                 // Set the right hand target position and rotation, if one has been assigned
