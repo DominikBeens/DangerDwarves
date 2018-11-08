@@ -22,7 +22,10 @@ public class IKControl : MonoBehaviour, IPunObservable
     {
         if(trackPlayer)
         {
-            lookObj = Player.localPlayer.transform;
+            if (Player.localPlayer)
+            {
+                lookObj = Player.localPlayer.transform;
+            }
         }
         animator = GetComponent<Animator>();
     }

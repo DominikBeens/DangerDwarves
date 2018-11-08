@@ -73,7 +73,7 @@ public class LoginManager : MonoBehaviourPunCallbacks
         Quaternion targetRotation = Quaternion.LookRotation(lookat - transform.position, Vector3.up);
         camTransform.rotation = Quaternion.Slerp(camTransform.rotation, targetRotation, Time.deltaTime * cameraSmoothSpeed);
 
-        dwarfLookAt.position = new Vector3(mouseInWorldPos.x, mouseInWorldPos.y, -6);
+        dwarfLookAt.position = new Vector3(mouseInWorldPos.x, mouseInWorldPos.y - 2, -6);
     }
 
     private void UpdateActivePlayers()
