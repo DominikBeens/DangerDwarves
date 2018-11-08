@@ -5,6 +5,7 @@ public class StatusEffectIcon : MonoBehaviour
 {
 
     private float duration;
+    private bool updateDescPanel;
 
     public StatusEffects.StatusEffectType type;
 
@@ -26,7 +27,8 @@ public class StatusEffectIcon : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(description))
         {
-            UIManager.instance.playerStatusCanvas.ToggleBuffDescPanel(toggle, description);
+            updateDescPanel = toggle;
+            UIManager.instance.playerStatusCanvas.ToggleBuffDescPanel(toggle, description + "\nRemaining: <color=red>" + (durationFill.fillAmount * duration).ToString("F1"));
         }
     }
 
@@ -36,5 +38,15 @@ public class StatusEffectIcon : MonoBehaviour
         {
             durationFill.fillAmount -= 1f / duration * Time.deltaTime;
         }
+
+        if (updateDescPanel)
+        {
+            UIManager.instance.playerStatusCanvas.ToggleBuffDescPanel(true, description + "\nRemaining: <color=red>" + (durationFill.fillAmount * duration).ToString("F1"));
+        }
+    }
+
+    private void OnDisable()
+    {
+        ToggleDesc(false);
     }
 }
