@@ -26,6 +26,7 @@ MonoBehaviour:
   walkAnimation: Walking
   hitAnimation: 
   wanderRadius: 20
-  minIdleTime: 5
-  maxIdleTime: 10
+  minIdleTime: 2
+  maxIdleTime: 4
   targetSeekRange: 0
+  minIdleLoops: 3

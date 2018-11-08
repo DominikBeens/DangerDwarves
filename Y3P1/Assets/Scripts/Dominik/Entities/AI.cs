@@ -17,6 +17,7 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
     private List<AISettings.AttackAnimation> rangedAttacks;
     private float nextRandomRangedTime;
     private float currentIdleTime;
+    private int currentIdleLoops;
 
     private bool canAttack = true;
     private bool canLookAtTarget = true;
@@ -106,14 +107,16 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
             if (Vector3.Distance(transform.position, agent.destination) < agent.stoppingDistance + 0.5f || agent.destination == transform.position)
             {
                 float random = Random.value;
-                if (random < 0.5f)
+                if (random < 0.5f && currentIdleLoops >= settings.minIdleLoops)
                 {
                     agent.SetDestination(GetWanderDestination());
                     anim.SetBool(settings.walkAnimation, true);
                     agent.isStopped = false;
+                    currentIdleLoops = 0;
                 }
                 else
                 {
+                    currentIdleLoops++;
                     currentIdleTime = Random.Range(settings.minIdleTime, settings.maxIdleTime);
                 }
             }
