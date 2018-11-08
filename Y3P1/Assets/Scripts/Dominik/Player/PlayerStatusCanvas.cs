@@ -18,6 +18,8 @@ public class PlayerStatusCanvas : MonoBehaviour
     [Space(10)]
 
     [SerializeField] private List<StatusEffectIcon> weaponBuffIcons = new List<StatusEffectIcon>();
+    [SerializeField] private GameObject buffDescPanel;
+    [SerializeField] private TextMeshProUGUI buffDescText;
 
     public void Start()
     {
@@ -73,6 +75,11 @@ public class PlayerStatusCanvas : MonoBehaviour
         {
             UpdateSecondaryProgressText();
         }
+
+        if (buffDescPanel.activeInHierarchy)
+        {
+            buffDescPanel.transform.position = Input.mousePosition;
+        }
     }
 
     private void UpdateSecondaryProgressText()
@@ -111,6 +118,12 @@ public class PlayerStatusCanvas : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ToggleBuffDescPanel(bool toggle, string desc)
+    {
+        buffDescText.text = desc;
+        buffDescPanel.SetActive(toggle);
     }
 
     private void OnDisable()

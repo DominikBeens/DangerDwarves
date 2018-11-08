@@ -9,6 +9,7 @@ public class StatusEffectIcon : MonoBehaviour
     public StatusEffects.StatusEffectType type;
 
     [SerializeField] private Image durationFill;
+    [TextArea] [SerializeField] private string description;
 
     public void Activate(float? duration = null)
     {
@@ -18,6 +19,14 @@ public class StatusEffectIcon : MonoBehaviour
         {
             durationFill.fillAmount = 1f;
             this.duration = duration != null ? (float)duration : 0;
+        }
+    }
+
+    public void ToggleDesc(bool toggle)
+    {
+        if (!string.IsNullOrEmpty(description))
+        {
+            UIManager.instance.playerStatusCanvas.ToggleBuffDescPanel(toggle, description);
         }
     }
 
