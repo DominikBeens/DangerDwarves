@@ -69,6 +69,10 @@ public class StatusEffects
             case StatusEffectType.WeaponCharge:
                 newEffect = new StatusEffect_WeaponCharge();
                 break;
+
+            case StatusEffectType.Heal:
+                newEffect = new StatusEffect_Heal();
+                break;
         }
 
         newEffect.Initialise(myEntity, duration, value);

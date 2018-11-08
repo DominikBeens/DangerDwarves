@@ -255,3 +255,31 @@ public class StatusEffect_WeaponCharge : StatusEffect
         }
     }
 }
+
+public class StatusEffect_Heal : StatusEffect
+{
+    private int healPercentage;
+
+    public override void Initialise(Entity entity, float duration, int value = -1)
+    {
+        base.Initialise(entity, duration);
+        type = StatusEffects.StatusEffectType.Heal;
+        if (value != -1)
+        {
+            healPercentage = value;
+        }
+    }
+
+    public override void TriggerEffect()
+    {
+        base.TriggerEffect();
+
+        if (entity == Y3P1.Player.localPlayer.entity)
+        {
+            if (entity.health.CurrentHealth != entity.health.GetMaxHealth())
+            {
+                entity.Hit(Mathf.RoundToInt(((float)healPercentage / 100) * entity.health.GetMaxHealth()), Stats.DamageType.Melee);
+            }
+        }
+    }
+}

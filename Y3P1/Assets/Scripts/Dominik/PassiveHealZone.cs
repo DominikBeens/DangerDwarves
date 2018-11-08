@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Y3P1;
 
 public class PassiveHealZone : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class PassiveHealZone : MonoBehaviour
     private float nextTick;
     private Collider[] entitiesInRange = new Collider[10];
 
-    [SerializeField] private int healAmount = 1;
+    [SerializeField] private int healPercentage = 2;
     [SerializeField] private float healInterval = 1f;
     [SerializeField] private float healRange;
     [SerializeField] private bool refillSecondaryCharge;
@@ -29,15 +30,13 @@ public class PassiveHealZone : MonoBehaviour
         {
             if (entitiesInRange[i].tag == "Player" && entitiesInRange[i].gameObject.layer == 9)
             {
-                Entity entity = entitiesInRange[i].GetComponent<Entity>();
-                if (entity && entity.health.CurrentHealth != entity.health.GetMaxHealth())
-                {
-                    entity.Hit(healAmount, Stats.DamageType.AOE);
-                }
+                Player.localPlayer.entity.statusEffects.AddEffect(6, healInterval, healPercentage);
+                Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.Heal, endTime = Time.time + healInterval }, healInterval);
 
                 if (refillSecondaryCharge)
                 {
-                    UIManager.instance.playerStatusCanvas.Hit(false);
+                    Player.localPlayer.entity.statusEffects.AddEffect(5, healInterval);
+                    Player.localPlayer.weaponSlot.AddBuff(new WeaponSlot.WeaponBuff { type = StatusEffects.StatusEffectType.WeaponCharge, endTime = Time.time + healInterval }, healInterval);
                 }
             }
         }

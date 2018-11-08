@@ -19070,5 +19070,10 @@ PrefabInstance:
       propertyPath: healRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9146452613545501340, guid: fb29695a673bf5c4ba289b6de42db597,
+        type: 3}
+      propertyPath: healPercentage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb29695a673bf5c4ba289b6de42db597, type: 3}
