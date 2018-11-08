@@ -25,11 +25,6 @@ public class Dungeon : MonoBehaviour
     {
         entitySpawners = GetComponentsInChildren<EntitySpawner>();
         burnables = GetComponentsInChildren<Burnable>();
-
-        //if (PhotonNetwork.IsMasterClient)
-        //{
-        //    StartCoroutine(InitialisePersistentSpawners());
-        //}
     }
 
     public void StartDungeon()
@@ -45,7 +40,10 @@ public class Dungeon : MonoBehaviour
     {
         for (int i = 0; i < entitySpawners.Length; i++)
         {
-            entitySpawners[i].CanSpawn = true;
+            if (!persistentSpawns.Contains(entitySpawners[i]))
+            {
+                entitySpawners[i].CanSpawn = true;
+            }
         }
 
         for (int i = 0; i < propSpawners.Count; i++)
