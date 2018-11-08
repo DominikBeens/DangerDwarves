@@ -461,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121695a2a8a3a9c4ea63a00bbe03ebd0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121695a2a8a3a9c4ea63a00bbe03ebd0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -537,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f83449917f4a10408d4e845d4e8699e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f83449917f4a10408d4e845d4e8699e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -577,6 +577,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f83449917f4a10408d4e845d4e8699e, type: 3}
+--- !u!1001 &137131193800080680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.982017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63449746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.99330604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839799874, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295469927839827554, guid: 98ed9539a145e5b47a9d5ae22622c35f,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_plaster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98ed9539a145e5b47a9d5ae22622c35f, type: 3}
 --- !u!1001 &5981086070676210617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -621,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 8849947851072380053, guid: 82c5b8bdebcaaa6449b940ddfc983791,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8849947851072380053, guid: 82c5b8bdebcaaa6449b940ddfc983791,
         type: 3}
@@ -642,6 +710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dungeon2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402151052811240045, guid: 82c5b8bdebcaaa6449b940ddfc983791,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c5b8bdebcaaa6449b940ddfc983791, type: 3}
