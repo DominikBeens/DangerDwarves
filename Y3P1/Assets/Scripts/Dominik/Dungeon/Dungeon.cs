@@ -40,7 +40,7 @@ public class Dungeon : MonoBehaviour
         {
             if (entitySpawners[i])
             {
-                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Humanoid || entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Interactable)
+                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Humanoid || entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.RespawnableProp)
                 {
                     entitySpawners[i].CanSpawn = true;
                 }
@@ -83,7 +83,7 @@ public class Dungeon : MonoBehaviour
         {
             if (entitySpawners[i])
             {
-                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.Interactable)
+                if (entitySpawners[i].spawnerType == EntitySpawner.SpawnerType.RespawnableProp)
                 {
                     entitySpawners[i].TriggerSpawnMasterClient();
                     yield return new WaitForSeconds(0.01f);

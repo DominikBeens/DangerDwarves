@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityPrefabs:
   - {fileID: 2178640116657171037, guid: 73821ab76dd51a24e9ec1de8fec24475, type: 3}
+  spawnerType: 1
   spawnOnAwake: 0
   spawnImmortal: 0
   spawnRange: 0
@@ -200,12 +201,12 @@ PrefabInstance:
     - target: {fileID: 2739341130745259399, guid: 73821ab76dd51a24e9ec1de8fec24475,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1849021177337341742, guid: 73821ab76dd51a24e9ec1de8fec24475,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6348558052716880469, guid: 73821ab76dd51a24e9ec1de8fec24475,
         type: 3}
@@ -216,6 +217,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178640116989380432, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527562796292316847, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178640116657171039, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178640116595653038, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178640116657171035, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178640117218469063, guid: 73821ab76dd51a24e9ec1de8fec24475,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7450188321996756932, guid: 73821ab76dd51a24e9ec1de8fec24475, type: 3}
