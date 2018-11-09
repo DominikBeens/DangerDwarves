@@ -576,4 +576,66 @@ public class LootRandomizer : MonoBehaviour {
         }
         return 3;
     }
+
+    public Item LootSW()
+    {
+        Item testItem = new Weapon_Melee();
+        int rarity = 0;
+        int nIL = NewItemLevel(rarity, 1);
+        int mat = 0;
+
+        string secun = "";
+        int index = Database.hostInstance.GetSword();
+        //Item Creation XD
+        testItem.StartUp("Basic Sword", rarity, Database.hostInstance.GetSwordSprite(index), NewStats(nIL), Database.hostInstance.GetSwordObject(index), nIL, mat);
+        testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun), Single(secun));
+        testItem.StartMelee(Range(), 0);
+        //end item creation
+        return testItem;
+    }
+
+    public Item LootSC()
+    {
+        Item testItem = new Weapon_Ranged();
+        int rarity = 0;
+        int nIL = NewItemLevel(rarity, 1);
+        int mat = 0;
+        int degreesSecun = Degrees();
+        int degreesPri = Degrees();
+        int amountSecun = 1;
+        int amountPrim = 1;
+        if (degreesSecun != 0)
+        {
+            amountSecun = 1;
+        }
+        if (degreesPri != 0)
+        {
+            amountPrim = 1;
+        }
+
+        string secun = "";
+        int index = Database.hostInstance.GetCrossbow();
+        //Item Creation XD
+        testItem.StartUp("Basic Crossbow", rarity, Database.hostInstance.GetCrossbowSprite(index), NewStats(nIL), Database.hostInstance.GetCrossbowObject(index), nIL, mat);
+        testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun, Buff(secun), Single(secun));
+        testItem.StartRanged(Force(), amountPrim, degreesPri);
+        //end item creation
+
+        test.Add((Weapon_Ranged)testItem);
+        return testItem;
+    }
+
+    public Item LootTW()
+    {
+        Item otherWeapon = new Weapon_Melee();
+        int rarity = 0;
+        int nIL = NewItemLevel(rarity, 1);
+        int myItem = Database.hostInstance.TorchWeapon();
+
+        string secun = "";
+        otherWeapon.StartUp("Basic Torch", rarity, Database.hostInstance.GetOWSprite(myItem), NewStats(nIL), Database.hostInstance.GetOWObject(myItem), nIL);
+        otherWeapon.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun), Single(secun));
+        otherWeapon.StartMelee(Range(), 0);
+        return otherWeapon;
+    }
 }

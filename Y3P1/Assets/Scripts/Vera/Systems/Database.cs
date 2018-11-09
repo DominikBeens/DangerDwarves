@@ -124,6 +124,18 @@ public class Database : MonoBehaviour {
         return Random.Range(0, oWNames.Count);
     }
 
+    public int TorchWeapon()
+    {
+        for (int i = 0; i < oWNames.Count; i++)
+        {
+            if (oWNames[i] == "Torch")
+            {
+                return i;
+            }
+        }
+        return 0;
+    }
+
     public int OH()
     {
         return Random.Range(0, oHelmetNames.Count);

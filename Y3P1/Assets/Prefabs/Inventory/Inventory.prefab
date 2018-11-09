@@ -8103,7 +8103,46 @@ MonoBehaviour:
     materialIndex: 0
     sold: 0
   onMouse: {fileID: 4215865613476731664}
-  startingItems: []
+  startingItems:
+  - itemName: 
+    itemRarity: 0
+    spriteIndex: 0
+    myStats:
+      stamina: 0
+      strength: 0
+      agility: 0
+      willpower: 0
+      defense: 0
+    prefabIndex: 0
+    itemLevel: 0
+    materialIndex: 0
+    sold: 0
+  - itemName: 
+    itemRarity: 0
+    spriteIndex: 0
+    myStats:
+      stamina: 0
+      strength: 0
+      agility: 0
+      willpower: 0
+      defense: 0
+    prefabIndex: 0
+    itemLevel: 0
+    materialIndex: 0
+    sold: 0
+  - itemName: 
+    itemRarity: 0
+    spriteIndex: 0
+    myStats:
+      stamina: 0
+      strength: 0
+      agility: 0
+      willpower: 0
+      defense: 0
+    prefabIndex: 0
+    itemLevel: 0
+    materialIndex: 0
+    sold: 0
   aIL: {fileID: 5189594823551533629}
   totalGoldAmount: 0
   averageILevel: 1

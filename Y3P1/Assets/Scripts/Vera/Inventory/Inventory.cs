@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviourPunCallbacks
     [SerializeField] private Image onMouse;
 
     [Header("Starting Items")]
-    [SerializeField] private List<Item> startingItems = new List<Item>();
+    [SerializeField] private List<GameObject> startingItems = new List<GameObject>();
 
     [Header("Info")]
     public AverageItemLevel aIL;
