@@ -43,6 +43,7 @@ namespace Y3P1
         [HideInInspector] public ReviveZone reviveZone;
         [HideInInspector] public CameraShake cameraShake;
         [HideInInspector] public Teleporter teleporter;
+        [HideInInspector] public PickAndPlayFromList audio;
         #endregion
 
         private void Awake()
@@ -75,6 +76,7 @@ namespace Y3P1
             reviveZone = GetComponentInChildren<ReviveZone>();
             cameraShake = GetComponentInChildren<CameraShake>();
             teleporter = GetComponentInChildren<Teleporter>();
+            audio = GetComponentInChildren<PickAndPlayFromList>();
         }
 
         private void Initialise()
@@ -173,6 +175,7 @@ namespace Y3P1
         {
             deathCanvas.SetActive(false);
             localPlayer.entity.Revive(hub ? 100 : 50);
+            audio.PlaySFXGettingRevived(0);
 
             if (hub)
             {

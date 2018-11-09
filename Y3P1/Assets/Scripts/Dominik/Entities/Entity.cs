@@ -155,6 +155,11 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         EntityManager.instance.RemoveFromAliveTargets(this);
         BountyManager.instance.RegisterKill(entityID);
 
+        if (entityType == EntityType.Humanoid && transform.tag != "Player")
+        {
+            Player.localPlayer.audio.PlaySFXSlayingEnemy(10);
+        }
+
         if (instaDestroyOnDeath)
         {
             DestroyEntity();
@@ -209,7 +214,7 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
 
         if (PhotonNetwork.IsMasterClient && canDropLoot)
         {
-            Player.localPlayer.myInventory.DropNewItem(transform.position,entityType,entityID);
+            Player.localPlayer.myInventory.DropNewItem(transform.position, entityType, entityID);
         }
     }
 

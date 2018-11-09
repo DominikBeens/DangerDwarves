@@ -22,6 +22,7 @@ public class PickUpTrigger : MonoBehaviour
                 {
                     myItemPrefab.PickUp();
                     Player.localPlayer.dwarfAnimController.Pickup();
+                    Player.localPlayer.audio.PlaySFXGettingMoney(5);
                     return;
                 }
 
@@ -29,6 +30,7 @@ public class PickUpTrigger : MonoBehaviour
                 {
                     myItemPrefab.PickUp();
                     Player.localPlayer.dwarfAnimController.Pickup();
+                    Player.localPlayer.audio.PlaySFXFindingEquipment(5);
                 }
             }
         }
