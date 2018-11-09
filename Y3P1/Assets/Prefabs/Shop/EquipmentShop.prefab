@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90e14c75a6402640bfee974b810bf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopInventory: {fileID: 4337099619414526017}
+  shopInventory: {fileID: 4337099619414526017}
   shopType: 0
   st: equipment
   sizeShop: 12
@@ -4555,6 +4555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
         type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
       propertyPath: OnKeyDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4337099618528605369}
@@ -4617,6 +4622,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4337099618528605369}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LeaveShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613948256471558973, guid: 6dd73cf6bf5591c4faeb4d02e68977a1,
+        type: 3}
+      propertyPath: OnZoneExitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dd73cf6bf5591c4faeb4d02e68977a1, type: 3}

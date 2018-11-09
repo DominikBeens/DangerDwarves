@@ -512,7 +512,7 @@ public class Inventory : MonoBehaviourPunCallbacks
             canvas.enabled = false;
             if(window == Window.Shop)
             {
-                ShopManager.instance.OpenShop();
+                AllShopManager.instance.OpenShop();
             }
         }
     }

@@ -9,7 +9,7 @@ public class ShopManager : MonoBehaviourPunCallbacks
 
     [Header("Shop Type")]
     public static ShopManager instance;
-    public ShopInventory ShopInventory;
+    public ShopInventory shopInventory;
     private bool ugh;
     public enum ShopType {Equipment, Potions}
     public ShopType shopType;
@@ -18,17 +18,10 @@ public class ShopManager : MonoBehaviourPunCallbacks
     public static List<Item> buyBackItems = new List<Item>();
     [SerializeField] private int sizeShop;
 
-    [Header("Other")]
-    [SerializeField] private int cooldownInMin;
-    private float nextTime;
+
 
     private void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-
         StartCoroutine(Delay());
     }
 
@@ -36,10 +29,11 @@ public class ShopManager : MonoBehaviourPunCallbacks
     {
         yield return new WaitForSeconds(0.05f);
         Restock();
-        if (ShopInventory.IsOpen())
+        if (shopInventory.IsOpen())
         {
-            ShopInventory.OpenClose();
+            shopInventory.OpenClose();
         }
+        AllShopManager.instance.AddShop(this);
     }
 
     public void SellItem(Item toSell)
@@ -51,35 +45,35 @@ public class ShopManager : MonoBehaviourPunCallbacks
         {
             buyBackItems.RemoveAt(0);
         }
-        if(ShopInventory.shopBS == ShopInventory.ShopBS.Buyback)
+        if(shopInventory.shopBS == ShopInventory.ShopBS.Buyback)
         {
-            ShopInventory.SetToBuyback();
+            shopInventory.SetToBuyback();
         }
 
     }
 
     public void OpenShop()
     {
-        ShopInventory.OpenClose();
+        shopInventory.OpenClose();
     }
 
     public void Restock()
     {
         Player.localPlayer.myInventory.CalculateArmor();
-        ShopInventory.RemoveAll();
+        shopInventory.RemoveAll();
         switch (shopType)
         {
             case ShopType.Equipment:
                 for (int i = 0; i < sizeShop; i++)
                 {
-                    ShopInventory.AddItem(LootRandomizer.instance.EquipmentToShop(Player.localPlayer.myInventory.aIL.averageILevel));
+                    shopInventory.AddItem(LootRandomizer.instance.EquipmentToShop(Player.localPlayer.myInventory.aIL.averageILevel));
                 }
                 break;
             case ShopType.Potions:
                 for (int i = 0; i < sizeShop; i++)
                 {
                     Item temp = LootRandomizer.instance.PotionToShop();
-                    ShopInventory.AddItem(temp);
+                    shopInventory.AddItem(temp);
                 }
                 break;
         }
@@ -91,25 +85,27 @@ public class ShopManager : MonoBehaviourPunCallbacks
         Restock();
     }
 
+    public void RS()
+    {
+        photonView.RPC("SendRestock", RpcTarget.All);
+    }
 
+    public void LeaveShop()
+    {
+        NotificationManager.instance.NewNotification("test123");
+        if (shopInventory.IsOpen())
+        {
+            OpenShop();
+        }
+    }
 
     private void Update()
     {
-        if(Time.time > nextTime)
-        {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                NotificationManager.instance.NewNotification("The " + st + " shop has been restocked");
-                photonView.RPC("SendRestock", RpcTarget.All);
-            }
-            nextTime += (cooldownInMin*60);
-        }
-
-        if (ShopInventory.IsOpen())
+        if (shopInventory.IsOpen())
         {
             if (Input.GetButtonDown("Cancel"))
             {
-                ShopInventory.OpenClose();
+                shopInventory.OpenClose();
             }
         }
     }
