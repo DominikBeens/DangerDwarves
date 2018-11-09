@@ -5,18 +5,19 @@ using Photon.Pun;
 public class NetworkedEvent : MonoBehaviour 
 {
 
-    private List<GameObject> players = new List<GameObject>();
+    private List<Entity> players = new List<Entity>();
 
     [SerializeField] private Animator anim;
     [SerializeField] private string animBoolName;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && other.GetComponent<Entity>())
+        if (other.tag == "Player")
         {
-            if (!players.Contains(other.gameObject))
+            Entity entity = other.GetComponentInChildren<Entity>();
+            if (entity && !players.Contains(entity))
             {
-                players.Add(other.gameObject);
+                players.Add(entity);
                 CheckPlayerCount();
             }
         }
@@ -24,11 +25,12 @@ public class NetworkedEvent : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" && other.GetComponent<Entity>())
+        if (other.tag == "Player")
         {
-            if (players.Contains(other.gameObject))
+            Entity entity = other.GetComponentInChildren<Entity>();
+            if (entity && players.Contains(entity))
             {
-                players.Remove(other.gameObject);
+                players.Remove(entity);
             }
         }
     }
