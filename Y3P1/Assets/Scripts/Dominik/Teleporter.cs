@@ -32,7 +32,7 @@ public class Teleporter : MonoBehaviourPunCallbacks
         isTeleporting = true;
         OnStartTeleport();
 
-        photonView.RPC("SyncTeleportEffect", RpcTarget.All);
+        photonView.RPC("SyncTeleportEffect", RpcTarget.All, Player.localPlayer.transform.position);
         screenFadeAnim.SetTrigger("Fade");
 
         yield return new WaitForSeconds(screenFadeDuration);
@@ -57,9 +57,8 @@ public class Teleporter : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void SyncTeleportEffect()
+    private void SyncTeleportEffect(Vector3 position)
     {
-        //ObjectPooler.instance.GrabFromPool(teleportParticle, transform.position, Quaternion.identity);
-        // Activate player anim
+        ObjectPooler.instance.GrabFromPool(teleportParticle, position, Quaternion.identity);
     }
 }

@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &5020066494048166984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: e7aa7253b6ad04342b0f9b143def3036,
+    type: 3}
+  m_PrefabInstance: {fileID: 5020066494048042696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206795320587160827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,8 +2182,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.020077825, y: 0.15780592, z: -0.6601236}
-    m_Extent: {x: 0.5636796, y: 1.0277027, z: 1.2020948}
+    m_Center: {x: 0.020077825, y: 0.15780616, z: -0.6601236}
+    m_Extent: {x: 0.5636797, y: 1.027703, z: 1.202095}
   m_DirtyAABB: 0
 --- !u!114 &1335749231349100736
 MonoBehaviour:
@@ -2679,7 +2685,7 @@ MonoBehaviour:
     isDead: 0
     baseHealth: 100
   stats:
-    stamina: 5
+    stamina: 150
     strength: 12
     agility: 11
     willpower: 10
@@ -2925,24 +2931,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!4 &5020066494048166984 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e7aa7253b6ad04342b0f9b143def3036,
-    type: 3}
-  m_PrefabInstance: {fileID: 5020066494048042696}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5243003909010641899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7972216441462917839, guid: ae10adcbca2c84d469fdfd990e1d6eab,
-    type: 3}
-  m_PrefabInstance: {fileID: 2765743278543165732}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &7357742553267221930 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4646051276855569550, guid: ae10adcbca2c84d469fdfd990e1d6eab,
-    type: 3}
-  m_PrefabInstance: {fileID: 2765743278543165732}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3207313064170534577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,7 +3054,7 @@ GameObject:
   - component: {fileID: 7800852644147783608}
   - component: {fileID: 7062770033854566983}
   m_Layer: 0
-  m_Name: SpiderMancer
+  m_Name: SpiderMancerWIP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3081,7 +3069,7 @@ Transform:
   m_GameObject: {fileID: 3327797924538865796}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
   m_LocalPosition: {x: 1.75, y: 0, z: 0.12}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 546149826144086114}
   - {fileID: 7357742553267221930}
@@ -3140,7 +3128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4939985f28fa848a1152707dbc199a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 199b30f54d86a7a4688d96cd3402fdf5, type: 2}
+  settings: {fileID: 11400000, guid: 5105c138d9341534db6b2feeb2d38917, type: 2}
   behaviourState: 0
   damagePoint: {fileID: 9064047032960620921}
   healthBar: {fileID: 5243003909010641899}
@@ -3385,14 +3373,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143846893497421310}
-  m_LocalRotation: {x: -0.6803072, y: 0.073803164, z: 0.25669393, w: 0.6825273}
-  m_LocalPosition: {x: -0.082, y: 0.124, z: -0.038}
+  m_LocalRotation: {x: -0.91195875, y: 0.045530643, z: 0.037896655, w: 0.40598282}
+  m_LocalPosition: {x: -0.084, y: 0.028, z: -0.228}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 5337222943572793902}
   m_Father: {fileID: 3946107973906604345}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -104.862, y: 104.326996, z: -77.063995}
+  m_LocalEulerAnglesHint: {x: -131.933, y: 2.7579956, z: 4.4859924}
 --- !u!1 &4162957666517728059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,7 +3441,7 @@ Transform:
   m_GameObject: {fileID: 4201093180147566272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5963016345160408652}
   - {fileID: 7945100707920543125}
@@ -3555,6 +3543,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: Flinch 0
+  - Type: 9
+    SynchronizeType: 2
+    Name: Summon
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -3993,7 +3984,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: -0.58}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.017993689, y: 0.106000036, z: -0.101000026}
+  m_ConnectedAnchor: {x: -0.017993696, y: 0.106000066, z: -0.101000085}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -4047,6 +4038,18 @@ Transform:
   m_Father: {fileID: 8389013264569666156}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5243003909010641899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972216441462917839, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+    type: 3}
+  m_PrefabInstance: {fileID: 2765743278543165732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7357742553267221930 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4646051276855569550, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+    type: 3}
+  m_PrefabInstance: {fileID: 2765743278543165732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5337222943573214734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,8 +4837,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8716127917758720852}
-  m_LocalRotation: {x: -0.5000004, y: 0.4999997, z: 0.49999964, w: 0.5000003}
-  m_LocalPosition: {x: -0.004240632, y: 0.62581205, z: 0.0013147928}
+  m_LocalRotation: {x: -0.5000004, y: 0.4999997, z: 0.49999964, w: 0.50000036}
+  m_LocalPosition: {x: -0.004240671, y: 0.62581205, z: 0.0013148087}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 6063432653317430351}
@@ -5056,6 +5059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646051276855569550, guid: ae10adcbca2c84d469fdfd990e1d6eab,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.576
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae10adcbca2c84d469fdfd990e1d6eab, type: 3}

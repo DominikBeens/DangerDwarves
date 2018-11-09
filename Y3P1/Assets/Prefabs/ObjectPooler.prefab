@@ -219,3 +219,13 @@ MonoBehaviour:
       type: 3}
     poolSize: 15
     autoExpand: 1
+  - poolName: TeleportParticle
+    poolPrefab: {fileID: 3716037247890611631, guid: 2ef9ca8919fd0c54d9868a92d3d5f1af,
+      type: 3}
+    poolSize: 10
+    autoExpand: 1
+  - poolName: SpidermancerSummon
+    poolPrefab: {fileID: 3716037247890611631, guid: b76887c67d473424a95576adcb21c6c8,
+      type: 3}
+    poolSize: 15
+    autoExpand: 1

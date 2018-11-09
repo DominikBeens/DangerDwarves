@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenFadeAnim: {fileID: 2934189645569908569}
   screenFadeDuration: 0.6
-  teleportParticle: 
+  teleportParticle: TeleportParticle
   teleportMessageText: {fileID: 2730464659849618619}
   teleportMessageDuration: 1.5
 --- !u!114 &5379287191861182112

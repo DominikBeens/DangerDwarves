@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using Photon.Pun;
+using System.Collections.Generic;
 
 public class SpawnNetworkedObjOnFire : MonoBehaviour 
 {
 
-    [SerializeField] private GameObject toSpawn;
+    [SerializeField] private List<GameObject> toSpawn = new List<GameObject>();
 
     private void Awake()
     {
@@ -15,7 +16,7 @@ public class SpawnNetworkedObjOnFire : MonoBehaviour
             {
                 if (PhotonNetwork.IsMasterClient)
                 {
-                    PhotonNetwork.InstantiateSceneObject(toSpawn.name, transform.position, Quaternion.identity);
+                    PhotonNetwork.InstantiateSceneObject(toSpawn[Random.Range(0, toSpawn.Count)].name, transform.position, Quaternion.identity);
                 }
             };
         }

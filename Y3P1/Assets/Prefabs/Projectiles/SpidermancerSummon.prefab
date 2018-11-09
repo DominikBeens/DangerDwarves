@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4915653778860839161}
   - component: {fileID: 5063046915007473304}
   m_Layer: 10
-  m_Name: WraithSummon2
+  m_Name: SpidermancerSummon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747753adf2cbc954a91ce764b48cf948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPoolName: WraithSummon2
+  myPoolName: SpidermancerSummon
   damageTarget: 1
   selfDestroyTime: 8
   prefabToSpawnOnHit: 
@@ -95,7 +95,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSpawn:
-  - {fileID: 6357796064771890802, guid: 2f50cc6e5b4ebe848aebd32344845c0f, type: 3}
+  - {fileID: 5235892731197639727, guid: 58c56fb8ee4a8f846bee53972e8096b0, type: 3}
+  - {fileID: 5235892731197639727, guid: 50ba9472d0d22e24f8096be195357cab, type: 3}
+  - {fileID: 5235892731197639727, guid: 537611df2efad1f41a56d9a46620a528, type: 3}
+  - {fileID: 5235892731197639727, guid: bdc8e272c78db2446a7ea245c6510ac6, type: 3}
+  - {fileID: 5235892731197639727, guid: d2700c256e6c8d642bba79ff7863a43f, type: 3}
+  - {fileID: 5235892731197639727, guid: 34f13d67560a6e6419be589c86d43b87, type: 3}
 --- !u!1 &4659710344052627038
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +320,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.048508644, g: 1, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4736,8 +4741,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4ef7e80edf99bda4ab057ae5863a44dc, type: 2}
-  - {fileID: 2100000, guid: 4ef7e80edf99bda4ab057ae5863a44dc, type: 2}
+  - {fileID: 2100000, guid: c4154120e1770934785092736a0a222e, type: 2}
+  - {fileID: 2100000, guid: c4154120e1770934785092736a0a222e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
