@@ -1,5 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &192092155845184128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8136903220673741615, guid: 0e5da5678f761484b94187a4b2c0acb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8234379549047458223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25424171234609137
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,12 +471,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &192092155845184128 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8136903220673741615, guid: 0e5da5678f761484b94187a4b2c0acb2,
-    type: 3}
-  m_PrefabInstance: {fileID: 8234379549047458223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2566153561324421213
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +907,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: -0.58}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.017993629, y: 0.106000036, z: -0.101000115}
+  m_ConnectedAnchor: {x: -0.017993629, y: 0.106000036, z: -0.101000056}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1477,7 +1477,7 @@ Transform:
   m_GameObject: {fileID: 5421560230717596617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.088, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 7043368237735501433}
   m_Father: {fileID: 0}
@@ -1999,8 +1999,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.004573345, y: -0.23046207, z: 1.1182997}
-    m_Extent: {x: 1.6088755, y: 1.802542, z: 1.6817364}
+    m_Center: {x: 0.006098032, y: -0.30728295, z: 1.491066}
+    m_Extent: {x: 2.1451674, y: 2.4033895, z: 2.2423158}
   m_DirtyAABB: 0
 --- !u!1 &5545961985271647856
 GameObject:
@@ -2168,7 +2168,10 @@ MonoBehaviour:
   extrabool: 1
   rightHandObj: {fileID: 2027410982458417389}
   rightHandObjRot: {fileID: 2027410982458417389}
+  leftHandObj: {fileID: 0}
+  leftHandObjRot: {fileID: 0}
   lookObj: {fileID: 2027410982458417389}
+  trackPlayer: 0
 --- !u!1 &5669093799698004577
 GameObject:
   m_ObjectHideFlags: 0
