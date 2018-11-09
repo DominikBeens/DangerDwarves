@@ -827,6 +827,11 @@ public class Inventory : MonoBehaviourPunCallbacks
             onMouse.sprite = Database.hostInstance.allSprites[drag.spriteIndex];
             onMouse.transform.position = Input.mousePosition;
         }
+
+        if(Input.GetButtonDown("Drink Potion"))
+        {
+            UsePotion();
+        }
     }
 
     private void HotKeyAction(int ind)
@@ -1315,6 +1320,28 @@ public class Inventory : MonoBehaviourPunCallbacks
                     allItems[i] = null;
                     allSlots[i].DisableImage();
                     UpdateInventoryColor();
+                }
+            }
+        }
+    }
+
+    private void UsePotion()
+    {
+        if (!InventoryIsOpen())
+        {
+            for (int i = 0; i < allItems.Count; i++)
+            {
+                if(allItems[i] != null)
+                {
+                    if(allItems[i] is Potion)
+                    {
+                        Potion temp = (Potion)allItems[i];
+                        temp.Drink();
+                        allItems[i] = null;
+                        allSlots[i].DisableImage();
+                        UpdateInventoryColor();
+                        return;
+                    }
                 }
             }
         }

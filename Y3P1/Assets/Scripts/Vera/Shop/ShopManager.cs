@@ -66,7 +66,7 @@ public class ShopManager : MonoBehaviourPunCallbacks
             case ShopType.Equipment:
                 for (int i = 0; i < sizeShop; i++)
                 {
-                    shopInventory.AddItem(LootRandomizer.instance.EquipmentToShop(Player.localPlayer.myInventory.aIL.averageILevel));
+                    shopInventory.AddItem(LootRandomizer.instance.EquipmentToShop(Player.localPlayer.myInventory.averageILevel));
                 }
                 break;
             case ShopType.Potions:

@@ -231,6 +231,7 @@ MonoBehaviour:
   - Green chefs hat
   - Yellow chefs hat
   - Red chefs hat
+  - Huge Chefs Hat
   chSprite:
   - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
   - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}

@@ -141,7 +141,7 @@ public class Item
     {
         if (sold)
         {
-            return new string[] { "Buy Value: <color=#00A8FF>" + CalculateValue().ToString() + "<color=white> Gold" };
+            return new string[] { "Buy Value: <color=yellow" + CalculateValue().ToString() + "<color=white> Gold" };
         }
         return new string[] { "Value: <color=yellow>" + CalculateValue().ToString() + "<color=white> Gold"};
     }
