@@ -98,7 +98,7 @@ public class EntitySpawner : MonoBehaviourPunCallbacks
             int spawnerIndex = EntityManager.instance.GetSpawnerIndex(this);
             if (spawnerIndex != -1)
             {
-                EntityManager.instance.photonView.RPC("SpawnEntities", RpcTarget.AllBuffered, spawnerIndex, spawnAmount, spawnRange, spawnImmortal);
+                EntityManager.instance.photonView.RPC("SpawnEntities", RpcTarget.AllBuffered, spawnerIndex, spawnAmount == 0 ? 1 : spawnAmount, spawnRange, spawnImmortal);
             }
         }
     }

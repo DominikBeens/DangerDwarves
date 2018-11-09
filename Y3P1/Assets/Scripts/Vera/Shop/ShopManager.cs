@@ -22,6 +22,10 @@ public class ShopManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
         StartCoroutine(Delay());
     }
 
@@ -37,8 +41,12 @@ public class ShopManager : MonoBehaviourPunCallbacks
     }
 
     public void SellItem(Item toSell)
-    {       
-        Player.localPlayer.myInventory.UpdateGold(toSell.CalculateValue());
+    {
+        if (Player.localPlayer != null)
+        {
+            Player.localPlayer.myInventory.UpdateGold(toSell.CalculateValue());
+        }
+
         toSell.sold = true;
         buyBackItems.Add(toSell);
         if (buyBackItems.Count > sizeShop)
@@ -92,7 +100,6 @@ public class ShopManager : MonoBehaviourPunCallbacks
 
     public void LeaveShop()
     {
-        NotificationManager.instance.NewNotification("test123");
         if (shopInventory.IsOpen())
         {
             OpenShop();

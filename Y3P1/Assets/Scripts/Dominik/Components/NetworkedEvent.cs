@@ -37,7 +37,7 @@ public class NetworkedEvent : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            if (players.Count == PhotonNetwork.CountOfPlayers)
+            if (players.Count == PhotonNetwork.CurrentRoom.PlayerCount)
             {
                 TriggerEvent(true);
             }
@@ -46,6 +46,11 @@ public class NetworkedEvent : MonoBehaviour
 
     public void TriggerEvent(bool b)
     {
-        anim.SetBool(animBoolName, b);
+        if (anim)
+        {
+            anim.SetBool(animBoolName, b);
+        }
+
+        NotificationManager.instance.NewNotification("REEEEEE");
     }
 }

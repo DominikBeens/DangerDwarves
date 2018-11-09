@@ -272,16 +272,20 @@ public class ShopInventory : MonoBehaviour {
     public void OpenClose()
     {
         shopPanel.SetActive(!shopPanel.activeInHierarchy);
-        Player.localPlayer.myInventory.ToggleInventory(shopPanel.activeInHierarchy);
-        if (shopPanel.activeInHierarchy)
+        if(Player.localPlayer != null)
         {
-            SetToBuy();
-            Player.localPlayer.myInventory.window = Inventory.Window.Shop;
+            Player.localPlayer.myInventory.ToggleInventory(shopPanel.activeInHierarchy);
+            if (shopPanel.activeInHierarchy)
+            {
+                SetToBuy();
+                Player.localPlayer.myInventory.window = Inventory.Window.Shop;
+            }
+            else
+            {
+                Player.localPlayer.myInventory.window = Inventory.Window.Equipment;
+            }
         }
-        else
-        {
-            Player.localPlayer.myInventory.window = Inventory.Window.Equipment;
-        }
+        
     }
 
     public bool IsOpen()
