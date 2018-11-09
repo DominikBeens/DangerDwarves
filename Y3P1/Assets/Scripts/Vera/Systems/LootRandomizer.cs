@@ -585,9 +585,9 @@ public class LootRandomizer : MonoBehaviour {
         int mat = 0;
 
         string secun = "";
-        int index = Database.hostInstance.GetSword();
+
         //Item Creation XD
-        testItem.StartUp("Basic Sword", rarity, Database.hostInstance.GetSwordSprite(index), NewStats(nIL), Database.hostInstance.GetSwordObject(index), nIL, mat);
+        testItem.StartUp("Basic Sword", rarity, Database.hostInstance.GetSwordSprite(0), NewStats(nIL), Database.hostInstance.GetSwordObject(0), nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), 1, 0, Buff(secun), Single(secun));
         testItem.StartMelee(Range(), 0);
         //end item creation
@@ -614,9 +614,8 @@ public class LootRandomizer : MonoBehaviour {
         }
 
         string secun = "";
-        int index = Database.hostInstance.GetCrossbow();
         //Item Creation XD
-        testItem.StartUp("Basic Crossbow", rarity, Database.hostInstance.GetCrossbowSprite(index), NewStats(nIL), Database.hostInstance.GetCrossbowObject(index), nIL, mat);
+        testItem.StartUp("Basic Crossbow", rarity, Database.hostInstance.GetCrossbowSprite(0), NewStats(nIL), Database.hostInstance.GetCrossbowObject(0), nIL, mat);
         testItem.StartWeapon(BaseDamage(nIL), FireRate(), secun, SecundaryFR(), ChargeTime(), Force(), amountSecun, degreesSecun, Buff(secun), Single(secun));
         testItem.StartRanged(Force(), amountPrim, degreesPri);
         //end item creation

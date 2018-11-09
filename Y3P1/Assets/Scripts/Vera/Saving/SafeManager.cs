@@ -32,15 +32,6 @@ public class SafeManager : MonoBehaviour {
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            //NotificationManager.instance.NewNotification("Started To Save");
-            SaveGame();
-        }
-    }
-
     public void SaveGame()
     {
         if (loaded)
@@ -57,7 +48,6 @@ public class SafeManager : MonoBehaviour {
 
     private void SavedGame(SafeFile toSave)
     {
-        //NotificationManager.instance.NewNotification("is saving");
         var serializer = new XmlSerializer(typeof(SafeFile));
         using (var stream = new System.IO.FileStream(Application.persistentDataPath + "/SavedGame_" + PhotonNetwork.NickName + ".xml", FileMode.Create))
         {
@@ -77,13 +67,15 @@ public class SafeManager : MonoBehaviour {
             {
                 safe = (Safe)ByteArrayToObject(test);
             }
+            LoadFile();
         }
         else
         {
             lastSafeFile = new SafeFile();
             safe = new Safe();
+            LoadFile();
+            Player.localPlayer.myInventory.StartingItems();
         }
-        LoadFile();
     }
 
     public SafeFile Load()

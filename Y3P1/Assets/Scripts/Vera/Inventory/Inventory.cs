@@ -1038,6 +1038,13 @@ public class Inventory : MonoBehaviourPunCallbacks
         }
     }
 
+    public void StartingItems()
+    {
+        AddItem(LootRandomizer.instance.LootSW());
+        AddItem(LootRandomizer.instance.LootSC());
+        AddItem(LootRandomizer.instance.LootTW());
+    }
+
     public void CalculateArmor()
     {
         Stats together = new Stats();
