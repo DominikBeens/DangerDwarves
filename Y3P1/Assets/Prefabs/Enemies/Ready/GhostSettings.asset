@@ -28,7 +28,7 @@ MonoBehaviour:
     attackType: 1
     damageType: 1
     projectilePoolName: GhostSummon
-  attackDistance: 10
+  attackDistance: 12
   attackRangeLookAtSpeed: 10
   randomRangedAttackChance: 30
   randomRangedAttackInterval: 1
@@ -44,3 +44,4 @@ MonoBehaviour:
   minIdleTime: 1
   maxIdleTime: 4
   targetSeekRange: 250
+  minIdleLoops: 0
