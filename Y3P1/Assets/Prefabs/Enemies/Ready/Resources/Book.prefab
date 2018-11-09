@@ -81,7 +81,6 @@ MonoBehaviour:
     isInvinsible: 0
     isDead: 0
     baseHealth: 100
-    currentHealth: 0
   stats:
     stamina: 5
     strength: 12
@@ -409,7 +408,7 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Flinch
   - Type: 4
     SynchronizeType: 2
@@ -421,7 +420,7 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Attack1
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Die
   m_SynchronizeLayers:
   - SynchronizeType: 0

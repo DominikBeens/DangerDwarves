@@ -81,7 +81,6 @@ MonoBehaviour:
     isInvinsible: 0
     isDead: 0
     baseHealth: 100
-    currentHealth: 0
   stats:
     stamina: 10
     strength: 7
@@ -433,19 +432,21 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Spit_attack
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Spider_death
   - Type: 4
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Spider_IsDead
   - Type: 9
     SynchronizeType: 0
-    Name: Spider_hitOFF
+    Name: Flinch
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
   - SynchronizeType: 0
     LayerIndex: 1
+  - SynchronizeType: 0
+    LayerIndex: 2
 --- !u!1 &7621433897501417358
 GameObject:
   m_ObjectHideFlags: 0

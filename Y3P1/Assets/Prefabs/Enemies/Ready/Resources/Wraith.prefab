@@ -93,7 +93,6 @@ MonoBehaviour:
     isInvinsible: 0
     isDead: 0
     baseHealth: 100
-    currentHealth: 0
   stats:
     stamina: 5
     strength: 12
@@ -490,6 +489,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AABB.m_Center.z
       value: -0.87125564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[4].SynchronizeType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[4].Name
+      value: Wraith_dying
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[5].SynchronizeType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[5].Name
+      value: Wraith_stagger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[6].SynchronizeType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618707314214138204, guid: 3a9efe84057e5594aacef6e45e40aadf,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[6].Name
+      value: Flinch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9efe84057e5594aacef6e45e40aadf, type: 3}

@@ -5050,6 +5050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   durationFill: {fileID: 0}
+  description: 
 --- !u!1 &1058433451661367241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5816,6 +5817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   durationFill: {fileID: 0}
+  description: 
 --- !u!1 &3075636788705503595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13309,7 +13311,6 @@ MonoBehaviour:
     isInvinsible: 0
     isDead: 0
     baseHealth: 100
-    currentHealth: 0
   stats:
     stamina: 5
     strength: 12
@@ -14457,6 +14458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   durationFill: {fileID: 0}
+  description: 
 --- !u!1 &5925149235624768781
 GameObject:
   m_ObjectHideFlags: 0
@@ -15403,6 +15405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   durationFill: {fileID: 0}
+  description: 
 --- !u!1 &7799958946164624356
 GameObject:
   m_ObjectHideFlags: 0
@@ -15659,6 +15662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   durationFill: {fileID: 0}
+  description: 
 --- !u!1 &8174516438969190199
 GameObject:
   m_ObjectHideFlags: 0
@@ -16111,11 +16115,14 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: Wraith_floating
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Wraith_dying
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Wraith_stagger
+  - Type: 9
+    SynchronizeType: 0
+    Name: Flinch
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

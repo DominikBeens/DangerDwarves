@@ -3544,7 +3544,7 @@ MonoBehaviour:
     SynchronizeType: 0
     Name: Rotating
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Flinch
   - Type: 4
     SynchronizeType: 0
@@ -3563,13 +3563,13 @@ MonoBehaviour:
     Name: Demon_Walking
   - Type: 9
     SynchronizeType: 2
-    Name: Demon_Hit
-  - Type: 9
-    SynchronizeType: 2
     Name: Demon_Attack_Melee
   - Type: 9
-    SynchronizeType: 2
+    SynchronizeType: 0
     Name: Demon_Death
+  - Type: 9
+    SynchronizeType: 0
+    Name: Flinch 0
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
