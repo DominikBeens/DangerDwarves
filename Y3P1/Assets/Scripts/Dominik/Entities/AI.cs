@@ -11,13 +11,14 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
     private Entity myEntity;
     private NavMeshAgent agent;
     private Collider[] hits = new Collider[10];
-    private AISettings.AttackAnimation currentAttack;
     private Vector3 toTarget;
     private float randomRangedAttack;
     private List<AISettings.AttackAnimation> rangedAttacks;
     private float nextRandomRangedTime;
     private float currentIdleTime;
     private int currentIdleLoops;
+    private AISettings.AttackAnimation currentAttack;
+    public AISettings.AttackAnimation CurrentAttack { get { return currentAttack; } }
 
     private bool canAttack = true;
     private bool canLookAtTarget = true;
@@ -54,7 +55,7 @@ public class AI : MonoBehaviourPunCallbacks, IPunObservable
 
         initialChaseTrigger.OnZoneEnterEvent.AddListener(() =>
         {
-            Entity entity = initialChaseTrigger.eventCaller.GetComponentInChildren<Entity>();
+            Entity entity = initialChaseTrigger.EventCaller.GetComponentInChildren<Entity>();
             if (!entity.health.isDead)
             {
                 photonView.RPC("SetTarget", RpcTarget.All, entity.photonView.ViewID);

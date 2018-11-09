@@ -19,7 +19,8 @@ public class CollisionEventZone : MonoBehaviour
 
     public UnityEvent OnZoneEnterEvent;
     public UnityEvent OnZoneExitEvent;
-    [HideInInspector] public Transform eventCaller;
+    private Transform eventCaller;
+    public Transform EventCaller { get { return eventCaller; } }
 
     [Space(10)]
     [SerializeField] private KeyCode key;
