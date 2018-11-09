@@ -694,6 +694,7 @@ public class Inventory : MonoBehaviourPunCallbacks
                 else if(window == Window.Shop)
                 {
                     int index = GetIndex(currentSlot);
+                    
                     ShopManager.instance.SellItem(allItems[index]);
                     allItems[index] = null;
                     allSlots[index].DisableImage();
