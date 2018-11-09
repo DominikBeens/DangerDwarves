@@ -30,6 +30,8 @@ public class LoginManager : MonoBehaviourPunCallbacks
     [SerializeField] private float cameraSmoothSpeed = 2f;
     [SerializeField] private List<GameObject> miniDwarves = new List<GameObject>();
     [SerializeField] private List<GameObject> miniBraziers = new List<GameObject>();
+    [SerializeField] private GameObject dwarf;
+    [SerializeField] private GameObject credits;
 
     private void Awake()
     {
@@ -177,6 +179,20 @@ public class LoginManager : MonoBehaviourPunCallbacks
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 10 }, null);
+    }
+
+    public void GoToURL(string url)
+    {
+        if (!string.IsNullOrEmpty(url))
+        {
+            Application.OpenURL(url);
+        }
+    }
+
+    public void ToggleCredits()
+    {
+        dwarf.SetActive(!dwarf.activeInHierarchy);
+        credits.SetActive(!credits.activeInHierarchy);
     }
 
     public override void OnDisconnected(DisconnectCause cause)
