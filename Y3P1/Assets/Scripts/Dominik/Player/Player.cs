@@ -131,22 +131,6 @@ namespace Y3P1
             }
         }
 
-        private void Update()
-        {
-            if (photonView.IsMine)
-            {
-                if (Input.GetKeyDown(KeyCode.X))
-                {
-                    entity.Hit(-10, Stats.DamageType.Melee);
-                }
-
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    entity.Hit(-100, Stats.DamageType.Melee);
-                }
-            }
-        }
-
         private void CreateWorldSpacePlayerUI()
         {
             PlayerUI playerUI = Instantiate(playerWorldSpaceUIPrefab, transform.position + playerUISpawnOffset, Quaternion.identity, playerController.body).GetComponent<PlayerUI>();

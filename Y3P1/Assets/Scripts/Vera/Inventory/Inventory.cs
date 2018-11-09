@@ -587,26 +587,7 @@ public class Inventory : MonoBehaviourPunCallbacks
             return;
         }
         SetWindow();
-        if (Input.GetKeyDown(KeyCode.Period))
-        {
-            switch (window)
-            {
-                case Window.Shop:
-                    window = Window.Equipment;
-                    break;
-                case Window.Equipment:
-                    window = Window.Shop;
-                    break;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            photonView.RPC("ResetAVR", RpcTarget.MasterClient);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            photonView.RPC("AddGold", RpcTarget.All, UnityEngine.Random.Range(5000, 10000)); 
-        }
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             RemoveAllItems();
@@ -812,11 +793,7 @@ public class Inventory : MonoBehaviourPunCallbacks
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            CalculateArmor();
-            SetInfo();
-        }
+        
         if (drag == null)
         {
             onMouse.enabled = false;
