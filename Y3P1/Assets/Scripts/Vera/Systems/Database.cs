@@ -235,6 +235,36 @@ public class Database : MonoBehaviour {
         return trinketNames[Random.Range(0, trinketNames.Count)];
     }
 
+    //Types
+    public int GetStaff()
+    {
+        return Random.Range(0, staffObject.Count);
+    }
+    public int GetCrossbow()
+    {
+        return Random.Range(0, crossbowObject.Count);
+    }
+    public int GetAxe()
+    {
+        return Random.Range(0, axeObject.Count);
+    }
+    public int GetSword()
+    {
+        return Random.Range(0, swordObject.Count);
+    }
+    public int GetHammer()
+    {
+        return Random.Range(0, hammerObject.Count);
+    }
+    public int GetHelmet()
+    {
+        return Random.Range(0, helmetObject.Count);
+    }
+    public int GetTrinket()
+    {
+        return Random.Range(0, trinketObject.Count);
+    }
+
     //sprites
 
     public int GetPotionSprite(int o)
@@ -293,10 +323,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetStaffSprite()
+    public int GetStaffSprite(int o)
     {
-        int randomSpri = Random.Range(0, staffSprite.Count);
-        Sprite mySpri = staffSprite[randomSpri];
+        Sprite mySpri = staffSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -308,10 +337,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetCrossbowSprite()
+    public int GetCrossbowSprite(int o)
     {
-        int randomSpri = Random.Range(0, crossbowSprite.Count);
-        Sprite mySpri = crossbowSprite[randomSpri];
+        Sprite mySpri = crossbowSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -323,9 +351,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetAxeSprite()
+    public int GetAxeSprite(int o)
     {
-        Sprite mySpri = axeSprite[Random.Range(0, axeSprite.Count)];
+        Sprite mySpri = axeSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -337,9 +365,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetSwordSprite()
+    public int GetSwordSprite(int o)
     {
-        Sprite mySpri = swordSprite[Random.Range(0, swordSprite.Count)];
+        Sprite mySpri = swordSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -351,9 +379,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetHammerSprite()
+    public int GetHammerSprite(int o)
     {
-        Sprite mySpri = hammerSprite[Random.Range(0, hammerSprite.Count)];
+        Sprite mySpri = hammerSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -365,9 +393,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetHelmetSprite()
+    public int GetHelmetSprite(int o)
     {
-        Sprite mySpri =  helmetSprite[Random.Range(0, helmetSprite.Count)];
+        Sprite mySpri =  helmetSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -379,9 +407,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetTrinketSprite()
+    public int GetTrinketSprite(int o)
     {
-        Sprite mySpri = trinketSprite[Random.Range(0, trinketSprite.Count)];
+        Sprite mySpri = trinketSprite[o];
         int index = 0;
         for (int i = 0; i < allSprites.Count; i++)
         {
@@ -479,9 +507,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetStaffObject()
+    public int GetStaffObject(int o)
     {
-        GameObject myObj = staffObject[Random.Range(0, staffObject.Count)];
+        GameObject myObj = staffObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -493,9 +521,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetCrossbowObject()
+    public int GetCrossbowObject(int o)
     {
-        GameObject myObj = crossbowObject[Random.Range(0, crossbowObject.Count)];
+        GameObject myObj = crossbowObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -507,9 +535,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetAxeObject()
+    public int GetAxeObject(int o)
     {
-        GameObject myObj = axeObject[Random.Range(0, axeObject.Count)];
+        GameObject myObj = axeObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -521,9 +549,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetSwordObject()
+    public int GetSwordObject(int o)
     {
-        GameObject myObj = swordObject[Random.Range(0, swordObject.Count)];
+        GameObject myObj = swordObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -535,9 +563,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetHammerObject()
+    public int GetHammerObject(int o)
     {
-        GameObject myObj = hammerObject[Random.Range(0, hammerObject.Count)];
+        GameObject myObj = hammerObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -549,9 +577,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetTrinketObject()
+    public int GetTrinketObject(int o)
     {
-        GameObject myObj = trinketObject[Random.Range(0, trinketObject.Count)];
+        GameObject myObj = trinketObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {
@@ -563,9 +591,9 @@ public class Database : MonoBehaviour {
         return index;
     }
 
-    public int GetHelmetObject()
+    public int GetHelmetObject(int o)
     {
-        GameObject myObj = helmetObject[Random.Range(0, helmetObject.Count)];
+        GameObject myObj = helmetObject[o];
         int index = 0;
         for (int i = 0; i < allGameobjects.Count; i++)
         {

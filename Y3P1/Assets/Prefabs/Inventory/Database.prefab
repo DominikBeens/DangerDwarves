@@ -94,11 +94,11 @@ MonoBehaviour:
   - Bloody Cleaver
   - Shovel
   oWSprite:
-  - {fileID: 21300000, guid: c5ead9b7a2fa9074cb23976e823511e1, type: 3}
-  - {fileID: 21300000, guid: f2ebb1d647b49bb46a559f9874a42a74, type: 3}
-  - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
-  - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
-  - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
+  - {fileID: 21300000, guid: d2812cdbcba85fa469d7128872c3d6b3, type: 3}
+  - {fileID: 21300000, guid: 3b7cfd6287213d74ca1baacd705e6819, type: 3}
+  - {fileID: 21300000, guid: 89c2ac8d25496cc4cbeb557068a989a0, type: 3}
+  - {fileID: 21300000, guid: e023d39c68cb80744877a4cc857672e8, type: 3}
+  - {fileID: 21300000, guid: 8f46f7323f877c84abbddaec29620f2d, type: 3}
   oWObject:
   - {fileID: 5980796425491674147, guid: c669be2b4a229374c890df3aed91f6ff, type: 3}
   - {fileID: 5980796425491674147, guid: b2d30bc724e18014f99f542c82a36f73, type: 3}
@@ -106,32 +106,32 @@ MonoBehaviour:
   - {fileID: 7826146008099933160, guid: df44f7fd2e6b84b4da976840a537cb74, type: 3}
   - {fileID: 5980796425491674147, guid: b29eef0d721da0d4cb586ee6b4196673, type: 3}
   crossbowNames:
-  - Bow
-  - Crossbow
-  - LongBow
   - Eagles descent
   - Wind fire
-  - Hunters crossbow
+  - Hunters Shot
   - Dragon string
   - CrossPath
   crossbowSprite:
-  - {fileID: 21300000, guid: 09373a73ee29b0e47b2538b286123831, type: 3}
-  - {fileID: 21300000, guid: 378230571bbf3c4499cb85633d3afffd, type: 3}
+  - {fileID: 21300000, guid: 827961ec03fc6164d8ddafe58ddad775, type: 3}
+  - {fileID: 21300000, guid: 17f4434fe39440b45a4f29f66be55955, type: 3}
   crossbowObject:
   - {fileID: 5980796425491674147, guid: 11c494545ececfd42a01d9632e35e826, type: 3}
-  - {fileID: 4600826014966429009, guid: fae04cefb0898214caf6d47a4c2c0ced, type: 3}
-  - {fileID: 4600826014966429009, guid: 292b2a4379542fb429cbb23c1ff7635f, type: 3}
   - {fileID: 5980796425491674147, guid: 90e497149ffa1c24c96f6ef3294bc255, type: 3}
   crossbowMats:
   - {fileID: 2100000, guid: 7fb772bcb1ab81b4f912fe76639dc6cd, type: 2}
   - {fileID: 2100000, guid: 761bbbf31d50ddc419438edd2dfa5834, type: 2}
   StaffNames:
-  - Demon Staff
+  - Staff of the Grave
+  - War Staff
+  - Great Staff
+  - Spirit Staff
+  - Sleep Walker
   staffSprite:
-  - {fileID: 21300000, guid: d6aa08abd7d967b409f97a0a07b927a3, type: 3}
-  - {fileID: 21300000, guid: c268f624bcf4ead4e89ebc1d8c3ed5ad, type: 3}
+  - {fileID: 21300000, guid: 38e6ea388aa2194468344df190b4fb41, type: 3}
+  - {fileID: 21300000, guid: 9bbcf5d96f5704b44a05958608429db6, type: 3}
   staffObject:
   - {fileID: 4600826014966429009, guid: fae04cefb0898214caf6d47a4c2c0ced, type: 3}
+  - {fileID: 4600826014966429009, guid: 292b2a4379542fb429cbb23c1ff7635f, type: 3}
   axeNames:
   - Axe
   - Great Axe
@@ -142,12 +142,7 @@ MonoBehaviour:
   - Heavy Axe
   - War Axe
   axeSprite:
-  - {fileID: 21300000, guid: b5c92ae8f029add43a9023b8f4918c06, type: 3}
-  - {fileID: 21300000, guid: 4c0f0e71da702d84c9f34e28484d7001, type: 3}
-  - {fileID: 21300000, guid: 70c3157b83b98f748a009ad25aeeb595, type: 3}
-  - {fileID: 21300000, guid: 8bb1a3cd85b7e2449aa77179a4ea9b34, type: 3}
-  - {fileID: 21300000, guid: 4449189a3176b9740875c2fbcdf0df99, type: 3}
-  - {fileID: 21300000, guid: 2c396ab04836bc445b9cae6ad436b9d7, type: 3}
+  - {fileID: 21300000, guid: 1c29964e196a50349a1109d940dafcfe, type: 3}
   axeObject:
   - {fileID: 5980796425491674147, guid: edce065c4f7d2e64db6390cafb86c7ed, type: 3}
   axeMats:
@@ -165,9 +160,7 @@ MonoBehaviour:
   - Long Sword
   - Bastard Sword
   swordSprite:
-  - {fileID: 21300000, guid: 1d2acff5fd149f140ad3afc8f644bd11, type: 3}
-  - {fileID: 21300000, guid: 83cc72fd9307d904fac3b34ba6812253, type: 3}
-  - {fileID: 21300000, guid: f3933bdac83aff74f8e3f0a63b15e6a1, type: 3}
+  - {fileID: 21300000, guid: 1b20da891ebe8f94196bbb9cebfa99e7, type: 3}
   swordObject:
   - {fileID: 5980796425491674147, guid: 9dfb24b8158f3504f83310b91b58ed3e, type: 3}
   swordMats:
@@ -185,8 +178,7 @@ MonoBehaviour:
   - Molten Hammer
   - Dust Bringer
   hammerSprite:
-  - {fileID: 21300000, guid: 8a4044b5546cdff4794a2a78bba18d4d, type: 3}
-  - {fileID: 21300000, guid: 7f4d7586b71bc87449ea18483b51c4b1, type: 3}
+  - {fileID: 21300000, guid: 086d5b19363c96440b981df74864402e, type: 3}
   hammerObject:
   - {fileID: 5980796425491674147, guid: af6855acc7d5fc143aae18749f17179c, type: 3}
   hammerMats:
@@ -201,8 +193,9 @@ MonoBehaviour:
   - Dwarven Helmet
   - Melucius
   helmetSprite:
-  - {fileID: 21300000, guid: 90b457ad05104f14397228dfc0b450b2, type: 3}
-  - {fileID: 21300000, guid: 0bde3acf8ffc14e4aadc79409de51403, type: 3}
+  - {fileID: 21300000, guid: f5d234c32beb0b54b871f899d037cc73, type: 3}
+  - {fileID: 21300000, guid: beee0e2e57cb9d249981c3bf7b8ae012, type: 3}
+  - {fileID: 21300000, guid: e2d6a52aab6d94740947b4be88f1a3ec, type: 3}
   helmetObject:
   - {fileID: 727557903423277189, guid: a1efd5470e995374694b1980c3adccff, type: 3}
   - {fileID: 2789109688068099712, guid: dc1d13192ebeafe4db451921434928f0, type: 3}
@@ -216,13 +209,13 @@ MonoBehaviour:
   - Demonic horns
   - Chest hat
   oHelmetSprite:
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
-  - {fileID: 21300000, guid: e652c9cad4d3cde4d821fbfbcd3c2dc0, type: 3}
+  - {fileID: 21300000, guid: fadcb014cb0e5614c98972b568b3c482, type: 3}
+  - {fileID: 21300000, guid: fadcb014cb0e5614c98972b568b3c482, type: 3}
+  - {fileID: 21300000, guid: fadcb014cb0e5614c98972b568b3c482, type: 3}
+  - {fileID: 21300000, guid: fadcb014cb0e5614c98972b568b3c482, type: 3}
+  - {fileID: 21300000, guid: fadcb014cb0e5614c98972b568b3c482, type: 3}
+  - {fileID: 21300000, guid: e9666a6f2b819334b997b73f6dc1f1d7, type: 3}
+  - {fileID: 21300000, guid: fd55f197a1e99d54294dfdc0339c0519, type: 3}
   oHelmetObject:
   - {fileID: 727557903423277189, guid: 83e4a6b2dd6ea3142801c18dc97099e3, type: 3}
   - {fileID: 727557903423277189, guid: 95310e36a7a512c44b012f5d08d10b88, type: 3}
@@ -232,19 +225,20 @@ MonoBehaviour:
   - {fileID: 6033659611258288555, guid: c1851a63f4bae07439a1ab79d5458d4a, type: 3}
   - {fileID: 8041008291607882683, guid: 95462acf907e7e84e9f2438bb697c325, type: 3}
   chNames:
-  - Chefs hat white
-  - Chefs hat blue
-  - Chefs hat dark
-  - Chefs hat green
-  - Chefs hat yellow
-  - Chefs hat red
+  - 'White chefs hat '
+  - 'Blue chefs hat '
+  - 'Dark chefs hat '
+  - Green chefs hat
+  - Yellow chefs hat
+  - Red chefs hat
   chSprite:
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
-  - {fileID: 21300000, guid: c9f40ab154245d84d9b3e16980f05167, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
+  - {fileID: 21300000, guid: 1365a1efce0c55e4fa78d654a8ae6563, type: 3}
   chObject:
   - {fileID: 6033659611258288555, guid: 8984756be7e97484e9def264afbaff12, type: 3}
   - {fileID: 6033659611258288555, guid: 150b49f2a6b1dd4459cc616dfcc2d38f, type: 3}
@@ -254,7 +248,6 @@ MonoBehaviour:
   - {fileID: 6033659611258288555, guid: 5cba8413ed48b3e409f6db91f6cd4f50, type: 3}
   - {fileID: 6033659611258288555, guid: 6344a62902a62c94bb9e5b2ece540f00, type: 3}
   trinketNames:
-  - Arcane Orb
   - Transcendence
   - Herlors Gift
   - Mountains Gem
@@ -262,12 +255,11 @@ MonoBehaviour:
   - Gracedal
   - Gem of Tharim
   - Eye of the Light
-  - Elven Stones
   - Kings Blessing
   trinketSprite:
-  - {fileID: 21300000, guid: eee8dd7977d9a2d42aa636731903a3f9, type: 3}
-  - {fileID: 21300000, guid: 24075bd85c99b0c45893e5525ed25a8e, type: 3}
-  - {fileID: 21300000, guid: d3162a8d52ab8af46b603a57c5482f51, type: 3}
+  - {fileID: 21300000, guid: bdf1d83bdce469c42b6f294ef82ad661, type: 3}
+  - {fileID: 21300000, guid: 7d721c6db51954141b2ea706be85e3b6, type: 3}
+  - {fileID: 21300000, guid: 1c1412b10436068469110519310219d4, type: 3}
   trinketObject:
   - {fileID: 727557903423277189, guid: 7ce03740aba13e24eb0fcaca8ec042b1, type: 3}
   - {fileID: 727557903423277189, guid: 6e818244fc1e0db4ebd11dd8c3c677fb, type: 3}

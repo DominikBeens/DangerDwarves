@@ -702,6 +702,7 @@ public class Inventory : MonoBehaviourPunCallbacks
                         temp.Drink();
                         allItems[index] = null;
                         allSlots[index].DisableImage();
+                        UpdateInventoryColor();
                         return;
                     }
 
