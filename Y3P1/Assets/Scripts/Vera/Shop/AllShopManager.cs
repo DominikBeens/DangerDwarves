@@ -42,7 +42,7 @@ public class AllShopManager : MonoBehaviourPunCallbacks
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                NotificationManager.instance.NewNotification("The shops has been restocked");
+                NotificationManager.instance.NewNotification("The shops have been restocked");
                 if(allShops.Count != 0)
                 {
                     for (int i = 0; i < allShops.Count; i++)
