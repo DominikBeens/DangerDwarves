@@ -18733,7 +18733,7 @@ PrefabInstance:
     - target: {fileID: 4601402252440807638, guid: 824fa7283f7c88c4fb23e3cddbe0d13d,
         type: 3}
       propertyPath: m_AABB.m_Center.x
-      value: -0.00000011920929
+      value: -0.00000017881393
       objectReference: {fileID: 0}
     - target: {fileID: 4601402252440807638, guid: 824fa7283f7c88c4fb23e3cddbe0d13d,
         type: 3}
