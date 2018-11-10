@@ -60,6 +60,7 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         defaultDamageTarget = damageTarget;
         trail = GetComponent<MeleeWeaponTrail>();
+        DisableVisuals();
     }
 
     public virtual void OnEnable()
@@ -107,6 +108,14 @@ public class Projectile : MonoBehaviour
             {
                 visuals[i].visualObject.SetActive(false);
             }
+        }
+    }
+
+    private void DisableVisuals()
+    {
+        for (int i = 0; i < visuals.Count; i++)
+        {
+            visuals[i].visualObject.SetActive(false);
         }
     }
 
@@ -217,6 +226,7 @@ public class Projectile : MonoBehaviour
         hitCollider = null;
         hitAnything = false;
         damageTarget = defaultDamageTarget;
+        DisableVisuals();
         CancelInvoke();
     }
 
