@@ -5,6 +5,7 @@ public class Projectile_Animated : Projectile
 {
 
     private int hitProjectiles;
+    private Vector3 defaultAnimatedProjectilePos;
 
     [SerializeField] private List<Projectile> animatedProjectiles = new List<Projectile>();
 
@@ -49,5 +50,10 @@ public class Projectile_Animated : Projectile
         base.OnDisable();
 
         hitProjectiles = 0;
+
+        for (int i = 0; i < animatedProjectiles.Count; i++)
+        {
+            animatedProjectiles[i].transform.localPosition = Vector3.zero;
+        }
     }
 }
