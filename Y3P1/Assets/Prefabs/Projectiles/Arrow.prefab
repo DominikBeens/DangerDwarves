@@ -657,7 +657,7 @@ PrefabInstance:
     - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.744
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
         type: 3}
@@ -788,6 +788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].outSlope
       value: -0.06669331
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c574775419861a4e9b74ac4a7a3bee1, type: 3}
@@ -1022,6 +1027,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c574775419861a4e9b74ac4a7a3bee1, type: 3}
 --- !u!1001 &6787223951884667650
@@ -1108,7 +1118,7 @@ PrefabInstance:
     - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.762
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
         type: 3}
@@ -1264,6 +1274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pitch
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c574775419861a4e9b74ac4a7a3bee1, type: 3}
@@ -1580,6 +1595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044591949233027493, guid: 6c574775419861a4e9b74ac4a7a3bee1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c574775419861a4e9b74ac4a7a3bee1, type: 3}

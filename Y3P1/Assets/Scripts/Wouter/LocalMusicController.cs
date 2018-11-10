@@ -30,7 +30,7 @@ public class LocalMusicController : MonoBehaviour {
         {
             if (muffled)
             {
-                myMusic.volume = Mathf.Lerp(myMusic.volume, desiredVolume * 0.5f, 1f / lerpTime * Time.deltaTime);
+                myMusic.volume = Mathf.Lerp(myMusic.volume, desiredVolume * 0.7f, 1f / lerpTime * Time.deltaTime);
             }
             else
             {
