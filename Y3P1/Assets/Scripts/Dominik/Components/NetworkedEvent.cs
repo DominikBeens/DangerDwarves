@@ -52,7 +52,5 @@ public class NetworkedEvent : MonoBehaviour
         {
             anim.SetBool(animBoolName, b);
         }
-
-        NotificationManager.instance.NewNotification("REEEEEE");
     }
 }
