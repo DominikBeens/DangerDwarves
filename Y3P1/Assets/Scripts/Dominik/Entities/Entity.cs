@@ -65,12 +65,16 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         statusEffects.HandleEffects();
     }
 
+    // Something hit this entity locally. This function sends the required hit data to every client.
     public void Hit(int amount, Stats.DamageType damageType, List<WeaponSlot.WeaponBuff> weaponBuffs = null)
     {
+        // Calculate the damage done to this entity and execute the function HitRPC() on every client.
         photonView.RPC("HitRPC", RpcTarget.All, CalculateAmount(amount), health.isInvinsible, (int)damageType);
 
+        // If the attackers weapon was buffed, make sure to apply those effects to this entity.
         if (weaponBuffs != null)
         {
+            // This function also makes sure to send an RPC to sync the status effects on this entity.
             statusEffects.ApplyWeaponBuffs(weaponBuffs);
         }
     }
@@ -80,8 +84,10 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (amount <= 0 && !isInvinsible)
         {
+            // Call an UnityEvent for some optional functionality.  
             OnHit.Invoke();
         }
+        // Modifies health and the associated healthbar displays damage numbers.
         health.ModifyHealth(amount, (Stats.DamageType)damageType);
     }
 

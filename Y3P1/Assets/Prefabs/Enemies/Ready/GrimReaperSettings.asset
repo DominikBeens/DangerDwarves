@@ -28,7 +28,7 @@ MonoBehaviour:
     attackType: 0
     damageType: 0
     projectilePoolName: 
-  attackDistance: 40
+  attackDistance: 55
   attackRangeLookAtSpeed: 10
   randomRangedAttackChance: 0
   randomRangedAttackInterval: 0

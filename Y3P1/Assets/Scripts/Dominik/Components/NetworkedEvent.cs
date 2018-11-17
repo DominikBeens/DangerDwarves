@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class NetworkedEvent : MonoBehaviour 
+public class NetworkedEvent : MonoBehaviour
 {
 
     private List<Entity> players = new List<Entity>();
@@ -12,9 +12,9 @@ public class NetworkedEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer == 9 || other.gameObject.layer == 14)
         {
-            Entity entity = other.GetComponentInChildren<Entity>();
+            Entity entity = other.transform.root.GetComponentInChildren<Entity>();
             if (entity && !players.Contains(entity))
             {
                 players.Add(entity);
@@ -25,9 +25,9 @@ public class NetworkedEvent : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer == 9 || other.gameObject.layer == 14)
         {
-            Entity entity = other.GetComponentInChildren<Entity>();
+            Entity entity = other.transform.root.GetComponentInChildren<Entity>();
             if (entity && players.Contains(entity))
             {
                 players.Remove(entity);
@@ -37,12 +37,9 @@ public class NetworkedEvent : MonoBehaviour
 
     private void CheckPlayerCount()
     {
-        if (PhotonNetwork.IsMasterClient)
+        if (players.Count == PhotonNetwork.CurrentRoom.PlayerCount)
         {
-            if (players.Count == PhotonNetwork.CurrentRoom.PlayerCount)
-            {
-                TriggerEvent(true);
-            }
+            TriggerEvent(true);
         }
     }
 

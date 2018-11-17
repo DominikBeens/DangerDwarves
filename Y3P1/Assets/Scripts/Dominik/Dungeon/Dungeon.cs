@@ -1,5 +1,6 @@
 ﻿using Photon.Pun;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Dungeon : MonoBehaviour
@@ -17,6 +18,7 @@ public class Dungeon : MonoBehaviour
     public Transform startSpawn;
     [SerializeField] private Transform dungeonCleanupCenter;
     [SerializeField] private float dungeonCloseCleanupRange = 100f;
+    [SerializeField] private List<NetworkedEvent> events = new List<NetworkedEvent>();
 
     private void Awake()
     {
@@ -52,6 +54,12 @@ public class Dungeon : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             StartCoroutine(CleanUpDungeon());
+        }
+
+        // Currently only used for the library grim reaper boss.
+        for (int i = 0; i < events.Count; i++)
+        {
+            events[i].TriggerEvent(false);
         }
     }
 

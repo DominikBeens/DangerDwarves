@@ -94,6 +94,7 @@ public class StatusEffect_Slow : StatusEffect
         if (agent)
         {
             preSlowMovespeed = agent.speed;
+            TriggerEffect();
             return;
         }
 
@@ -101,9 +102,8 @@ public class StatusEffect_Slow : StatusEffect
         if (playerController)
         {
             preSlowMovespeed = playerController.moveSpeed;
+            TriggerEffect();
         }
-
-        TriggerEffect();
     }
 
     public override void TriggerEffect()
