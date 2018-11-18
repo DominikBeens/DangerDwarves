@@ -189,7 +189,7 @@ public class WeaponSlot : EquipmentSlot
 
     private bool CanAttack()
     {
-        if (canAttack && !Player.localPlayer.myInventory.InventoryIsOpen() && !UIManager.HasOpenUI && !Player.localPlayer.entity.health.isDead)
+        if (canAttack && !UIManager.HasOpenUI && !Player.localPlayer.entity.health.isDead)
         {
             return true;
         }

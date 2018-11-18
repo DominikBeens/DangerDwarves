@@ -748,6 +748,10 @@ public class Inventory : MonoBehaviourPunCallbacks
         {
             OpenCloseInv();
         }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            ToggleInventory(false);
+        }
 
         if (Input.GetKey(KeyCode.H))
         {

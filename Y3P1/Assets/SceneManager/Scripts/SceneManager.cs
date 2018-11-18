@@ -83,7 +83,7 @@ namespace Y3P1
         {
             // You cant pause the game if a level is loading or if canPause is set to false.
             // Or when certain game panels are opened because it will try to close them first.
-            if (isLoadingLevel || !canPause || BountyManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI())
+            if (isLoadingLevel || !canPause || UIManager.HasOpenGameUI)
             {
                 return;
             }

@@ -21,7 +21,7 @@ namespace Y3P1
         [Header("Death")]
         [SerializeField] private GameObject deathCanvas;
 
-        [Header("Cowl Coth")]
+        [Header("Cowl Cloth")]
         public CapsuleCollider collider1;
         public CapsuleCollider collider2;
 

@@ -8,12 +8,23 @@ public class UIManager : MonoBehaviour
 
     public static UIManager instance;
 
-    private bool hasOpenUI;
     public static bool HasOpenUI
     {
         get
         {
-            if (BountyManager.instance.HasOpenUI() || SceneManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI() || DungeonManager.instance.HasOpenUI())
+            if (BountyManager.instance.HasOpenUI() || SceneManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI() || DungeonManager.instance.HasOpenUI() || Player.localPlayer.myInventory.InventoryIsOpen())
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    public static bool HasOpenGameUI
+    {
+        get
+        {
+            if (BountyManager.instance.HasOpenUI() || ArmoryManager.instance.HasOpenUI() || DungeonManager.instance.HasOpenUI() || Player.localPlayer.myInventory.InventoryIsOpen())
             {
                 return true;
             }

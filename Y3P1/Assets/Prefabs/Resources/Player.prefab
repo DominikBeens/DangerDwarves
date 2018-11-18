@@ -7039,7 +7039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canShake: 1
-  trauma: 0.009917766
+  trauma: 0
   force: 20
   magnitude: 0.25
   rotationalMagnitude: 0

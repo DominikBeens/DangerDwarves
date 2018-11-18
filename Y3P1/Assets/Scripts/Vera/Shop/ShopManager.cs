@@ -10,15 +10,11 @@ public class ShopManager : MonoBehaviourPunCallbacks
     [Header("Shop Type")]
     public static ShopManager instance;
     public ShopInventory shopInventory;
-    private bool ugh;
     public enum ShopType {Equipment, Potions}
     public ShopType shopType;
-    public string st;
     [Header("Buy back")]
     public static List<Item> buyBackItems = new List<Item>();
     [SerializeField] private int sizeShop;
-
-
 
     private void Awake()
     {

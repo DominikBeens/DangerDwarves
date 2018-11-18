@@ -7,16 +7,17 @@ using UnityEngine;
 public class PlayerAppearance : MonoBehaviourPunCallbacks
 {
 
-    [Header("Appearance")]
+    private SkinnedMeshRenderer dwarfRenderer;
+    private Material beardMat;
 
+    [Header("Appearance")]
     [SerializeField] private List<GameObject> beardObjects = new List<GameObject>();
     [SerializeField] private List<Material> beardMaterials = new List<Material>();
     [SerializeField] private List<Material> bodyMaterials = new List<Material>();
-    public SkinnedMeshRenderer dwarfRenderer;
-    public Material beardMat;
-    [SerializeField] private DecoyPlayer decoy;
+
     [Space(10)]
 
+    [SerializeField] private DecoyPlayer decoy;
     [SerializeField] private TMP_Dropdown beardObjectDropdown;
     [SerializeField] private TMP_Dropdown beardMatDropdown;
     [SerializeField] private TMP_Dropdown bodyMatDropdown;
@@ -94,6 +95,9 @@ public class PlayerAppearance : MonoBehaviourPunCallbacks
     // Sync appearance when someone enters the room.
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        photonView.RPC("SetAppearance", RpcTarget.All, beardObjectDropdown.value, beardMatDropdown.value, bodyMatDropdown.value);
+        if (newPlayer != PhotonNetwork.LocalPlayer)
+        {
+            photonView.RPC("SetAppearance", RpcTarget.All, beardObjectDropdown.value, beardMatDropdown.value, bodyMatDropdown.value);
+        }
     }
 }
