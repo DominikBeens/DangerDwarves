@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Y3P1;
-using Photon.Pun;
 
-public class ShopManager : MonoBehaviourPunCallbacks
+public class ShopManager : MonoBehaviour
 {
 
     [Header("Shop Type")]
@@ -22,18 +20,11 @@ public class ShopManager : MonoBehaviourPunCallbacks
         {
             instance = this;
         }
-        StartCoroutine(Delay());
-    }
 
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(0.05f);
-        Restock();
         if (shopInventory.IsOpen())
         {
             shopInventory.OpenClose();
         }
-        AllShopManager.instance.AddShop(this);
     }
 
     public void SellItem(Item toSell)
@@ -81,17 +72,6 @@ public class ShopManager : MonoBehaviourPunCallbacks
                 }
                 break;
         }
-    }
-
-    [PunRPC]
-    public void SendRestock()
-    {
-        Restock();
-    }
-
-    public void RS()
-    {
-        photonView.RPC("SendRestock", RpcTarget.All);
     }
 
     public void LeaveShop()

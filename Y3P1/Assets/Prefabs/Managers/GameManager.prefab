@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbb4176656127d4da5f414989fe0ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hubPlayerSpawn: {fileID: 0}
   playerPrefab: {fileID: 8464704438644112518, guid: 35380d2f791b7ea4e95492d7ca46df30,
     type: 3}
   bountyManagerPrefab: {fileID: 1443447783173548153, guid: e9d8a821f480a96439d97b8f2a3ba186,
@@ -52,4 +53,6 @@ MonoBehaviour:
   notificationManagerPrefab: {fileID: 5786067977797153831, guid: 74280ff55a76feb4187d4e599d8cdbff,
     type: 3}
   dungeonManagerPrefab: {fileID: 1443447783173548153, guid: d0f3db06e5c2dc94892078e86a12eee5,
+    type: 3}
+  shopManagerPrefab: {fileID: 4896120020532799747, guid: 9a3cfe7312d9f0e42b6093308a0e0c54,
     type: 3}

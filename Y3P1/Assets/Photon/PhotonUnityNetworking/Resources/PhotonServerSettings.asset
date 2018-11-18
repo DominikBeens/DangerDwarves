@@ -96,4 +96,5 @@ MonoBehaviour:
   - ExtinguishBrazier
   - Restock
   - SendRestock
+  - RestockShops
   DisableAutoOpenWizard: 1

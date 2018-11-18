@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Photon.Pun;
 using UnityEngine;
-using Photon.Pun;
 
 public class AllShopManager : MonoBehaviourPunCallbacks
 {
     public static AllShopManager instance;
-    [SerializeField] private List<ShopManager> allShops = new List<ShopManager>();
+    private bool canRestock;
+    private bool initialisedStocks;
+    private float nextTime;
+    private ShopManager[] allShops;
+
     [Header("Other")]
     [SerializeField] private int cooldownInMin;
-    private float nextTime;
-
 
     private void Awake()
     {
@@ -18,11 +18,13 @@ public class AllShopManager : MonoBehaviourPunCallbacks
         {
             instance = this;
         }
+
+        allShops = FindObjectsOfType<ShopManager>();
     }
 
     public void OpenShop()
     {
-        for (int i = 0; i < allShops.Count; i++)
+        for (int i = 0; i < allShops.Length; i++)
         {
             if (allShops[i].shopInventory.IsOpen())
             {
@@ -31,29 +33,39 @@ public class AllShopManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void AddShop(ShopManager toAdd)
-    {
-        allShops.Add(toAdd);
-    }
-
     private void Update()
     {
-        if (Time.time > nextTime)
+        if (Time.time > nextTime && canRestock)
         {
             if (PhotonNetwork.IsMasterClient)
             {
                 NotificationManager.instance.NewNotification("<color=yellow>The shops have been restocked");
-                if(allShops.Count != 0)
-                {
-                    for (int i = 0; i < allShops.Count; i++)
-                    {
-                        allShops[i].RS();
-                    }
-                }
-
+                photonView.RPC("RestockShops", RpcTarget.All);
             }
+            else
+            {
+                if (!initialisedStocks)
+                {
+                    RestockShops();
+                    initialisedStocks = true;
+                }
+            }
+
             nextTime += (cooldownInMin * 60);
         }
+    }
 
+    [PunRPC]
+    private void RestockShops()
+    {
+        for (int i = 0; i < allShops.Length; i++)
+        {
+            allShops[i].Restock();
+        }
+    }
+
+    public void StartRestocking()
+    {
+        canRestock = true;
     }
 }

@@ -426,7 +426,7 @@ public class Inventory : MonoBehaviourPunCallbacks
         }
         //hotkeySlots.Reverse();
         StartCoroutine(OrderHotKeySlots());
-        
+        AllShopManager.instance.StartRestocking();
     }
 
     private IEnumerator OrderHotKeySlots()
