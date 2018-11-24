@@ -97,6 +97,7 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         statusEffects.AddEffect(effectType, duration, value);
     }
 
+    // Scale this entitys stats with a certain item level.
     public void LevelStats(float aIL)
     {
         float multiplier = aIL / 10 + 1 - 0.1f;
@@ -122,6 +123,7 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         health.UpdateHealth();
     }
 
+    // Calculates incoming damage.
     private int CalculateAmount(int amount)
     {
         // Heals dont get affected by stats.
@@ -137,6 +139,7 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
         return (int)Mathf.Clamp(-reducedDamage, -99999999999999999, -1);
     }
 
+    // Calculates outgoing damage.
     public int CalculateDamage(Stats.DamageType damageType)
     {
         switch (damageType)
@@ -226,37 +229,6 @@ public class Entity : MonoBehaviourPunCallbacks, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        //if (stream.IsWriting)
-        //{
-        //    stream.SendNext(health.isImmortal);
-        //    stream.SendNext(health.isInvinsible);
-        //    stream.SendNext(health.isDead);
-        //    stream.SendNext(health.currentHealth);
-
-        //    stream.SendNext(stats.DefenseEffectiveness);
-        //    stream.SendNext(stats.DamageEffectiveness);
-
-        //    stream.SendNext(stats.stamina);
-        //    stream.SendNext(stats.strength);
-        //    stream.SendNext(stats.agility);
-        //    stream.SendNext(stats.willpower);
-        //    stream.SendNext(stats.defense);
-        //}
-        //else
-        //{
-        //    health.isImmortal = (bool)stream.ReceiveNext();
-        //    health.isInvinsible = (bool)stream.ReceiveNext();
-        //    health.isDead = (bool)stream.ReceiveNext();
-        //    health.currentHealth = (int)stream.ReceiveNext();
-
-        //    stats.DefenseEffectiveness = (float)stream.ReceiveNext();
-        //    stats.DamageEffectiveness = (float)stream.ReceiveNext();
-
-        //    stats.stamina = (int)stream.ReceiveNext();
-        //    stats.strength = (int)stream.ReceiveNext();
-        //    stats.agility = (int)stream.ReceiveNext();
-        //    stats.willpower = (int)stream.ReceiveNext();
-        //    stats.defense = (int)stream.ReceiveNext();
-        //}
+        // TODO: Remove interface (requires checking every entitys PhotonView observed components)
     }
 }

@@ -20,7 +20,7 @@ public abstract class EquipmentSlot : MonoBehaviourPunCallbacks
         }
     }
 
-    // Equips the item 'toEquip' at 'spawnpoint' and returns two PhotonView ID's to use for parenting the item via an RPC.
+    // Equips the item 'toEquip' at 'spawnpoint' and returns two PhotonView IDs to use for parenting the item via an RPC.
     protected int[] Equip(Item toEquip, Transform spawnpoint)
     {
         if (!photonView.IsMine)
@@ -49,6 +49,8 @@ public abstract class EquipmentSlot : MonoBehaviourPunCallbacks
         return null;
     }
 
+    // Our inventory UI features a live preview of our player which is basically a second player positioned somewhere the player cant see.
+    // This also spawns the equiped item for our preview player.
     protected void DecoyEquip(Item toEquip, Transform spawnpoint)
     {
         if (!photonView.IsMine)
@@ -68,6 +70,7 @@ public abstract class EquipmentSlot : MonoBehaviourPunCallbacks
         }
     }
 
+    // The IDs you get from Equip() are passed in here.
     protected abstract void ParentEquipment(int equipmentID, int parentID);
 
     protected int[] GetEquipedItemIDs(Transform spawnpoint)

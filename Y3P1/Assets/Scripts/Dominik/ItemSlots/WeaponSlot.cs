@@ -87,6 +87,7 @@ public class WeaponSlot : EquipmentSlot
         {
             if (!isChargingSecondary)
             {
+                // Ranged weapon will be able to fire every x amount of time.
                 if (currentWeapon is Weapon_Ranged)
                 {
                     if (Time.time >= nextPrimaryTime)
@@ -95,6 +96,7 @@ public class WeaponSlot : EquipmentSlot
                         OnUsePrimary();
                     }
                 }
+                // Melee weapon will start swinging the dwarfs arms.
                 else
                 {
                     Player.localPlayer.dwarfAnimController.SetMeleeStance(CanAttack() ? true : false);
@@ -107,6 +109,7 @@ public class WeaponSlot : EquipmentSlot
             }
         }
 
+        // Release our left mouse button while we have a melee weapon equiped stops our swing animations.
         if (Input.GetMouseButtonUp(0))
         {
             if (currentWeapon is Weapon_Melee)
@@ -118,18 +121,22 @@ public class WeaponSlot : EquipmentSlot
 
     private void HandleSecondaryAttack()
     {
+        // Does our weapon have a secondary attack?
         if (!string.IsNullOrEmpty(currentWeapon.secondaryProjectile))
         {
             if (Input.GetMouseButtonDown(1))
             {
+                // Is our secondary bar fully charged?
                 if (currentHits >= hitsRequiredToSecondary)
                 {
+                    // No chargeup, fire instantly.
                     if (currentWeapon.secondaryChargeupTime == 0)
                     {
                         OnUseSecondary(currentWeapon.secondaryType);
                     }
                     else
                     {
+                        // Start charging our secondary attack.
                         if (!isChargingSecondary)
                         {
                             OnStartChargeSecondary(currentWeapon.secondaryChargeupTime, currentWeapon);
@@ -142,6 +149,7 @@ public class WeaponSlot : EquipmentSlot
 
             if (Input.GetMouseButtonUp(1))
             {
+                // Stop charging our secondary because we released our right mouse button.
                 if (currentWeapon.secondaryChargeupTime > 0)
                 {
                     if (isChargingSecondary)
@@ -149,6 +157,7 @@ public class WeaponSlot : EquipmentSlot
                         OnStopChargeSecondary(currentWeapon);
                         isChargingSecondary = false;
 
+                        // Secondary charge is full, fire secondary.
                         if (secondaryChargeCounter >= currentWeapon.secondaryChargeupTime)
                         {
                             OnUseSecondary(currentWeapon.secondaryType);
@@ -159,18 +168,7 @@ public class WeaponSlot : EquipmentSlot
         }
     }
 
-    private void HandleWeaponBuffTimers()
-    {
-        for (int i = weaponBuffs.Count - 1; i >= 0; i--)
-        {
-            if (Time.time >= weaponBuffs[i].endTime)
-            {
-                OnWeaponBuffRemoved(weaponBuffs[i].type);
-                weaponBuffs.Remove(weaponBuffs[i]);
-            }
-        }
-    }
-
+    // Adds a weapon buff to this weapon slots buff list. When attacking these buffs get applied to the enemy.
     public void AddBuff(WeaponBuff buff, float duration)
     {
         for (int i = 0; i < weaponBuffs.Count; i++)
@@ -187,6 +185,20 @@ public class WeaponSlot : EquipmentSlot
         OnWeaponBuffAdded(buff.type, duration);
     }
 
+    // Check if a weapon buffs duration has ran out and remove him from the list if necessary.
+    private void HandleWeaponBuffTimers()
+    {
+        for (int i = weaponBuffs.Count - 1; i >= 0; i--)
+        {
+            if (Time.time >= weaponBuffs[i].endTime)
+            {
+                OnWeaponBuffRemoved(weaponBuffs[i].type);
+                weaponBuffs.Remove(weaponBuffs[i]);
+            }
+        }
+    }
+
+    // We cant attack when we have some piece of ui open or when were dead.
     private bool CanAttack()
     {
         if (canAttack && !UIManager.HasOpenUI && !Player.localPlayer.entity.health.isDead)
@@ -228,6 +240,8 @@ public class WeaponSlot : EquipmentSlot
         OnUsePrimary();
     }
 
+    // Equips a weapon and instantiates the weapon prefab across the network and tells everyone to parent that weapon in ParentEquipment().
+    // This also spawns a decoy weapon for this player.
     public void EquipWeapon(Weapon weapon)
     {
         int[] ids = Equip(weapon, weapon is Weapon_Ranged ? rangedWeaponSpawn : meleeWeaponSpawn);
@@ -241,12 +255,14 @@ public class WeaponSlot : EquipmentSlot
         OnEquipWeapon(weapon);
     }
 
+    // Convert equipment to a byte array and send it to every client.
     protected override void ParentEquipment(int equipmentID, int parentID)
     {
         ByteObjectConverter boc = new ByteObjectConverter();
         photonView.RPC("ParentWeapon", RpcTarget.All, equipmentID, parentID, boc.ObjectToByteArray(currentEquipment));
     }
 
+    // Every client sets the parent locally and receives the items data.
     [PunRPC]
     private void ParentWeapon(int equipmentID, int parentID, byte[] itemData)
     {
@@ -262,6 +278,7 @@ public class WeaponSlot : EquipmentSlot
         }
     }
 
+    // Syncs parent when a new player joins.
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
         int[] ids = GetEquipedItemIDs(currentEquipment is Weapon_Ranged ? rangedWeaponSpawn : meleeWeaponSpawn);

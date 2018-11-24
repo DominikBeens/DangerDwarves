@@ -33,6 +33,7 @@ public class Health
         ResetHealth(100);
     }
 
+    // Scale health based on a certain item level.
     public void LevelHealth(int aIL)
     {
         baseHealth = Mathf.RoundToInt((baseHealth * (aIL / 10 - 0.1f + 1)) + UnityEngine.Random.Range(0, 10));

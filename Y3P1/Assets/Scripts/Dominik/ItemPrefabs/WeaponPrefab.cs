@@ -66,8 +66,10 @@ public class WeaponPrefab : ItemPrefab
         {
             Weapon_Melee weapon = WeaponSlot.currentWeapon as Weapon_Melee;
 
+            // Find all colliders in a small radius.
             int collidersFound = Physics.OverlapSphereNonAlloc(transform.position, weapon.attackRange, meleeHits, hitLayerMask);
 
+            // When were in a pvp zone, set pvp to true.
             bool pvp = false;
             for (int i = 0; i < collidersFound; i++)
             {
@@ -77,21 +79,26 @@ public class WeaponPrefab : ItemPrefab
                 }
             }
 
+            // Loops through all hit colliders and checks if the player is facing them using Vector3.Dot() because we dont want to accidentally hit something behind us.
             for (int i = 0; i < collidersFound; i++)
             {
                 Vector3 toHit = meleeHits[i].transform.position - Player.localPlayer.playerController.body.position;
                 if (Vector3.Dot(Player.localPlayer.playerController.body.forward, toHit) > 0)
                 {
+                    // If were facing the hit collider, check if they are an entity.
                     Entity entity = meleeHits[i].GetComponent<Entity>();
                     if (entity)
                     {
+                        // If were in a pvp zone check if we hit a player. If were not in a pvp zone then we dont want to hit other players, no friendly fire!
                         if (pvp ? meleeHits[i].transform.tag == "Player" : meleeHits[i].transform.tag != "Player")
                         {
+                            // Calculate this weapons damage and hit the entity.
                             entity.Hit(-(weapon.baseDamage + Player.localPlayer.entity.CalculateDamage(Stats.DamageType.Melee)), Stats.DamageType.Melee, WeaponSlot.weaponBuffs);
 
                             // TODO: Change this to an event or a parameter in Entity.Hit()
                             UIManager.instance.playerStatusCanvas.Hit(false);
 
+                            // If the weapon has a knockback value, entity.KnockBack will send an RPC and apply a bit of force to the entity.
                             if (weapon.knockBack > 0 && !pvp)
                             {
                                 entity.KnockBack(toHit, weapon.knockBack);
@@ -99,9 +106,11 @@ public class WeaponPrefab : ItemPrefab
                         }
                     }
 
+                    // Spawn an optional object at the place where we hit the collider.
+                    // This is used for hitmarkers.
                     if (!string.IsNullOrEmpty(prefabToSpawnOnHit))
                     {
-                        GameObject newSpawn = ObjectPooler.instance.GrabFromPool(prefabToSpawnOnHit, meleeHits[i].ClosestPoint(transform.position), Quaternion.identity);
+                        ObjectPooler.instance.GrabFromPool(prefabToSpawnOnHit, meleeHits[i].ClosestPoint(transform.position), Quaternion.identity);
                     }
                 }
             }
@@ -133,6 +142,7 @@ public class WeaponPrefab : ItemPrefab
         ProjectileManager.instance.FireProjectile(data);
     }
 
+    // Sets the item data when equiping a weapon.
     private void WeaponSlot_OnEquipWeapon(Weapon weapon)
     {
         if (isDropped || isDecoy)
@@ -146,9 +156,11 @@ public class WeaponPrefab : ItemPrefab
         }
     }
 
+    // Called when an item gets dropped.
     [PunRPC]
     private void SyncDropData(byte[] itemData)
     {
+        // Set the item data. Item data gets converted to a byte array so that were able to send it across the network.
         ByteObjectConverter boc = new ByteObjectConverter();
         myItem = (Item)boc.ByteArrayToObject(itemData);
 
@@ -158,6 +170,7 @@ public class WeaponPrefab : ItemPrefab
         interactCollider.SetActive(true);
         objectCollider.enabled = true;
 
+        // Randomize the rotation.
         transform.eulerAngles += dropRotationAdjustment;
         transform.Rotate(new Vector3(0, UnityEngine.Random.Range(0, 360), 0), Space.World);
 
@@ -166,6 +179,7 @@ public class WeaponPrefab : ItemPrefab
         //DroppedItemManager.instance.RegisterDroppedItem(photonView.ViewID, myItem);
     }
 
+    // Tell the master client to destroy this object. Every client sees the pickup animation.
     [PunRPC]
     private void PickUpDestroy()
     {
@@ -178,6 +192,7 @@ public class WeaponPrefab : ItemPrefab
         droppedItemLabel.anim.SetTrigger("Pickup");
     }
 
+    // Toggle the weapon trail of a melee weapon.
     public void SetWeaponTrail(bool b)
     {
         if (weaponTrail)
